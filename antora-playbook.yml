@@ -1,0 +1,28 @@
+site:
+  title: USFM Documentation
+  url: https://docs.usfm.bible
+  start_page: usfm::index.adoc
+  robots: allow
+git:
+  ensure_git_suffix: true
+content:
+  sources:
+  - url: https://github.com/usfm-bible/tcdocs
+    branches: main
+    start_path: docs/usfm/
+output:
+  dir: ./public
+asciidoc:
+  attributes:
+    example-caption: false
+    listing-caption: false
+    url-org: https://usfm.bible
+    url-project: https://docs.usfm.bible
+ui:
+  bundle:
+    # Antora default UI
+    url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
+    # Asciidoctor docs UI
+    #url: https://github.com/asciidoctor/asciidoctor-docs-ui/releases/download/prod-276/ui-bundle.zip
+runtime:
+  fetch: true
