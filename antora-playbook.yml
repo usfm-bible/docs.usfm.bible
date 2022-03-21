@@ -1,15 +1,15 @@
 site:
   title: USFM Documentation
   url: https://docs.usfm.bible
-  start_page: usfm::index.adoc
+  start_page: usfm-docs::index.adoc
   robots: allow
 git:
   ensure_git_suffix: true
 content:
   sources:
-  - url: https://github.com/usfm-bible/tcdocs
-    branches: main
-    start_path: antora/usfm/
+  - url: https://github.com/usfm-bible/tcdocs.git
+    branches: align-manuals
+    start_path: manual/antora
 output:
   dir: ./public
 asciidoc:
