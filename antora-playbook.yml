@@ -1,5 +1,5 @@
 site:
-  title: USFM Documentation
+  title: USFM/USX
   url: https://docs.usfm.bible
   start_page: usfm-docs::index.adoc
   robots: allow
