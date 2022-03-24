@@ -11,7 +11,7 @@ content:
     branches: align-manuals
     start_path: manual/antora
 output:
-  dir: ./public
+  dir: ./build/site
 asciidoc:
   attributes:
     example-caption: false
