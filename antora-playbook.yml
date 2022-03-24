@@ -1,7 +1,7 @@
 site:
-  title: USFM / USX
+  title: USFM / USX Docs
   url: https://docs.usfm.bible
-  start_page: usfm-docs::index.adoc
+  start_page: usfm-usx-docs::index.adoc
   robots: disallow
 git:
   ensure_git_suffix: true
