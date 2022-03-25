@@ -8,7 +8,7 @@ git:
 content:
   sources:
   - url: https://github.com/usfm-bible/tcdocs.git
-    branches: align-manuals
+    branches: main
     start_path: manual/antora
 output:
   dir: ./build/site
