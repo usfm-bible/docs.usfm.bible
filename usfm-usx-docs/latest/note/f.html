@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Paragraph Styles :: USFM / USX Docs</title>
-    <link rel="canonical" href="https://docs.usfm.bible/usfm-usx-docs/latest/para/index.html">
+    <title>f :: USFM / USX Docs</title>
+    <link rel="canonical" href="https://docs.usfm.bible/usfm-usx-docs/latest/note/f.html">
     <meta name="generator" content="Antora 3.0.1">
     <link rel="stylesheet" href="../../../_/css/site.css">
     <script>var uiRootPath = '../../../_'</script>
@@ -81,45 +81,45 @@
   </li>
   <li class="nav-item" data-depth="0">
 <ul class="nav-list">
-  <li class="nav-item is-current-page" data-depth="1">
+  <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="index.html">Paragraph Styles</a>
+    <a class="nav-link" href="../para/index.html">Paragraph Styles</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="identification/index.html">Identification</a>
+    <a class="nav-link" href="../para/identification/index.html">Identification</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="introductions/index.html">Introductions</a>
+    <a class="nav-link" href="../para/introductions/index.html">Introductions</a>
   </li>
   <li class="nav-item" data-depth="2">
     <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="titles-sections/index.html">Titles and Sections</a>
+    <a class="nav-link" href="../para/titles-sections/index.html">Titles and Sections</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="titles-sections/s.html">s# - Section heading</a>
+    <a class="nav-link" href="../para/titles-sections/s.html">s# - Section heading</a>
   </li>
 </ul>
   </li>
   <li class="nav-item" data-depth="2">
     <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="paragraphs/index.html">Paragraphs</a>
+    <a class="nav-link" href="../para/paragraphs/index.html">Paragraphs</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="paragraphs/p.html">p - Paragraph</a>
+    <a class="nav-link" href="../para/paragraphs/p.html">p - Paragraph</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="paragraphs/m.html">m - Continuation (margin)</a>
+    <a class="nav-link" href="../para/paragraphs/m.html">m - Continuation (margin)</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="paragraphs/po.html">p - Letter opening</a>
+    <a class="nav-link" href="../para/paragraphs/po.html">p - Letter opening</a>
   </li>
 </ul>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="poetry/index.html">Poetry</a>
+    <a class="nav-link" href="../para/poetry/index.html">Poetry</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="lists/index.html">Lists</a>
+    <a class="nav-link" href="../para/lists/index.html">Lists</a>
   </li>
 </ul>
   </li>
@@ -136,10 +136,10 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="../note/index.html">Notes</a>
+    <a class="nav-link" href="index.html">Notes</a>
 <ul class="nav-list">
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../note/f.html">f - Footnote</a>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="f.html">f - Footnote</a>
   </li>
 </ul>
   </li>
@@ -174,76 +174,179 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">USFM / USX Docs</a></li>
-    <li><a href="index.html">Paragraph Styles</a></li>
+    <li><a href="index.html">Notes</a></li>
+    <li><a href="f.html">f - Footnote</a></li>
   </ul>
 </nav>
-  <div class="edit-this-page"><a href="https://github.com/usfm-bible/tcdocs/edit/main/manual/antora/modules/para/pages/index.adoc">Edit this Page</a></div>
+  <div class="edit-this-page"><a href="https://github.com/usfm-bible/tcdocs/edit/main/manual/antora/modules/note/pages/f.adoc">Edit this Page</a></div>
   </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">Paragraph Styles</h1>
+<h1 class="page">f</h1>
 <div class="sect1">
 <h2 id="_summary"><a class="anchor" href="#_summary"></a>Summary</h2>
 <div class="sectionbody">
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Description</dt>
+<dd>
+<p>A footnote container. Footnotes are entered inline within the main scripture body text. The boundaries of the footnote text are defined by an opening and closing marker. Footnote-related character elements make up the footnote content.</p>
+</dd>
+<dt class="hdlist1">Syntax</dt>
+<dd>
+<p><code>\f_&lt;caller&gt;_(\fr_&lt;C#:V#:&gt;_)&lt;content&gt;\f*</code></p>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>caller</code></dt>
+<dd>
+<p>Footnote caller</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>+</code> - The caller should be generated automatically by the translation editor, or publishing tools</p>
+</li>
+<li>
+<p><code>-</code> - No caller should be generated or used.</p>
+</li>
+<li>
+<p><code>?</code> - Where  <code>?`</code> represents the character to be used for the caller.</p>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1"><code>C#:V#:</code></dt>
+<dd>
+<p>Chapter-verse reference. The chapter-verse separator and end-of-reference punctuation are text specific.</p>
+</dd>
+<dt class="hdlist1"><code>content</code></dt>
+<dd>
+<p>The footnote-related character elements and text which make up the footnote content.</p>
+</dd>
+</dl>
+</div>
+</dd>
+<dt class="hdlist1">Added</dt>
+<dd>
+<p>1.0</p>
+</dd>
+</dl>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+See the Syntax Notes for information on the use of endmarkers for elements within footnote content.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_properties"><a class="anchor" href="#_properties"></a>Properties</h2>
+<div class="sectionbody">
+<div class="dlist">
+<dl>
+<dt class="hdlist1">StyleType</dt>
+<dd>
+<p>Note</p>
+</dd>
+<dt class="hdlist1">OccursUnder</dt>
+<dd>
+<p><code>c cp lh li li1 li2 li3 li4 lf lim lim1 lim2 lim3 lim4 m mi nb p pc ph phi pi pi1 pi2 pi3 pr pmo pm pmc pmr po q q1 q2 q3 q4 qc qr qd qm qm1 qm2 qm3 qs sp tc1 tc2 tc3 tc4 mt mt1 mt2 mt3 ms ms1 ms2 ms3 s s1 s2 s3 d ip</code></p>
+</dd>
+<dt class="hdlist1">TextType</dt>
+<dd>
+<p>NoteText</p>
+</dd>
+<dt class="hdlist1">TextProperties</dt>
+<dd>
+<p>publishable, vernacular, note</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_usfm_structure"><a class="anchor" href="#_usfm_structure"></a>USFM Structure</h2>
+<div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="_images/schema/f_rail.svg" alt="f rail">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/schema/fchar_rail.svg" alt="fchar rail">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/schema/cat_rail.svg" alt="cat rail">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/schema/ref_rail.svg" alt="ref rail">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_usx_structure"><a class="anchor" href="#_usx_structure"></a>USX Structure</h2>
+<div class="sectionbody">
+<div class="imageblock">
+<div class="content">
+<img src="_images/schema/f_usx.svg" alt="f usx">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/schema/fchar_usx.svg" alt="fchar usx">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_examples"><a class="anchor" href="#_examples"></a>Examples</h2>
+<div class="sectionbody">
+<div id="src-note-f_1" class="listingblock">
+<div class="title">Example 1. Mark 1.1 and 1.4 (GNT)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\p
+\v 1 This is the Good News about Jesus Christ, the Son of God. \f + \fr 1.1:
+\ft Some manuscripts do not have \fq the Son of God.\f*
+...
+\p
+\v 4 So John appeared in the desert, baptizing and preaching.\f + \fr 1.4
+\fq John appeared in the desert, baptizing and preaching\ft ; some manuscripts
+have \fqa John the Baptist appeared in the desert, preaching.\f* “Turn away
+from your sins and be baptized,” he told the people, “and God will forgive
+your sins.”</code></pre>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/note/f_1.jpg" alt="Mark 1.1 (caller) (GNT)" width="300">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/note/f_2.jpg" alt="Mark 1.1 and 1.4 (note text) (GNT)" width="600">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_publication_issues"><a class="anchor" href="#_publication_issues"></a>Publication Issues</h2>
+<div class="sectionbody">
 
-</div>
-</div>
-<div class="sect1">
-<h2 id="_usfm"><a class="anchor" href="#_usfm"></a>USFM</h2>
-<div class="sectionbody">
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Syntax</dt>
-<dd>
-<p><code>\{paraStyle}_</code></p>
-</dd>
-</dl>
-</div>
-<div class="sect2">
-<h3 id="_structure"><a class="anchor" href="#_structure"></a>Structure</h3>
-<div class="imageblock">
-<div class="content">
-<img src="_images/schema/p_rail.svg" alt="p rail">
-</div>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="_images/schema/char_rail.svg" alt="char rail">
-</div>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="_images/schema/link_rail.svg" alt="link rail">
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_usx"><a class="anchor" href="#_usx"></a>USX</h2>
-<div class="sectionbody">
-<div class="dlist">
-<dl>
-<dt class="hdlist1">Syntax</dt>
-<dd>
-<p><code>&lt;para style="{paraStyle}"&gt;text...&lt;/para&gt;</code></p>
-</dd>
-</dl>
-</div>
-<div class="sect2">
-<h3 id="_structure_2"><a class="anchor" href="#_structure_2"></a>Structure</h3>
-<div class="paragraph">
-<p><span class="image"><img src="_images/schema/p_usx.svg" alt="p usx"></span></p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="_images/schema/char_usx.svg" alt="char usx">
-</div>
-</div>
-</div>
 </div>
 </div>
 </article>
