@@ -257,7 +257,61 @@
   <li class="nav-item" data-depth="0">
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="../char/index.html">Character Styles</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../char/attributes.html">Attributes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../char/nesting.html">Nesting</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../char/lists/index.html">Lists</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../char/lists/litl.html">litl - Entry total</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../char/lists/lik.html">lik - Entry key</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../char/lists/liv.html">liv - Entry value(s)</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../char/poetry/index.html">Poetry</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../char/poetry/qac.html">qac - Acrostic character</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../char/poetry/qs.html">qs - Selah</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../char/notes/index.html">Notes</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../char/notes/fr.html">fr - Origin reference</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../char/notes/fq.html">fq - Translation quotation</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../char/notes/ft.html">ft - Footnote text</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../char/format/index.html">Formatting</a>
+  </li>
+</ul>
   </li>
 </ul>
   </li>
@@ -269,6 +323,21 @@
 <ul class="nav-list">
   <li class="nav-item is-current-page" data-depth="2">
     <a class="nav-link" href="f.html">f - Footnote</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="fe.html">fe - Endnote</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="x.html">x - Cross Reference</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ef.html">ef - Extended Note</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="ex.html">ex - Extended CrossRef</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="esb.html">esb - Sidebar</a>
   </li>
 </ul>
   </li>
@@ -322,11 +391,17 @@
 <dl>
 <dt class="hdlist1">Description</dt>
 <dd>
-<p>A footnote container. Footnotes are entered inline within the main scripture body text. The boundaries of the footnote text are defined by an opening and closing marker. Footnote-related character elements make up the footnote content.</p>
+<p>A footnote container. Footnotes are entered inline within the main scripture body text. The boundaries of the footnote text are defined by an opening and closing marker. Footnote character style elements make up the footnote content.</p>
 </dd>
 <dt class="hdlist1">Syntax</dt>
 <dd>
-<p><code>\f_&lt;caller&gt;_(\fr_&lt;C#:V#:&gt;_)&lt;content&gt;\f*</code></p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>USFM:</strong> <code>\f_{caller}_{content}\f*</code></p>
+</li>
+<li>
+<p><strong>USX:</strong> <code>&lt;note caller="{caller}" style="f"&gt;{content}&lt;/note&gt;</code></p>
 <div class="dlist">
 <dl>
 <dt class="hdlist1"><code>caller</code></dt>
@@ -346,15 +421,14 @@
 </ul>
 </div>
 </dd>
-<dt class="hdlist1"><code>C#:V#:</code></dt>
-<dd>
-<p>Chapter-verse reference. The chapter-verse separator and end-of-reference punctuation are text specific.</p>
-</dd>
 <dt class="hdlist1"><code>content</code></dt>
 <dd>
-<p>The footnote-related character elements and text which make up the footnote content.</p>
+<p>The footnote character style elements and text which make up the footnote content.</p>
 </dd>
 </dl>
+</div>
+</li>
+</ul>
 </div>
 </dd>
 <dt class="hdlist1">Added</dt>
@@ -388,7 +462,7 @@ See the Syntax Notes for information on the use of endmarkers for elements withi
 </dd>
 <dt class="hdlist1">OccursUnder</dt>
 <dd>
-<p><code>c cp lh li li1 li2 li3 li4 lf lim lim1 lim2 lim3 lim4 m mi nb p pc ph phi pi pi1 pi2 pi3 pr pmo pm pmc pmr po q q1 q2 q3 q4 qc qr qd qm qm1 qm2 qm3 qs sp tc1 tc2 tc3 tc4 mt mt1 mt2 mt3 ms ms1 ms2 ms3 s s1 s2 s3 d ip</code></p>
+<p><code>[ParaWithNote]</code></p>
 </dd>
 <dt class="hdlist1">TextType</dt>
 <dd>

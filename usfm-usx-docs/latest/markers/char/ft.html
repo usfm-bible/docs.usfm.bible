@@ -258,7 +258,61 @@
   <li class="nav-item" data-depth="0">
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="../../char/index.html">Character Styles</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../char/attributes.html">Attributes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../char/nesting.html">Nesting</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../char/lists/index.html">Lists</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../char/lists/litl.html">litl - Entry total</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../char/lists/lik.html">lik - Entry key</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../char/lists/liv.html">liv - Entry value(s)</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../char/poetry/index.html">Poetry</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../char/poetry/qac.html">qac - Acrostic character</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../char/poetry/qs.html">qs - Selah</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../char/notes/index.html">Notes</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../char/notes/fr.html">fr - Origin reference</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../char/notes/fq.html">fq - Translation quotation</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../char/notes/ft.html">ft - Footnote text</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../char/format/index.html">Formatting</a>
+  </li>
+</ul>
   </li>
 </ul>
   </li>
@@ -270,6 +324,21 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../../note/f.html">f - Footnote</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../note/fe.html">fe - Endnote</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../note/x.html">x - Cross Reference</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../note/ef.html">ef - Extended Note</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../note/ex.html">ex - Extended CrossRef</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../note/esb.html">esb - Sidebar</a>
   </li>
 </ul>
   </li>
@@ -326,16 +395,22 @@
 </dd>
 <dt class="hdlist1">Syntax</dt>
 <dd>
-<p><code>\ft_...</code></p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>USFM:</strong> <code>\ft_text...</code></p>
+</li>
+<li>
+<p><strong>USX:</strong> <code>&lt;char style="ft"&gt;text...&lt;/char&gt;</code></p>
+</li>
+</ul>
+</div>
 </dd>
 <dt class="hdlist1">Added</dt>
 <dd>
 <p>1.0</p>
 </dd>
 </dl>
-</div>
-<div class="paragraph">
-<p><em>See also:</em> <a href="note-f.adoc">Footnote</a></p>
 </div>
 </div>
 </div>
@@ -350,7 +425,7 @@
 </dd>
 <dt class="hdlist1">OccursUnder</dt>
 <dd>
-<p><code>f fe ef</code></p>
+<p><code>[FootnoteContent]</code></p>
 </dd>
 <dt class="hdlist1">TextType</dt>
 <dd>
@@ -367,9 +442,7 @@
 <div class="sect1">
 <h2 id="_structure"><a class="anchor" href="#_structure"></a>Structure</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p>'Railroad' type diagram here&#8230;&#8203;</p>
-</div>
+
 </div>
 </div>
 <div class="sect1">
