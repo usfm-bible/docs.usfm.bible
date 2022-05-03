@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>\v :: USFM / USX Docs</title>
+    <title>v :: USFM / USX Docs</title>
     <link rel="canonical" href="https://docs.usfm.bible/usfm-usx-docs/latest/markers/cv/v.html">
     <meta name="description" content="Verse number">
     <meta name="generator" content="Antora 3.0.1">
@@ -76,7 +76,10 @@
   <li class="nav-item" data-depth="0">
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../../cv/index.html">Chapters and Verses</a>
+    <a class="nav-link" href="../../cv/c.html">Chapters</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../cv/v.html">Verses</a>
   </li>
 </ul>
   </li>
@@ -422,7 +425,7 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../../index.html">USFM / USX Docs</a></li>
-    <li><a href="v.html">\v</a></li>
+    <li><a href="v.html">v</a></li>
   </ul>
 </nav>
   <div class="edit-this-page"><a href="https://github.com/usfm-bible/tcdocs/edit/main/manual/antora/modules/markers/pages/cv/v.adoc">Edit this Page</a></div>
@@ -432,7 +435,7 @@
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">\v</h1>
+<h1 class="page">v</h1>
 <div class="sect1">
 <h2 id="_summary"><a class="anchor" href="#_summary"></a>Summary</h2>
 <div class="sectionbody">
@@ -440,11 +443,50 @@
 <dl>
 <dt class="hdlist1">Description</dt>
 <dd>
-<p>Verse number. The marker is followed by the verse number <code>#</code>, followed by a space and verse text.</p>
+<p>Verse number (milestone).</p>
 </dd>
 <dt class="hdlist1">Syntax</dt>
 <dd>
-<p><code>\v_#_</code></p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>USFM:</strong> <code>\v_{vnum}_</code></p>
+</li>
+<li>
+<p><strong>USX:</strong> <code>&lt;verse style="v" number="{vnum}" [@altnumber,pubnumber,sid,eid]" /&gt;</code></p>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><code>vnum</code></dt>
+<dd>
+<p>Verse number</p>
+</dd>
+<dt class="hdlist1">Attributes</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p><code>number</code> -</p>
+</li>
+<li>
+<p><code>altnumber</code> -</p>
+</li>
+<li>
+<p><code>pubnumber</code> -</p>
+</li>
+<li>
+<p><code>sid</code> -</p>
+</li>
+<li>
+<p><code>eid</code> -</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+</li>
+</ul>
+</div>
 </dd>
 <dt class="hdlist1">Added</dt>
 <dd>
@@ -465,7 +507,7 @@
 </dd>
 <dt class="hdlist1">OccursUnder</dt>
 <dd>
-<p><code>lh li li1 li2 li3 li4 lf lim lim1 lim2 lim3 lim4 m mi nb p pc ph phi pi pi1 pi2 pi3 pr pmo pm pmc pmr po q q1 q2 q3 q4 qc qr qd qm qm1 qm2 qm3 tr tc1 tc2 tc3 tc4 tcr1 tcr2 tcr3 tcr4 s3 d sp</code></p>
+<p><code>[ParaWithVerse]</code></p>
 </dd>
 <dt class="hdlist1">TextType</dt>
 <dd>
@@ -480,10 +522,21 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="_structure"><a class="anchor" href="#_structure"></a>Structure</h2>
+<h2 id="_diagram"><a class="anchor" href="#_diagram"></a>Diagram</h2>
 <div class="sectionbody">
+<div class="sect2">
+<h3 id="_usfm"><a class="anchor" href="#_usfm"></a>USFM</h3>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/schema/verse_rail.svg" alt="verse rail">
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_usx"><a class="anchor" href="#_usx"></a>USX</h3>
 <div class="paragraph">
-<p>'Railroad' type diagram here&#8230;&#8203;</p>
+<p><span class="image"><img src="../_images/schema/verse_usx.svg" alt="verse usx"></span></p>
+</div>
 </div>
 </div>
 </div>
