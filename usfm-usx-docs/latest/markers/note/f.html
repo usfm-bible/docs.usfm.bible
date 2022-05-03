@@ -76,10 +76,16 @@
   <li class="nav-item" data-depth="0">
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../cv/index.html">Chapters and Verses</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../../cv/c.html">Chapters</a>
   </li>
-  <li class="nav-item" data-depth="1">
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../../cv/v.html">Verses</a>
+  </li>
+</ul>
   </li>
 </ul>
   </li>
@@ -453,11 +459,9 @@
 <p><strong>USFM:</strong> <code>\f_{caller}_{content}\f*</code></p>
 </li>
 <li>
-<p><strong>USX:</strong> <code>&lt;note caller="{caller}" style="f"&gt;{content}&lt;/note&gt;</code></p>
-</li>
-</ul>
-</div>
-</dd>
+<p><strong>USX:</strong> <code>&lt;note style="f" caller="{caller}"&gt;{content}&lt;/note&gt;</code></p>
+<div class="dlist">
+<dl>
 <dt class="hdlist1"><code>caller</code></dt>
 <dd>
 <p>Note caller</p>
@@ -478,6 +482,12 @@
 <dt class="hdlist1"><code>content</code></dt>
 <dd>
 <p>The footnote character style elements and text.</p>
+</dd>
+</dl>
+</div>
+</li>
+</ul>
+</div>
 </dd>
 <dt class="hdlist1">Added</dt>
 <dd>

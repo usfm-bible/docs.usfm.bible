@@ -75,10 +75,16 @@
   <li class="nav-item" data-depth="0">
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="index.html">Chapters and Verses</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="c.html">Chapters</a>
   </li>
-  <li class="nav-item is-current-page" data-depth="1">
+  <li class="nav-item is-current-page" data-depth="2">
     <a class="nav-link" href="v.html">Verses</a>
+  </li>
+</ul>
   </li>
 </ul>
   </li>
@@ -424,6 +430,7 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">USFM / USX Docs</a></li>
+    <li><a href="index.html">Chapters and Verses</a></li>
     <li><a href="v.html">Verses</a></li>
   </ul>
 </nav>
@@ -459,24 +466,35 @@
 <dd>
 <p>Verse number</p>
 </dd>
-<dt class="hdlist1">Attributes</dt>
+<dt class="hdlist1">Additional attributes</dt>
 <dd>
 <div class="ulist">
 <ul>
 <li>
-<p><code>number</code> -</p>
+<p><code>altnumber</code> - Verse number for an alternate versification scheme.</p>
 </li>
 <li>
-<p><code>altnumber</code> -</p>
+<p><code>pubnumber</code> - Published verse character. The character(s) (number, letter, or both) which should be displayed in a published text, where it is different than the sequential verse number used within the translation editing environment.</p>
 </li>
 <li>
-<p><code>pubnumber</code> -</p>
+<p><code>sid</code><sup>*</sup> - Verse start identifier. A standard book + chapter + verse scripture reference. Book names must be one of <code>[bookCode]</code>. Chapter:verse separator is always a colon &#8216;:&#8217;. <em>Required at verse start milestone.</em></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pattern: <code>[A-Z1-4]{3} ?[a-z0-9\-:]*</code></p>
+</li>
+</ul>
+</div>
 </li>
 <li>
-<p><code>sid</code> -</p>
-</li>
+<p><code>eid</code><sup>*</sup> - Verse end identifier. A standard book + chapter + verse scripture reference. Book names must be one of <code>[bookCode]</code>. Chapter:verse separator is always a colon &#8216;:&#8217;. <em>Required at verse end milestone.</em></p>
+<div class="ulist">
+<ul>
 <li>
-<p><code>eid</code> -</p>
+<p>Pattern: <code>[A-Z1-4]{3} ?[a-z0-9\-:]*</code></p>
+</li>
+</ul>
+</div>
 </li>
 </ul>
 </div>

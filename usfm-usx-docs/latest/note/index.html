@@ -75,10 +75,16 @@
   <li class="nav-item" data-depth="0">
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../cv/index.html">Chapters and Verses</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../cv/c.html">Chapters</a>
   </li>
-  <li class="nav-item" data-depth="1">
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../cv/v.html">Verses</a>
+  </li>
+</ul>
   </li>
 </ul>
   </li>
@@ -449,10 +455,10 @@
 <div class="ulist">
 <ul>
 <li>
-<p><strong>USFM:</strong> <code>\[note@style]_{caller}_\cat_[@category]\cat*{content}\[note@style]*</code></p>
+<p><strong>USFM:</strong> <code>\[note@style]_{caller}_\cat_{category}\cat*{content}\[note@style]*</code></p>
 </li>
 <li>
-<p><strong>USX:</strong> <code>&lt;note style="[note@style]" caller="{caller}" category="[@category]"&gt;{content}&lt;/note&gt;</code></p>
+<p><strong>USX:</strong> <code>&lt;note style="[note@style]" caller="{caller}" category="{category}"&gt;{content}&lt;/note&gt;</code></p>
 <div class="dlist">
 <dl>
 <dt class="hdlist1"><code>note@style</code></dt>
@@ -486,9 +492,9 @@
 </ul>
 </div>
 </dd>
-<dt class="hdlist1"><code>@category</code></dt>
+<dt class="hdlist1"><code>category</code></dt>
 <dd>
-<p>Note category <em>(optional)</em></p>
+<p>Note category</p>
 </dd>
 <dt class="hdlist1"><code>content</code></dt>
 <dd>
