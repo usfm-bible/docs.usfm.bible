@@ -26,3 +26,6 @@ ui:
     #url: https://github.com/asciidoctor/asciidoctor-docs-ui/releases/download/prod-276/ui-bundle.zip
 runtime:
   fetch: true
+antora:
+  extensions:
+  - '@antora/pdf-extension'
