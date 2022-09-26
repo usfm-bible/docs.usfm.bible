@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Character Styles for Visual Formatting :: USFM / USX Docs</title>
+    <title>Character Types for Text Formatting :: USFM / USX Docs</title>
     <link rel="canonical" href="https://docs.usfm.bible/usfm-usx-docs/latest/char/format/index.html">
     <meta name="generator" content="Antora 3.1.1">
     <link rel="stylesheet" href="../../../../_/css/site.css">
@@ -286,6 +286,9 @@
     <a class="nav-link" href="../features/qt.html">qt - Quoted text</a>
   </li>
   <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../features/rb.html">rb - Ruby gloss</a>
+  </li>
+  <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../features/sig.html">sig - Author&#8217;s signature</a>
   </li>
   <li class="nav-item" data-depth="3">
@@ -293,6 +296,18 @@
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../features/tl.html">tl - Transliterated words</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../features/w.html">w - Wordlist entry</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../features/wa.html">wa - Aramaic wordlist entry</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../features/wh.html">wg - Hebrew wordlist entry</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../features/wg.html">wh - Greek wordlist entry</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../features/wj.html">wj - Words of Jesus</a>
@@ -304,12 +319,39 @@
   <li class="nav-item" data-depth="4">
     <a class="nav-link" href="../features/addpn.html">addpn - Addition + name</a>
   </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../features/pro.html">pro - Pronunciation annotation</a>
+  </li>
 </ul>
   </li>
 </ul>
   </li>
   <li class="nav-item is-current-page" data-depth="2">
-    <a class="nav-link" href="index.html">Formatting</a>
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="index.html">Text Formatting</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="bd.html">bd - Bold text</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="it.html">it - Italic text</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="bdit.html">bdit - Bold+italic text</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="no.html">no - Normal text</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="em.html">em - Emphasis text</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="sc.html">sc - Smallcap text</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="sup.html">sup - Smallcap text</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <button class="nav-item-toggle"></button>
@@ -397,6 +439,13 @@
   <li class="nav-item" data-depth="0">
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../fig/fig.html">Figures</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
     <a class="nav-link" href="../../study/index.html">Extended Study Content</a>
 <ul class="nav-list">
@@ -449,7 +498,7 @@
   <ul>
     <li><a href="../../index.html">USFM / USX Docs</a></li>
     <li><a href="../index.html">Characters</a></li>
-    <li><a href="index.html">Formatting</a></li>
+    <li><a href="index.html">Text Formatting</a></li>
   </ul>
 </nav>
   <div class="edit-this-page"><a href="https://github.com/usfm-bible/tcdocs/edit/main/manual/antora/modules/char/pages/format/index.adoc">Edit this Page</a></div>
@@ -459,8 +508,46 @@
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">Character Styles for Visual Formatting</h1>
-
+<h1 class="page">Character Types for Text Formatting</h1>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-caution" title="Caution"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The use of formatting oriented character markup is strongly discouraged. Please search for the appropriate USFM element to markup content, wherever possible.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="bd.html" class="xref page">bd - Bold text</a></p>
+</li>
+<li>
+<p><a href="it.html" class="xref page">it - Italic text</a></p>
+</li>
+<li>
+<p><a href="bdit.html" class="xref page">bdit - Bold+italic text</a></p>
+</li>
+<li>
+<p><a href="no.html" class="xref page">no - Normal text</a></p>
+</li>
+<li>
+<p><a href="em.html" class="xref page">em - Emphasis text</a></p>
+</li>
+<li>
+<p><a href="sc.html" class="xref page">sc - Smallcap text</a></p>
+</li>
+<li>
+<p><a href="sup.html" class="xref page">sup - Smallcap text</a></p>
+</li>
+</ul>
+</div>
 </article>
   </div>
 </main>

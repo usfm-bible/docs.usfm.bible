@@ -287,6 +287,9 @@
     <a class="nav-link" href="../../char/features/qt.html">qt - Quoted text</a>
   </li>
   <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../char/features/rb.html">rb - Ruby gloss</a>
+  </li>
+  <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../../char/features/sig.html">sig - Author&#8217;s signature</a>
   </li>
   <li class="nav-item" data-depth="3">
@@ -294,6 +297,18 @@
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../../char/features/tl.html">tl - Transliterated words</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../char/features/w.html">w - Wordlist entry</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../char/features/wa.html">wa - Aramaic wordlist entry</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../char/features/wh.html">wg - Hebrew wordlist entry</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../char/features/wg.html">wh - Greek wordlist entry</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../../char/features/wj.html">wj - Words of Jesus</a>
@@ -305,12 +320,39 @@
   <li class="nav-item" data-depth="4">
     <a class="nav-link" href="../../char/features/addpn.html">addpn - Addition + name</a>
   </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../char/features/pro.html">pro - Pronunciation annotation</a>
+  </li>
 </ul>
   </li>
 </ul>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../../char/format/index.html">Formatting</a>
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../char/format/index.html">Text Formatting</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../char/format/bd.html">bd - Bold text</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../char/format/it.html">it - Italic text</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../char/format/bdit.html">bdit - Bold+italic text</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../char/format/no.html">no - Normal text</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../char/format/em.html">em - Emphasis text</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../char/format/sc.html">sc - Smallcap text</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../char/format/sup.html">sup - Smallcap text</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <button class="nav-item-toggle"></button>
@@ -392,6 +434,13 @@
 </ul>
   </li>
 </ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../fig/fig.html">Figures</a>
   </li>
 </ul>
   </li>
@@ -495,7 +544,7 @@
 <p>A strong’s ID augmentation identifier, if required, should be separated from the strong value by a colon <code>:</code>. An augmentation is a method of extending Strong’s by aligning it to another lexicon (e.g. Brown-Driver-Briggs). This requires dividing some words into two or more separate words.</p>
 </li>
 <li>
-<p>There are instances where more than one word may need to be included within <code>\w_...\w*</code> because of how Hebrew and Greek use word repetition - e.g. for a superlative. Exodus 29:37 repeats the word ‘holy’ as the superlative form.</p>
+<p>There are instances where more than one word may need to be included within <code>\w_...\w*</code> because of how Hebrew and Greek use word repetitions (e.g. for a superlative). Exodus 29:37 repeats the word ‘holy’ as the superlative form.</p>
 </li>
 </ul>
 </div>
@@ -560,8 +609,31 @@
 <div class="sect1">
 <h2 id="_examples"><a class="anchor" href="#_examples"></a>Examples</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p>Source USFM text and corresponding formatted layout image</p>
+<div id="src-char-w_1" class="listingblock">
+<div class="title">Example 1. Glossay word without attributes</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\w gracious\w*</code></pre>
+</div>
+</div>
+<div id="src-char-w_2" class="listingblock">
+<div class="title">Example 2. Glossay word with unidentified (default) lemma attribute</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\w gracious|grace\w*</code></pre>
+</div>
+</div>
+<div id="src-char-w_3" class="listingblock">
+<div class="title">Example 3. Glossay word with explicit lemma attribute</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\w gracious|lemma="grace"\w*</code></pre>
+</div>
+</div>
+<div id="src-char-w_4" class="listingblock">
+<div class="title">Example 4. Glossay word with lemma and strong</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\w gracious|lemma="grace" strong="G5485"\w*
+\w gracious|strong="G5485"\w*
+\w gracious|strong="H1234,G5485"\w*</code></pre>
+</div>
 </div>
 </div>
 </div>

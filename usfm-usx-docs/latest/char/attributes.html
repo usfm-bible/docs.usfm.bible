@@ -286,6 +286,9 @@
     <a class="nav-link" href="features/qt.html">qt - Quoted text</a>
   </li>
   <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="features/rb.html">rb - Ruby gloss</a>
+  </li>
+  <li class="nav-item" data-depth="3">
     <a class="nav-link" href="features/sig.html">sig - Author&#8217;s signature</a>
   </li>
   <li class="nav-item" data-depth="3">
@@ -293,6 +296,18 @@
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="features/tl.html">tl - Transliterated words</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="features/w.html">w - Wordlist entry</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="features/wa.html">wa - Aramaic wordlist entry</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="features/wh.html">wg - Hebrew wordlist entry</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="features/wg.html">wh - Greek wordlist entry</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="features/wj.html">wj - Words of Jesus</a>
@@ -304,12 +319,39 @@
   <li class="nav-item" data-depth="4">
     <a class="nav-link" href="features/addpn.html">addpn - Addition + name</a>
   </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="features/pro.html">pro - Pronunciation annotation</a>
+  </li>
 </ul>
   </li>
 </ul>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="format/index.html">Formatting</a>
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="format/index.html">Text Formatting</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="format/bd.html">bd - Bold text</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="format/it.html">it - Italic text</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="format/bdit.html">bdit - Bold+italic text</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="format/no.html">no - Normal text</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="format/em.html">em - Emphasis text</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="format/sc.html">sc - Smallcap text</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="format/sup.html">sup - Smallcap text</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <button class="nav-item-toggle"></button>
@@ -397,6 +439,13 @@
   <li class="nav-item" data-depth="0">
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../fig/fig.html">Figures</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
     <a class="nav-link" href="../study/index.html">Extended Study Content</a>
 <ul class="nav-list">
@@ -460,7 +509,122 @@
 </aside>
 <article class="doc">
 <h1 class="page">Character Level Attributes</h1>
-
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>USFM 3 provides a general syntax for adding named attributes to character markers. Attributes define additional properties for the marked content, and are a means of extending the meta-information contained within in a USFM text.</p>
+</div>
+<div class="paragraph">
+<p>USFM <em>formally</em> defines attributes for a <a href="#chars-with-attrib">small set</a> of current character markers, which are relevant to the overall purpose of the marker.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_general_syntax"><a class="anchor" href="#_general_syntax"></a>General Syntax</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Within a character marker span, an attributes list is separated from the text content by a vertical bar <code>|</code>. Attributes are listed as pairs of name and corresponding value using the syntax: <code>attribute="value"</code>. The attribute name is a single ASCII string. The value is wrapped in quotes.</p>
+</div>
+<div id="src-char-w-attrib_1" class="listingblock">
+<div class="title">Example 1. Glossary word with <code>lemma</code> attribute</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\w gracious|lemma="grace"\w*</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_default_attribute"><a class="anchor" href="#_default_attribute"></a>Default Attribute</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>When content is supplied in the position of a marker attribute, but without an explicit attribute name, the USFM specification defines a single default.</p>
+</div>
+<div id="src-char-w-attrib_2" class="listingblock">
+<div class="title">Example 2. Glossary word with un-named default <code>lemma</code> attribute</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\w gracious|grace\w*</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This allows a commonly used attribute (the default) to be expressed with as little additional markup as possible within the text.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_multiple_attribute_values"><a class="anchor" href="#_multiple_attribute_values"></a>Multiple Attribute Values</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In cases where more than one value is needed for an attribute key, the author should provide a comma separated list within the value string. Leading and trailing whitespace adjacent to the comma separators are ignored.</p>
+</div>
+<div id="src-char-w-attrib_3" class="listingblock">
+<div class="title">Example 3. Glossary word with multiple <code>strong</code> values</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\w gracious|strong="H1234,G5485"\w*</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>See the attributes for <a href="features/w.html" class="xref page">wordlist/glossary entry</a> for additional examples.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_multiple_attribute_parts"><a class="anchor" href="#_multiple_attribute_parts"></a>Multiple Attribute Parts</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In cases where an attribute value is composed of multiple parts (e.g. a compound word or phrase), the author can separate the parts using a colon <code>:</code> within the value string.</p>
+</div>
+<div class="paragraph">
+<p>See the <code>gloss</code> attribute for <a href="features/w.html" class="xref page">ruby glosses</a> for an example of the use of this syntax.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_backward_compatibility"><a class="anchor" href="#_backward_compatibility"></a>Backward Compatibility</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Pre-existing markers which formally provide attributes in USFM 3 (or newer) may continue to be used without attributes. <code>\w gracious\w*</code>- (no attributes) remains valid USFM content.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_user_defined_attributes"><a class="anchor" href="#_user_defined_attributes"></a>User Defined Attributes</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Using the general syntax, attributes may be added to any character markers beyond the formalized set for the current version of USFM. These will not be considered strictly USFM compliant, and there is no assurance that they will be supported by compliant software tools or processes. Future versions of USFM may formally provide additional attributes.</p>
+</div>
+<div class="paragraph">
+<p>Any user defined attributes must begin with the prefix <code>x-</code>.</p>
+</div>
+<div id="src-char-w-attrib_4" class="listingblock">
+<div class="title">Example 4. Glossary word with multiple <code>strong</code> values</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\w gracious|x-myattr="metadata"\w*
+\w gracious|lemma="grace" x-myattr="metadata"\w*</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="chars-with-attrib"><a class="anchor" href="#chars-with-attrib"></a>Characters Types Providing Attributes</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><a href="features/w.html" class="xref page">w</a>&#8201;&#8212;&#8201;<code>lemma</code>, <code>strong</code>, <code>srcloc</code></p>
+</li>
+<li>
+<p><a href="features/rb.html" class="xref page">rb</a>&#8201;&#8212;&#8201;<code>gloss</code></p>
+</li>
+<li>
+<p><a href="notes/xt.html" class="xref page">xt</a>&#8201;&#8212;&#8201;<code>link-href</code> - a linking attribute</p>
+</li>
+<li>
+<p><a href="../fig/fig.html" class="xref page">figure</a>&#8201;&#8212;&#8201;<code>alt</code>, <code>src</code>, <code>size</code>, <code>loc</code>, <code>copy</code>, <code>ref</code> - harmonizing the USFM 2.x syntax for this marker with the USFM 3 attribute specification</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
 </article>
   </div>
 </main>
