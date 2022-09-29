@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Figures - fig :: USFM / USX Docs</title>
+    <title>fig (Figure) :: USFM / USX Docs</title>
     <link rel="canonical" href="https://docs.usfm.bible/usfm-usx-docs/latest/fig/fig.html">
     <meta name="generator" content="Antora 3.1.1">
     <link rel="stylesheet" href="../../../_/css/site.css">
@@ -373,13 +373,13 @@
     <a class="nav-link" href="../char/notes/index.html">Notes</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../char/notes/fr.html">fr - Origin reference</a>
+    <a class="nav-link" href="../char/notes/footnote/fr.html">fr - Origin reference</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../char/notes/fq.html">fq - Translation quote</a>
+    <a class="nav-link" href="../char/notes/footnote/fq.html">fq - Translation quote</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../char/notes/ft.html">ft - Note text</a>
+    <a class="nav-link" href="../char/notes/footnote/ft.html">ft - Note text</a>
   </li>
 </ul>
   </li>
@@ -446,25 +446,7 @@
   <li class="nav-item" data-depth="0">
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="../study/index.html">Extended Study Content</a>
-<ul class="nav-list">
-  <li class="nav-item" data-depth="2">
-    <span class="nav-text">Extended Book Introductions</span>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <span class="nav-text">Division/Section Introductions</span>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <span class="nav-text">Extended Notes</span>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../study/esb.html">Sidebar</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <span class="nav-text">Categories</span>
-  </li>
-</ul>
+    <a class="nav-link" href="../sbar/esb.html">Sidebars</a>
   </li>
 </ul>
   </li>
@@ -507,7 +489,7 @@
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">Figures - fig</h1>
+<h1 class="page">fig (Figure)</h1>
 <div id="preamble">
 <div class="sectionbody">
 <div class="admonitionblock caution">
@@ -573,6 +555,9 @@
 </div>
 </dd>
 <dt class="hdlist1">caption</dt>
+<dd>
+<p>Illustration cxaption text.</p>
+</dd>
 </dl>
 </div>
 </li>
@@ -594,7 +579,26 @@
 <div class="sect1">
 <h2 id="_properties"><a class="anchor" href="#_properties"></a>Properties</h2>
 <div class="sectionbody">
-
+<div class="dlist">
+<dl>
+<dt class="hdlist1">StyleType</dt>
+<dd>
+<p>Character</p>
+</dd>
+<dt class="hdlist1">OccursUnder</dt>
+<dd>
+<p><code>[ParaWithFig]</code></p>
+</dd>
+<dt class="hdlist1">TextType</dt>
+<dd>
+<p>Other</p>
+</dd>
+<dt class="hdlist1">TextProperties</dt>
+<dd>
+<p>paragraph publishable vernacular</p>
+</dd>
+</dl>
+</div>
 </div>
 </div>
 <div class="sect1">
@@ -602,18 +606,58 @@
 <div class="sectionbody">
 <div class="sect2">
 <h3 id="_usfm"><a class="anchor" href="#_usfm"></a>USFM</h3>
-
+<div class="imageblock">
+<div class="content">
+<img src="_images/schema/fig_rail.svg" alt="fig rail">
+</div>
+</div>
 </div>
 <div class="sect2">
 <h3 id="_usx"><a class="anchor" href="#_usx"></a>USX</h3>
-
+<div class="imageblock">
+<div class="content">
+<img src="_images/schema/fig_usx.svg" alt="fig usx">
+</div>
+</div>
 </div>
 </div>
 </div>
 <div class="sect1">
 <h2 id="_examples"><a class="anchor" href="#_examples"></a>Examples</h2>
 <div class="sectionbody">
-
+<div id="src-note-fig_1" class="listingblock">
+<div class="title">Example 1. Spanning Columns - Mark 1.18 (GNT)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\p
+\v 16 As Jesus walked along the shore of Lake Galilee, he saw two fishermen,
+Simon and his brother Andrew, catching fish with a net.
+\v 17 Jesus said to them, “Come with me, and I will teach you to catch people.”
+\v 18 At once they left their nets and went with him. \fig At once they left
+their nets.|src="avnt016.jpg" size="span" ref="1.18"\fig*</code></pre>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/fig/fig_1.jpg" alt="Mark 1.18 (GNT)" width="600">
+</div>
+</div>
+<div id="src-note-fig_2" class="listingblock">
+<div class="title">Example 2. Current Column - Mark 1.31 (GNT)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\v 30 Simon's mother-in-law was sick in bed with a fever, and as soon as Jesus
+arrived, he was told about her.
+\v 31 He went to her, took her by the hand, and helped her up. The fever left
+her, and she began to wait on them. \fig Took her by the hand, and...the fever
+left her.|src="avnt017.tif" size="col" ref="1.31"\fig*
+\p
+\v 32 After the sun had set and evening had come ...</code></pre>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/fig/fig_2.jpg" alt="Mark 1.31 (GNT)" width="550">
+</div>
+</div>
 </div>
 </div>
 <div class="sect1">
