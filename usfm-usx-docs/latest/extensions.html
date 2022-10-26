@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>z Namespace :: USFM / USX Docs</title>
-    <link rel="canonical" href="https://docs.usfm.bible/usfm-usx-docs/latest/z-namespace.html">
+    <link rel="canonical" href="https://docs.usfm.bible/usfm-usx-docs/latest/extensions.html">
     <meta name="generator" content="Antora 3.1.1">
     <link rel="stylesheet" href="../../_/css/site.css">
     <script>var uiRootPath = '../../_'</script>
@@ -73,10 +73,10 @@
     <a class="nav-link" href="whitespace.html">Whitespace</a>
   </li>
   <li class="nav-item is-current-page" data-depth="3">
-    <a class="nav-link" href="z-namespace.html">z Namespace</a>
+    <a class="nav-link" href="extensions.html">Extensions</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="docs-syntax.html">Docs Syntax Notes</a>
+    <a class="nav-link" href="syntax-docs.html">Docs Syntax Notes</a>
   </li>
 </ul>
   </li>
@@ -143,7 +143,46 @@
 </ul>
   </li>
   <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="para/introductions/index.html">Introductions</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="para/introductions/imt.html">imt# - Intro major title</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="para/introductions/is.html">is# - Intro section heading</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="para/introductions/ip.html">ip - Intro paragraph</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="para/introductions/ipi.html">ipi - Intro indented</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="para/introductions/im.html">im - Intro margin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="para/introductions/imi.html">imi - Intro indented margin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="para/introductions/ipq.html">ipq - Intro quote</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="para/introductions/imq.html">imq - Intro quote margin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="para/introductions/ipr.html">ipr - Intro right-aligned</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="para/introductions/iq.html">iq# - Intro poetic line</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="para/introductions/ili.html">ili# - Intro list entry</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="para/introductions/ib.html">ib - Intro blank line</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <button class="nav-item-toggle"></button>
@@ -553,10 +592,10 @@
     <li><a href="index.html">USFM / USX Docs</a></li>
     <li><a href="index.html">About USFM and USX</a></li>
     <li><a href="syntax.html">Syntax Notes</a></li>
-    <li><a href="z-namespace.html">z Namespace</a></li>
+    <li><a href="extensions.html">Extensions</a></li>
   </ul>
 </nav>
-  <div class="edit-this-page"><a href="https://github.com/usfm-bible/tcdocs/edit/main/manual/antora/modules/ROOT/pages/z-namespace.adoc">Edit this Page</a></div>
+  <div class="edit-this-page"><a href="https://github.com/usfm-bible/tcdocs/edit/main/manual/antora/modules/ROOT/pages/extensions.adoc">Edit this Page</a></div>
   </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -564,7 +603,9 @@
 </aside>
 <article class="doc">
 <h1 class="page">z Namespace</h1>
-
+<div class="paragraph">
+<p>If private-use markup extensions are required, it is recommended that any user additions begin with <code>\z</code> (e.g. <code>\zMyMarker</code>). Markers in this <code>\z</code> namespace are not considered part of the USFM standard. USFM processors cannot be expected to handle <code>\z</code> markup or associated text, and are free to ignore this markup when it is encountered in a text. It will be the application or user&#8217;s responsibility to support <code>\z</code> markup in ways which meet a local need. Please consider this carefully before introducing non-standard USFM markup within a scripture translation project text.</p>
+</div>
 </article>
   </div>
 </main>

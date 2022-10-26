@@ -73,10 +73,10 @@
     <a class="nav-link" href="whitespace.html">Whitespace</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="z-namespace.html">z Namespace</a>
+    <a class="nav-link" href="extensions.html">Extensions</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="docs-syntax.html">Docs Syntax Notes</a>
+    <a class="nav-link" href="syntax-docs.html">Docs Syntax Notes</a>
   </li>
 </ul>
   </li>
@@ -143,7 +143,46 @@
 </ul>
   </li>
   <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="para/introductions/index.html">Introductions</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="para/introductions/imt.html">imt# - Intro major title</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="para/introductions/is.html">is# - Intro section heading</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="para/introductions/ip.html">ip - Intro paragraph</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="para/introductions/ipi.html">ipi - Intro indented</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="para/introductions/im.html">im - Intro margin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="para/introductions/imi.html">imi - Intro indented margin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="para/introductions/ipq.html">ipq - Intro quote</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="para/introductions/imq.html">imq - Intro quote margin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="para/introductions/ipr.html">ipr - Intro right-aligned</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="para/introductions/iq.html">iq# - Intro poetic line</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="para/introductions/ili.html">ili# - Intro list entry</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="para/introductions/ib.html">ib - Intro blank line</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <button class="nav-item-toggle"></button>
@@ -563,7 +602,164 @@
 </aside>
 <article class="doc">
 <h1 class="page">Syntax Notes</h1>
-
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p><em>See also:</em></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="whitespace.html" class="xref page">Whitespace</a></p>
+</li>
+<li>
+<p><a href="extensions.html" class="xref page">Extensions</a></p>
+</li>
+<li>
+<p><a href="syntax-docs.html" class="xref page">Docs Syntax Notes</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_general_syntax_usfm"><a class="anchor" href="#_general_syntax_usfm"></a>General Syntax (USFM)</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>There are three broad categories of USFM markup - <a href="para/index.html" class="xref page">paragraph</a>, <a href="char/index.html" class="xref page">character</a>, and <a href="note/index.html" class="xref page">note</a> types.</p>
+</li>
+<li>
+<p>All USFM markers begin with a backslash character <code>\</code>.</p>
+</li>
+<li>
+<p><a href="para/index.html" class="xref page">Paragraph</a> markers end with the next space character.</p>
+</li>
+<li>
+<p><a href="char/index.html" class="xref page">Character</a> markers occur in pairs, marking a span of text within a paragraph.</p>
+</li>
+<li>
+<p><a href="note/index.html" class="xref page">Note</a> markers also occur in pairs, marking the start and end of the footnote, cross reference, or study note content.</p>
+</li>
+<li>
+<p>For marker pairs (character and note), the opening marker ends with the next space character (as with paragraph markers). The matching closing marker is identical to the opening marker but ends with an asterisk character <code>*</code>. Example: <code>\w grace\w*</code>.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_numbered_markers"><a class="anchor" href="#_numbered_markers"></a>Numbered Markers</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Some USFM markers include an optional numeric variable, which is represented in this documentation by a hash character <code><mark></code>. In USFM the number indicates:
+* A portion of a complete element, or relative weighting of the "pieces" of the elements, such as <code>\mt1</code>, <code>\mt2</code>, <code>\mt3</code> which are parts of a major title.
+* The level of the division or section (hierarchy).
+* The level of indentation relative to other like elements, as in poetry (<a href="para/poetry/q.html" class="xref page">\q</mark></a>) or lists (<a href="para/lists/li.html" class="xref page">\li#</a>) or outlines (\io#).</p>
+</div>
+<div class="paragraph">
+<p><strong>marker = marker1</strong> — The <em>unnumbered</em> version of a marker should only be used when only one level of this marker exists within the text. <em>Numbered</em> markers should always be used when more than one level of the marker exists within the text.</p>
+</div>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-caution" title="Caution"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>A specific numbered marker should not be used to indicate a specific occurrence of the element type (e.g. you should not use <code>\s3</code> to represent the the particular section heading occuring before the "Story of Creation" in Genesis 1.)</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_endmarkers_in_footnotes_and_cross_references"><a class="anchor" href="#_endmarkers_in_footnotes_and_cross_references"></a>Endmarkers in Footnotes and Cross References</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The boundaries of footnote or cross reference text are defined by an opening and closing marker, as in the following footnote syntax example:</p>
+</div>
+<div id="src-noteSyntax_1" class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\f_+_(\fr_REF_)footnote content\f*</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Elements which make up the footnote or cross reference content are character level markers, which means that they each define a start and a end marker. Some USFM editors interpret the presence of a new character marker as an implicit closure of any preceding character level marker. As a result, most scripture translation projects working with USFM have adopted the approach of authoring footnotes or cross references without supplying the explicit end marker, since this reduces the amount of markup within the notes, and is somewhat easier to read and interpret.</p>
+</div>
+<div class="paragraph">
+<p>Examples of the two markup approaches for notes is provided below:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="title">Example 1. Implicit closure</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">`+\f + \fk Issac: \ft In Hebrew means "laughter"\f*+`</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example 2. Explicit end marker</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">`+\f + \fk Issac:\fk* \ft In Hebrew means "laughter"\ft*\f*+`</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="title">Example 3. Immplicit closure</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\f + \fr 1.14 \fq religious festivals; \ft or \fqa seasons.\f*</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example 4. Explicit end marker</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\f + \fr 1.14\fr* \fq religious festivals;\fq* or \fqa seasons.\fqa*\f*</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="title">Example 5. Implicit closure</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\f + \fr 2.4 \fk The \+nd Lord\+nd*: \ft See \+nd Lord\+nd* in
+Word List.\f*</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Example 6. Explicit end marker</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\f + \fr 2.4\fr* \fk The \+nd Lord\+nd*:\fk* \ft See \+nd Lord\+nd* in
+Word List.\ft*\f*</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p><a href="char/nesting.html" class="xref page">Nested</a> character markers within notes <em>always</em> require explicit opening and closing markers, and must use the syntax for <a href="char/nesting.html" class="xref page">character marker nesting</a>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
 </article>
   </div>
 </main>
