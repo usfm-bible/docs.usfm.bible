@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Character Marker Nesting :: USFM / USX Docs</title>
     <link rel="canonical" href="https://docs.usfm.bible/usfm-usx-docs/latest/char/nesting.html">
-    <meta name="generator" content="Antora 3.1.1">
+    <meta name="generator" content="Antora 3.1.2">
     <link rel="stylesheet" href="../../../_/css/site.css">
     <script>var uiRootPath = '../../../_'</script>
   </head>
@@ -60,7 +60,7 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="../index.html">About USFM and USX</a>
+    <a class="nav-link" href="../index.html">USFM and USX Documentation</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../release-notes.html">Release Notes</a>
@@ -181,6 +181,21 @@
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../para/introductions/ib.html">ib - Intro blank line</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/introductions/iot.html">iot - Intro outline title</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/introductions/io.html">io# - Intro outline entry</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/introductions/iex.html">iex - Intro bridge text</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/introductions/imte.html">imte - Intro major title end</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/introductions/ie.html">ie - Intro end</a>
   </li>
 </ul>
   </li>
@@ -448,6 +463,18 @@
   </li>
   <li class="nav-item" data-depth="2">
     <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="introductions/index.html">Introductions</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="introductions/ior.html">ior - Intro outline refs</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="introductions/iqt.html">iqt - Intro quoted text</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="poetry/index.html">Poetry</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
@@ -505,6 +532,22 @@
     <a class="nav-link" href="notes/footnote/ft.html">ft - Note text</a>
   </li>
 </ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../ms/index.html">Milestones</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ms/qt.html">qt# - Quotations</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ms/ts.html">ts - Translator&#8217;s section</a>
   </li>
 </ul>
   </li>
@@ -602,7 +645,116 @@
 </aside>
 <article class="doc">
 <h1 class="page">Character Marker Nesting</h1>
-
+<div class="sect1">
+<h2 id="_background"><a class="anchor" href="#_background"></a>Background</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>In USFM</strong>, <a href="index.html" class="xref page">character</a> level markup is applied to a span of text within a containing <a href="../para/index.html" class="xref page">paragraph</a>. In some texts, the USFM markup required to identify the content will require nesting one character level marker within another character level marker. In these situations a USFM editor, processor, or publishing system must understand how to interpret or display the nested markup contexts. In some editors (e.g. Paratext), the start of a new character level marker is interpreted as an implicit closure of the the previous character environment. If the intent is to nest the inner character markup, the meaning or formatting applied to the outer marker layer applies to the inner level also. The inner markup adds additional meaning and formatting for the nested text.</p>
+</div>
+<div class="paragraph">
+<p>The most common occurrence for nested character markup is within footnotes, where text occurring within a footnote quotation (\fq), keyword (\fk), or the footnote text (\ft), requires further markup.</p>
+</div>
+<div class="paragraph">
+<p><strong>In USX</strong>, nested elements occur in XML normally without requiring any additional syntax.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_indicating_markup_is_nested"><a class="anchor" href="#_indicating_markup_is_nested"></a>Indicating markup is nested</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>In USFM</strong>, add a plus sign <code>+</code> as a prefix to the opening and closing forms of a nested marker pair to indicate that a nested character environment is starting. The <code>+</code> is added after the backslash, and before the marker text.</p>
+</div>
+<div class="paragraph">
+<p>In the following example text:
+* <code>\+nd</code> indicates to start a new character environment nested inside the existing <code>\add</code> environment (without closing <code>\add</code>)
+* <code>\+nd*</code> indicates to end the nested environment without closing <code>\add</code></p>
+</div>
+<div id="src-char-nesting_1" class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">The following is a \add translator's addition containing
+the word \+nd Lord\+nd* within it\add*</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>All new character marker starts (without the + prefix) close all existing nesting. The next two examples are both valid nested character markup.</p>
+</div>
+<div id="src-char-nesting_2" class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\p ... \add an addition containing the word \+nd Lord\+nd*\add* and
+further text ...</code></pre>
+</div>
+</div>
+<div id="src-char-nesting_3" class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\p ... \add an addition containing the word \+nd Lord\add* and further
+text ...</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If necessary, multiple levels of nesting character markup can occur.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_examples"><a class="anchor" href="#_examples"></a>Examples</h2>
+<div class="sectionbody">
+<div id="src-char-nesting_4" class="listingblock">
+<div class="title">Example 1. USFM: Numbers 21.14 (GNT) - \bk \+nd nested</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\v 14 That is why \bk The Book of the \+nd Lord\+nd*'s Battles\bk* speaks of
+“...the town of Waheb in the area of Suphah, and the valleys; the Arnon River,
+\v 15 and the slope of the valleys that extend to the town of Ar and toward
+the border of Moab.”</code></pre>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/char/bknd-nested_1.jpg" alt="Numbers 21.14 (GNT) - \bk \+nd nested" width="300">
+</div>
+</div>
+<div id="src-char-nesting_5" class="listingblock">
+<div class="title">Example 2. USFM: Genesis 2.4 (GNT) - \fk and \ft \+nd nested</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\s1 The Garden of Eden
+\p When the \nd Lord\nd* \f + \fr 2.4: \fk the \+nd Lord\+nd*: \ft Where the
+Hebrew text has Yahweh, traditionally transliterated as Jehovah, this
+translation employs \+nd Lord\+nd* with capital letters, following a usage
+which is widespread in English versions.\f* God made the universe,
+\v 5 there were no plants on the earth and no seeds had sprouted, because he
+had not sent any rain, and there was no one to cultivate the land;</code></pre>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/char/fknd-nested_1.jpg" alt="Genesis 2.4 (GNT) - \fk and \ft \+nd nested" width="600">
+</div>
+</div>
+<div id="src-usx-char-nesting_5" class="listingblock">
+<div class="title">Example 3. USX: Genesis 2.4 (GNT) - &lt;char style="nd"&gt; within &lt;char style="fk"&gt;</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;para style="s" vid="GEN 2:4"&gt;The Garden of Eden&lt;/para&gt;
+&lt;para style="p" vid="GEN 2:4"&gt;When the &lt;char style="nd"&gt;Lord&lt;/char&gt;
+  &lt;note caller="+" style="f"&gt;
+    &lt;char style="fr" closed="false"&gt;2.4: &lt;/char&gt;
+    &lt;char style="fk" closed="false"&gt;the
+      &lt;char style="nd"&gt;Lord&lt;/char&gt;:
+    &lt;/char&gt;
+    &lt;char style="ft" closed="false"&gt;Where the Hebrew text has Yahweh,
+      traditionally transliterated as Jehovah, this translation employs
+      &lt;char style="nd"&gt;Lord&lt;/char&gt;
+      with capital letters, following a usage which is widespread in
+      English versions.
+    &lt;/char&gt;
+  &lt;/note&gt; God made the universe, &lt;verse eid="GEN 2:4" /&gt;
+  &lt;verse number="5" style="v" sid="GEN 2:5" /&gt;there were no plants on the earth
+  and no seeds had sprouted, because he had not sent any rain, and there was no
+  one to cultivate the land;&lt;verse eid="GEN 2:5" /&gt;
+&lt;/para&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
 </article>
   </div>
 </main>

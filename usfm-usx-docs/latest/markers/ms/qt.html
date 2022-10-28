@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>\qt#-s\* &#8230;&#8203;\qt#-e\* :: USFM / USX Docs</title>
+    <title>qt#-s / qt#-e :: USFM / USX Docs</title>
     <link rel="canonical" href="https://docs.usfm.bible/usfm-usx-docs/latest/markers/ms/qt.html">
-    <meta name="description" content="Quotation start / end milestones">
-    <meta name="generator" content="Antora 3.1.1">
+    <meta name="description" content="Quotation start and end milestones">
+    <meta name="generator" content="Antora 3.1.2">
     <link rel="stylesheet" href="../../../../_/css/site.css">
     <script>var uiRootPath = '../../../../_'</script>
   </head>
@@ -61,7 +61,7 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="../../index.html">About USFM and USX</a>
+    <a class="nav-link" href="../../index.html">USFM and USX Documentation</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../../release-notes.html">Release Notes</a>
@@ -182,6 +182,21 @@
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../../para/introductions/ib.html">ib - Intro blank line</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../para/introductions/iot.html">iot - Intro outline title</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../para/introductions/io.html">io# - Intro outline entry</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../para/introductions/iex.html">iex - Intro bridge text</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../para/introductions/imte.html">imte - Intro major title end</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../para/introductions/ie.html">ie - Intro end</a>
   </li>
 </ul>
   </li>
@@ -449,6 +464,18 @@
   </li>
   <li class="nav-item" data-depth="2">
     <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../char/introductions/index.html">Introductions</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../char/introductions/ior.html">ior - Intro outline refs</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../char/introductions/iqt.html">iqt - Intro quoted text</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="../../char/poetry/index.html">Poetry</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
@@ -506,6 +533,22 @@
     <a class="nav-link" href="../../char/notes/footnote/ft.html">ft - Note text</a>
   </li>
 </ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../ms/index.html">Milestones</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../ms/qt.html">qt# - Quotations</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../ms/ts.html">ts - Translator&#8217;s section</a>
   </li>
 </ul>
   </li>
@@ -591,7 +634,7 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../../index.html">USFM / USX Docs</a></li>
-    <li><a href="qt.html">\qt#-s\* &#8230;&#8203;\qt#-e\*</a></li>
+    <li><a href="qt.html">qt#-s / qt#-e</a></li>
   </ul>
 </nav>
   <div class="edit-this-page"><a href="https://github.com/usfm-bible/tcdocs/edit/main/manual/antora/modules/markers/pages/ms/qt.adoc">Edit this Page</a></div>
@@ -601,7 +644,7 @@
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">\qt#-s\* &#8230;&#8203;\qt#-e\*</h1>
+<h1 class="page">qt#-s / qt#-e</h1>
 <div class="sect1">
 <h2 id="_summary"><a class="anchor" href="#_summary"></a>Summary</h2>
 <div class="sectionbody">
@@ -609,24 +652,64 @@
 <dl>
 <dt class="hdlist1">Description</dt>
 <dd>
-<p>Quotation start / end milestones.</p>
+<p>Quotation start and end milestones. Typically used for indicating the speaker of the text.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>The variable <code>#</code> represents the level of nesting of the quotation being marked (i.e. a quote within a quote).</p>
+</li>
+</ul>
+</div>
 </dd>
 <dt class="hdlist1">Syntax</dt>
 <dd>
-<p><code>\qt#-s\*</code> &#8230;&#8203; <code>\qt#-e\*</code></p>
-</dd>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>USFM:</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>\qt#-s |[@sid,who]\*</code></p>
+</li>
+<li>
+<p><code>\qt#-e |[@eid]\*</code></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>USX:</strong></p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>&lt;ms style="qt#-s" [@sid,who]/&gt;</code></p>
+</li>
+<li>
+<p><code>&lt;ms style="qt#-e" [@eid]/&gt;</code></p>
+<div class="dlist">
+<dl>
 <dt class="hdlist1">Attributes</dt>
-<dd>
-<p><code>who</code></p>
+</dl>
+</div>
+</li>
+<li>
+<p><code>sid</code>, <code>eid</code> - See the <a href="../../ms/index.html#_attributes" class="xref page">attributes for any milestone</a>.</p>
+</li>
+<li>
+<p><code>who</code> - The speak of the quotation <em>(default)</em></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
 </dd>
 <dt class="hdlist1">Added</dt>
 <dd>
 <p>3.0</p>
 </dd>
 </dl>
-</div>
-<div class="paragraph">
-<p><em>See also:</em> <a href="../documentation/milestones.adoc">Milestones</a></p>
 </div>
 </div>
 </div>
@@ -641,20 +724,7 @@
 </dd>
 <dt class="hdlist1">OccursUnder</dt>
 <dd>
-<p><code>id</code></p>
-</dd>
-</dl>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_attributes"><a class="anchor" href="#_attributes"></a>Attributes</h2>
-<div class="sectionbody">
-<div class="dlist">
-<dl>
-<dt class="hdlist1">who</dt>
-<dd>
-<p>Speaker of the quotation <em>(default)</em></p>
+<p><code>[ChapterContent]</code></p>
 </dd>
 </dl>
 </div>
@@ -663,56 +733,70 @@
 <div class="sect1">
 <h2 id="_structure"><a class="anchor" href="#_structure"></a>Structure</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p>'Railroad' type diagram here&#8230;&#8203;</p>
-</div>
+
 </div>
 </div>
 <div class="sect1">
 <h2 id="_examples"><a class="anchor" href="#_examples"></a>Examples</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p>Start and end quotation milestones using <code>who</code> attribute; no levels.</p>
-</div>
 <div id="src-ms-qt_1" class="listingblock">
-<div class="title">Example 1. Matthew 27.11-14 (GNT)</div>
+<div class="title">Example 1. USFM: Mark 15.2 (GNT) - no levels</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\v 11 Jesus stood before the Roman governor, who questioned him. \qt-s |who="Pilate"\*“Are you the king of the Jews?”\qt-e\* he asked.
-\p \qt-s |who="Jesus"\*“So you say,”\qt-e\* answered Jesus.
-\v 12 But he said nothing in response to the accusations of the chief priests and elders.
-\p
-\v 13 So Pilate said to him, \qt-s |who="Pilate"\*“Don't you hear all these things they accuse you of?”\qt-e\*
-\p
-\v 14 But Jesus refused to answer a single word, with the result that the Governor was greatly surprised.</code></pre>
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\p
+\v 1 Early in the morning the chief priests met hurriedly with the elders,
+the teachers of the Law, and the whole Council, and made their plans. They
+put Jesus in chains, led him away, and handed him over to Pilate.
+\v 2 Pilate questioned him, \qt-s |sid="qt.MRK.15:2.1" who="Pilate"\*“Are you
+the king of the Jews?”\qt-e |eid="qt.MRK.15:2.1"\*
+\p Jesus answered, \qt-s |sid="qt.MRK.15:2.2" who="Jesus"\*“So you say.”
+\qt-e |eid="qt.MRK.15:2.2"\*</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>Start and end quotation milestones using <code>who</code>, <code>level</code>, and <code>id</code> attributes.</p>
+<div id="src-usx-ms-qt_1" class="listingblock">
+<div class="title">Example 2. USX: Mark 15.2 (GNT) - no levels</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;para style="p"&gt;
+  &lt;verse number="1" style="v" sid="MRK 15:1"/&gt; Early in the morning the
+  chief priests met hurriedly with the elders, the teachers of the Law, and
+  the whole Council, and made their plans. They put Jesus in chains, led him
+  away, and handed him over to Pilate.&lt;verse eid="MRK 15:1"/&gt;
+  &lt;verse number="2" style="v" sid="MRK 15:2"/&gt;Pilate questioned him,
+  &lt;ms style="qt-s" sid="qt.MRK.15:2.1" who="Pilate"/&gt;“Are you the king of the
+  Jews?”&lt;ms style="qt-e" sid="qt.MRK.15:2.1"/&gt;
+&lt;/para&gt;
+&lt;para style="p" vid="MRK 15:2"&gt;
+  Jesus answered, &lt;ms style="qt-s" sid="qt.MRK.15:2.2" who="Jesus"/&gt;“So you
+  say.”&lt;ms style="qt-e" eid="qt.MRK.15:2.2"/&gt;&lt;verse eid="MRK 15:2"/&gt;
+&lt;/para&gt;</code></pre>
+</div>
 </div>
 <div id="src-ms-qt_2" class="listingblock">
-<div class="title">Example 2. Acts 17.22-31 (GNT)</div>
+<div class="title">Example 3. USFM: Acts 17.22-31 (GNT) - 2 levels</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\p
 \v 22 Paul stood up in front of the city council and said,
-\qt1-s |sid="qt1_ACT_17:22" who="Paul"\*“I see that in every way you Athenians
-are very religious.
+\qt1-s |sid="qt1.ACT.17:22.1" who="Paul"\*“I see that in every way you
+Athenians are very religious.
 \v 23 For as I walked through your city and looked at the places where you
-worship, I found an altar on which is written, ‘To an Unknown God.’ That which
-you worship, then, even though you do not know it, is what I now proclaim to you.
-\v 24 God, who made the world and everything in it, is Lord of heaven and earth
-and does not live in temples made by human hands.
-\v 25 Nor does he need anything that we can supply by working for him, since it
-is he himself who gives life and breath and everything else to everyone
+worship, I found an altar on which is written, ‘To an Unknown God.’ That
+which you worship, then, even though you do not know it, is what I now
+proclaim to you.
+\v 24 God, who made the world and everything in it, is Lord of heaven and
+earth and does not live in temples made by human hands.
+\v 25 Nor does he need anything that we can supply by working for him, since
+it is he himself who gives life and breath and everything else to everyone
 \v 26 From one human being he created all races of people and made them live
-throughout the whole earth. He himself fixed beforehand the exact times and the
-limits of the places where they would live.
-\v 27 He did this so that they would look for him, and perhaps find him as they
-felt around for him. Yet God is actually not far from any one of us;
+throughout the whole earth. He himself fixed beforehand the exact times and
+the limits of the places where they would live.
+\v 27 He did this so that they would look for him, and perhaps find him as
+they felt around for him. Yet God is actually not far from any one of us;
 \v 28 as someone has said,
-\q1 \qt2-s |who="someone"\*‘In him we live and move and exist.’\qt2-e\*
+\q1 \qt2-s |sid="qt2.ACT.17:28.1" who="someone"\*‘In him we live and move
+and exist.’\qt2-e |eid="qt2.ACT.17:28.1"\*
 \b
 \m It is as some of your poets have said,
-\q1 \qt2-s |who="some poets"\*‘We too are his children.’\qt2-e\*
+\q1 \qt2-s |sid="qt2.ACT.17:28.2" who="poets"\*‘We too are his children.’
+\qt2-e |eid="qt2.ACT.17:28.2"\*
 \b
 \m
 \v 29 Since we are God's children, we should not suppose that his nature is
@@ -722,20 +806,60 @@ skill.
 commands all of them everywhere to turn away from their evil ways.
 \v 31 For he has fixed a day in which he will judge the whole world with
 justice by means of a man he has chosen. He has given proof of this to
-everyone by raising that man from death!”\qt1-e |eid="qt1_ACT_17:22"\*</code></pre>
+everyone by raising that man from death!”\qt1-e |eid="qt1_ACT_17:22.1"\*</code></pre>
 </div>
 </div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-The <code>sid</code> and <code>eid</code> attributes in the above example have been formed using a combination of the milestone type and start milestone reference.
-</td>
-</tr>
-</table>
+<div id="src-usx-ms-qt_2" class="listingblock">
+<div class="title">Example 4. USX: Acts 17.22-31 (GNT) - 2 levels</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;para style="p"&gt;
+  &lt;verse number="22" style="v" sid="GEN 7:22"/&gt;
+  Paul stood up in front of the city council and said,
+  &lt;ms style="qt1-s" sid="qt1.ACT.17:22.1" who="Paul"/&gt;“I see that in every
+  way you Athenians are very religious. &lt;verse eid="GEN 7:22"/&gt;
+  &lt;verse number="23" style="v" sid="GEN 7:23"/&gt;For as I walked through your
+  city and looked at the places where you worship, I found an altar on which
+  is written, ‘To an Unknown God.’ That which you worship, then, even though
+  you do not know it, is what I now proclaim to you. &lt;verse eid="GEN 7:23"/&gt;
+  &lt;verse number="24" style="v" sid="GEN 7:24"/&gt;God, who made the world and
+  everything in it, is Lord of heaven and earth and does not live in temples
+  made by human hands.&lt;verse eid="GEN 7:24"/&gt;
+  &lt;verse number="25" style="v" sid="GEN 7:25"/&gt;Nor does he need anything
+  that we can supply by working for him, since it is he himself who gives
+  life and breath and everything else to everyone &lt;verse eid="GEN 7:25"/&gt;
+  &lt;verse number="26" style="v" sid="GEN 7:26"/&gt;From one human being he
+  created all races of people and made them live throughout the whole earth.
+  He himself fixed beforehand the exact times and the limits of the places
+  where they would live.&lt;verse eid="GEN 7:26"/&gt;
+  &lt;verse number="27" style="v" sid="GEN 7:27"/&gt;He did this so that they
+  would look for him, and perhaps find him as they felt around for him. Yet
+  God is actually not far from any one of us; &lt;verse eid="GEN 7:27"/&gt;
+  &lt;verse number="28" style="v" sid="GEN 7:28"/&gt;as someone has said,
+&lt;/para&gt;
+&lt;para style="q1" vid="GEN 7:28"&gt;
+  &lt;ms style="qt2-s" sid="qt2.ACT.17:28.1" who="someone"/&gt;‘In him we live and
+  move and exist.’&lt;ms style="qt2-e" eid="qt2.ACT.17:28.1"/&gt;
+&lt;/para&gt;
+&lt;para style="b" vid="GEN 7:28"/&gt;
+&lt;para style="m" vid="GEN 7:28"&gt;It is as some of your poets have said,&lt;/para&gt;
+&lt;para style="q1" vid="GEN 7:28"&gt;
+  &lt;ms style="qt2-s" sid="qt2.ACT.17:28.2" who="poets"/&gt;‘We too are his
+  children.’&lt;ms style="qt2-e" eid="qt2.ACT.17:28.2"/&gt;&lt;verse eid="GEN 7:28"/&gt;
+&lt;/para&gt;
+&lt;para style="b"/&gt;
+&lt;para style="m"&gt;
+  &lt;verse number="29" style="v" sid="GEN 7:29"/&gt;Since we are God's children,
+  we should not suppose that his nature is anything like an image of gold or
+  silver or stone, shaped by human art and skill.&lt;verse eid="GEN 7:29"/&gt;
+  &lt;verse number="30" style="v" sid="GEN 7:30"/&gt;God has overlooked the times
+  when people did not know him, but now he commands all of them everywhere to
+  turn away from their evil ways.&lt;verse eid="GEN 7:30"/&gt;
+  &lt;verse number="31" style="v" sid="GEN 7:31"/&gt;For he has fixed a day in
+  which he will judge the whole world with justice by means of a man he has
+  chosen. He has given proof of this to everyone by raising that man from
+  death!”&lt;ms style="qt1-e" eid="qt1_ACT_17:22.1"/&gt;&lt;verse eid="GEN 7:31"/&gt;
+&lt;/para&gt;</code></pre>
+</div>
 </div>
 </div>
 </div>

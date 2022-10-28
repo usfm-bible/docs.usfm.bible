@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Character Level Attributes :: USFM / USX Docs</title>
     <link rel="canonical" href="https://docs.usfm.bible/usfm-usx-docs/latest/char/attributes.html">
-    <meta name="generator" content="Antora 3.1.1">
+    <meta name="generator" content="Antora 3.1.2">
     <link rel="stylesheet" href="../../../_/css/site.css">
     <script>var uiRootPath = '../../../_'</script>
   </head>
@@ -60,7 +60,7 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="../index.html">About USFM and USX</a>
+    <a class="nav-link" href="../index.html">USFM and USX Documentation</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../release-notes.html">Release Notes</a>
@@ -181,6 +181,21 @@
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../para/introductions/ib.html">ib - Intro blank line</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/introductions/iot.html">iot - Intro outline title</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/introductions/io.html">io# - Intro outline entry</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/introductions/iex.html">iex - Intro bridge text</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/introductions/imte.html">imte - Intro major title end</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/introductions/ie.html">ie - Intro end</a>
   </li>
 </ul>
   </li>
@@ -448,6 +463,18 @@
   </li>
   <li class="nav-item" data-depth="2">
     <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="introductions/index.html">Introductions</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="introductions/ior.html">ior - Intro outline refs</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="introductions/iqt.html">iqt - Intro quoted text</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="poetry/index.html">Poetry</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
@@ -505,6 +532,22 @@
     <a class="nav-link" href="notes/footnote/ft.html">ft - Note text</a>
   </li>
 </ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../ms/index.html">Milestones</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ms/qt.html">qt# - Quotations</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ms/ts.html">ts - Translator&#8217;s section</a>
   </li>
 </ul>
   </li>
@@ -605,10 +648,7 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>USFM 3 provides a general syntax for adding named attributes to character markers. Attributes define additional properties for the marked content, and are a means of extending the meta-information contained within in a USFM text.</p>
-</div>
-<div class="paragraph">
-<p>USFM <em>formally</em> defines attributes for a <a href="#chars-with-attrib">small set</a> of current character markers, which are relevant to the overall purpose of the marker.</p>
+<p>USFM 3 provides a general syntax for adding named attributes to character markers. Attributes define additional properties for the marked content, and are a means of extending the meta-information contained within in a USFM text. USFM <em>formally</em> defines attributes for a <a href="#chars-with-attrib">selected set</a> of current <a href="index.html" class="xref page">character</a> markers.</p>
 </div>
 </div>
 </div>
@@ -616,13 +656,25 @@
 <h2 id="_general_syntax"><a class="anchor" href="#_general_syntax"></a>General Syntax</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Within a character marker span, an attributes list is separated from the text content by a vertical bar <code>|</code>. Attributes are listed as pairs of name and corresponding value using the syntax: <code>attribute="value"</code>. The attribute name is a single ASCII string. The value is wrapped in quotes.</p>
+<p><strong>In USFM</strong>, within a character marker span an attributes list is separated from the text content by a vertical bar <code>|</code>. Attributes are listed as pairs of name and corresponding value using the syntax: <code>attribute="value"</code>. The attribute name is a single ASCII string. The value is wrapped in quotes.</p>
 </div>
-<div id="src-char-w-attrib_1" class="listingblock">
-<div class="title">Example 1. Glossary word with <code>lemma</code> attribute</div>
+<div id="src-char-w-attrib" class="listingblock">
+<div class="title">Example 1. USFM: Glossary word with <code>lemma</code> attribute</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\w gracious|lemma="grace"\w*</code></pre>
 </div>
+</div>
+<div class="paragraph">
+<p><strong>In USX</strong>, attributes are applied to elements in the standard XML syntax: <code>attribute="value"</code>.</p>
+</div>
+<div id="src-usx-char-w-attrib_1" class="listingblock">
+<div class="title">Example 2. USX: Glossary word with <code>lemma</code> attribute</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;char style="w" lemma="grace"&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Nearly all USX elements contain a required <code>style</code> attribute. For <a href="../para/index.html" class="xref page">&lt;para&gt;</a> and <a href="index.html" class="xref page">&lt;char&gt;</a> elements, the <code>style</code> attribute defines the <a href="../para/index.html" class="xref page">paragraph</a> or <a href="index.html" class="xref page">character</a> type.</p>
 </div>
 </div>
 </div>
@@ -630,16 +682,25 @@
 <h2 id="_default_attribute"><a class="anchor" href="#_default_attribute"></a>Default Attribute</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>When content is supplied in the position of a marker attribute, but without an explicit attribute name, the USFM specification defines a single default.</p>
+<p><strong>In USFM</strong>, when content is supplied in the position of a marker attribute, but without an explicit attribute name, the USFM specification defines a single default.</p>
 </div>
-<div id="src-char-w-attrib_2" class="listingblock">
-<div class="title">Example 2. Glossary word with un-named default <code>lemma</code> attribute</div>
+<div id="src-char-w-attrib-default" class="listingblock">
+<div class="title">Example 3. Glossary word with un-named default <code>lemma</code> attribute</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\w gracious|grace\w*</code></pre>
 </div>
 </div>
 <div class="paragraph">
 <p>This allows a commonly used attribute (the default) to be expressed with as little additional markup as possible within the text.</p>
+</div>
+<div class="paragraph">
+<p>The concept of a "default attribute" is only valid in USFM. <strong>In USX</strong>, XML attributes are always expressed as <code>attribute="value"</code> together.</p>
+</div>
+<div id="src-usx-char-w-attrib_2" class="listingblock">
+<div class="title">Example 4. USX: Glossary word with <code>lemma</code> attribute</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;char style="w" lemma="grace"&gt;</code></pre>
+</div>
 </div>
 </div>
 </div>
@@ -649,8 +710,8 @@
 <div class="paragraph">
 <p>In cases where more than one value is needed for an attribute key, the author should provide a comma separated list within the value string. Leading and trailing whitespace adjacent to the comma separators are ignored.</p>
 </div>
-<div id="src-char-w-attrib_3" class="listingblock">
-<div class="title">Example 3. Glossary word with multiple <code>strong</code> values</div>
+<div id="src-char-w-attrib-strong" class="listingblock">
+<div class="title">Example 5. Glossary word with multiple <code>strong</code> values</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\w gracious|strong="H1234,G5485"\w*</code></pre>
 </div>
@@ -675,7 +736,7 @@
 <h2 id="_backward_compatibility"><a class="anchor" href="#_backward_compatibility"></a>Backward Compatibility</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Pre-existing markers which formally provide attributes in USFM 3 (or newer) may continue to be used without attributes. <code>\w gracious\w*</code>- (no attributes) remains valid USFM content.</p>
+<p>Pre-existing markers which formally provide attributes in USFM 3 (or newer) may continue to be used without attributes. <code>\w gracious\w*</code>(no attributes) remains valid USFM content.</p>
 </div>
 </div>
 </div>
@@ -688,11 +749,18 @@
 <div class="paragraph">
 <p>Any user defined attributes must begin with the prefix <code>x-</code>.</p>
 </div>
-<div id="src-char-w-attrib_4" class="listingblock">
-<div class="title">Example 4. Glossary word with multiple <code>strong</code> values</div>
+<div id="src-char-w-attrib-user" class="listingblock">
+<div class="title">Example 6. USFM: Glossary word with user defined attribute</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\w gracious|x-myattr="metadata"\w*
 \w gracious|lemma="grace" x-myattr="metadata"\w*</code></pre>
+</div>
+</div>
+<div id="src-usx-char-w-attrib-user" class="listingblock">
+<div class="title">Example 7. USX: Glossary word with user defined attribute</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;char style="w" x-myattr="metadata"&gt;gracious&lt;/char&gt;
+&lt;char style="w" lemma="grace" x-myattr="metadata"&gt;gracious&lt;/char&gt;</code></pre>
 </div>
 </div>
 </div>
@@ -709,10 +777,10 @@
 <p><a href="features/rb.html" class="xref page">rb</a>&#8201;&#8212;&#8201;<code>gloss</code></p>
 </li>
 <li>
-<p><a href="notes/crossref/xt.html" class="xref page">xt</a>&#8201;&#8212;&#8201;<code>link-href</code> - a linking attribute</p>
+<p><a href="notes/crossref/xt.html" class="xref page">xt</a>&#8201;&#8212;&#8201;<code>link-href</code> (a linking attribute)</p>
 </li>
 <li>
-<p><a href="../fig/fig.html" class="xref page">figure</a>&#8201;&#8212;&#8201;<code>alt</code>, <code>src</code>, <code>size</code>, <code>loc</code>, <code>copy</code>, <code>ref</code> - harmonizing the USFM 2.x syntax for this marker with the USFM 3 attribute specification</p>
+<p><a href="../fig/fig.html" class="xref page">figure</a>&#8201;&#8212;&#8201;<code>alt</code>, <code>src</code>, <code>size</code>, <code>loc</code>, <code>copy</code>, <code>ref</code> (harmonizing the USFM 2.x syntax for this marker with the USFM 3 attribute specification)</p>
 </li>
 </ul>
 </div>
