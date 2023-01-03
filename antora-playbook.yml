@@ -16,16 +16,19 @@ asciidoc:
   attributes:
     example-caption: false
     listing-caption: false
+    page-pagination: ''
     url-org: https://usfm.bible
     url-project: https://docs.usfm.bible
 ui:
   bundle:
     # Antora default UI
     url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
-    # Asciidoctor docs UI
-    #url: https://github.com/asciidoctor/asciidoctor-docs-ui/releases/download/prod-276/ui-bundle.zip
+    snapshot: true
+  supplemental_files: ./supplemental-ui
 runtime:
   fetch: true
-#antora:
-#  extensions:
-#  - '@antora/pdf-extension'
+antora:
+  extensions:
+  - require: '@antora/lunr-extension'
+    snippet_length: 100
+  - '@antora/pdf-extension'
