@@ -1,0 +1,68 @@
+.navbar {
+  background: #acbe3f;
+}
+
+.nav {
+  background: #efefef;
+}
+
+.navbar-brand {
+  font-weight: 500;
+}
+
+div.content a {
+  color: #98AB28;
+  text-decoration: none;
+}
+div.content a:focus, div.content a:hover {
+  color: #7f8d2c;
+  text-decoration: underline;
+}
+
+.toc .toc-menu a {
+  color: #98AB28;
+  text-decoration: none;
+}
+
+.toc .toc-menu a:focus, .toc .toc-menu a:hover {
+  color: #7f8d2c;
+  text-decoration: underline;
+}
+
+.toc .toc-menu a.is-active {
+  color: #7f8d2c;
+  font-weight: 500;
+  border-width: 2px;
+  border-left-color: #a5a5a5;
+}
+
+.navbar-end .navbar-item.has-dropdown:hover .navbar-link,
+.navbar-end .navbar-link:hover,
+.navbar-end>a.navbar-item:hover {
+    /* background: #efefef; */
+    background: #acbe3f;
+    color: #000
+}
+
+#search-input {
+  width: 250px;
+}
+
+.gitlink {
+  background: url(../images/github.svg) no-repeat 50% 45%;
+  background-size: 50%;
+  display: block;
+  height: 2.5rem;
+  padding: 0;
+  width: 2.5rem;
+}
+
+.navbar-end>a.navbar-item:hover>span.gitlink {
+  background: url(../images/github.svg) no-repeat 50% 45%;
+  background-size: 50%;
+  background-color: #acbe3f;
+  display: block;
+  height: 2.5rem;
+  padding: 0;
+  width: 2.5rem;
+}
