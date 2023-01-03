@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>xt :: USFM / USX Docs</title>
     <link rel="canonical" href="https://docs.usfm.bible/usfm-usx-docs/latest/char/notes/crossref/xt.html">
+    <link rel="prev" href="index.html">
+    <link rel="next" href="../../../ms/index.html">
     <meta name="generator" content="Antora 3.1.2">
     <link rel="stylesheet" href="../../../../../_/css/site.css">
 <link rel="stylesheet" href="../../../../../_/css/site-extra.css">    <script>var uiRootPath = '../../../../../_'</script>
@@ -512,13 +514,52 @@
     <a class="nav-link" href="../index.html">Notes</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../footnote/index.html">Footnotes</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
     <a class="nav-link" href="../footnote/fr.html">fr - Origin reference</a>
   </li>
-  <li class="nav-item" data-depth="3">
+  <li class="nav-item" data-depth="4">
     <a class="nav-link" href="../footnote/fq.html">fq - Translation quote</a>
   </li>
-  <li class="nav-item" data-depth="3">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../footnote/fqa.html">fqa - Alternate translation</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../footnote/fk.html">fk - Keyword</a>
+  </li>
+  <li class="nav-item" data-depth="4">
     <a class="nav-link" href="../footnote/ft.html">ft - Note text</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../footnote/fl.html">fl - Label text</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../footnote/fw.html">fw - Witness list</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../footnote/fp.html">fp - Additional paragraph</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../footnote/fv.html">fv - Verse number</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../footnote/fdc.html">fdc - DC-only content</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../footnote/fm.html">fm - Reference mark</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="index.html">Cross References</a>
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="4">
+    <a class="nav-link" href="xt.html">xt - Target references</a>
+  </li>
+</ul>
   </li>
 </ul>
   </li>
@@ -622,7 +663,10 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../../../index.html">USFM / USX Docs</a></li>
-    <li><a href="xt.html">xt</a></li>
+    <li><a href="../../index.html">Characters</a></li>
+    <li><a href="../index.html">Notes</a></li>
+    <li><a href="index.html">Cross References</a></li>
+    <li><a href="xt.html">xt - Target references</a></li>
   </ul>
 </nav>
   <div class="edit-this-page"><a href="https://github.com/usfm-bible/tcdocs/edit/main/manual/antora/modules/char/pages/notes/crossref/xt.adoc">Edit this Page</a></div>
@@ -633,7 +677,154 @@
 </aside>
 <article class="doc">
 <h1 class="page">xt</h1>
+<div class="sect1">
+<h2 id="_summary"><a class="anchor" href="#_summary"></a>Summary</h2>
+<div class="sectionbody">
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Description</dt>
+<dd>
+<p>Footnote - Note text.</p>
+</dd>
+<dt class="hdlist1">Syntax</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>USFM:</strong> <code>\xt_{content}</code></p>
+</li>
+<li>
+<p><strong>USX:</strong> <code>&lt;char style="xt"&gt;{content}&lt;/char&gt;</code></p>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Attributes</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p><code>link-href</code> - Unambiguously identifies the scripture target reference using a standard scripture reference format. <em>(default)</em></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Book names must be one a standard <a href="../../../para/identification/books.html" class="xref page">book identifier</a>. Chapter verse separator is always a colon <code>:</code>. A string of pattern <code>[A-Z1-4]{3}(-[A-Z1-4]{3})? ?[a-z0-9\-:]*</code></p>
+</li>
+<li>
+<p>In some scenarios a target reference is written in a format which cannot be accurately parsed and identified. Providing the <code>link-href</code> attribute allows greater flexibility in the use of <a href="xt.html" class="xref page">xt</a>.</p>
+</li>
+<li>
+<p>In this context, <code>link-href</code> should only target scripture references for the current text (i.e. references to other project texts or non-scripture URIs are not allowed).</p>
+</li>
+<li>
+<p>When adding <code>link-href</code>, the explicit attribute name is not required since it is defined in USFM as the default for <a href="xt.html" class="xref page">xt</a>.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Added</dt>
+<dd>
+<p>1.0</p>
+</dd>
+<dt class="hdlist1">Updated</dt>
+<dd>
+<p>3.0 (attributes)</p>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>See also: <a href="../../../note/crossref/x.html" class="xref page">Cross Reference</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_properties"><a class="anchor" href="#_properties"></a>Properties</h2>
+<div class="sectionbody">
+<div class="dlist">
+<dl>
+<dt class="hdlist1">StyleType</dt>
+<dd>
+<p>Character</p>
+</dd>
+<dt class="hdlist1">OccursUnder</dt>
+<dd>
+<p><code>[CrossReferenceContent]</code></p>
+</dd>
+<dt class="hdlist1">TextType</dt>
+<dd>
+<p>NoteText</p>
+</dd>
+<dt class="hdlist1">TextProperties</dt>
+<dd>
+<p>publishable, vernacular, note</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_structure"><a class="anchor" href="#_structure"></a>Structure</h2>
+<div class="sectionbody">
 
+</div>
+</div>
+<div class="sect1">
+<h2 id="_examples"><a class="anchor" href="#_examples"></a>Examples</h2>
+<div class="sectionbody">
+<div id="src-char-xt_1" class="listingblock">
+<div class="title">Example 1. Typical Cross Reference - Matthew 2.23 (GNT)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\p
+\v 22 But when Joseph heard that Archelaus had succeeded his father Herod as
+king of Judea, he was afraid to go there. He was given more instructions in a
+dream, so he went to the province of Galilee
+\v 23 \x - \xo 2.23: \xt Mrk 1.24; Luk 2.39; Jhn 1.45.\x* and made his home
+in a town named Nazareth. And so what the prophets had said came true: “He
+will be called a Nazarene.”</code></pre>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../_images/char/xt_1.jpg" alt="Matthew 2.23 (GNT)" width="600">
+</div>
+</div>
+<div id="src-char-xt_2" class="listingblock">
+<div class="title">Example 2. Multiple Origin Parts - Mark 10.19 (GNT)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\p
+\v 18 “Why do you call me good?” Jesus asked him. “No one is good except
+God alone.
+\v 19 \x - \xo 10.19: a \xt Exo 20.13; Deu 5.17; \xo b \xt Exo 20.14;
+Deu 5.18; \xo c \xt Exo 20.15; Deu 5.19; \xo d \xt Exo 20.16; Deu 5.20;
+\xo e \xt Exo 20.12; Deu 5.16.\x* You know the commandments: ‘Do not commit
+murder; do not commit adultery; do not steal; do not accuse anyone falsely;
+do not cheat; respect your father and your mother.’”</code></pre>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../_images/char/xt_2.jpg" alt="Mark 10.19 (GNT)" width="600">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_publication_issues"><a class="anchor" href="#_publication_issues"></a>Publication Issues</h2>
+<div class="sectionbody">
+
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="index.html">Cross References</a></span>
+  <span class="next"><a href="../../../ms/index.html">Milestones</a></span>
+</nav>
 </article>
   </div>
 </main>
