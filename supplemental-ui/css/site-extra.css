@@ -66,3 +66,16 @@ div.content a:focus, div.content a:hover {
   padding: 0;
   width: 2.5rem;
 }
+
+.doc pre.highlight code,
+.doc .listingblock pre:not(.highlight),
+.doc .literalblock pre {
+  background: #efefef;
+  font-size: 0.8rem;
+}
+
+.doc p code,
+.doc thead code,
+.doc .colist > table code {
+  background: #efefef;
+}
