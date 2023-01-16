@@ -19,6 +19,8 @@ asciidoc:
     page-pagination: ''
     url-org: https://usfm.bible
     url-project: https://docs.usfm.bible
+  extensions:
+    - '@asciidoctor/tabs'
 ui:
   bundle:
     # Antora default UI

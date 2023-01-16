@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@asciidoctor/tabs": "^1.0.0-alpha.12"
+  }
+}
