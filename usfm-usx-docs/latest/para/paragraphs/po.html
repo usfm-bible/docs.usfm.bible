@@ -706,9 +706,17 @@
 <div class="sectionbody">
 <div class="dlist">
 <dl>
+<dt class="hdlist1">Type of</dt>
+<dd>
+<p><a href="../index.html" class="xref page">Paragraph</a></p>
+</dd>
 <dt class="hdlist1">Description</dt>
 <dd>
 <p>Letter opening.</p>
+</dd>
+<dt class="hdlist1">Added</dt>
+<dd>
+<p>3.0</p>
 </dd>
 <dt class="hdlist1">Syntax</dt>
 <dd>
@@ -723,49 +731,27 @@
 </ul>
 </div>
 </dd>
-<dt class="hdlist1">Added</dt>
-<dd>
-<p>3.0</p>
-</dd>
 </dl>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_properties"><a class="anchor" href="#_properties"></a>Properties</h2>
-<div class="sectionbody">
-<div class="dlist">
-<dl>
-<dt class="hdlist1">StyleType</dt>
-<dd>
-<p>Paragraph</p>
-</dd>
-<dt class="hdlist1">OccursUnder</dt>
-<dd>
-<p><code>[ChapterContent]</code>, <code>[SidebarContent]</code></p>
-</dd>
-<dt class="hdlist1">TextType</dt>
-<dd>
-<p>VerseText</p>
-</dd>
-<dt class="hdlist1">TextProperties</dt>
-<dd>
-<p>paragraph, publishable, vernacular</p>
-</dd>
-</dl>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_structure"><a class="anchor" href="#_structure"></a>Structure</h2>
-<div class="sectionbody">
-
 </div>
 </div>
 <div class="sect1">
 <h2 id="_examples"><a class="anchor" href="#_examples"></a>Examples</h2>
 <div class="sectionbody">
-<div id="src-para-po_1" class="listingblock">
+<div id="_tabs_1" class="openblock tabs is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_1_usfm" class="tab">
+<p>USFM</p>
+</li>
+<li id="_tabs_1_usx" class="tab">
+<p>USX</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_1_usfm--panel" class="tabpanel" aria-labelledby="_tabs_1_usfm">
+<div id="src-usfm-para-po_1" class="listingblock">
 <div class="title">Example 1. Romans 1.1,7 (GNT)</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\c 1
@@ -784,10 +770,58 @@ his own people:
 \po May God our Father and the Lord Jesus Christ give you grace and peace.</code></pre>
 </div>
 </div>
+</div>
+<div id="_tabs_1_usx--panel" class="tabpanel" aria-labelledby="_tabs_1_usx">
+<div id="src-usx-para-po_1" class="listingblock">
+<div class="title">Example 2. Romans 1.1,7 (GNT)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;chapter number="1" style="c" sid="ROM 1" /&gt;
+&lt;para style="po"&gt;
+  &lt;verse number="1" style="v" sid="ROM 1:1" /&gt;From Paul, a servant of Christ
+  Jesus and an apostle chosen and called by God to preach his Good News.
+  &lt;verse eid="ROM 1:1" /&gt;&lt;/para&gt;
+&lt;para style="p"&gt;
+  &lt;verse number="2" style="v" sid="ROM 1:2" /&gt;The Good News was promised long
+  ago by God through his prophets, as written in the Holy Scriptures. ...
+  &lt;verse eid="ROM 1:2" /&gt;
+  &lt;verse number="6" style="v" sid="ROM 1:6" /&gt;This also includes you who are
+  in Rome, whom God has called to belong to Jesus Christ.&lt;verse eid="ROM 1:6" /&gt;
+  &lt;/para&gt;
+&lt;para style="po"&gt;
+  &lt;verse number="7" style="v" sid="ROM 1:7" /&gt;And so I write to all of you in
+  Rome whom God loves and has called to be his own people:&lt;/para&gt;
+&lt;para style="po" vid="ROM 1:7"&gt;May God our Father and the Lord Jesus Christ
+  give you grace and peace.&lt;verse eid="ROM 1:7" /&gt;&lt;/para&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
 <div class="imageblock">
 <div class="content">
 <img src="../_images/para/po_1.jpg" alt="Romans 1.1 and 7 (GNT)" width="600">
 </div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_properties"><a class="anchor" href="#_properties"></a>Properties</h2>
+<div class="sectionbody">
+<div class="dlist">
+<dl>
+<dt class="hdlist1">OccursUnder</dt>
+<dd>
+<p><code>[ChapterContent]</code>, <code>[SidebarContent]</code></p>
+</dd>
+<dt class="hdlist1">TextType</dt>
+<dd>
+<p>VerseText</p>
+</dd>
+<dt class="hdlist1">TextProperties</dt>
+<dd>
+<p>paragraph, publishable, vernacular</p>
+</dd>
+</dl>
 </div>
 </div>
 </div>
