@@ -9,7 +9,8 @@
     <link rel="next" href="qt.html">
     <meta name="generator" content="Antora 3.1.2">
     <link rel="stylesheet" href="../../../_/css/site.css">
-<link rel="stylesheet" href="../../../_/css/site-extra.css">    <script>var uiRootPath = '../../../_'</script>
+<link rel="stylesheet" href="../../../_/css/site-extra.css">
+<link rel="stylesheet" href="../../../_/css/vendor/tabs.css">    <script>var uiRootPath = '../../../_'</script>
   </head>
   <body class="article">
 <header class="header">
@@ -817,6 +818,19 @@
 </li>
 </ul>
 </div>
+<div id="_tabs_1" class="openblock tabs is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_1_usfm" class="tab">
+<p>USFM</p>
+</li>
+<li id="_tabs_1_usx" class="tab">
+<p>USX</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_1_usfm--panel" class="tabpanel" aria-labelledby="_tabs_1_usfm">
 <div id="src-ms-qt" class="listingblock">
 <div class="title">Example 1. USFM: Milestones for the start and end of a quotation/speaker</div>
 <div class="content">
@@ -825,6 +839,8 @@
 \qt1-e\*</code></pre>
 </div>
 </div>
+</div>
+<div id="_tabs_1_usx--panel" class="tabpanel" aria-labelledby="_tabs_1_usx">
 <div id="src-usx-ms-qt" class="listingblock">
 <div class="title">Example 2. USX: Milestone for the start of a quotation/speaker</div>
 <div class="content">
@@ -835,22 +851,43 @@
 </div>
 </div>
 </div>
+</div>
+</div>
+</div>
 <div class="sect1">
 <h2 id="_standalone_milestones"><a class="anchor" href="#_standalone_milestones"></a>Standalone Milestones</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>This syntax can also be used for standalone milestones, not using start <code>-s</code> and end <code>-e</code> suffixes.</p>
 </div>
+<div id="_tabs_2" class="openblock tabs is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_2_usfm" class="tab">
+<p>USFM</p>
+</li>
+<li id="_tabs_2_usx" class="tab">
+<p>USX</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_2_usfm--panel" class="tabpanel" aria-labelledby="_tabs_2_usfm">
 <div id="src-ms-zms" class="listingblock">
 <div class="title">Example 3. USFM: Standalone milestone (<a href="../extensions.html" class="xref page">\z namespace</a> in this example)</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\zms\*</code></pre>
 </div>
 </div>
+</div>
+<div id="_tabs_2_usx--panel" class="tabpanel" aria-labelledby="_tabs_2_usx">
 <div id="src-usx-ms-zms" class="listingblock">
 <div class="title">Example 4. USX: Standalone milestone</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;ms style="zms"/&gt;</code></pre>
+</div>
+</div>
+</div>
 </div>
 </div>
 <div class="admonitionblock note">
@@ -861,7 +898,7 @@
 </td>
 <td class="content">
 <div class="paragraph">
-<p><em>USFM does not currently define any standalone milestones.</em> This may change with future updates to USFM, as specific needs are identified.</p>
+<p><em>USFM or USX do not currently define any standalone milestones.</em> This may change with future updates, as specific needs are identified.</p>
 </div>
 </td>
 </tr>
@@ -890,6 +927,19 @@
 <div class="paragraph">
 <p>Additional attributes may be available for or required by a specific milestone type (e.g the use of the <code>who</code> attribute in the following quotation milestone example).</p>
 </div>
+<div id="_tabs_3" class="openblock tabs is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_3_usfm" class="tab">
+<p>USFM</p>
+</li>
+<li id="_tabs_3_usx" class="tab">
+<p>USX</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_3_usfm--panel" class="tabpanel" aria-labelledby="_tabs_3_usfm">
 <div id="src-ms-attrib" class="listingblock">
 <div class="title">Example 5. USFM: Milestone attributes sid, eid, who</div>
 <div class="content">
@@ -897,28 +947,33 @@
 \v 1 Early in the morning the chief priests met hurriedly with the elders,
 the teachers of the Law, and the whole Council, and made their plans. They
 put Jesus in chains, led him away, and handed him over to Pilate.
-\v 2 Pilate questioned him, \qt-s |sid="qt.MRK.15:2.1" who="Pilate"\*“Are you
-the king of the Jews?”\qt-e |eid="qt.MRK.15:2.1"\*
+\v 2 Pilate questioned him, \qt-s |sid="qt.MRK.15:2.1" who="Pilate"\*“Are
+you the king of the Jews?”\qt-e |eid="qt.MRK.15:2.1"\*
 \p Jesus answered, \qt-s |sid="qt.MRK.15:2.2" who="Jesus"\*“So you say.”
 \qt-e |eid="qt.MRK.15:2.2"\*</code></pre>
 </div>
 </div>
+</div>
+<div id="_tabs_3_usx--panel" class="tabpanel" aria-labelledby="_tabs_3_usx">
 <div id="src-usx-ms-attrib" class="listingblock">
 <div class="title">Example 6. USX: Milestone attributes sid, eid, who</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;para style="p"&gt;
   &lt;verse number="1" style="v" sid="MRK 15:1" /&gt; Early in the morning the
-  chief priests met hurriedly with the elders, the teachers of the Law, and
-  the whole Council, and made their plans. They put Jesus in chains, led him
-  away, and handed him over to Pilate.&lt;verse eid="MRK 15:1" /&gt;
+  chief priests met hurriedly with the elders, the teachers of the Law,
+  and the whole Council, and made their plans. They put Jesus in chains,
+  led him away, and handed him over to Pilate.&lt;verse eid="MRK 15:1" /&gt;
   &lt;verse number="2" style="v" sid="MRK 15:2" /&gt;Pilate questioned him,
-  &lt;ms style="qt-s" sid="qt.MRK.15:2.1" who="Pilate"/&gt;“Are you the king of the
-  Jews?”&lt;ms style="qt-e" sid="qt.MRK.15:2.1"/&gt;
+  &lt;ms style="qt-s" sid="qt.MRK.15:2.1" who="Pilate"/&gt;“Are you the king of
+  the Jews?”&lt;ms style="qt-e" sid="qt.MRK.15:2.1"/&gt;
 &lt;/para&gt;
 &lt;para style="p" vid="MRK 15:2"&gt;
-  Jesus answered, &lt;ms style="qt-s" sid="qt.MRK.15:2.2" who="Jesus"/&gt;“So you
-  say.”&lt;ms style="qt-e" eid="qt.MRK.15:2.2"/&gt;&lt;verse eid="MRK 15:2" /&gt;
+  Jesus answered, &lt;ms style="qt-s" sid="qt.MRK.15:2.2" who="Jesus"/&gt;“So
+  you say.”&lt;ms style="qt-e" eid="qt.MRK.15:2.2"/&gt;&lt;verse eid="MRK 15:2"/&gt;
 &lt;/para&gt;</code></pre>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -948,6 +1003,7 @@ the king of the Jews?”\qt-e |eid="qt.MRK.15:2.1"\*
 </footer>
 <script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
 <script async src="../../../_/js/vendor/highlight.js"></script>
+<script async src="../../../_/js/vendor/tabs.js"></script>
 <script src="../../../_/js/vendor/lunr.js"></script>
 <script src="../../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../../.." data-snippet-length="100" data-stylesheet="../../../_/css/search.css"></script>
 <script async src="../../../search-index.js"></script>
