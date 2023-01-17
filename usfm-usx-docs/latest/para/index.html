@@ -229,7 +229,7 @@
   </li>
   <li class="nav-item" data-depth="2">
     <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="paragraphs/index.html">Paragraph types</a>
+    <a class="nav-link" href="paragraphs/index.html">Body Paragraphs</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="paragraphs/p.html">p - Paragraph</a>
@@ -713,15 +713,14 @@
 <div class="ulist">
 <ul>
 <li>
-<p><strong>USFM:</strong> <code>\[para@style]_{content}</code></p>
+<p><strong>USFM:</strong> <code>\{para.style}_{content}</code></p>
 </li>
 <li>
-<p><strong>USX:</strong> <code>&lt;para style="[para@style]" vid="{vid}"&gt;{content}&lt;/para&gt;</code></p>
+<p><strong>USX:</strong> <code>&lt;para style="{para.style}" vid="{vid}"&gt;{content}&lt;/para&gt;</code></p>
 <div class="dlist">
 <dl>
-<dt class="hdlist1"><code>para@style</code></dt>
+<dt class="hdlist1"><code>para.style</code></dt>
 <dd>
-<p>Paragraph type</p>
 <div class="ulist">
 <ul>
 <li>
@@ -734,7 +733,7 @@
 <p><a href="titles-sections/index.html" class="xref page">Titles and Sections</a></p>
 </li>
 <li>
-<p><a href="paragraphs/index.html" class="xref page">Paragraph types</a></p>
+<p><a href="paragraphs/index.html" class="xref page">Body Paragraphs</a></p>
 </li>
 <li>
 <p><a href="poetry/index.html" class="xref page">Poetry</a></p>
@@ -750,7 +749,7 @@
 </dd>
 <dt class="hdlist1"><code>vid</code></dt>
 <dd>
-<p>Required to re-identify the current verse whenever the previous <a href="index.html" class="xref page">paragraph</a> or <a href="tables/index.html" class="xref page">table</a> closed prior the end of the current verse text. A standard book + chapter + verse scripture reference. Book names must be one of <code>[bookCode]</code>. Chapter:verse separator is always a colon &#8216;:&#8217;.</p>
+<p>Required to re-identify the current verse whenever the previous <a href="index.html" class="xref page">paragraph</a> or <a href="tables/index.html" class="xref page">table</a> closed prior the end of the current verse text. A standard book + chapter + verse scripture reference. Book names must be a standard 3-character <a href="identification/books.html" class="xref page">book identifier</a>. The Chapter + verse separator is always a colon &#8216;:&#8217;.</p>
 <div class="ulist">
 <ul>
 <li>
@@ -774,20 +773,32 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="_diagram"><a class="anchor" href="#_diagram"></a>Diagram</h2>
+<h2 id="_diagrams"><a class="anchor" href="#_diagrams"></a>Diagrams</h2>
 <div class="sectionbody">
-<div class="sect2">
-<h3 id="_usfm"><a class="anchor" href="#_usfm"></a>USFM</h3>
+<div id="_tabs_1" class="openblock tabs is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_1_usfm" class="tab">
+<p>USFM</p>
+</li>
+<li id="_tabs_1_usx" class="tab">
+<p>USX</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_1_usfm--panel" class="tabpanel" aria-labelledby="_tabs_1_usfm">
 <div class="imageblock">
 <div class="content">
 <img src="_images/schema/p_rail.svg" alt="p rail">
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_usx"><a class="anchor" href="#_usx"></a>USX</h3>
+<div id="_tabs_1_usx--panel" class="tabpanel" aria-labelledby="_tabs_1_usx">
 <div class="paragraph">
 <p><span class="image"><img src="_images/schema/p_usx.svg" alt="p usx"></span></p>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -802,25 +813,25 @@
 <div class="ulist">
 <ul>
 <li>
-<p>Footnotes - [<a href="../note/footnote/index.html" class="xref page">Footnote</a>]</p>
+<p><a href="../note/footnote/index.html" class="xref page">Footnotes</a> <code>[Footnote]</code></p>
 </li>
 <li>
-<p>Cross References - [<a href="../note/crossref/index.html" class="xref page">CrossReference</a>]</p>
+<p><a href="../note/crossref/index.html" class="xref page">Cross References</a> <code>[CrossReference]</code></p>
 </li>
 </ul>
 </div>
 </li>
 <li>
-<p>Characters - [<a href="../char/index.html" class="xref page">Char</a>]</p>
+<p><a href="../char/index.html" class="xref page">Characters</a> <code>[Char]</code></p>
 </li>
 <li>
-<p>Milestones</p>
+<p><a href="../ms/index.html" class="xref page">Milestones</a> <code>[Milestone]</code></p>
 </li>
 <li>
-<p>Figures - [<a href="../fig/fig.html" class="xref page">Figure</a>]</p>
+<p><a href="../fig/fig.html" class="xref page">Figures</a> <code>[Figure]</code></p>
 </li>
 <li>
-<p>Verses - [<a href="../cv/v.html" class="xref page">Verse</a>]</p>
+<p><a href="../cv/v.html" class="xref page">Verses</a> <code>[Verse]</code></p>
 </li>
 </ul>
 </div>

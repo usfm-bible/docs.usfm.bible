@@ -229,7 +229,7 @@
   </li>
   <li class="nav-item" data-depth="2">
     <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="index.html">Paragraph types</a>
+    <a class="nav-link" href="index.html">Body Paragraphs</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="p.html">p - Paragraph</a>
@@ -689,7 +689,7 @@
   <ul>
     <li><a href="../../index.html">USFM / USX Docs</a></li>
     <li><a href="../index.html">Paragraphs</a></li>
-    <li><a href="index.html">Paragraph types</a></li>
+    <li><a href="index.html">Body Paragraphs</a></li>
     <li><a href="pm.html">pm - Embedded paragraph</a></li>
   </ul>
 </nav>
@@ -732,40 +732,22 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="_properties"><a class="anchor" href="#_properties"></a>Properties</h2>
-<div class="sectionbody">
-<div class="dlist">
-<dl>
-<dt class="hdlist1">StyleType</dt>
-<dd>
-<p>Paragraph</p>
-</dd>
-<dt class="hdlist1">OccursUnder</dt>
-<dd>
-<p><code>[ChapterContent] &gt; [ParaWithEmbed]</code>, <code>[SidebarContent] &gt; [ParaWithEmbed]</code></p>
-</dd>
-<dt class="hdlist1">TextType</dt>
-<dd>
-<p>VerseText</p>
-</dd>
-<dt class="hdlist1">TextProperties</dt>
-<dd>
-<p>paragraph, publishable, vernacular</p>
-</dd>
-</dl>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_structure"><a class="anchor" href="#_structure"></a>Structure</h2>
-<div class="sectionbody">
-
-</div>
-</div>
-<div class="sect1">
 <h2 id="_examples"><a class="anchor" href="#_examples"></a>Examples</h2>
 <div class="sectionbody">
-<div id="src-para-pm_1" class="listingblock">
+<div id="_tabs_1" class="openblock tabs is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_1_usfm" class="tab">
+<p>USFM</p>
+</li>
+<li id="_tabs_1_usx" class="tab">
+<p>USX</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_1_usfm--panel" class="tabpanel" aria-labelledby="_tabs_1_usfm">
+<div id="src-usfm-para-pm_1" class="listingblock">
 <div class="title">Example 1. Act 15.24-27,28-29 (CEV)</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\pmo We apostles and leaders send friendly greetings to all of you Gentiles
@@ -783,10 +765,61 @@ same things that we are writing.
 on you...</code></pre>
 </div>
 </div>
+</div>
+<div id="_tabs_1_usx--panel" class="tabpanel" aria-labelledby="_tabs_1_usx">
+<div id="src-usx-para-pm_1" class="listingblock">
+<div class="title">Example 2. Act 15.24-27,28-29 (CEV)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;para style="pmo"&gt;We apostles and leaders send friendly greetings to all of you
+  Gentiles who are followers of the Lord in Antioch, Syria, and Cilicia.&lt;/para&gt;
+&lt;para style="pm"&gt;
+  &lt;verse number="24" style="v" sid="ACT 15:24"/&gt;We have heard that some people
+  from here have terribly upset you by what they said. But we did not send them!
+  &lt;verse eid="ACT 15:24"/&gt;&lt;verse number="25" style="v" sid="ACT 15:25"/&gt;So we met
+  together and decided to choose some men and to send them to you along with our
+  good friends Barnabas and Paul. &lt;verse eid="ACT 15:25"/&gt;
+  &lt;verse number="26" style="v" sid="ACT 15:26"/&gt;These men have risked their lives
+  for our Lord Jesus Christ. &lt;verse eid="ACT 15:26"/&gt;
+  &lt;verse number="27" style="v" sid="ACT 15:27"/&gt;We are also sending Judas and Silas,
+  who will tell you in person the same things that we are writing.
+  &lt;verse eid="ACT 15:27"/&gt;&lt;/para&gt;
+&lt;para style="pm"&gt;
+  &lt;verse number="28" style="v" sid="ACT 15:28"/&gt;The Holy Spirit has shown us that
+  we should not place any extra burden on you...&lt;verse eid="ACT 15:28"/&gt;&lt;/para&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
 <div class="imageblock">
 <div class="content">
 <img src="../_images/para/pm_1.jpg" alt="15.24-27 and 28-29 (CEV)" width="300">
 </div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_properties"><a class="anchor" href="#_properties"></a>Properties</h2>
+<div class="sectionbody">
+<div class="dlist">
+<dl>
+<dt class="hdlist1">StyleType</dt>
+<dd>
+<p><a href="../index.html" class="xref page">Paragraph</a></p>
+</dd>
+<dt class="hdlist1">OccursUnder</dt>
+<dd>
+<p><code>[ChapterContent] &gt; [ParaWithEmbed]</code>, <code>[SidebarContent] &gt; [ParaWithEmbed]</code></p>
+</dd>
+<dt class="hdlist1">TextType</dt>
+<dd>
+<p>VerseText</p>
+</dd>
+<dt class="hdlist1">TextProperties</dt>
+<dd>
+<p>paragraph, publishable, vernacular</p>
+</dd>
+</dl>
 </div>
 </div>
 </div>
