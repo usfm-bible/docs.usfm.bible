@@ -742,16 +742,31 @@
 </ul>
 </div>
 <div class="paragraph">
-<p>USX represents most USFM <a href="../index.html" class="xref page">paragraph</a> and <a href="../../char/index.html" class="xref page">character</a> types with corresponding &lt;para&gt; and &lt;char&gt; tags. For tables, the structures are different. In <strong>USX</strong> the sequence of <code>\tr</code> rows is composed within a <code>&lt;table&gt;...&lt;/table&gt;</code> container.</p>
+<p>USX represents most USFM <a href="../index.html" class="xref page">paragraph</a> and <a href="../../char/index.html" class="xref page">character</a> types with corresponding <code>&lt;para&gt;</code> and <code>&lt;char&gt;</code> tags. For tables, the structures are different. In <strong>USX</strong> the sequence of <code>\tr</code> rows is composed within a <code>&lt;table&gt;...&lt;/table&gt;</code> container.</p>
 </div>
-<div id="src-para-tr_1" class="listingblock">
+<div id="_tabs_1" class="openblock tabs is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_1_usfm" class="tab">
+<p>USFM</p>
+</li>
+<li id="_tabs_1_usx" class="tab">
+<p>USX</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_1_usfm--panel" class="tabpanel" aria-labelledby="_tabs_1_usfm">
+<div id="src-usfm-para-tr_1" class="listingblock">
 <div class="title">Example 1. USFM table structure</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\tr \tc1 {cell 1 content} \tc2 {cell 2 content}
 \tr \tc1 {cell 3 content} \tc2 {cell 4 content}</code></pre>
 </div>
 </div>
-<div id="src-table_1" class="listingblock">
+</div>
+<div id="_tabs_1_usx--panel" class="tabpanel" aria-labelledby="_tabs_1_usx">
+<div id="src-usx-table_1" class="listingblock">
 <div class="title">Example 2. USX table structure</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;table&gt;
@@ -770,22 +785,37 @@
 </div>
 </div>
 </div>
+</div>
+</div>
+</div>
 <div class="sect1">
-<h2 id="_diagram"><a class="anchor" href="#_diagram"></a>Diagram</h2>
+<h2 id="_diagrams"><a class="anchor" href="#_diagrams"></a>Diagrams</h2>
 <div class="sectionbody">
-<div class="sect2">
-<h3 id="_usfm"><a class="anchor" href="#_usfm"></a>USFM</h3>
+<div id="_tabs_2" class="openblock tabs is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_2_usfm" class="tab">
+<p>USFM</p>
+</li>
+<li id="_tabs_2_usx" class="tab">
+<p>USX</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_2_usfm--panel" class="tabpanel" aria-labelledby="_tabs_2_usfm">
 <div class="imageblock">
 <div class="content">
 <img src="../_images/schema/table_rail.svg" alt="table rail">
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_usx"><a class="anchor" href="#_usx"></a>USX</h3>
+<div id="_tabs_2_usx--panel" class="tabpanel" aria-labelledby="_tabs_2_usx">
 <div class="imageblock">
 <div class="content">
 <img src="../_images/schema/table_usx.svg" alt="table usx">
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -797,7 +827,7 @@
 <div class="ulist">
 <ul>
 <li>
-<p>Character Types for Table Cells - [<a href="../../char/tables/index.html" class="xref page">TableContent</a>]</p>
+<p><a href="../../char/tables/index.html" class="xref page">Character Types for Table Cells</a> <code>[TableContent]</code></p>
 <div class="ulist">
 <ul>
 <li>

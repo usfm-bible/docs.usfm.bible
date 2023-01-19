@@ -732,40 +732,22 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="_properties"><a class="anchor" href="#_properties"></a>Properties</h2>
-<div class="sectionbody">
-<div class="dlist">
-<dl>
-<dt class="hdlist1">StyleType</dt>
-<dd>
-<p>Paragraph</p>
-</dd>
-<dt class="hdlist1">OccursUnder</dt>
-<dd>
-<p><code>[ChapterContent]</code>, <code>[SidebarContent]</code></p>
-</dd>
-<dt class="hdlist1">TextType</dt>
-<dd>
-<p>VerseText</p>
-</dd>
-<dt class="hdlist1">TextProperties</dt>
-<dd>
-<p>paragraph, publishable, vernacular, poetic</p>
-</dd>
-</dl>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_structure"><a class="anchor" href="#_structure"></a>Structure</h2>
-<div class="sectionbody">
-
-</div>
-</div>
-<div class="sect1">
 <h2 id="_examples"><a class="anchor" href="#_examples"></a>Examples</h2>
 <div class="sectionbody">
-<div id="src-para-qa_1" class="listingblock">
+<div id="_tabs_1" class="openblock tabs is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_1_usfm" class="tab">
+<p>USFM</p>
+</li>
+<li id="_tabs_1_usx" class="tab">
+<p>USX</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_1_usfm--panel" class="tabpanel" aria-labelledby="_tabs_1_usfm">
+<div id="src-usfm-para-qa_1" class="listingblock">
 <div class="title">Example 1. Psalm 119 (NIV)</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\c 119
@@ -780,10 +762,59 @@
 \q2 By living according to your word.</code></pre>
 </div>
 </div>
+</div>
+<div id="_tabs_1_usx--panel" class="tabpanel" aria-labelledby="_tabs_1_usx">
+<div id="src-usx-para-qa_1" class="listingblock">
+<div class="title">Example 2. Psalm 119 (NIV)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;chapter number="119" style="c" sid="PSA 119"/&gt;
+&lt;para style="qa"&gt;Aleph&lt;/para&gt;
+&lt;para style="q1"&gt;
+  &lt;verse number="1" style="v" sid="PSA 119:1"/&gt;Blessed are they whose ways are
+  blameless,&lt;/para&gt;
+&lt;para style="q2" vid="PSA 119:1"&gt;who walk according to the law of the
+  &lt;char style="nd"&gt;Lord&lt;/char&gt;.&lt;verse eid="PSA 119:1"/&gt;&lt;/para&gt;
+...
+&lt;para style="qa"&gt;Beth&lt;/para&gt;
+&lt;para style="q1"&gt;
+  &lt;verse number="9" style="v" sid="PSA 119:9"/&gt;How can a young man keep his way
+  pure?&lt;/para&gt;
+&lt;para style="q2" vid="PSA 119:9"&gt;By living according to your word.
+  &lt;verse eid="PSA 119:9"/&gt;&lt;/para&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
 <div class="imageblock">
 <div class="content">
 <img src="../_images/para/qa_1.jpg" alt="Psalm 119 (NIV)" width="300">
 </div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_properties"><a class="anchor" href="#_properties"></a>Properties</h2>
+<div class="sectionbody">
+<div class="dlist">
+<dl>
+<dt class="hdlist1">StyleType</dt>
+<dd>
+<p><a href="../index.html" class="xref page">Paragraph</a></p>
+</dd>
+<dt class="hdlist1">OccursUnder</dt>
+<dd>
+<p><code>[ChapterContent]</code>, <code>[SidebarContent]</code></p>
+</dd>
+<dt class="hdlist1">TextType</dt>
+<dd>
+<p>VerseText</p>
+</dd>
+<dt class="hdlist1">TextProperties</dt>
+<dd>
+<p>paragraph, publishable, vernacular, poetic</p>
+</dd>
+</dl>
 </div>
 </div>
 </div>

@@ -708,7 +708,7 @@
 <dl>
 <dt class="hdlist1">Description</dt>
 <dd>
-<p>Semantic division (semantic space). Vertical space used to divide the text into sections, in a manner similar to the structure added through a sequence of heading texts with (ms) or (s). The purpose of <code>sd#</code> is distinct from (b) which primarily denotes whitespace (in particular at poetic stanza breaks) and does not imply a hierarchy or division.</p>
+<p>Semantic division (semantic space). Vertical space used to divide the text into sections, in a manner similar to the structure added through a sequence of heading texts with <a href="ms.html" class="xref page">ms</a> or <a href="s.html" class="xref page">s</a>. The purpose of <a href="sd.html" class="xref page">sd</a> is distinct from <a href="../paragraphs/b.html" class="xref page">b</a> which primarily denotes whitespace (in particular at poetic stanza breaks) and does not imply a hierarchy or division.</p>
 <div class="ulist">
 <ul>
 <li>
@@ -739,40 +739,22 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="_properties"><a class="anchor" href="#_properties"></a>Properties</h2>
-<div class="sectionbody">
-<div class="dlist">
-<dl>
-<dt class="hdlist1">StyleType</dt>
-<dd>
-<p>Paragraph</p>
-</dd>
-<dt class="hdlist1">OccursUnder</dt>
-<dd>
-<p><code>[ChapterContent]</code></p>
-</dd>
-<dt class="hdlist1">TextType</dt>
-<dd>
-<p>Section</p>
-</dd>
-<dt class="hdlist1">TextProperties</dt>
-<dd>
-<p>paragraph, publishable, level_#</p>
-</dd>
-</dl>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_structure"><a class="anchor" href="#_structure"></a>Structure</h2>
-<div class="sectionbody">
-
-</div>
-</div>
-<div class="sect1">
 <h2 id="_examples"><a class="anchor" href="#_examples"></a>Examples</h2>
 <div class="sectionbody">
-<div id="src-para-s1_1" class="listingblock">
+<div id="_tabs_1" class="openblock tabs is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_1_usfm" class="tab">
+<p>USFM</p>
+</li>
+<li id="_tabs_1_usx" class="tab">
+<p>USX</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_1_usfm--panel" class="tabpanel" aria-labelledby="_tabs_1_usfm">
+<div id="src-usfm-para-s1_1" class="listingblock">
 <div class="title">Example 1. Matthew 13.51-54 (NIV “Books of the Bible”).</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\m
@@ -788,6 +770,33 @@ brings out of his storeroom new treasures as well as old.”
 \v 54 Coming to his hometown, he began teaching the people in their synagogue,
 and they were amazed. “Where did this man get this wisdom and these miraculous
 powers?” they asked.</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_1_usx--panel" class="tabpanel" aria-labelledby="_tabs_1_usx">
+<div id="src-usx-para-s1_1" class="listingblock">
+<div class="title">Example 2. Matthew 13.51-54 (NIV “Books of the Bible”).</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;para style="m"&gt;
+  &lt;verse number="51" style="v" sid="MAT 13:51"/&gt;“Have you understood all these
+  things?” Jesus asked.&lt;/para&gt;
+&lt;para style="p" vid="MAT 13:51"&gt;“Yes,” they replied.&lt;verse eid="MAT 13:51"/&gt;
+  &lt;/para&gt;
+&lt;para style="p"&gt;
+  &lt;verse number="52" style="v" sid="MAT 13:52"/&gt;He said to them, “Therefore every
+  teacher of the law who has been instructed about the kingdom of heaven is like
+  the owner of a house who brings out of his storeroom new treasures as well as
+  old.”&lt;verse eid="MAT 13:52"/&gt;&lt;/para&gt;
+&lt;para style="sd2"/&gt;
+&lt;para style="p"&gt;
+  &lt;verse number="53" style="v" sid="MAT 13:53"/&gt;When Jesus had finished these
+  parables, he moved on from there. &lt;verse eid="MAT 13:53"/&gt;&lt;verse number="54"
+    style="v" sid="MAT 13:54"/&gt;Coming to his hometown, he began teaching the
+  people in their synagogue, and they were amazed. “Where did this man get this
+  wisdom and these miraculous powers?” they asked.&lt;verse eid="MAT 13:54"/&gt;&lt;/para&gt;</code></pre>
+</div>
+</div>
+</div>
 </div>
 </div>
 <div class="admonitionblock note">
@@ -806,6 +815,31 @@ In this layout design, chapter and verse numbers are suppressed, and new section
 <div class="content">
 <img src="../_images/para/sd_1.jpg" alt="Matthew 13.51-54 (NIV “Books of the Bible”)" width="500">
 </div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_properties"><a class="anchor" href="#_properties"></a>Properties</h2>
+<div class="sectionbody">
+<div class="dlist">
+<dl>
+<dt class="hdlist1">StyleType</dt>
+<dd>
+<p><a href="../index.html" class="xref page">Paragraph</a></p>
+</dd>
+<dt class="hdlist1">OccursUnder</dt>
+<dd>
+<p><code>[ChapterContent]</code></p>
+</dd>
+<dt class="hdlist1">TextType</dt>
+<dd>
+<p>Section</p>
+</dd>
+<dt class="hdlist1">TextProperties</dt>
+<dd>
+<p>paragraph, publishable, level_#</p>
+</dd>
+</dl>
 </div>
 </div>
 </div>
