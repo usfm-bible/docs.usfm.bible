@@ -714,38 +714,27 @@
 <div class="ulist">
 <ul>
 <li>
-<p><strong>USFM:</strong> <code>\c_{cnum}</code></p>
+<p><strong>USFM:</strong> <code>\c_{number}</code></p>
 </li>
 <li>
-<p><strong>USX:</strong> <code>&lt;chapter style="c" number="{cnum}" [@altnumber,pubnumber,sid,eid]" /&gt;</code></p>
+<p><strong>USX:</strong> <code>&lt;chapter style="c" number="{number}" @altnumber @pubnumber @sid @eid/&gt;</code></p>
 <div class="dlist">
 <dl>
-<dt class="hdlist1"><code>cnum</code></dt>
+<dt class="hdlist1"><code>number</code> *</dt>
 <dd>
 <p>Chapter number</p>
 </dd>
-<dt class="hdlist1">Additional attributes</dt>
+<dt class="hdlist1"><code>altnumber</code></dt>
 <dd>
-<div class="ulist">
-<ul>
-<li>
-<p><code>altnumber</code> - Chapter number for an alternate versification scheme.</p>
-</li>
-<li>
-<p><code>pubnumber</code> - Published chapter character. The character(s) (number, letter, or both) which should be displayed in a published text, where it is different than the sequential chapter number used within the translation editing environment.</p>
-</li>
-<li>
-<p><code>sid</code><sup>*</sup> - Chapter start identifier. A standard book + chapter scripture reference. Book names must be a standard 3-character <a href="../para/identification/books.html" class="xref page">book identifier</a>. <em>Required at chapter start milestone.</em></p>
-<div class="ulist">
-<ul>
-<li>
-<p>Pattern: <code>[A-Z1-4]{3} ?[0-9]+</code></p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p><code>eid</code><sup>*</sup> - Chapter end identifier. A standard book + chapter scripture reference. Book names must be a standard 3-character <a href="../para/identification/books.html" class="xref page">book identifier</a>. <em>Required at chapter end milestone.</em></p>
+<p>Chapter number for an alternate versification scheme.</p>
+</dd>
+<dt class="hdlist1"><code>pubnumber</code></dt>
+<dd>
+<p>Published chapter character. The character(s) (number, letter, or both) which should be displayed in a published text, where it is different than the sequential chapter number used within the translation editing environment.</p>
+</dd>
+<dt class="hdlist1"><code>sid</code> *</dt>
+<dd>
+<p>Chapter start identifier. A standard book + chapter scripture reference. Book names must be a standard 3-character <a href="../para/identification/books.html" class="xref page">book identifier</a>. <em>Required at chapter start milestone.</em></p>
 <div class="ulist">
 <ul>
 <li>
@@ -753,6 +742,14 @@
 </li>
 </ul>
 </div>
+</dd>
+<dt class="hdlist1"><code>eid</code> *</dt>
+<dd>
+<p>Chapter end identifier. A standard book + chapter scripture reference. Book names must be a standard 3-character <a href="../para/identification/books.html" class="xref page">book identifier</a>. <em>Required at chapter end milestone.</em></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Pattern: <code>[A-Z1-4]{3} ?[0-9]+</code></p>
 </li>
 </ul>
 </div>
@@ -772,13 +769,101 @@
 </div>
 </div>
 <div class="sect1">
+<h2 id="_diagrams"><a class="anchor" href="#_diagrams"></a>Diagrams</h2>
+<div class="sectionbody">
+<div id="_tabs_1" class="openblock tabs is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_1_usfm" class="tab">
+<p>USFM</p>
+</li>
+<li id="_tabs_1_usx" class="tab">
+<p>USX</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_1_usfm--panel" class="tabpanel" aria-labelledby="_tabs_1_usfm">
+<div class="imageblock">
+<div class="content">
+<img src="_images/schema/chapter_rail.svg" alt="chapter rail">
+</div>
+</div>
+</div>
+<div id="_tabs_1_usx--panel" class="tabpanel" aria-labelledby="_tabs_1_usx">
+<div class="paragraph">
+<p><span class="image"><img src="_images/schema/chapter_usx.svg" alt="chapter usx"></span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_examples"><a class="anchor" href="#_examples"></a>Examples</h2>
+<div class="sectionbody">
+<div id="_tabs_2" class="openblock tabs is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_2_usfm" class="tab">
+<p>USFM</p>
+</li>
+<li id="_tabs_2_usx" class="tab">
+<p>USX</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_2_usfm--panel" class="tabpanel" aria-labelledby="_tabs_2_usfm">
+<div id="src-usfm-cv-c_1" class="listingblock">
+<div class="title">Example 1. Matthew 1 (GNT)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\io1 The last week in and near Jerusalem (21.1–27.66)
+\io1 The resurrection and appearances of the Lord (28.1-20)
+\c 1
+\s1 The Ancestors of Jesus Christ
+\r (Luke 3.23-38)
+\p
+\v 1 This is the list of the ancestors of Jesus Christ, a descendant of David,
+who was a descendant of Abraham.</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_2_usx--panel" class="tabpanel" aria-labelledby="_tabs_2_usx">
+<div id="src-usx-cv-c_1" class="listingblock">
+<div class="title">Example 2. Matthew 1 (GNT)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;para style="io1"&gt;The last week in and near Jerusalem (21.1–27.66)&lt;/para&gt;
+&lt;para style="io1"&gt;The resurrection and appearances of the Lord (28.1-20)&lt;/para&gt;
+&lt;chapter number="1" style="c" sid="MAT 1"/&gt;
+&lt;para style="s1"&gt;The Ancestors of Jesus Christ&lt;/para&gt;
+&lt;para style="r"&gt;(Luke 3.23-38)&lt;/para&gt;
+&lt;para style="p"&gt;
+  &lt;verse number="1" style="v" sid="MAT 1:1"/&gt;This is the list of the ancestors of
+  Jesus Christ, a descendant of David, who was a descendant of Abraham.
+  &lt;verse eid="MAT 1:1"/&gt;&lt;/para&gt;
+  ...
+&lt;chapter eid="MAT 1"/&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/cv/c_1.jpg" alt="Matthew 1 (GNT)" width="300">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
 <h2 id="_properties"><a class="anchor" href="#_properties"></a>Properties</h2>
 <div class="sectionbody">
 <div class="dlist">
 <dl>
 <dt class="hdlist1">StyleType</dt>
 <dd>
-<p>Paragraph</p>
+<p><a href="../para/index.html" class="xref page">Paragraph</a></p>
 </dd>
 <dt class="hdlist1">OccursUnder</dt>
 <dd>
@@ -793,48 +878,6 @@
 <p>chapter</p>
 </dd>
 </dl>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_diagram"><a class="anchor" href="#_diagram"></a>Diagram</h2>
-<div class="sectionbody">
-<div class="sect2">
-<h3 id="_usfm"><a class="anchor" href="#_usfm"></a>USFM</h3>
-<div class="imageblock">
-<div class="content">
-<img src="_images/schema/chapter_rail.svg" alt="chapter rail">
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_usx"><a class="anchor" href="#_usx"></a>USX</h3>
-<div class="paragraph">
-<p><span class="image"><img src="_images/schema/chapter_usx.svg" alt="chapter usx"></span></p>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_examples"><a class="anchor" href="#_examples"></a>Examples</h2>
-<div class="sectionbody">
-<div id="src-cv-c_1" class="listingblock">
-<div class="title">Example 1. Matthew 1 (GNT)</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\io1 The last week in and near Jerusalem (21.1–27.66)
-\io1 The resurrection and appearances of the Lord (28.1-20)
-\c 1
-\s1 The Ancestors of Jesus Christ
-\r (Luke 3.23-38)
-\p
-\v 1 This is the list of the ancestors of Jesus Christ, a descendant of David,
-who was a descendant of Abraham.</code></pre>
-</div>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="_images/cv/c_1.jpg" alt="Matthew 1 (GNT)" width="300">
-</div>
 </div>
 </div>
 </div>

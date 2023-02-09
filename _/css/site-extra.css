@@ -79,3 +79,12 @@ div.content a:focus, div.content a:hover {
 .doc .colist > table code {
   background: #efefef;
 }
+
+.doc .dlist dt > code {
+  color: #d82445;
+  /* color: #3f7bb8; */
+  /* color: #0047AB; */
+  /* color: mediumblue; */
+  font-size: 0.925rem;
+  font-weight: 500;
+}
