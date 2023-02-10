@@ -403,10 +403,10 @@
     <a class="nav-link" href="../../char/features/wa.html">wa - Aramaic wordlist entry</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../../char/features/wh.html">wg - Hebrew wordlist entry</a>
+    <a class="nav-link" href="../../char/features/wg.html">wg - Greek wordlist entry</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../../char/features/wg.html">wh - Greek wordlist entry</a>
+    <a class="nav-link" href="../../char/features/wh.html">wh - Hebrew wordlist entry</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../../char/features/wj.html">wj - Words of Jesus</a>
@@ -718,15 +718,13 @@
 <p><strong>USX:</strong> <code>&lt;char style="w" [@lemma,strong,srcloc]&gt;{content}&lt;/char&gt;</code></p>
 <div class="dlist">
 <dl>
-<dt class="hdlist1">Attributes</dt>
+<dt class="hdlist1"><code>lemma</code></dt>
 <dd>
-<div class="ulist">
-<ul>
-<li>
-<p><code>lemma</code> - Citation form for the term in the glossary <em>(default)</em></p>
-</li>
-<li>
-<p><code>strong</code> - Strong’s ID in the form <code>H####</code> (Hebrew) or <code>G####</code> (Greek)</p>
+<p>Citation form for the term in the glossary <em>(default attribute)</em></p>
+</dd>
+<dt class="hdlist1"><code>strong</code></dt>
+<dd>
+<p>Strong’s ID in the form <code>H####</code> (Hebrew) or <code>G####</code> (Greek)</p>
 <div class="ulist">
 <ul>
 <li>
@@ -737,12 +735,10 @@
 </li>
 </ul>
 </div>
-</li>
-<li>
-<p><code>srcloc</code> - Location of the word in the source text; Example: GNT version 5 text, book 51, chapter 1, verse 2, word 1.</p>
-</li>
-</ul>
-</div>
+</dd>
+<dt class="hdlist1"><code>srcloc</code></dt>
+<dd>
+<p>Location of the word in the source text; Example: GNT version 5 text, book 51, chapter 1, verse 2, word 1.</p>
 </dd>
 </dl>
 </div>
@@ -763,13 +759,142 @@
 </div>
 </div>
 <div class="sect1">
+<h2 id="_examples"><a class="anchor" href="#_examples"></a>Examples</h2>
+<div class="sectionbody">
+<div id="_tabs_1" class="openblock tabs is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_1_usfm" class="tab">
+<p>USFM</p>
+</li>
+<li id="_tabs_1_usx" class="tab">
+<p>USX</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_1_usfm--panel" class="tabpanel" aria-labelledby="_tabs_1_usfm">
+<div id="src-usfm-char-w_1" class="listingblock">
+<div class="title">Example 1. Glossay word without attributes</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\w gracious\w*</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_1_usx--panel" class="tabpanel" aria-labelledby="_tabs_1_usx">
+<div id="src-usx-char-w_1" class="listingblock">
+<div class="title">Example 2. Glossay word without attributes</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;char style="w"&gt;gracious&lt;/char&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="_tabs_2" class="openblock tabs is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_2_usfm" class="tab">
+<p>USFM</p>
+</li>
+<li id="_tabs_2_usx" class="tab">
+<p>USX</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_2_usfm--panel" class="tabpanel" aria-labelledby="_tabs_2_usfm">
+<div id="src-usfm-char-w_2" class="listingblock">
+<div class="title">Example 3. Glossay word with (unnamed) default "lemma" attribute</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\w gracious|grace\w*</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_2_usx--panel" class="tabpanel" aria-labelledby="_tabs_2_usx">
+<div id="src-usx-char-w_2" class="listingblock">
+<div class="title">Example 4. Glossay word with "lemma" attribute</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;char style="w" lemma="grace"&gt;gracious&lt;/char&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="_tabs_3" class="openblock tabs is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_3_usfm" class="tab">
+<p>USFM</p>
+</li>
+<li id="_tabs_3_usx" class="tab">
+<p>USX</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_3_usfm--panel" class="tabpanel" aria-labelledby="_tabs_3_usfm">
+<div id="src-usfm-char-w_3" class="listingblock">
+<div class="title">Example 5. Glossay word with explicit lemma attribute</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\w gracious|lemma="grace"\w*</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_3_usx--panel" class="tabpanel" aria-labelledby="_tabs_3_usx">
+<div id="src-usx-char-w_3" class="listingblock">
+<div class="title">Example 6. Glossay word with explicit "lemma" attribute</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;char style="w" lemma="grace"&gt;gracious&lt;/char&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="_tabs_4" class="openblock tabs is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_4_usfm" class="tab">
+<p>USFM</p>
+</li>
+<li id="_tabs_4_usfm_2" class="tab">
+<p>USFM</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_4_usfm--panel" class="tabpanel" aria-labelledby="_tabs_4_usfm">
+<div id="src-usfm-char-w_4" class="listingblock">
+<div class="title">Example 7. Glossay word with "lemma" and "strong"</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\w gracious|lemma="grace" strong="G5485"\w*
+\w gracious|strong="G5485"\w*
+\w gracious|strong="H1234,G5485"\w*</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_4_usfm_2--panel" class="tabpanel" aria-labelledby="_tabs_4_usfm_2">
+<div id="src-usx-char-w_4" class="listingblock">
+<div class="title">Example 8. Glossay word with "lemma" and "strong"</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;char style="w" lemma="grace" strong="G5485"&gt;gracious&lt;/char&gt;
+&lt;char style="w" strong="G5485"&gt;gracious&lt;/char&gt;
+&lt;char style="w" strong="H1234,G5485"&gt;gracious&lt;/char&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
 <h2 id="_properties"><a class="anchor" href="#_properties"></a>Properties</h2>
 <div class="sectionbody">
 <div class="dlist">
 <dl>
 <dt class="hdlist1">StyleType</dt>
 <dd>
-<p>Character</p>
+<p><a href="../../char/index.html" class="xref page">Character</a></p>
 </dd>
 <dt class="hdlist1">OccursUnder</dt>
 <dd>
@@ -784,43 +909,6 @@
 <p>publishable, vernacular</p>
 </dd>
 </dl>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_structure"><a class="anchor" href="#_structure"></a>Structure</h2>
-<div class="sectionbody">
-
-</div>
-</div>
-<div class="sect1">
-<h2 id="_examples"><a class="anchor" href="#_examples"></a>Examples</h2>
-<div class="sectionbody">
-<div id="src-char-w_1" class="listingblock">
-<div class="title">Example 1. Glossay word without attributes</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\w gracious\w*</code></pre>
-</div>
-</div>
-<div id="src-char-w_2" class="listingblock">
-<div class="title">Example 2. Glossay word with unidentified (default) lemma attribute</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\w gracious|grace\w*</code></pre>
-</div>
-</div>
-<div id="src-char-w_3" class="listingblock">
-<div class="title">Example 3. Glossay word with explicit lemma attribute</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\w gracious|lemma="grace"\w*</code></pre>
-</div>
-</div>
-<div id="src-char-w_4" class="listingblock">
-<div class="title">Example 4. Glossay word with lemma and strong</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\w gracious|lemma="grace" strong="G5485"\w*
-\w gracious|strong="G5485"\w*
-\w gracious|strong="H1234,G5485"\w*</code></pre>
-</div>
 </div>
 </div>
 </div>

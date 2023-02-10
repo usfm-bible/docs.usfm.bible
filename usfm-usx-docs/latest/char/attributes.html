@@ -404,10 +404,10 @@
     <a class="nav-link" href="features/wa.html">wa - Aramaic wordlist entry</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="features/wh.html">wg - Hebrew wordlist entry</a>
+    <a class="nav-link" href="features/wg.html">wg - Greek wordlist entry</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="features/wg.html">wh - Greek wordlist entry</a>
+    <a class="nav-link" href="features/wh.html">wh - Hebrew wordlist entry</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="features/wj.html">wj - Words of Jesus</a>
@@ -703,7 +703,7 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>USFM 3 provides a general syntax for adding named attributes to character markers. Attributes define additional properties for the marked content, and are a means of extending the meta-information contained within in a USFM text. USFM <em>formally</em> defines attributes for a <a href="#chars-with-attrib">selected set</a> of current <a href="index.html" class="xref page">character</a> markers.</p>
+<p>USFM and USX 3 provide a syntax for adding named attributes to character markers. Attributes define additional properties for the marked content, and are a means of extending the meta-information contained within in a text. USFM <em>formally</em> defines attributes for a <a href="#chars-with-attrib">selected set</a> of current <a href="index.html" class="xref page">character</a> types.</p>
 </div>
 </div>
 </div>
@@ -711,7 +711,7 @@
 <h2 id="_general_syntax"><a class="anchor" href="#_general_syntax"></a>General Syntax</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><strong>In USFM</strong>, within a character marker span an attributes list is separated from the text content by a vertical bar <code>|</code>. Attributes are listed as pairs of name and corresponding value using the syntax: <code>attribute="value"</code>. The attribute name is a single ASCII string. The value is wrapped in quotes.</p>
+<p><strong>In USFM</strong>, within a character marker span an attributes list is separated from the text content by a vertical bar <code>|</code>. Attributes are listed as pairs of name + corresponding value using the syntax: <code>attribute="value"</code>. The attribute name is a single ASCII string. The value is wrapped in quotes.</p>
 </div>
 <div class="paragraph">
 <p><strong>In USX</strong>, attributes are applied to elements in the standard XML syntax: <code>attribute="value"</code>.</p>
@@ -740,14 +740,25 @@
 <div id="src-usx-char-w-attrib_1" class="listingblock">
 <div class="title">Example 2. Glossary word with <code>lemma</code> attribute</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;char style="w" lemma="grace"&gt;</code></pre>
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;char style="w" lemma="grace"&gt;gracious&lt;/char&gt;</code></pre>
 </div>
 </div>
 </div>
 </div>
 </div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
 <div class="paragraph">
 <p>Nearly all USX elements contain a required <code>style</code> attribute. For <a href="../para/index.html" class="xref page">&lt;para&gt;</a> and <a href="index.html" class="xref page">&lt;char&gt;</a> elements, the <code>style</code> attribute defines the <a href="../para/index.html" class="xref page">paragraph</a> or <a href="index.html" class="xref page">character</a> type.</p>
+</div>
+</td>
+</tr>
+</table>
 </div>
 </div>
 </div>
@@ -755,24 +766,39 @@
 <h2 id="_default_attribute"><a class="anchor" href="#_default_attribute"></a>Default Attribute</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><strong>In USFM</strong>, when content is supplied in the position of a marker attribute, but without an explicit attribute name, the USFM specification defines a single default.</p>
+<p><strong>In USFM</strong>, when content is supplied in the position of an attribute, but without an explicit attribute name, the specification defines a single default. This allows a commonly used attribute (the default) to be added with as little additional markup in the text as possible.</p>
 </div>
-<div id="src-char-w-attrib-default" class="listingblock">
+<div class="paragraph">
+<p>The concept of a "default attribute" is only valid in USFM. <strong>In USX</strong>, attributes always need to be expressed fully as <code>attribute="value"</code> together.</p>
+</div>
+<div id="_tabs_2" class="openblock tabs is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_2_usfm" class="tab">
+<p>USFM</p>
+</li>
+<li id="_tabs_2_usx" class="tab">
+<p>USX</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_2_usfm--panel" class="tabpanel" aria-labelledby="_tabs_2_usfm">
+<div id="src-usfm-char-w-attrib-default" class="listingblock">
 <div class="title">Example 3. Glossary word with un-named default <code>lemma</code> attribute</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\w gracious|grace\w*</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>This allows a commonly used attribute (the default) to be expressed with as little additional markup as possible within the text.</p>
 </div>
-<div class="paragraph">
-<p>The concept of a "default attribute" is only valid in USFM. <strong>In USX</strong>, XML attributes are always expressed as <code>attribute="value"</code> together.</p>
-</div>
+<div id="_tabs_2_usx--panel" class="tabpanel" aria-labelledby="_tabs_2_usx">
 <div id="src-usx-char-w-attrib_2" class="listingblock">
 <div class="title">Example 4. USX: Glossary word with <code>lemma</code> attribute</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;char style="w" lemma="grace"&gt;</code></pre>
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;char style="w" lemma="grace"&gt;gracious&lt;/char&gt;</code></pre>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -781,16 +807,40 @@
 <h2 id="_multiple_attribute_values"><a class="anchor" href="#_multiple_attribute_values"></a>Multiple Attribute Values</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>In cases where more than one value is needed for an attribute key, the author should provide a comma separated list within the value string. Leading and trailing whitespace adjacent to the comma separators are ignored.</p>
+<p>In cases where more than one value is needed for an attribute key, use a comma separated list within the value string. Whitespace adjacent to the comma separators is ignored.</p>
 </div>
-<div id="src-char-w-attrib-strong" class="listingblock">
+<div id="_tabs_3" class="openblock tabs is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_3_usfm" class="tab">
+<p>USFM</p>
+</li>
+<li id="_tabs_3_usx" class="tab">
+<p>USX</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_3_usfm--panel" class="tabpanel" aria-labelledby="_tabs_3_usfm">
+<div id="src-usfm-char-w-attrib-strong" class="listingblock">
 <div class="title">Example 5. Glossary word with multiple <code>strong</code> values</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\w gracious|strong="H1234,G5485"\w*</code></pre>
 </div>
 </div>
+</div>
+<div id="_tabs_3_usx--panel" class="tabpanel" aria-labelledby="_tabs_3_usx">
+<div id="src-usx-char-w-attrib-strong" class="listingblock">
+<div class="title">Example 6. Glossary word with multiple <code>strong</code> values</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;char style="w" strong="H1234,G5485"&gt;gracious&lt;/char&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
 <div class="paragraph">
-<p>See the attributes for <a href="features/w.html" class="xref page">wordlist/glossary entry</a> for additional examples.</p>
+<p>See the attributes for <a href="features/w.html" class="xref page">wordlist/glossary entry</a> for other examples.</p>
 </div>
 </div>
 </div>
@@ -798,7 +848,7 @@
 <h2 id="_multiple_attribute_parts"><a class="anchor" href="#_multiple_attribute_parts"></a>Multiple Attribute Parts</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>In cases where an attribute value is composed of multiple parts (e.g. a compound word or phrase), the author can separate the parts using a colon <code>:</code> within the value string.</p>
+<p>In cases where an attribute value is composed of multiple parts (e.g. a compound word or phrase), separate the parts using a colon <code>:</code> within the value string.</p>
 </div>
 <div class="paragraph">
 <p>See the <code>gloss</code> attribute for <a href="features/w.html" class="xref page">ruby glosses</a> for an example of the use of this syntax.</p>
@@ -809,7 +859,7 @@
 <h2 id="_backward_compatibility"><a class="anchor" href="#_backward_compatibility"></a>Backward Compatibility</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Pre-existing markers which formally provide attributes in USFM 3 (or newer) may continue to be used without attributes. <code>\w gracious\w*</code>(no attributes) remains valid USFM content.</p>
+<p>Pre-existing markers which formally provide attributes in USFM/USX 3 (or newer) may continue to be used without attributes. <code>\w gracious\w*</code> (no attributes) and <code>&lt;char style="w"&gt;gracious&lt;/char&gt;</code> remain valid.</p>
 </div>
 </div>
 </div>
@@ -817,29 +867,47 @@
 <h2 id="_user_defined_attributes"><a class="anchor" href="#_user_defined_attributes"></a>User Defined Attributes</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Using the general syntax, attributes may be added to any character markers beyond the formalized set for the current version of USFM. These will not be considered strictly USFM compliant, and there is no assurance that they will be supported by compliant software tools or processes. Future versions of USFM may formally provide additional attributes.</p>
+<p>Using the general syntax above, attributes may be added to any character markers beyond the formalized set in the current version of the USFM/USX specification. These will not be considered strictly canonical, and software supporting USFM/USX may not process user-deined attributes. (Future versions of USFM may formally provide additional attributes within the specification.)</p>
 </div>
 <div class="paragraph">
-<p>Any user defined attributes must begin with the prefix <code>x-</code>.</p>
+<p>User defined attributes must begin with the prefix <code>x-</code>.</p>
 </div>
-<div id="src-char-w-attrib-user" class="listingblock">
-<div class="title">Example 6. USFM: Glossary word with user defined attribute</div>
+<div id="_tabs_4" class="openblock tabs is-loading">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\w gracious|x-myattr="metadata"\w*
-\w gracious|lemma="grace" x-myattr="metadata"\w*</code></pre>
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_4_usfm" class="tab">
+<p>USFM</p>
+</li>
+<li id="_tabs_4_usx" class="tab">
+<p>USX</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_4_usfm--panel" class="tabpanel" aria-labelledby="_tabs_4_usfm">
+<div id="src-usfm-char-w-attrib-user" class="listingblock">
+<div class="title">Example 7. Glossary word with user defined attribute</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\w gracious|x-myattr="value"\w*
+\w gracious|lemma="grace" x-myattr="value"\w*</code></pre>
 </div>
 </div>
+</div>
+<div id="_tabs_4_usx--panel" class="tabpanel" aria-labelledby="_tabs_4_usx">
 <div id="src-usx-char-w-attrib-user" class="listingblock">
-<div class="title">Example 7. USX: Glossary word with user defined attribute</div>
+<div class="title">Example 8. Glossary word with user defined attribute</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;char style="w" x-myattr="metadata"&gt;gracious&lt;/char&gt;
-&lt;char style="w" lemma="grace" x-myattr="metadata"&gt;gracious&lt;/char&gt;</code></pre>
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;char style="w" x-myattr="value"&gt;gracious&lt;/char&gt;
+&lt;char style="w" lemma="grace" x-myattr="value"&gt;gracious&lt;/char&gt;</code></pre>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="chars-with-attrib"><a class="anchor" href="#chars-with-attrib"></a>Characters Types Providing Attributes</h2>
+<h2 id="chars-with-attrib"><a class="anchor" href="#chars-with-attrib"></a>Characters Types with Attributes in USFM/USX 3.0</h2>
 <div class="sectionbody">
 <div class="ulist">
 <ul>
@@ -853,7 +921,7 @@
 <p><a href="notes/crossref/xt.html" class="xref page">xt</a>&#8201;&#8212;&#8201;<code>link-href</code> (a linking attribute)</p>
 </li>
 <li>
-<p><a href="../fig/fig.html" class="xref page">figure</a>&#8201;&#8212;&#8201;<code>alt</code>, <code>src</code>, <code>size</code>, <code>loc</code>, <code>copy</code>, <code>ref</code> (harmonizing the USFM 2.x syntax for this marker with the USFM 3 attribute specification)</p>
+<p><a href="../fig/fig.html" class="xref page">figure</a>&#8201;&#8212;&#8201;<code>alt</code>, <code>src</code>, <code>size</code>, <code>loc</code>, <code>copy</code>, <code>ref</code> (harmonizing the 2.x syntax for this marker with the USFM/USX 3.x attribute specification)</p>
 </li>
 </ul>
 </div>

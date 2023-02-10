@@ -403,10 +403,10 @@
     <a class="nav-link" href="../../char/features/wa.html">wa - Aramaic wordlist entry</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../../char/features/wh.html">wg - Hebrew wordlist entry</a>
+    <a class="nav-link" href="../../char/features/wg.html">wg - Greek wordlist entry</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../../char/features/wg.html">wh - Greek wordlist entry</a>
+    <a class="nav-link" href="../../char/features/wh.html">wh - Hebrew wordlist entry</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../../char/features/wj.html">wj - Words of Jesus</a>
@@ -718,15 +718,9 @@
 <p><strong>USX:</strong> <code>&lt;char style="rb" gloss={glosses}&gt;{content}&lt;/char&gt;</code></p>
 <div class="dlist">
 <dl>
-<dt class="hdlist1">Attributes</dt>
+<dt class="hdlist1"><code>gloss</code></dt>
 <dd>
-<div class="ulist">
-<ul>
-<li>
-<p><code>gloss</code> - Ruby glosses <em>(default)</em></p>
-</li>
-</ul>
-</div>
+<p>Ruby glosses <em>(default attribute)</em></p>
 </dd>
 <dt class="hdlist1"><code>glosses</code></dt>
 <dd>
@@ -754,13 +748,228 @@
 </div>
 </div>
 <div class="sect1">
+<h2 id="_examples"><a class="anchor" href="#_examples"></a>Examples</h2>
+<div class="sectionbody">
+<div id="_tabs_1" class="openblock tabs is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_1_usfm" class="tab">
+<p>USFM</p>
+</li>
+<li id="_tabs_1_usx" class="tab">
+<p>USX</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_1_usfm--panel" class="tabpanel" aria-labelledby="_tabs_1_usfm">
+<div id="src-usfm-char-rb_1" class="listingblock">
+<div class="title">Example 1. One Han character with a single ruby gloss</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\rb 哀|あい\rb*</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_1_usx--panel" class="tabpanel" aria-labelledby="_tabs_1_usx">
+<div id="src-usx-char-rb_1" class="listingblock">
+<div class="title">Example 2. One Han character with a single ruby gloss</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;char style="rb" gloss="あい"&gt;哀&lt;/char&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="_tabs_2" class="openblock tabs is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_2_usfm" class="tab">
+<p>USFM</p>
+</li>
+<li id="_tabs_2_usx" class="tab">
+<p>USX</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_2_usfm--panel" class="tabpanel" aria-labelledby="_tabs_2_usfm">
+<div id="src-usfm-char-rb_2" class="listingblock">
+<div class="title">Example 3. Two Han characters with a single ruby phrase gloss</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\rb 話賄|はなはなし\rb*</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_2_usx--panel" class="tabpanel" aria-labelledby="_tabs_2_usx">
+<div id="src-usx-char-rb_2" class="listingblock">
+<div class="title">Example 4. Two Han characters with a single ruby phrase gloss</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;char style="rb" gloss="はなはなし"&gt;話賄&lt;/char&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="_tabs_3" class="openblock tabs is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_3_usfm" class="tab">
+<p>USFM</p>
+</li>
+<li id="_tabs_3_usx" class="tab">
+<p>USX</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_3_usfm--panel" class="tabpanel" aria-labelledby="_tabs_3_usfm">
+<div id="src-usfm-char-rb_3" class="listingblock">
+<div class="title">Example 5. Phrase gloss with portions of ruby characters separated by a colon</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\rb 話賄|はな:はなし\rb*</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_3_usx--panel" class="tabpanel" aria-labelledby="_tabs_3_usx">
+<div id="src-usx-char-rb_3" class="listingblock">
+<div class="title">Example 6. Phrase gloss with portions of ruby characters separated by a colon</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;char style="rb" gloss="はな:はなし"&gt;話賄&lt;/char&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="_tabs_4" class="openblock tabs is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_4_usfm" class="tab">
+<p>USFM</p>
+</li>
+<li id="_tabs_4_usx" class="tab">
+<p>USX</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_4_usfm--panel" class="tabpanel" aria-labelledby="_tabs_4_usfm">
+<div id="src-usfm-char-rb_4" class="listingblock">
+<div class="title">Example 7. Character sequence which includes a non-Han character which is NOT glossed</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\rb 定ま|さだ:\rb*</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_4_usx--panel" class="tabpanel" aria-labelledby="_tabs_4_usx">
+<div id="src-usx-char-rb_4" class="listingblock">
+<div class="title">Example 8. Character sequence which includes a non-Han character which is NOT glossed</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;char style="rb" gloss="さだ:"&gt;定ま&lt;/char&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="_tabs_5" class="openblock tabs is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_5_usfm" class="tab">
+<p>USFM</p>
+</li>
+<li id="_tabs_5_usx" class="tab">
+<p>USX</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_5_usfm--panel" class="tabpanel" aria-labelledby="_tabs_5_usfm">
+<div id="src-usfm-char-rb_5" class="listingblock">
+<div class="title">Example 9. Un-glossed character occurring between glossed characters in a phrase</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\rb 神の子|かみ::こ\rb*</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_5_usx--panel" class="tabpanel" aria-labelledby="_tabs_5_usx">
+<div id="src-usx-char-rb_5" class="listingblock">
+<div class="title">Example 10. Un-glossed character occurring between glossed characters in a phrase</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;char style="rb" gloss="かみ::こ"&gt;神の子&lt;/char&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="_tabs_6" class="openblock tabs is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_6_usfm" class="tab">
+<p>USFM</p>
+</li>
+<li id="_tabs_6_usfm_2" class="tab">
+<p>USFM</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_6_usfm--panel" class="tabpanel" aria-labelledby="_tabs_6_usfm">
+<div id="src-usfm-char-rb_6" class="listingblock">
+<div class="title">Example 11. Genesis 1.1-2 (Japanese Contemporary Bible - Biblica)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\p
+\v 1 まだ\rb 何|なに\rb*もなかった\rb 時|とき\rb*、\rb 神|かみ\rb*は\rb 天|てん\rb*と
+\rb 地|ち\rb*を\rb 造|つく\rb*りました。
+\v 2 \rb 地|ち\rb*は\rb 形|かたち\rb*も\rb 定|さだ\rb*まらず、\rb 闇|やみ\rb*に
+\rb 包|つつ\rb*まれた\rb 水|みず\rb*の\rb 上|うえ\rb*を、さらに\rb 神|かみ\rb*の
+\rb 霊|れい\rb*が\rb 覆|おお\rb*っていました。</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_6_usfm_2--panel" class="tabpanel" aria-labelledby="_tabs_6_usfm_2">
+<div id="src-usx-char-rb_6" class="listingblock">
+<div class="title">Example 12. Genesis 1.1-2 (Japanese Contemporary Bible - Biblica)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;para style="p"&gt;
+  &lt;verse number="1" style="v" sid="GEN 1:1"/&gt;まだ
+  &lt;char style="rb" gloss="なに"&gt;何&lt;/char&gt;もなかった
+  &lt;char style="rb" gloss="とき"&gt;時&lt;/char&gt;、
+  &lt;char style="rb" gloss="かみ"&gt;神&lt;/char&gt;は
+  &lt;char style="rb" gloss="てん"&gt;天&lt;/char&gt;と
+  &lt;char style="rb" gloss="ち"&gt;地&lt;/char&gt;を
+  &lt;char style="rb" gloss="つく"&gt;造&lt;/char&gt;りました。
+  &lt;verse eid="GEN 1:1"/&gt;
+  &lt;verse number="2" style="v" sid="GEN 1:2"/&gt;
+  &lt;char style="rb" gloss="ち"&gt;地&lt;/char&gt;は
+  &lt;char style="rb" gloss="かたち"&gt;形&lt;/char&gt;も
+  &lt;char style="rb" gloss="さだ"&gt;定&lt;/char&gt;まらず、
+  &lt;char style="rb" gloss="やみ"&gt;闇&lt;/char&gt;に
+  &lt;char style="rb" gloss="つつ"&gt;包&lt;/char&gt;まれた
+  &lt;char style="rb" gloss="みず"&gt;水&lt;/char&gt;の
+  &lt;char style="rb" gloss="うえ"&gt;上&lt;/char&gt;を、さらに
+  &lt;char style="rb" gloss="かみ"&gt;神&lt;/char&gt;の
+  &lt;char style="rb" gloss="れい"&gt;霊&lt;/char&gt;が
+  &lt;char style="rb" gloss="おお"&gt;覆&lt;/char&gt;っていました。
+  &lt;verse eid="GEN 1:2"/&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/char/rb_1.jpg" alt="Genesis 1.1-2 (Japanese Contemporary Bible - Biblica)" width="300">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
 <h2 id="_properties"><a class="anchor" href="#_properties"></a>Properties</h2>
 <div class="sectionbody">
 <div class="dlist">
 <dl>
 <dt class="hdlist1">StyleType</dt>
 <dd>
-<p>Character</p>
+<p><a href="../../char/index.html" class="xref page">Character</a></p>
 </dd>
 <dt class="hdlist1">OccursUnder</dt>
 <dd>
@@ -779,63 +988,6 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="_structure"><a class="anchor" href="#_structure"></a>Structure</h2>
-<div class="sectionbody">
-
-</div>
-</div>
-<div class="sect1">
-<h2 id="_examples"><a class="anchor" href="#_examples"></a>Examples</h2>
-<div class="sectionbody">
-<div id="src-char-rb_1" class="listingblock">
-<div class="title">Example 1. One Han character with a single ruby gloss</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\rb 哀|あい\rb*</code></pre>
-</div>
-</div>
-<div id="src-char-rb_2" class="listingblock">
-<div class="title">Example 2. Two Han characters with a single ruby phrase gloss</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\rb 話賄|はなはなし\rb*</code></pre>
-</div>
-</div>
-<div id="src-char-rb_3" class="listingblock">
-<div class="title">Example 3. Phrase gloss with portions of ruby characters separated by a colon</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\rb 話賄|はな:はなし\rb*</code></pre>
-</div>
-</div>
-<div id="src-char-rb_4" class="listingblock">
-<div class="title">Example 4. Character sequence which includes a non-Han character which is NOT glossed</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\rb 定ま|さだ:\rb*</code></pre>
-</div>
-</div>
-<div id="src-char-rb_5" class="listingblock">
-<div class="title">Example 5. Un-glossed character occurring between glossed characters in a phrase</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\rb 神の子|かみ::こ\rb*</code></pre>
-</div>
-</div>
-<div id="src-char-rb_6" class="listingblock">
-<div class="title">Example 6. Genesis 1.1-2 (Japanese Contemporary Bible - Biblica)</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\p
-\v 1 まだ\rb 何|なに\rb*もなかった\rb 時|とき\rb*、\rb 神|かみ\rb*は\rb 天|てん\rb*と
-\rb 地|ち\rb*を\rb 造|つく\rb*りました。
-\v 2 \rb 地|ち\rb*は\rb 形|かたち\rb*も\rb 定|さだ\rb*まらず、\rb 闇|やみ\rb*に
-\rb 包|つつ\rb*まれた\rb 水|みず\rb*の\rb 上|うえ\rb*を、さらに\rb 神|かみ\rb*の
-\rb 霊|れい\rb*が\rb 覆|おお\rb*っていました。</code></pre>
-</div>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../_images/char/rb_1.jpg" alt="Genesis 1.1-2 (Japanese Contemporary Bible - Biblica)" width="300">
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
 <h2 id="_publication_issues"><a class="anchor" href="#_publication_issues"></a>Publication Issues</h2>
 <div class="sectionbody">
 
@@ -844,9 +996,7 @@
 <div class="sect1">
 <h2 id="_discussion"><a class="anchor" href="#_discussion"></a>Discussion</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p>Links to open repository Issues</p>
-</div>
+
 </div>
 </div>
 </article>
