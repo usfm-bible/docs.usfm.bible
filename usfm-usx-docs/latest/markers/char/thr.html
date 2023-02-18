@@ -714,6 +714,28 @@
 </ul>
 </div>
 </dd>
+</dl>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="title">Syntax notes</div>
+<div class="paragraph">
+<p>In <strong>USFM</strong>, a table is composed by a series of paragraphs marked with <a href="../../para/tables/tr.html" class="xref page">\tr</a>. The content for cells is marked with <a href="../../char/tables/index.html" class="xref page">character types for table cells</a>, such as <a href="../../char/tables/th.html" class="xref page">\th#</a>.</p>
+</div>
+<div class="paragraph">
+<p>In <strong>USX</strong> the sequence of <a href="../../para/tables/tr.html" class="xref page">\tr</a> rows is composed within a <code>&lt;table&gt;...&lt;/table&gt;</code> containing `&lt;row&gt;`s and `&lt;cell&gt;`s. See <a href="../../para/tables/index.html" class="xref page">Paragraphs &gt; Tables</a>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="dlist">
+<dl>
 <dt class="hdlist1">Syntax</dt>
 <dd>
 <div class="ulist">
@@ -723,22 +745,22 @@
 <div class="ulist">
 <ul>
 <li>
-<p>Use a dash <code>-</code> between a range of column numbers to indicate that the columns should be spanned. Example: <code>\th1-2</code></p>
+<p>Use a dash <code>-</code> between a range of column numbers to indicate that the columns should be spanned. Example: <code>\thr1-2</code></p>
 </li>
 </ul>
 </div>
 </li>
 <li>
-<p><strong>USX:</strong> <code>&lt;cell style="thr#" colspan="{columns} align="{alignment}"&gt;{content}&lt;/cell&gt;</code></p>
+<p><strong>USX:</strong> <code>&lt;cell style="thr#" @colspan @align&gt;{content}&lt;/cell&gt;</code></p>
 <div class="dlist">
 <dl>
-<dt class="hdlist1"><code>columns</code></dt>
+<dt class="hdlist1"><code>colspan.</code></dt>
 <dd>
-<p>Column spanning is indicated with an optional <code>colspan</code> attribute. Example: <code>&lt;cell style="thr1" colspan="2" align="right"&gt;</code></p>
+<p>Column spanning is indicated with an optional <code>colspan</code> attribute. Example: <code>&lt;cell style="thr1" colspan="2" align="start"&gt;</code></p>
 </dd>
-<dt class="hdlist1"><code>alignment</code></dt>
+<dt class="hdlist1"><code>align</code></dt>
 <dd>
-<p>Cell alignment = <code>start</code> | <code>center</code> | <code>end</code>. Represents "left", "center", and "right" respectively in left-to-right direction texts, and "right", "center", "left" in right-to-left direction texts.</p>
+<p>Cell alignment = <code>start</code> | <code>center</code> | <code>end</code>. Represents 'left', 'center', and 'right' respectively in left-to-right direction texts, and 'right', 'center', 'left' in right-to-left direction texts.</p>
 </dd>
 <dt class="hdlist1"><code>content</code></dt>
 <dd>
@@ -759,13 +781,90 @@
 </div>
 </div>
 <div class="sect1">
+<h2 id="_examples"><a class="anchor" href="#_examples"></a>Examples</h2>
+<div class="sectionbody">
+<div id="_tabs_1" class="openblock tabs is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_1_usfm" class="tab">
+<p>USFM</p>
+</li>
+<li id="_tabs_1_usx" class="tab">
+<p>USX</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_1_usfm--panel" class="tabpanel" aria-labelledby="_tabs_1_usfm">
+<div id="src-usfm-char-thr_1" class="listingblock">
+<div class="title">Example 1. Numbers 2.10-16 (GNT)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\p
+\v 10-16 On the south, those under the banner of the division of Reuben shall
+camp in their groups, under their leaders, as follows:
+\tr \th1 Tribe \th2 Leader \thr3 Number
+\tr \tc1 Reuben \tc2 Elizur son of Shedeur \tcr3 46,500
+\tr \tc1 Simeon \tc2 Shelumiel son of Zurishaddai \tcr3 59,300
+\tr \tc1 Gad \tc2 Eliasaph son of Deuel \tcr3 45,650
+\tr \tcr1-2 Total: \tcr3 151,450</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_1_usx--panel" class="tabpanel" aria-labelledby="_tabs_1_usx">
+<div id="src-usx-char-thr_1" class="listingblock">
+<div class="title">Example 2. Numbers 2.10-16 (GNT)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;para style="p"&gt;
+  &lt;verse number="10-16" style="v" sid="NUM 2:10-16"/&gt;On the south, those under the
+  banner of the division of Reuben shall camp in their groups, under their
+  leaders, as follows:&lt;/para&gt;
+&lt;table&gt;
+  &lt;row style="tr"&gt;
+    &lt;cell style="th1" align="start"&gt;Tribe &lt;/cell&gt;
+    &lt;cell style="th2" align="start"&gt;Leader &lt;/cell&gt;
+    &lt;cell style="thr3" align="end"&gt;Number&lt;/cell&gt;
+  &lt;/row&gt;
+  &lt;row style="tr"&gt;
+    &lt;cell style="tc1" align="start"&gt;Reuben &lt;/cell&gt;
+    &lt;cell style="tc2" align="start"&gt;Elizur son of Shedeur &lt;/cell&gt;
+    &lt;cell style="tcr3" align="end"&gt;46,500&lt;/cell&gt;
+  &lt;/row&gt;
+  &lt;row style="tr"&gt;
+    &lt;cell style="tc1" align="start"&gt;Simeon &lt;/cell&gt;
+    &lt;cell style="tc2" align="start"&gt;Shelumiel son of Zurishaddai &lt;/cell&gt;
+    &lt;cell style="tcr3" align="end"&gt;59,300&lt;/cell&gt;
+  &lt;/row&gt;
+  &lt;row style="tr"&gt;
+    &lt;cell style="tc1" align="start"&gt;Gad &lt;/cell&gt;
+    &lt;cell style="tc2" align="start"&gt;Eliasaph son of Deuel &lt;/cell&gt;
+    &lt;cell style="tcr3" align="end"&gt;45,650&lt;/cell&gt;
+  &lt;/row&gt;
+  &lt;row style="tr"&gt;
+    &lt;cell style="tcr1" align="end" colspan="2"&gt;Total: &lt;/cell&gt;
+    &lt;cell style="tcr3" align="end"&gt;151,450&lt;/cell&gt;
+  &lt;/row&gt;
+  ...
+&lt;/table&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/char/thr_1.jpg" alt="Numbers 2.10-16 (GNT)" width="300">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
 <h2 id="_properties"><a class="anchor" href="#_properties"></a>Properties</h2>
 <div class="sectionbody">
 <div class="dlist">
 <dl>
 <dt class="hdlist1">StyleType</dt>
 <dd>
-<p>Character</p>
+<p><a href="../../char/index.html" class="xref page">Character</a></p>
 </dd>
 <dt class="hdlist1">OccursUnder</dt>
 <dd>
@@ -784,35 +883,6 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="_structure"><a class="anchor" href="#_structure"></a>Structure</h2>
-<div class="sectionbody">
-
-</div>
-</div>
-<div class="sect1">
-<h2 id="_examples"><a class="anchor" href="#_examples"></a>Examples</h2>
-<div class="sectionbody">
-<div id="src-char-thr_1" class="listingblock">
-<div class="title">Example 1. Numbers 2.10-16 (GNT)</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\p
-\v 10-16 On the south, those under the banner of the division of Reuben shall
-camp in their groups, under their leaders, as follows:
-\tr \th1 Tribe \th2 Leader \thr3 Number
-\tr \tc1 Reuben \tc2 Elizur son of Shedeur \tcr3 46,500
-\tr \tc1 Simeon \tc2 Shelumiel son of Zurishaddai \tcr3 59,300
-\tr \tc1 Gad \tc2 Eliasaph son of Deuel \tcr3 45,650
-\tr \tcr1-2 Total: \tcr3 151,450</code></pre>
-</div>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../_images/char/thr_1.jpg" alt="Numbers 2.10-16 (GNT)" width="300">
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
 <h2 id="_publication_issues"><a class="anchor" href="#_publication_issues"></a>Publication Issues</h2>
 <div class="sectionbody">
 
@@ -821,9 +891,7 @@ camp in their groups, under their leaders, as follows:
 <div class="sect1">
 <h2 id="_discussion"><a class="anchor" href="#_discussion"></a>Discussion</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p>Links to open repository Issues</p>
-</div>
+
 </div>
 </div>
 </article>

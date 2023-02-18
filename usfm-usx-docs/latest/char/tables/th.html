@@ -728,7 +728,10 @@
 <td class="content">
 <div class="title">Syntax notes</div>
 <div class="paragraph">
-<p>In <strong>USFM</strong>, a table is composed by a series of paragraphs marked with <code>\tr</code>, and the content for cells is marked with <a href="index.html" class="xref page">character types for table cells</a>, such as <code>\th#</code>. In <strong>USX</strong> the sequence of <code>\tr</code> rows is composed within a <code>&lt;table&gt;...&lt;/table&gt;</code> containing `&lt;row&gt;`s and `&lt;cell&gt;`s. See <a href="../../para/tables/index.html" class="xref page">Paragraphs &gt; Tables</a>.</p>
+<p>In <strong>USFM</strong>, a table is composed by a series of paragraphs marked with <a href="../../para/tables/tr.html" class="xref page">\tr</a>. The content for cells is marked with <a href="index.html" class="xref page">character types for table cells</a>, such as <a href="th.html" class="xref page">\th#</a>.</p>
+</div>
+<div class="paragraph">
+<p>In <strong>USX</strong> the sequence of <a href="../../para/tables/tr.html" class="xref page">\tr</a> rows is composed within a <code>&lt;table&gt;...&lt;/table&gt;</code> containing `&lt;row&gt;`s and `&lt;cell&gt;`s. See <a href="../../para/tables/index.html" class="xref page">Paragraphs &gt; Tables</a>.</p>
 </div>
 </td>
 </tr>
@@ -751,16 +754,16 @@
 </div>
 </li>
 <li>
-<p><strong>USX:</strong> <code>&lt;cell style="th#" colspan="{columns} align="{alignment}"&gt;{content}&lt;/cell&gt;</code></p>
+<p><strong>USX:</strong> <code>&lt;cell style="th#" @colspan @align&gt;{content}&lt;/cell&gt;</code></p>
 <div class="dlist">
 <dl>
-<dt class="hdlist1"><code>columns</code></dt>
+<dt class="hdlist1"><code>colspan.</code></dt>
 <dd>
 <p>Column spanning is indicated with an optional <code>colspan</code> attribute. Example: <code>&lt;cell style="th1" colspan="2" align="start"&gt;</code></p>
 </dd>
-<dt class="hdlist1"><code>alignment</code></dt>
+<dt class="hdlist1"><code>align</code></dt>
 <dd>
-<p>Cell alignment = <code>start</code> | <code>center</code> | <code>end</code>. Represents "left", "center", and "right" respectively in left-to-right direction texts, and "right", "center", "left" in right-to-left direction texts.</p>
+<p>Cell alignment = <code>start</code> | <code>center</code> | <code>end</code>. Represents 'left', 'center', and 'right' respectively in left-to-right direction texts, and 'right', 'center', 'left' in right-to-left direction texts.</p>
 </dd>
 <dt class="hdlist1"><code>content</code></dt>
 <dd>
@@ -781,13 +784,96 @@
 </div>
 </div>
 <div class="sect1">
+<h2 id="_examples"><a class="anchor" href="#_examples"></a>Examples</h2>
+<div class="sectionbody">
+<div id="_tabs_1" class="openblock tabs is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_1_usfm" class="tab">
+<p>USFM</p>
+</li>
+<li id="_tabs_1_usx" class="tab">
+<p>USX</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_1_usfm--panel" class="tabpanel" aria-labelledby="_tabs_1_usfm">
+<div id="src-usfm-char-th_1" class="listingblock">
+<div class="title">Example 1. Numbers 7.12-83 (GNT)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\p
+\v 12-83 They presented their offerings in the following order:
+\tr \th1 Day \th2 Tribe \th3 Leader
+\tr \tcr1 1st \tc2 Judah \tc3 Nahshon son of Amminadab
+\tr \tcr1 2nd \tc2 Issachar \tc3 Nethanel son of Zuar
+\tr \tcr1 3rd \tc2 Zebulun \tc3 Eliab son of Helon
+\tr \tcr1 4th \tc2 Reuben \tc3 Elizur son of Shedeur
+\tr \tcr1 5th \tc2 Simeon \tc3 Shelumiel son of Zurishaddai
+...</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_1_usx--panel" class="tabpanel" aria-labelledby="_tabs_1_usx">
+<div id="src-usx-char-th_1" class="listingblock">
+<div class="title">Example 2. Numbers 7.12-83 (GNT)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;para style="p"&gt;
+  &lt;verse number="12-83" style="v" sid="NUM 7:12-83"/&gt;They presented their
+  offerings in the following order:&lt;/para&gt;
+&lt;table&gt;
+  &lt;row style="tr"&gt;
+    &lt;cell style="th1" align="start"&gt;Day &lt;/cell&gt;
+    &lt;cell style="th2" align="start"&gt;Tribe &lt;/cell&gt;
+    &lt;cell style="th3" align="start"&gt;Leader&lt;/cell&gt;
+  &lt;/row&gt;
+  &lt;row style="tr"&gt;
+    &lt;cell style="tcr1" align="end"&gt;1st &lt;/cell&gt;
+    &lt;cell style="tc2" align="start"&gt;Judah &lt;/cell&gt;
+    &lt;cell style="tc3" align="start"&gt;Nahshon son of Amminadab&lt;/cell&gt;
+  &lt;/row&gt;
+  &lt;row style="tr"&gt;
+    &lt;cell style="tcr1" align="end"&gt;2nd &lt;/cell&gt;
+    &lt;cell style="tc2" align="start"&gt;Issachar &lt;/cell&gt;
+    &lt;cell style="tc3" align="start"&gt;Nethanel son of Zuar&lt;/cell&gt;
+  &lt;/row&gt;
+  &lt;row style="tr"&gt;
+    &lt;cell style="tcr1" align="end"&gt;3rd &lt;/cell&gt;
+    &lt;cell style="tc2" align="start"&gt;Zebulun &lt;/cell&gt;
+    &lt;cell style="tc3" align="start"&gt;Eliab son of Helon&lt;/cell&gt;
+  &lt;/row&gt;
+  &lt;row style="tr"&gt;
+    &lt;cell style="tcr1" align="end"&gt;4th &lt;/cell&gt;
+    &lt;cell style="tc2" align="start"&gt;Reuben &lt;/cell&gt;
+    &lt;cell style="tc3" align="start"&gt;Elizur son of Shedeur&lt;/cell&gt;
+  &lt;/row&gt;
+  &lt;row style="tr"&gt;
+    &lt;cell style="tcr1" align="end"&gt;5th &lt;/cell&gt;
+    &lt;cell style="tc2" align="start"&gt;Simeon &lt;/cell&gt;
+    &lt;cell style="tc3" align="start"&gt;Shelumiel son of Zurishaddai&lt;/cell&gt;
+  &lt;/row&gt;
+  ...
+&lt;/table&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/char/th_1.jpg" alt="Numbers 7.12-83 (GNT)" width="300">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
 <h2 id="_properties"><a class="anchor" href="#_properties"></a>Properties</h2>
 <div class="sectionbody">
 <div class="dlist">
 <dl>
 <dt class="hdlist1">StyleType</dt>
 <dd>
-<p>Character</p>
+<p><a href="../index.html" class="xref page">Character</a></p>
 </dd>
 <dt class="hdlist1">OccursUnder</dt>
 <dd>
@@ -802,36 +888,6 @@
 <p>publishable, vernacular</p>
 </dd>
 </dl>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_structure"><a class="anchor" href="#_structure"></a>Structure</h2>
-<div class="sectionbody">
-
-</div>
-</div>
-<div class="sect1">
-<h2 id="_examples"><a class="anchor" href="#_examples"></a>Examples</h2>
-<div class="sectionbody">
-<div id="src-char-th_1" class="listingblock">
-<div class="title">Example 1. Numbers 7.12-83 (GNT)</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\p
-\v 12-83 They presented their offerings in the following order:
-\tr \th1 Day \th2 Tribe \th3 Leader
-\tr \tcr1 1st \tc2 Judah \tc3 Nahshon son of Amminadab
-\tr \tcr1 2nd \tc2 Issachar \tc3 Nethanel son of Zuar
-\tr \tcr1 3rd \tc2 Zebulun \tc3 Eliab son of Helon
-\tr \tcr1 4th \tc2 Reuben \tc3 Elizur son of Shedeur
-\tr \tcr1 5th \tc2 Simeon \tc3 Shelumiel son of Zurishaddai
-...</code></pre>
-</div>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../_images/char/th_1.jpg" alt="Numbers 7.12-83 (GNT)" width="300">
-</div>
 </div>
 </div>
 </div>
