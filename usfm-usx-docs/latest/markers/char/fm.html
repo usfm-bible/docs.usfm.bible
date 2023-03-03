@@ -705,7 +705,7 @@
 <dl>
 <dt class="hdlist1">Description</dt>
 <dd>
-<p>Footnote - Reference mark. Use where multiple locations in the scripture text refer the reader to a common footnote text.</p>
+<p><a href="../../note/footnote/f.html" class="xref page">Footnote</a> - Reference mark. Use where multiple locations in the scripture text refer to a common footnote text.</p>
 </dd>
 <dt class="hdlist1">Syntax</dt>
 <dd>
@@ -729,13 +729,75 @@
 </div>
 </div>
 <div class="sect1">
+<h2 id="_examples"><a class="anchor" href="#_examples"></a>Examples</h2>
+<div class="sectionbody">
+<div id="_tabs_1" class="openblock tabs is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_1_usfm" class="tab">
+<p>USFM</p>
+</li>
+<li id="_tabs_1_usx" class="tab">
+<p>USX</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_1_usfm--panel" class="tabpanel" aria-labelledby="_tabs_1_usfm">
+<div id="src-usfm-char-fm_1" class="listingblock">
+<div class="title">Example 1. Genesis 2.9 and 2.17 (GNT)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\v 9 \x - \xo 2.9: \xt Rev 2.7; 22.2,14.\x* He made all kinds of beautiful
+trees grow there and produce good fruit. In the middle of the garden stood
+the tree that gives life and the tree that gives knowledge of what is good
+and what is bad.\f + \fr 2.9: \fq knowledge of what is good and what is bad;
+\ft or \fq knowledge of everything.\f*
+...
+\v 17 except the tree that gives knowledge of what is good and what is
+bad.\fm GEN 2:9\fm* You must not eat the fruit of that tree; if you do, you
+will die the same day.”</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_1_usx--panel" class="tabpanel" aria-labelledby="_tabs_1_usx">
+<div id="src-usx-char-fm_1" class="listingblock">
+<div class="title">Example 2. Genesis 2.9 and 2.17 (GNT)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;verse number="9" style="v" sid="GEN 2:9"/&gt;&lt;note caller="-" style="x"&gt;
+  &lt;char style="xo"&gt;2.9: &lt;/char&gt;
+  &lt;char style="xt"&gt;Rev 2.7; 22.2,14.&lt;/char&gt;&lt;/note&gt; He made all kinds of
+beautiful trees grow there and produce good fruit. In the middle of the garden
+stood the tree that gives life and the tree that gives knowledge of what is good
+and what is bad.&lt;note caller="+" style="f"&gt;
+  &lt;char style="fr"&gt;2.9: &lt;/char&gt;
+  &lt;char style="fq"&gt;knowledge of what is good and what is bad; &lt;/char&gt;
+  &lt;char style="ft"&gt;or &lt;/char&gt;
+  &lt;char style="fq"&gt;knowledge of everything.&lt;/char&gt;&lt;/note&gt;&lt;verse eid="GEN 2:9"/&gt;
+...
+&lt;verse number="17" style="v" sid="GEN 2:17"/&gt;except the tree that gives knowledge
+of what is good and what is bad.&lt;char style="fm"&gt;GEN 2:9&lt;/char&gt; You must not eat
+the fruit of that tree; if you do, you will die the same day.”
+&lt;verse eid="GEN 2:17"/&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/char/missing.jpg" alt="missing" width="300">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
 <h2 id="_properties"><a class="anchor" href="#_properties"></a>Properties</h2>
 <div class="sectionbody">
 <div class="dlist">
 <dl>
 <dt class="hdlist1">StyleType</dt>
 <dd>
-<p>Character</p>
+<p><a href="../../char/index.html" class="xref page">Character</a></p>
 </dd>
 <dt class="hdlist1">OccursUnder</dt>
 <dd>
@@ -754,36 +816,6 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="_structure"><a class="anchor" href="#_structure"></a>Structure</h2>
-<div class="sectionbody">
-
-</div>
-</div>
-<div class="sect1">
-<h2 id="_examples"><a class="anchor" href="#_examples"></a>Examples</h2>
-<div class="sectionbody">
-<div id="src-char-fm_1" class="listingblock">
-<div class="title">Example 1. Genesis 2.9 and 2.17 (GNT)</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\v 9 \x - \xo 2.9: \xt Rev 2.7; 22.2,14.\x* He made all kinds of beautiful
-trees grow there and produce good fruit. In the middle of the garden stood
-the tree that gives life and the tree that gives knowledge of what is good
-and what is bad.\f + \fr 2.9: \fq knowledge of what is good and what is bad;
-\ft or \fq knowledge of everything.\f*
-...
-\v 17 except the tree that gives knowledge of what is good and what is
-bad.\fm GEN 2:9\fm* You must not eat the fruit of that tree; if you do, you
-will die the same day.”</code></pre>
-</div>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../_images/char/missing.jpg" alt="missing" width="300">
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
 <h2 id="_publication_issues"><a class="anchor" href="#_publication_issues"></a>Publication Issues</h2>
 <div class="sectionbody">
 
@@ -792,9 +824,7 @@ will die the same day.”</code></pre>
 <div class="sect1">
 <h2 id="_discussion"><a class="anchor" href="#_discussion"></a>Discussion</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p>Links to open repository Issues</p>
-</div>
+
 </div>
 </div>
 </article>

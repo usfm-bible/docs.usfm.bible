@@ -709,22 +709,22 @@
 <dl>
 <dt class="hdlist1">Description</dt>
 <dd>
-<p>Footnote - Origin reference.</p>
+<p><a href="../../../note/footnote/f.html" class="xref page">Footnote</a> - Origin reference.</p>
 </dd>
 <dt class="hdlist1">Syntax</dt>
 <dd>
 <div class="ulist">
 <ul>
 <li>
-<p><strong>USFM:</strong> <code>\fr_{C#:V#:}</code></p>
+<p><strong>USFM:</strong> <code>\fr_{cv-reference}</code></p>
 </li>
 <li>
-<p><strong>USX:</strong> <code>&lt;char style="fr"&gt;{C#:V#:}&lt;/char&gt;</code></p>
+<p><strong>USX:</strong> <code>&lt;char style="fr"&gt;{cv-reference}&lt;/char&gt;</code></p>
 <div class="dlist">
 <dl>
-<dt class="hdlist1"><code>C#:V#:</code></dt>
+<dt class="hdlist1"><code>cv-reference</code></dt>
 <dd>
-<p>Chapter-verse origin reference. The chapter-verse separator and end-of-reference punctuation are text specific.</p>
+<p>Chapter + verse origin reference. The separator character between chapter and verse is specific to the project text, but is commonly a colon <code>:</code> or period <code>.</code>. Trailing punctuation after the reference is optional.</p>
 </dd>
 </dl>
 </div>
@@ -738,46 +738,25 @@
 </dd>
 </dl>
 </div>
-<div class="paragraph">
-<p>See also: <a href="../../../note/footnote/f.html" class="xref page">Footnote</a></p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_properties"><a class="anchor" href="#_properties"></a>Properties</h2>
-<div class="sectionbody">
-<div class="dlist">
-<dl>
-<dt class="hdlist1">StyleType</dt>
-<dd>
-<p>Character</p>
-</dd>
-<dt class="hdlist1">OccursUnder</dt>
-<dd>
-<p><code>[FootnoteContent]</code></p>
-</dd>
-<dt class="hdlist1">TextType</dt>
-<dd>
-<p>NoteText</p>
-</dd>
-<dt class="hdlist1">TextProperties</dt>
-<dd>
-<p>publishable, vernacular, note</p>
-</dd>
-</dl>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_structure"><a class="anchor" href="#_structure"></a>Structure</h2>
-<div class="sectionbody">
-
 </div>
 </div>
 <div class="sect1">
 <h2 id="_examples"><a class="anchor" href="#_examples"></a>Examples</h2>
 <div class="sectionbody">
-<div id="src-char-fr_1" class="listingblock">
+<div id="_tabs_1" class="openblock tabs is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_1_usfm" class="tab">
+<p>USFM</p>
+</li>
+<li id="_tabs_1_usx" class="tab">
+<p>USX</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_1_usfm--panel" class="tabpanel" aria-labelledby="_tabs_1_usfm">
+<div id="src-usfm-char-fr_1" class="listingblock">
 <div class="title">Example 1. Mark 1.4 (GNT)</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\p
@@ -792,10 +771,62 @@ from your sins and be baptized,” he told the people, “and God will forgive
 your sins.”</code></pre>
 </div>
 </div>
+</div>
+<div id="_tabs_1_usx--panel" class="tabpanel" aria-labelledby="_tabs_1_usx">
+<div id="src-usx-char-fr_1" class="listingblock">
+<div class="title">Example 2. Mark 1.4 (GNT)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;para style="p"&gt;
+  &lt;verse number="1" style="v" sid="MRK 1:1"/&gt;This is the Good News about Jesus
+  Christ, the Son of God. &lt;note caller="+" style="f"&gt;
+    &lt;char style="fr"&gt;1.1: &lt;/char&gt;
+    &lt;char style="ft"&gt;Some manuscripts do not have &lt;/char&gt;
+    &lt;char style="fq"&gt;the Son of God.&lt;/char&gt;&lt;/note&gt;
+  &lt;verse eid="MRK 1:1"/&gt;&lt;/para&gt;
+...
+&lt;para style="p"&gt;
+  &lt;verse number="4" style="v" sid="MRK 1:4"/&gt;So John appeared in the desert,
+  baptizing and preaching.&lt;note caller="+" style="f"&gt;
+    &lt;char style="fr"&gt;1.4: &lt;/char&gt;
+    &lt;char style="fq"&gt;John appeared in the desert, baptizing and preaching; &lt;/char&gt;
+    &lt;char style="ft"&gt;some manuscripts have &lt;/char&gt;
+    &lt;char style="fqa"&gt;John the Baptist appeared in the desert, preaching.&lt;/char&gt;
+    &lt;/note&gt; “Turn away from your sins and be baptized,” he told the people,
+  “and God will forgive your sins.”&lt;verse eid="MRK 1:4"/&gt;&lt;/para&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
 <div class="imageblock">
 <div class="content">
 <img src="../../_images/char/fr_1.jpg" alt="Mark 1.1 and 1.4 (GNT)" width="600">
 </div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_properties"><a class="anchor" href="#_properties"></a>Properties</h2>
+<div class="sectionbody">
+<div class="dlist">
+<dl>
+<dt class="hdlist1">StyleType</dt>
+<dd>
+<p><a href="../../index.html" class="xref page">Character</a></p>
+</dd>
+<dt class="hdlist1">OccursUnder</dt>
+<dd>
+<p><code>[FootnoteContent]</code></p>
+</dd>
+<dt class="hdlist1">TextType</dt>
+<dd>
+<p>NoteText</p>
+</dd>
+<dt class="hdlist1">TextProperties</dt>
+<dd>
+<p>publishable, vernacular, note</p>
+</dd>
+</dl>
 </div>
 </div>
 </div>

@@ -709,7 +709,7 @@
 <dl>
 <dt class="hdlist1">Description</dt>
 <dd>
-<p>Footnote - Verse number. A verse number occuring in a <a href="fq.html" class="xref page">fq - text quotation</a> or <a href="fqa.html" class="xref page">fqa - alternative translation</a>.</p>
+<p><a href="../../../note/footnote/f.html" class="xref page">Footnote</a> - Verse number. A verse number occuring in a text quotation (<a href="fq.html" class="xref page">fq</a>) or alternative translation (<a href="fqa.html" class="xref page">fqa</a>).</p>
 </dd>
 <dt class="hdlist1">Syntax</dt>
 <dd>
@@ -738,14 +738,70 @@
 </td>
 <td class="content">
 <div class="paragraph">
-<p>This marker is normally <a href="../../nesting.html" class="xref page">nested</a> within another footnote character type (e.g. <a href="fq.html" class="xref page">fq</a>, <a href="fqa.html" class="xref page">fqa</a>).</p>
+<p>This marker is normally <a href="../../nesting.html" class="xref page">nested</a> within another footnote character type (e.g. <a href="fq.html" class="xref page">fq</a>, or <a href="fqa.html" class="xref page">fqa</a>).</p>
 </div>
 </td>
 </tr>
 </table>
 </div>
-<div class="paragraph">
-<p>See also: <a href="../../../note/footnote/f.html" class="xref page">Footnote</a></p>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_examples"><a class="anchor" href="#_examples"></a>Examples</h2>
+<div class="sectionbody">
+<div id="_tabs_1" class="openblock tabs is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_1_usfm" class="tab">
+<p>USFM</p>
+</li>
+<li id="_tabs_1_usx" class="tab">
+<p>USX</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_1_usfm--panel" class="tabpanel" aria-labelledby="_tabs_1_usfm">
+<div id="src-usfm-char-fv_1" class="listingblock">
+<div class="title">Example 1. John 7.38 (GNT)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\p
+\v 37 On the last and most important day of the festival Jesus stood up and
+said in a loud voice, “Whoever is thirsty should come to me, and
+\v 38 whoever believes in me should drink. As the scripture says, ‘Streams of
+life-giving water will pour out from his side.’” \f + \fr 7.38: \ft Jesus'
+words in verses 37-38 may be translated: \fqa “Whoever is thirsty should come
+to me and drink. \+fv 38\+fv* As the scripture says, ‘Streams of life-giving
+water will pour out from within anyone who believes in me.’”\f*</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_1_usx--panel" class="tabpanel" aria-labelledby="_tabs_1_usx">
+<div id="src-usx-char-fv_1" class="listingblock">
+<div class="title">Example 2. John 7.38 (GNT)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;para style="p"&gt;
+  &lt;verse number="37" style="v" sid="JHN 7:37"/&gt;On the last and most important day
+  of the festival Jesus stood up and said in a loud voice, “Whoever is thirsty
+  should come to me, and&lt;verse eid="JHN 7:37"/&gt;
+  &lt;verse number="38" style="v" sid="JHN 7:38"/&gt;whoever believes in me should drink.
+  As the scripture says, ‘Streams of life-giving water will pour out from his
+  side.’” &lt;note caller="+" style="f"&gt;
+    &lt;char style="fr"&gt;7.38: &lt;/char&gt;
+    &lt;char style="ft"&gt;Jesus' words in verses 37-38 may be translated: &lt;/char&gt;
+    &lt;char style="fqa"&gt;“Whoever is thirsty should come to me and drink.
+      &lt;char style="fv"&gt;38&lt;/char&gt; As the scripture says, ‘Streams of life-giving
+    water will pour out from within anyone who believes in me.’”&lt;/char&gt;&lt;/note&gt;
+  &lt;verse eid="JHN 7:38"/&gt;&lt;/para&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../_images/char/fv_1.jpg" alt="John 7.38 (GNT)" width="600">
+</div>
 </div>
 </div>
 </div>
@@ -756,7 +812,7 @@
 <dl>
 <dt class="hdlist1">StyleType</dt>
 <dd>
-<p>Character</p>
+<p><a href="../../index.html" class="xref page">Character</a></p>
 </dd>
 <dt class="hdlist1">OccursUnder</dt>
 <dd>
@@ -771,35 +827,6 @@
 <p>publishable, vernacular, note</p>
 </dd>
 </dl>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_structure"><a class="anchor" href="#_structure"></a>Structure</h2>
-<div class="sectionbody">
-
-</div>
-</div>
-<div class="sect1">
-<h2 id="_examples"><a class="anchor" href="#_examples"></a>Examples</h2>
-<div class="sectionbody">
-<div id="src-char-fv_1" class="listingblock">
-<div class="title">Example 1. John 7.38 (GNT)</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\p
-\v 37 On the last and most important day of the festival Jesus stood up and
-said in a loud voice, “Whoever is thirsty should come to me, and
-\v 38 whoever believes in me should drink. As the scripture says, ‘Streams of
-life-giving water will pour out from his side.’” \f + \fr 7.38: \ft Jesus'
-words in verses 37-38 may be translated: \fqa “Whoever is thirsty should come
-to me and drink. \+fv 38\+fv* As the scripture says, ‘Streams of life-giving
-water will pour out from within anyone who believes in me.’”\f*</code></pre>
-</div>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../../_images/char/fv_1.jpg" alt="John 7.38 (GNT)" width="600">
-</div>
 </div>
 </div>
 </div>
