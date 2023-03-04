@@ -718,10 +718,10 @@
 <p><strong>USFM:</strong> <code>\x_{caller}_{content}\x*</code></p>
 </li>
 <li>
-<p><strong>USX:</strong> <code>&lt;note style="x" caller="{caller}"&gt;{content}&lt;/note&gt;</code></p>
+<p><strong>USX:</strong> <code>&lt;note style="x" [@caller]&gt;{content}&lt;/note&gt;</code></p>
 <div class="dlist">
 <dl>
-<dt class="hdlist1"><code>caller</code></dt>
+<dt class="hdlist1"><code>caller</code> *</dt>
 <dd>
 <p>Note caller</p>
 <div class="ulist">
@@ -740,7 +740,7 @@
 </dd>
 <dt class="hdlist1"><code>content</code></dt>
 <dd>
-<p>The cross reference character style elements and text.</p>
+<p><a href="../../char/notes/crossref/index.html" class="xref page">Character types for cross references</a>.</p>
 </dd>
 </dl>
 </div>
@@ -754,8 +754,124 @@
 </dd>
 </dl>
 </div>
-<div class="paragraph">
-<p>See also: Character Types for Cross References - [<a href="../../char/notes/crossref/index.html" class="xref page">CrossReferenceChar</a>]</p>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_examples"><a class="anchor" href="#_examples"></a>Examples</h2>
+<div class="sectionbody">
+<div id="_tabs_1" class="openblock tabs is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_1_usfm" class="tab">
+<p>USFM</p>
+</li>
+<li id="_tabs_1_usx" class="tab">
+<p>USX</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_1_usfm--panel" class="tabpanel" aria-labelledby="_tabs_1_usfm">
+<div id="src-usfm-notes-x_1" class="listingblock">
+<div class="title">Example 1. Typical Cross Reference - Matthew 2.23 (GNT)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\p
+\v 22 But when Joseph heard that Archelaus had succeeded his father Herod as
+king of Judea, he was afraid to go there. He was given more instructions in a
+dream, so he went to the province of Galilee
+\v 23 \x - \xo 2.23: \xt Mrk 1.24; Luk 2.39; Jhn 1.45.\x* and made his home
+in a town named Nazareth. And so what the prophets had said came true: “He
+will be called a Nazarene.”</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_1_usx--panel" class="tabpanel" aria-labelledby="_tabs_1_usx">
+<div id="src-usx-note-x_1" class="listingblock">
+<div class="title">Example 2. Typical Cross Reference - Matthew 2.23 (GNT)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;para style="p"&gt;
+  &lt;verse number="22" style="v" sid="MAT 2:22"/&gt;But when Joseph heard that
+  Archelaus had succeeded his father Herod as king of Judea, he was afraid to go
+  there. He was given more instructions in a dream, so he went to the province of
+  Galilee&lt;verse eid="MAT 2:22"/&gt;
+  &lt;verse number="23" style="v" sid="MAT 2:23"/&gt;&lt;note caller="-" style="x"&gt;
+    &lt;char style="xo" closed="false"&gt;2.23: &lt;/char&gt;
+    &lt;char style="xt" closed="false"&gt;&lt;ref loc="MRK 1:24"&gt;Mk 1.24&lt;/ref&gt;;
+    &lt;ref loc="LUK 2:39"&gt;Lk 2.39&lt;/ref&gt;; &lt;ref loc="JHN 1:45"&gt;Jn 1.45&lt;/ref&gt;.&lt;/char&gt;
+  &lt;/note&gt;and made his home in a town named Nazareth. And so what the prophets had
+  said came true: “He will be called a Nazarene.”&lt;verse eid="MAT 2:23"/&gt;&lt;/para&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/note/x_1.jpg" alt="Matthew 2.23 (xref text) (GNT)" width="600">
+</div>
+</div>
+<div id="_tabs_2" class="openblock tabs is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_2_usfm" class="tab">
+<p>USFM</p>
+</li>
+<li id="_tabs_2_usx" class="tab">
+<p>USX</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_2_usfm--panel" class="tabpanel" aria-labelledby="_tabs_2_usfm">
+<div id="src-usfm-note-x_2" class="listingblock">
+<div class="title">Example 3. Multiple Origin Parts - Mark 10.19 (GNT)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\p
+\v 18 “Why do you call me good?” Jesus asked him. “No one is good except
+God alone.
+\v 19 \x - \xo 10.19: a \xt Exo 20.13; Deu 5.17; \xo b \xt Exo 20.14;
+Deu 5.18; \xo c \xt Exo 20.15; Deu 5.19; \xo d \xt Exo 20.16; Deu 5.20;
+\xo e \xt Exo 20.12; Deu 5.16.\x* You know the commandments: ‘Do not commit
+murder; do not commit adultery; do not steal; do not accuse anyone falsely;
+do not cheat; respect your father and your mother.’”</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_2_usx--panel" class="tabpanel" aria-labelledby="_tabs_2_usx">
+<div id="src-usx-note-x_2" class="listingblock">
+<div class="title">Example 4. Multiple Origin Parts - Mark 10.19 (GNT)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;para style="p"&gt;
+  &lt;verse number="18" style="v" sid="MRK 10:18"/&gt;“Why do you call me good?” Jesus
+  asked him. “No one is good except God alone.&lt;verse eid="MRK 10:18"/&gt;
+  &lt;verse number="19" style="v" sid="MRK 10:19"/&gt;&lt;note caller="-" style="x"&gt;
+    &lt;char style="xo"&gt;10.19: a &lt;/char&gt;
+    &lt;char style="xt"&gt;&lt;ref loc="EXO 20:13"&gt;Ex 20.13&lt;/ref&gt;;
+    &lt;ref loc="DEU 5:17"&gt;Dt 5.17&lt;/ref&gt;; &lt;/char&gt;
+    &lt;char style="xo"&gt;b &lt;/char&gt;
+    &lt;char style="xt"&gt;&lt;ref loc="EXO 20:14"&gt;Ex 20.14&lt;/ref&gt;;
+    &lt;ref loc="DEU 5:18"&gt;Dt 5.18&lt;/ref&gt;; &lt;/char&gt;
+    &lt;char style="xo"&gt;c &lt;/char&gt;
+    &lt;char style="xt"&gt;&lt;ref loc="EXO 20:15"&gt;Ex 20.15&lt;/ref&gt;;
+    &lt;ref loc="DEU 5:19"&gt;Dt 5.19&lt;/ref&gt;; &lt;/char&gt;
+    &lt;char style="xo"&gt;d &lt;/char&gt;
+    &lt;char style="xt"&gt;&lt;ref loc="EXO 20:16"&gt;Ex 20.16&lt;/ref&gt;;
+    &lt;ref loc="DEU 5:20"&gt;Dt 5.20&lt;/ref&gt;; &lt;/char&gt;
+    &lt;char style="xo"&gt;e &lt;/char&gt;
+    &lt;char style="xt"&gt;&lt;ref loc="EXO 20:12"&gt;Ex 20.12&lt;/ref&gt;;
+    &lt;ref loc="DEU 5:16"&gt;Dt 5.16&lt;/ref&gt;.&lt;/char&gt;&lt;/note&gt;You know the commandments:
+  ‘Do not commit murder; do not commit adultery; do not steal; do not accuse
+  anyone falsely; do not cheat; respect your father and your mother.’”
+  &lt;verse eid="MRK 10:19"/&gt;&lt;/para&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/note/x_2.jpg" alt="Mark 10.19 (multiple origin parts) (GNT)" width="560">
+</div>
 </div>
 </div>
 </div>
@@ -766,7 +882,7 @@
 <dl>
 <dt class="hdlist1">StyleType</dt>
 <dd>
-<p>Note</p>
+<p><a href="../index.html" class="xref page">Note</a></p>
 </dd>
 <dt class="hdlist1">OccursUnder</dt>
 <dd>
@@ -781,46 +897,6 @@
 <p>publishable, vernacular, note</p>
 </dd>
 </dl>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_examples"><a class="anchor" href="#_examples"></a>Examples</h2>
-<div class="sectionbody">
-<div id="src-note-x_1" class="listingblock">
-<div class="title">Example 1. Matthew 2.23 (GNT)</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\p
-\v 22 But when Joseph heard that Archelaus had succeeded his father Herod as
-king of Judea, he was afraid to go there. He was given more instructions in a
-dream, so he went to the province of Galilee
-\v 23 \x - \xo 2.23: \xt Mrk 1.24; Luk 2.39; Jhn 1.45.\x* and made his home
-in a town named Nazareth. And so what the prophets had said came true: “He
-will be called a Nazarene.”</code></pre>
-</div>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../_images/note/x_1.jpg" alt="Matthew 2.23 (xref text) (GNT)" width="600">
-</div>
-</div>
-<div id="src-note-x_2" class="listingblock">
-<div class="title">Example 2. Mark 10.19 (multiple origin parts) (GNT)</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\p
-\v 18 “Why do you call me good?” Jesus asked him. “No one is good except
-God alone.
-\v 19 \x - \xo 10.19: a \xt Exo 20.13; Deu 5.17; \xo b \xt Exo 20.14;
-Deu 5.18; \xo c \xt Exo 20.15; Deu 5.19; \xo d \xt Exo 20.16; Deu 5.20;
-\xo e \xt Exo 20.12; Deu 5.16.\x* You know the commandments: ‘Do not commit
-murder; do not commit adultery; do not steal; do not accuse anyone falsely;
-do not cheat; respect your father and your mother.’”</code></pre>
-</div>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../_images/note/x_2.jpg" alt="Mark 10.19 (multiple origin parts) (GNT)" width="600">
-</div>
 </div>
 </div>
 </div>

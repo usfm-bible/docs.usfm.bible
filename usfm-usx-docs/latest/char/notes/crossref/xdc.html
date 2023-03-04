@@ -709,7 +709,7 @@
 <dl>
 <dt class="hdlist1">Description</dt>
 <dd>
-<p>Cross Reference - DC target references. The marked <a href="#notes:crossref/xt">target references</a> are relevant for publications which include Deuterocanonlical (DC) books.</p>
+<p><a href="../../../note/crossref/index.html" class="xref page">Cross Reference</a> - DC target references. The marked target references (<a href="#notes:crossref/xt">xt</a>) are relevant for publications which include Deuterocanonlical (DC) books.</p>
 </dd>
 <dt class="hdlist1">Syntax</dt>
 <dd>
@@ -741,8 +741,115 @@
 </dd>
 </dl>
 </div>
-<div class="paragraph">
-<p>See also: <a href="../../../note/crossref/x.html" class="xref page">Cross Reference</a></p>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_examples"><a class="anchor" href="#_examples"></a>Examples</h2>
+<div class="sectionbody">
+<div id="_tabs_1" class="openblock tabs is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_1_usfm" class="tab">
+<p>USFM</p>
+</li>
+<li id="_tabs_1_usx" class="tab">
+<p>USX</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_1_usfm--panel" class="tabpanel" aria-labelledby="_tabs_1_usfm">
+<div id="src-usfm-char-xdc_1" class="listingblock">
+<div class="title">Example 1. Psalm 115.3-4 (GNT - cross references)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\q1
+\v 3 Our God is in heaven;
+\q2 he does whatever he wishes.
+\q1
+\v 4 \x - \xo 115.4-8: \xt Ps 135.15-18; \xdc Ltj Jr 4-73; \xt Rev 9.20.\x*
+Their gods are made of silver and gold,
+\q2 formed by human hands.</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_1_usx--panel" class="tabpanel" aria-labelledby="_tabs_1_usx">
+<div id="src-usx-char-xdc_1" class="listingblock">
+<div class="title">Example 2. Psalm 115.3-4 (GNT - cross references)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;para style="q1"&gt;
+  &lt;verse number="3" style="v" sid="PSA 115:3"/&gt;Our God is in heaven;&lt;/para&gt;
+&lt;para style="q2" vid="PSA 115:3"&gt;he does whatever
+  he wishes.&lt;verse eid="PSA 115:3"/&gt;&lt;/para&gt;
+&lt;para style="q1"&gt;
+  &lt;verse number="4" style="v" sid="PSA 115:4"/&gt;
+  &lt;note caller="-" style="x"&gt;
+    &lt;char style="xo"&gt;115.4-8: &lt;/char&gt;
+    &lt;char style="xt"&gt;
+      &lt;ref loc="PSA 135:15-18"&gt;Ps 135.15-18&lt;/ref&gt;; &lt;/char&gt;
+    &lt;char style="xdc"&gt;Ltj Jr 4-73; &lt;/char&gt;
+    &lt;char style="xt"&gt;
+      &lt;ref loc="REV 9:20"&gt;Rev 9.20&lt;/ref&gt;.&lt;/char&gt;&lt;/note&gt; Their gods are made of
+  silver and gold,&lt;/para&gt;
+&lt;para style="q2" vid="PSA 115:4"&gt;formed by human hands.
+  &lt;verse eid="PSA 115:4"/&gt;&lt;/para&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../_images/char/missing.jpg" alt="Psalm 115.3-4 (GNT - cross references)" width="300">
+</div>
+</div>
+<div id="_tabs_2" class="openblock tabs is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_2_usfm" class="tab">
+<p>USFM</p>
+</li>
+<li id="_tabs_2_usx" class="tab">
+<p>USX</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_2_usfm--panel" class="tabpanel" aria-labelledby="_tabs_2_usfm">
+<div id="src-usfm-char-xdc_2" class="listingblock">
+<div class="title">Example 3. 1 Corinthians 15.51-52 (GNT - cross reference)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\p
+\v 51-52 \x - \xo 15.51,52: \xdc 2Es 6.23; \xt 1Th 4.15-17.\x* Listen to this
+secret truth: we shall not all die, but when the last trumpet sounds, we
+shall all be changed in an instant, as quickly as the blinking of an eye. For
+when the trumpet sounds, the dead will be raised, never to die again, and we
+shall all be changed.</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_2_usx--panel" class="tabpanel" aria-labelledby="_tabs_2_usx">
+<div id="src-usx-char-xdc_2" class="listingblock">
+<div class="title">Example 4. 1 Corinthians 15.51-52 (GNT - cross reference)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;para style="p"&gt;
+  &lt;verse number="51-52" style="v" sid="1CO 15:51-52"/&gt;
+  &lt;note caller="-" style="x"&gt;
+    &lt;char style="xo"&gt;15.51,52: &lt;/char&gt;
+    &lt;char style="xdc"&gt;2Es 6.23; &lt;/char&gt;
+    &lt;char style="xt"&gt;1Th 4.15-17.&lt;/char&gt;&lt;/note&gt; Listen to this secret truth: we
+  shall not all die, but when the last trumpet sounds, we shall all be changed in
+  an instant, as quickly as the blinking of an eye. For when the trumpet sounds,
+  the dead will be raised, never to die again, and we shall all be changed.
+  &lt;verse eid="1CO 15:51-52"/&gt;&lt;/para&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../_images/char/missing.jpg" alt="1 Corinthians 15.51-52 (GNT - cross reference)" width="300">
+</div>
 </div>
 </div>
 </div>
@@ -753,7 +860,7 @@
 <dl>
 <dt class="hdlist1">StyleType</dt>
 <dd>
-<p>Character</p>
+<p><a href="../../index.html" class="xref page">Character</a></p>
 </dd>
 <dt class="hdlist1">OccursUnder</dt>
 <dd>
@@ -768,50 +875,6 @@
 <p>publishable, vernacular, note</p>
 </dd>
 </dl>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_structure"><a class="anchor" href="#_structure"></a>Structure</h2>
-<div class="sectionbody">
-
-</div>
-</div>
-<div class="sect1">
-<h2 id="_examples"><a class="anchor" href="#_examples"></a>Examples</h2>
-<div class="sectionbody">
-<div id="src-char-xdc_1" class="listingblock">
-<div class="title">Example 1. Psalm 115.3-4 (GNT - cross references)</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\q1
-\v 3 Our God is in heaven;
-\q2 he does whatever he wishes.
-\q1
-\v 4 \x - \xo 115.4-8: \xt Ps 135.15-18; \xdc Ltj Jr 4-73; \xt Rev 9.20.\x*
-Their gods are made of silver and gold,
-\q2 formed by human hands.</code></pre>
-</div>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../../_images/char/missing.jpg" alt="missing" width="300">
-</div>
-</div>
-<div id="src-char-xdc_2" class="listingblock">
-<div class="title">Example 2. 1 Corinthians 15.51-52 (GNT - cross reference)</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\p
-\v 51-52 \x - \xo 15.51,52: \xdc 2Es 6.23; \xt 1Th 4.15-17.\x* Listen to this
-secret truth: we shall not all die, but when the last trumpet sounds, we
-shall all be changed in an instant, as quickly as the blinking of an eye. For
-when the trumpet sounds, the dead will be raised, never to die again, and we
-shall all be changed.</code></pre>
-</div>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../../_images/char/missing.jpg" alt="missing" width="300">
-</div>
 </div>
 </div>
 </div>

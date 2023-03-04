@@ -713,10 +713,10 @@
 <div class="ulist">
 <ul>
 <li>
-<p><strong>USFM:</strong> <code>\[noteType]_{caller}_\cat_{category}\cat*{content}\[note@style]*</code></p>
+<p><strong>USFM:</strong> <code>\[noteType]_{caller}_\cat_{category}\cat*_{content}\[noteType]*</code></p>
 </li>
 <li>
-<p><strong>USX:</strong> <code>&lt;note style="[noteType]" caller="{caller}" category="{category}"&gt;{content}&lt;/note&gt;</code></p>
+<p><strong>USX:</strong> <code>&lt;note style="[noteType]" [@caller,category]&gt;{content}&lt;/note&gt;</code></p>
 <div class="dlist">
 <dl>
 <dt class="hdlist1"><code>noteType</code></dt>
@@ -733,7 +733,7 @@
 </ul>
 </div>
 </dd>
-<dt class="hdlist1"><code>caller</code></dt>
+<dt class="hdlist1"><code>caller</code> *</dt>
 <dd>
 <p>Note caller</p>
 <div class="ulist">
