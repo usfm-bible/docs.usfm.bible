@@ -3,4 +3,4 @@ Antora playbook project for the USFM / USX end-user documentation site.
 
 ---
 
-Dev publication rev: 38
+Dev publication rev: 39
