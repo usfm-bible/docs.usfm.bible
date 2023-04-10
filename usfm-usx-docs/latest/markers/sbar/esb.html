@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>esb &#8230;&#8203; esbe :: USFM / USX Docs</title>
+    <title>esb / esbe :: USFM / USX Docs</title>
     <link rel="canonical" href="https://docs.usfm.bible/usfm-usx-docs/latest/markers/sbar/esb.html">
     <meta name="description" content="Sidebar container">
-    <meta name="generator" content="Antora 3.1.2">
+    <meta name="generator" content="Antora 3.1.3">
     <link rel="stylesheet" href="../../../../_/css/site.css">
 <link rel="stylesheet" href="../../../../_/css/site-extra.css">
 <link rel="stylesheet" href="../../../../_/css/vendor/tabs.css">    <script>var uiRootPath = '../../../../_'</script>
@@ -687,7 +687,7 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../../index.html">USFM / USX Docs</a></li>
-    <li><a href="esb.html">esb &#8230;&#8203; esbe</a></li>
+    <li><a href="esb.html">esb / esbe</a></li>
   </ul>
 </nav>
   <div class="edit-this-page"><a href="https://github.com/usfm-bible/tcdocs/edit/main/manual/antora/modules/markers/pages/sbar/esb.adoc">Edit this Page</a></div>
@@ -697,7 +697,7 @@
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">esb &#8230;&#8203; esbe</h1>
+<h1 class="page">esb / esbe</h1>
 <div class="sect1">
 <h2 id="_summary"><a class="anchor" href="#_summary"></a>Summary</h2>
 <div class="sectionbody">
@@ -715,7 +715,7 @@
 <p><strong>USFM:</strong> <code>\esb_\cat_{category}\cat*{content}\esbe</code></p>
 </li>
 <li>
-<p><strong>USX:</strong> <code>&lt;sidebar style="esb" category="{category}"&gt;{content}&lt;/sidebar&gt;</code></p>
+<p><strong>USX:</strong> <code>&lt;sidebar style="esb" @category"&gt;{content}&lt;/sidebar&gt;</code></p>
 <div class="dlist">
 <dl>
 <dt class="hdlist1"><code>category</code></dt>
@@ -741,13 +741,129 @@
 </div>
 </div>
 <div class="sect1">
+<h2 id="_diagrams"><a class="anchor" href="#_diagrams"></a>Diagrams</h2>
+<div class="sectionbody">
+<div id="_tabs_1" class="openblock tabs is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_1_usfm" class="tab">
+<p>USFM</p>
+</li>
+<li id="_tabs_1_usx" class="tab">
+<p>USX</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_1_usfm--panel" class="tabpanel" aria-labelledby="_tabs_1_usfm">
+<div class="imageblock">
+<div class="content">
+<img src="../_images/schema/esb_rail.svg" alt="esb rail">
+</div>
+</div>
+</div>
+<div id="_tabs_1_usx--panel" class="tabpanel" aria-labelledby="_tabs_1_usx">
+<div class="imageblock">
+<div class="content">
+<img src="../_images/schema/esb_usx.svg" alt="esb usx">
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_examples"><a class="anchor" href="#_examples"></a>Examples</h2>
+<div class="sectionbody">
+<div id="_tabs_2" class="openblock tabs is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_2_usfm" class="tab">
+<p>USFM</p>
+</li>
+<li id="_tabs_2_usx" class="tab">
+<p>USX</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_2_usfm--panel" class="tabpanel" aria-labelledby="_tabs_2_usfm">
+<div id="src-usfm-sbar-esb_1" class="listingblock">
+<div class="title">Example 1. Mark 1 (CEV Learning Bible)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\v 18 At once they left their nets and went with him.
+\esb \cat History\cat*
+\ms Fish and Fishing
+\p In Jesus' time, fishing took place mostly on lake Galilee, because Jewish
+people could not use many of the harbors along the coast of the Mediterranean
+Sea, since these harbors were often controlled by unfriendly neighbors. The
+most common fish in the Lake of Galilee were carp and catfish. The Law of
+Moses allowed people to eat any fish with fins and scales, but since catfish
+lack scales (as do eels and sharks) they were not to be eaten (\xt Lev
+11.9-12\xt*). Fish were also probably brought from Tyre and Sidon, where they
+were dried and salted.
+...
+\p Among early Christians, the fish was a favorite image for Jesus, because
+the Greek word for fish (\tl ichthus\tl*) consists of the first letters of the
+Greek words that tell who Jesus is: \fig Ihsous Christos Theou uios Swthr|
+alt="Christian fish image" src="christfish.tif" size="col" ref="1.18"\fig*
+\esbe
+\p
+\v 19 He went a little farther on and saw two other brothers, James and John,
+the sons of Zebedee.</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_2_usx--panel" class="tabpanel" aria-labelledby="_tabs_2_usx">
+<div id="src-usx-sbar-esb_1" class="listingblock">
+<div class="title">Example 2. Mark 1 (CEV Learning Bible)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;para style="p"&gt;
+  ...
+  &lt;verse number="18" style="v" sid="MRK 1:18"/&gt;At once they left their nets and
+  went with him.&lt;/para&gt;
+&lt;sidebar style="esb" category="History"&gt;
+  &lt;para style="ms" vid="MRK 1:18"&gt;Fish and Fishing&lt;/para&gt;
+  &lt;para style="p" vid="MRK 1:18"&gt;In Jesus' time, fishing took place mostly on lake
+    Galilee, because Jewish people could not use many of the harbors along the
+    coast of the Mediterranean Sea, since these harbors were often controlled by
+    unfriendly neighbors. The most common fish in the Lake of Galilee were carp
+    and catfish. The Law of Moses allowed people to eat any fish with fins and
+    scales, but since catfish lack scales (as do eels and sharks) they were not to
+    be eaten (&lt;char style="xt"&gt;Lev 11.9-12&lt;/char&gt;). Fish were also probably
+    brought from Tyre and Sidon, where they were dried and salted. ...&lt;/para&gt;
+  &lt;para style="p" vid="MRK 1:18"&gt;Among early Christians, the fish was a favorite
+    image for Jesus, because the Greek word for fish
+    (&lt;char style="tl"&gt;ichthus&lt;/char&gt;) consists of the first letters of the Greek
+    words that tell who Jesus is: &lt;figure style="fig" alt="Christian fish image"
+    file="christfish.tif" size="col" ref="1.18"&gt;Ihsous Christos Theou uios
+    Swthr&lt;/figure&gt;&lt;verse eid="MRK 1:18"/&gt;&lt;/para&gt;
+&lt;/sidebar&gt;
+&lt;para style="p"&gt;
+  &lt;verse number="19" style="v" sid="MRK 1:19"/&gt;He went a little farther on and saw
+  two other brothers, James and John, the sons of Zebedee.&lt;verse eid="MRK 1:19"/&gt;
+  ...</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/sbar/esb_1.jpg" alt="Mark 1 (CEV Learning Bible)" width="550">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
 <h2 id="_properties"><a class="anchor" href="#_properties"></a>Properties</h2>
 <div class="sectionbody">
 <div class="dlist">
 <dl>
 <dt class="hdlist1">StyleType</dt>
 <dd>
-<p>Paragraph</p>
+<p><a href="../../para/index.html" class="xref page">Paragraph</a></p>
 </dd>
 <dt class="hdlist1">OccursUnder</dt>
 <dd>
@@ -766,80 +882,27 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="_diagram"><a class="anchor" href="#_diagram"></a>Diagram</h2>
-<div class="sectionbody">
-<div class="sect2">
-<h3 id="_usfm"><a class="anchor" href="#_usfm"></a>USFM</h3>
-<div class="imageblock">
-<div class="content">
-<img src="../_images/schema/esb_rail.svg" alt="esb rail">
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_usx"><a class="anchor" href="#_usx"></a>USX</h3>
-<div class="imageblock">
-<div class="content">
-<img src="../_images/schema/esb_usx.svg" alt="esb usx">
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_examples"><a class="anchor" href="#_examples"></a>Examples</h2>
-<div class="sectionbody">
-<div id="src-sbar-esb_1" class="listingblock">
-<div class="title">Example 1. Mark 1 (CEV Learning Bible)</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\v 18 At once they left their nets and went with him.
-\esb \cat History\cat*
-\ms Fish and Fishing
-\p In Jesus' time, fishing took place mostly on lake Galilee, because Jewish
-people could not use many of the harbors along the coast of the Mediterranean
-Sea, since these harbors were often controlled by unfriendly neighbors. The
-most common fish in the Lake of Galilee were carp and catfish. The Law of
-Moses allowed people to eat any fish with fins and scales, but since catfish
-lack scales (as do eels and sharks) they were not to be eaten (\xt Lev
-11.9-12\xt*). Fish were also probably brought from Tyre and Sidon, where they
-were dried and salted.
-...
-\p Among early Christians, the fish was a favorite image for Jesus, because
-the Greek word for fish (\tl ichthus\tl*) consists of the first letters of the
-Greek words that tell who Jesus is: \fig Ihsous Christos Theou Uios Swthr|
-alt="Christian Fish Image" src="christfish.jpg" size="col" ref="1.18"\fig*
-\esbe
-\p
-\v 19 He went a little farther on and saw two other brothers, James and John,
-the sons of Zebedee.</code></pre>
-</div>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../_images/sbar/esb_1.jpg" alt="Mark 1 (CEV Learning Bible)" width="550">
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
 <h2 id="_child_elements"><a class="anchor" href="#_child_elements"></a>Child Elements</h2>
 <div class="sectionbody">
 <div class="ulist">
 <ul>
 <li>
-<p>Paragraphs - [<a href="../../para/paragraphs/index.html" class="xref page">Para</a>]</p>
+<p><a href="../../para/paragraphs/index.html" class="xref page">Paragraphs</a> <code>[Para]</code></p>
 </li>
 <li>
-<p>Lists - [<a href="../../para/lists/index.html" class="xref page">List</a>]</p>
+<p><a href="../../para/lists/index.html" class="xref page">Lists</a> <code>[List]</code></p>
 </li>
 <li>
-<p>Tables</p>
+<p><a href="../../para/tables/index.html" class="xref page">Tables</a> <code>[Table]</code></p>
 </li>
 <li>
-<p>Footnotes - [<a href="../../note/footnote/index.html" class="xref page">Footnote</a>]</p>
+<p><a href="../../note/footnote/index.html" class="xref page">Footnotes</a> <code>[Footnote]</code></p>
 </li>
 <li>
-<p>Cross References - [<a href="../../note/crossref/index.html" class="xref page">CrossReference</a>]</p>
+<p><a href="../../note/crossref/index.html" class="xref page">Cross References</a> <code>[CrossReference]</code></p>
+</li>
+<li>
+<p><a href="../../char/index.html" class="xref page">Characters</a> <code>[Char]</code></p>
 </li>
 </ul>
 </div>

@@ -6,7 +6,7 @@
     <title>qt#-s / qt#-e :: USFM / USX Docs</title>
     <link rel="canonical" href="https://docs.usfm.bible/usfm-usx-docs/latest/markers/ms/qt.html">
     <meta name="description" content="Quotation start and end milestones">
-    <meta name="generator" content="Antora 3.1.2">
+    <meta name="generator" content="Antora 3.1.3">
     <link rel="stylesheet" href="../../../../_/css/site.css">
 <link rel="stylesheet" href="../../../../_/css/site-extra.css">
 <link rel="stylesheet" href="../../../../_/css/vendor/tabs.css">    <script>var uiRootPath = '../../../../_'</script>
@@ -719,40 +719,21 @@
 <div class="ulist">
 <ul>
 <li>
-<p><strong>USFM:</strong></p>
-<div class="ulist">
-<ul>
-<li>
-<p><code>\qt#-s |[@sid,who]\*</code></p>
+<p><strong>USFM:</strong> <code>\qt#-s |[@sid,who]\*</code> / <code>\qt#-e |@eid\*</code></p>
 </li>
 <li>
-<p><code>\qt#-e |[@eid]\*</code></p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p><strong>USX:</strong></p>
-<div class="ulist">
-<ul>
-<li>
-<p><code>&lt;ms style="qt#-s" [@sid,who]/&gt;</code></p>
-</li>
-<li>
-<p><code>&lt;ms style="qt#-e" [@eid]/&gt;</code></p>
+<p><strong>USX:</strong> <code>&lt;ms style="qt#-s" [@sid,who]/&gt;</code> / <code>&lt;ms style="qt#-e" @eid/&gt;</code></p>
 <div class="dlist">
 <dl>
-<dt class="hdlist1">Attributes</dt>
+<dt class="hdlist1"><code>sid</code>, <code>eid</code></dt>
+<dd>
+<p>See <a href="../../ms/index.html#_attributes" class="xref page">attributes for any milestone</a>.</p>
+</dd>
+<dt class="hdlist1"><code>who</code></dt>
+<dd>
+<p>The speaker of the quotation <em>(default attribute)</em></p>
+</dd>
 </dl>
-</div>
-</li>
-<li>
-<p><code>sid</code>, <code>eid</code> - See the <a href="../../ms/index.html#_attributes" class="xref page">attributes for any milestone</a>.</p>
-</li>
-<li>
-<p><code>who</code> - The speak of the quotation <em>(default)</em></p>
-</li>
-</ul>
 </div>
 </li>
 </ul>
@@ -767,33 +748,23 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="_properties"><a class="anchor" href="#_properties"></a>Properties</h2>
-<div class="sectionbody">
-<div class="dlist">
-<dl>
-<dt class="hdlist1">StyleType</dt>
-<dd>
-<p>Milestone</p>
-</dd>
-<dt class="hdlist1">OccursUnder</dt>
-<dd>
-<p><code>[ChapterContent]</code></p>
-</dd>
-</dl>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_structure"><a class="anchor" href="#_structure"></a>Structure</h2>
-<div class="sectionbody">
-
-</div>
-</div>
-<div class="sect1">
 <h2 id="_examples"><a class="anchor" href="#_examples"></a>Examples</h2>
 <div class="sectionbody">
-<div id="src-ms-qt_1" class="listingblock">
-<div class="title">Example 1. USFM: Mark 15.2 (GNT) - no levels</div>
+<div id="_tabs_1" class="openblock tabs is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_1_usfm" class="tab">
+<p>USFM</p>
+</li>
+<li id="_tabs_1_usx" class="tab">
+<p>USX</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_1_usfm--panel" class="tabpanel" aria-labelledby="_tabs_1_usfm">
+<div id="src-usfm-ms-qt_1" class="listingblock">
+<div class="title">Example 1. Mark 15.2 (GNT) - no levels</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\p
 \v 1 Early in the morning the chief priests met hurriedly with the elders,
@@ -805,8 +776,10 @@ the king of the Jews?”\qt-e |eid="qt.MRK.15:2.1"\*
 \qt-e |eid="qt.MRK.15:2.2"\*</code></pre>
 </div>
 </div>
+</div>
+<div id="_tabs_1_usx--panel" class="tabpanel" aria-labelledby="_tabs_1_usx">
 <div id="src-usx-ms-qt_1" class="listingblock">
-<div class="title">Example 2. USX: Mark 15.2 (GNT) - no levels</div>
+<div class="title">Example 2. Mark 15.2 (GNT) - no levels</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;para style="p"&gt;
   &lt;verse number="1" style="v" sid="MRK 15:1"/&gt; Early in the morning the
@@ -823,8 +796,24 @@ the king of the Jews?”\qt-e |eid="qt.MRK.15:2.1"\*
 &lt;/para&gt;</code></pre>
 </div>
 </div>
-<div id="src-ms-qt_2" class="listingblock">
-<div class="title">Example 3. USFM: Acts 17.22-31 (GNT) - 2 levels</div>
+</div>
+</div>
+</div>
+<div id="_tabs_2" class="openblock tabs is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_2_usfm" class="tab">
+<p>USFM</p>
+</li>
+<li id="_tabs_2_usx" class="tab">
+<p>USX</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_2_usfm--panel" class="tabpanel" aria-labelledby="_tabs_2_usfm">
+<div id="src-usfm-ms-qt_2" class="listingblock">
+<div class="title">Example 3. Acts 17.22-31 (GNT) - 2 levels</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\p
 \v 22 Paul stood up in front of the city council and said,
@@ -862,8 +851,10 @@ justice by means of a man he has chosen. He has given proof of this to
 everyone by raising that man from death!”\qt1-e |eid="qt1_ACT_17:22.1"\*</code></pre>
 </div>
 </div>
+</div>
+<div id="_tabs_2_usx--panel" class="tabpanel" aria-labelledby="_tabs_2_usx">
 <div id="src-usx-ms-qt_2" class="listingblock">
-<div class="title">Example 4. USX: Acts 17.22-31 (GNT) - 2 levels</div>
+<div class="title">Example 4. Acts 17.22-31 (GNT) - 2 levels</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;para style="p"&gt;
   &lt;verse number="22" style="v" sid="GEN 7:22"/&gt;
@@ -916,6 +907,26 @@ everyone by raising that man from death!”\qt1-e |eid="qt1_ACT_17:22.1"\*</code
 </div>
 </div>
 </div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_properties"><a class="anchor" href="#_properties"></a>Properties</h2>
+<div class="sectionbody">
+<div class="dlist">
+<dl>
+<dt class="hdlist1">StyleType</dt>
+<dd>
+<p><a href="../../ms/index.html" class="xref page">Milestone</a></p>
+</dd>
+<dt class="hdlist1">OccursUnder</dt>
+<dd>
+<p><code>[ChapterContent]</code></p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
 <div class="sect1">
 <h2 id="_publication_issues"><a class="anchor" href="#_publication_issues"></a>Publication Issues</h2>
 <div class="sectionbody">
@@ -925,9 +936,7 @@ everyone by raising that man from death!”\qt1-e |eid="qt1_ACT_17:22.1"\*</code
 <div class="sect1">
 <h2 id="_discussion"><a class="anchor" href="#_discussion"></a>Discussion</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p>Links to open repository Issues</p>
-</div>
+
 </div>
 </div>
 </article>

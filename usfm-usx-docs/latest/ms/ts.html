@@ -7,7 +7,7 @@
     <link rel="canonical" href="https://docs.usfm.bible/usfm-usx-docs/latest/ms/ts.html">
     <link rel="prev" href="qt.html">
     <link rel="next" href="../note/index.html">
-    <meta name="generator" content="Antora 3.1.2">
+    <meta name="generator" content="Antora 3.1.3">
     <link rel="stylesheet" href="../../../_/css/site.css">
 <link rel="stylesheet" href="../../../_/css/site-extra.css">
 <link rel="stylesheet" href="../../../_/css/vendor/tabs.css">    <script>var uiRootPath = '../../../_'</script>
@@ -714,37 +714,17 @@
 <div class="ulist">
 <ul>
 <li>
-<p><strong>USFM:</strong></p>
-<div class="ulist">
-<ul>
-<li>
-<p><code>\ts-s |[@sid]\*</code></p>
+<p><strong>USFM:</strong> <code>\ts-s |@sid\*</code> / <code>\ts-e |@eid\*</code></p>
 </li>
 <li>
-<p><code>\ts-e |[@eid]\*</code></p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p><strong>USX:</strong></p>
-<div class="ulist">
-<ul>
-<li>
-<p><code>&lt;ms style="ts-s" [@sid]/&gt;</code></p>
-</li>
-<li>
-<p><code>&lt;ms style="ts-e" [@eid]/&gt;</code></p>
+<p><strong>USX:</strong> <code>&lt;ms style="ts-s" @sid/&gt;</code> / <code>&lt;ms style="ts-e" @eid/&gt;</code></p>
 <div class="dlist">
 <dl>
-<dt class="hdlist1">Attributes</dt>
+<dt class="hdlist1"><code>sid</code>, <code>eid</code></dt>
+<dd>
+<p>See <a href="index.html#_attributes" class="xref page">attributes for any milestone</a>.</p>
+</dd>
 </dl>
-</div>
-</li>
-<li>
-<p><code>sid</code>, <code>eid</code> - See the <a href="index.html#_attributes" class="xref page">attributes for any milestone</a>.</p>
-</li>
-</ul>
 </div>
 </li>
 </ul>
@@ -759,33 +739,23 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="_properties"><a class="anchor" href="#_properties"></a>Properties</h2>
-<div class="sectionbody">
-<div class="dlist">
-<dl>
-<dt class="hdlist1">StyleType</dt>
-<dd>
-<p>Milestone</p>
-</dd>
-<dt class="hdlist1">OccursUnder</dt>
-<dd>
-<p><code>[ChapterContent]</code></p>
-</dd>
-</dl>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_structure"><a class="anchor" href="#_structure"></a>Structure</h2>
-<div class="sectionbody">
-
-</div>
-</div>
-<div class="sect1">
 <h2 id="_examples"><a class="anchor" href="#_examples"></a>Examples</h2>
 <div class="sectionbody">
-<div id="src-ms-ts_1" class="listingblock">
-<div class="title">Example 1. USFM: Jude 5-8 (ULB) - standalone milestones</div>
+<div id="_tabs_1" class="openblock tabs is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_1_usfm" class="tab">
+<p>USFM</p>
+</li>
+<li id="_tabs_1_usx" class="tab">
+<p>USX</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_1_usfm--panel" class="tabpanel" aria-labelledby="_tabs_1_usfm">
+<div id="src-usfm-ms-ts_1" class="listingblock">
+<div class="title">Example 1. Jude 5-8 (ULB) - standalone milestones</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\ts\*
 \p
@@ -803,11 +773,14 @@ eternal fire.
 \p
 \v 8 Yet in the same way these also pollute their bodies in their dreams, and
 they reject authority, and they say evil things about the glorious ones.
-\ts\*</code></pre>
+\ts\*
+...</code></pre>
 </div>
 </div>
+</div>
+<div id="_tabs_1_usx--panel" class="tabpanel" aria-labelledby="_tabs_1_usx">
 <div id="src-usx-ts-qt_1" class="listingblock">
-<div class="title">Example 2. USX: Jude 5-8 (ULB) - standalone milestones</div>
+<div class="title">Example 2. Jude 5-8 (ULB) - standalone milestones</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;ms style="ts"/&gt;
 &lt;para style="p"&gt;
@@ -818,7 +791,8 @@ they reject authority, and they say evil things about the glorious ones.
   &lt;verse number="6" style="v" sid="JUD 1:6"/&gt;And angels who did not keep
   to their own principality, but left their proper dwelling place—God has
   kept them in everlasting chains in darkness for the judgment of the
-  great day.&lt;verse eid="JUD 1:6"/&gt;&lt;ms style="ts"/&gt;
+  great day.&lt;verse eid="JUD 1:6"/&gt;
+  &lt;ms style="ts"/&gt;
   &lt;verse number="7" style="v" sid="JUD 1:7"/&gt;It is just like Sodom and
   Gomorrah and the cities around them, which in a similar way gave
   themselves over to fornication and pursued unnatural desires. They were
@@ -829,11 +803,28 @@ they reject authority, and they say evil things about the glorious ones.
   &lt;verse number="8" style="v" sid="JUD 1:8"/&gt;Yet in
   the same way these also pollute their bodies in their dreams, and they
   reject authority, and they say evil things about the glorious ones.
-  &lt;ms style="ts"/&gt;</code></pre>
+  &lt;ms style="ts"/&gt;
+  ...</code></pre>
 </div>
 </div>
-<div id="src-ms-ts_2" class="listingblock">
-<div class="title">Example 3. USFM: Jude 5-8 (ULB) - milestone pairs</div>
+</div>
+</div>
+</div>
+<div id="_tabs_2" class="openblock tabs is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_2_usfm" class="tab">
+<p>USFM</p>
+</li>
+<li id="_tabs_2_usx" class="tab">
+<p>USX</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_2_usfm--panel" class="tabpanel" aria-labelledby="_tabs_2_usfm">
+<div id="src-usfm-ms-ts_2" class="listingblock">
+<div class="title">Example 3. Jude 5-8 (ULB) - milestone pairs</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\ts |sid="ts.JUD.5-6"\*
 \p
@@ -852,11 +843,14 @@ eternal fire.
 \p
 \v 8 Yet in the same way these also pollute their bodies in their dreams, and
 they reject authority, and they say evil things about the glorious ones.
-\ts-e |eid="ts.JUD.7-8"\*</code></pre>
+\ts-e |eid="ts.JUD.7-8"\*
+...</code></pre>
 </div>
 </div>
+</div>
+<div id="_tabs_2_usx--panel" class="tabpanel" aria-labelledby="_tabs_2_usx">
 <div id="src-usx-ts-qt_2" class="listingblock">
-<div class="title">Example 4. USX: Jude 5-8 (ULB) - milestone pairs</div>
+<div class="title">Example 4. Jude 5-8 (ULB) - milestone pairs</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;ms style="ts-s" sid="ts.JUD.5-6"/&gt;
 &lt;para style="p"&gt;
@@ -882,6 +876,26 @@ they reject authority, and they say evil things about the glorious ones.
   reject authority, and they say evil things about the glorious ones.
   &lt;ms style="ts-e" eid="ts.JUD.7-8"/&gt;</code></pre>
 </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_properties"><a class="anchor" href="#_properties"></a>Properties</h2>
+<div class="sectionbody">
+<div class="dlist">
+<dl>
+<dt class="hdlist1">StyleType</dt>
+<dd>
+<p><a href="index.html" class="xref page">Milestone</a></p>
+</dd>
+<dt class="hdlist1">OccursUnder</dt>
+<dd>
+<p><code>[ChapterContent]</code></p>
+</dd>
+</dl>
 </div>
 </div>
 </div>
