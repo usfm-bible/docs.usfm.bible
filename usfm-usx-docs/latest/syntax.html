@@ -800,16 +800,20 @@
 <p>All USFM markers begin with a backslash character <code>\</code>.</p>
 </li>
 <li>
-<p><a href="para/index.html" class="xref page">Paragraph</a> markers end with the next space character.</p>
+<p><a href="para/index.html" class="xref page">Paragraph</a> markers, and the opening marker for <a href="char/index.html" class="xref page">characters</a> and <a href="note/index.html" class="xref page">notes</a> are followed by whitespace.</p>
 </li>
 <li>
 <p><a href="char/index.html" class="xref page">Character</a> markers occur in pairs, marking a span of text within a paragraph.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>The closing marker character is the same as the opening marker, but ends with an asterisk character <code>*</code>. Example: <code>\w grace\w*</code>.</p>
+</li>
+</ul>
+</div>
 </li>
 <li>
-<p><a href="note/index.html" class="xref page">Note</a> markers also occur in pairs, marking the start and end of the footnote, cross reference, or study note content.</p>
-</li>
-<li>
-<p>For marker pairs (character and note), the opening marker ends with the next space character (as with paragraph markers). The matching closing marker is identical to the opening marker but ends with an asterisk character <code>*</code>. Example: <code>\w grace\w*</code>.</p>
+<p><a href="note/index.html" class="xref page">Note</a> markers also occur in pairs, marking the start and end of the <a href="note/footnote/index.html" class="xref page">footnote</a> or <a href="note/crossref/index.html" class="xref page">cross reference</a> content.</p>
 </li>
 </ul>
 </div>
