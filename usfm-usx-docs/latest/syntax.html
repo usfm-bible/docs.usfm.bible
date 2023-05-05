@@ -847,65 +847,134 @@
 <h2 id="_endmarkers_in_footnotes_and_cross_references"><a class="anchor" href="#_endmarkers_in_footnotes_and_cross_references"></a>Endmarkers in Footnotes and Cross References</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The boundaries of footnote or cross reference text are defined by an opening and closing marker, as in the following footnote syntax example:</p>
-</div>
-<div id="src-noteSyntax_1" class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\f_+_(\fr_REF_)footnote content\f*</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Elements which make up the footnote or cross reference content are character level markers, which means that they each define a start and a end marker. Some USFM editors interpret the presence of a new character marker as an implicit closure of any preceding character level marker. As a result, most scripture translation projects working with USFM have adopted the approach of authoring footnotes or cross references without supplying the explicit end marker, since this reduces the amount of markup within the notes, and is somewhat easier to read and interpret.</p>
+<p>Elements which make up <a href="note/footnote/index.html" class="xref page">footnote</a> or <a href="note/crossref/index.html" class="xref page">cross reference</a> content are <a href="char/index.html" class="xref page">character</a> level markers, which means that they define a start and end marker. Some USFM editors interpret the presence of a new character marker as an implicit closure of any preceding character level marker. The majority of scripture translation projects working with USFM have followed this syntax for footnotes or cross references (not supplying the explicit end marker) since this reduces the amount of markup within the notes text, making it easier to read as a result.</p>
 </div>
 <div class="paragraph">
 <p>Examples of the two markup approaches for notes is provided below:</p>
 </div>
-<div class="exampleblock">
+<div id="_tabs_1" class="openblock tabs is-loading">
 <div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_1_usfm_implicit_closure" class="tab">
+<p>USFM (implicit closure)</p>
+</li>
+<li id="_tabs_1_usfm_explicit_closure" class="tab">
+<p>USFM (explicit closure)</p>
+</li>
+<li id="_tabs_1_usx" class="tab">
+<p>USX</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_1_usfm_implicit_closure--panel" class="tabpanel" aria-labelledby="_tabs_1_usfm_implicit_closure">
 <div class="listingblock">
-<div class="title">Example 1. Implicit closure</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\f + \fk Issac: \ft In Hebrew means "laughter"\f*</code></pre>
 </div>
 </div>
+</div>
+<div id="_tabs_1_usfm_explicit_closure--panel" class="tabpanel" aria-labelledby="_tabs_1_usfm_explicit_closure">
 <div class="listingblock">
-<div class="title">Example 2. Explicit end marker</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\f + \fk Issac:\fk* \ft In Hebrew means "laughter"\ft*\f*</code></pre>
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\f + \fk Issac: \fk*\ft In Hebrew means "laughter"\ft*\f*</code></pre>
 </div>
 </div>
 </div>
-</div>
-<div class="exampleblock">
-<div class="content">
+<div id="_tabs_1_usx--panel" class="tabpanel" aria-labelledby="_tabs_1_usx">
 <div class="listingblock">
-<div class="title">Example 3. Immplicit closure</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;note caller="+" style="f"&gt;
+  &lt;char style="fk"&gt;Issac: &lt;/char&gt;
+  &lt;char style="ft"&gt;In Hebrew means "laughter"&lt;/char&gt;
+&lt;/note&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="_tabs_2" class="openblock tabs is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_2_usfm_implicit_closure" class="tab">
+<p>USFM (implicit closure)</p>
+</li>
+<li id="_tabs_2_usfm_explicit_closure" class="tab">
+<p>USFM (explicit closure)</p>
+</li>
+<li id="_tabs_2_usx" class="tab">
+<p>USX</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_2_usfm_implicit_closure--panel" class="tabpanel" aria-labelledby="_tabs_2_usfm_implicit_closure">
+<div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\f + \fr 1.14 \fq religious festivals; \ft or \fqa seasons.\f*</code></pre>
 </div>
 </div>
+</div>
+<div id="_tabs_2_usfm_explicit_closure--panel" class="tabpanel" aria-labelledby="_tabs_2_usfm_explicit_closure">
 <div class="listingblock">
-<div class="title">Example 4. Explicit end marker</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\f + \fr 1.14\fr* \fq religious festivals;\fq* or \fqa seasons.\fqa*\f*</code></pre>
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\f + \fr 1.14 \fr*\fq religious festivals; \fq*\ft or \ft*\fqa seasons.\fqa*\f*</code></pre>
 </div>
 </div>
 </div>
-</div>
-<div class="exampleblock">
-<div class="content">
+<div id="_tabs_2_usx--panel" class="tabpanel" aria-labelledby="_tabs_2_usx">
 <div class="listingblock">
-<div class="title">Example 5. Implicit closure</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\f + \fr 2.4 \fk The \+nd Lord\+nd*: \ft See \+nd Lord\+nd* in
-Word List.\f*</code></pre>
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;note caller="+" style="f"&gt;
+  &lt;char style="fr"&gt;1.14 &lt;/char&gt;
+  &lt;char style="fq"&gt;religious festivals; &lt;/char&gt;
+  &lt;char style="ft"&gt;or &lt;/char&gt;
+  &lt;char style="fqa"&gt;seasons.&lt;/char&gt;
+&lt;/note&gt;</code></pre>
 </div>
 </div>
+</div>
+</div>
+</div>
+<div id="_tabs_3" class="openblock tabs is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_3_usfm_implicit_closure" class="tab">
+<p>USFM (implicit closure)</p>
+</li>
+<li id="_tabs_3_usfm_explicit_closure" class="tab">
+<p>USFM (explicit closure)</p>
+</li>
+<li id="_tabs_3_usx" class="tab">
+<p>USX</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_3_usfm_implicit_closure--panel" class="tabpanel" aria-labelledby="_tabs_3_usfm_implicit_closure">
 <div class="listingblock">
-<div class="title">Example 6. Explicit end marker</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\f + \fr 2.4\fr* \fk The \+nd Lord\+nd*:\fk* \ft See \+nd Lord\+nd* in
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\f + \fr 2.4 \fk The \+nd Lord\+nd*: \ft See \+nd Lord\+nd* in Word List.\f*</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_3_usfm_explicit_closure--panel" class="tabpanel" aria-labelledby="_tabs_3_usfm_explicit_closure">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\f + \fr 2.4 \fr*\fk The \+nd Lord\+nd*: \fk*\ft See \+nd Lord\+nd* in
 Word List.\ft*\f*</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_3_usx--panel" class="tabpanel" aria-labelledby="_tabs_3_usx">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;note caller="+" style="f"&gt;
+  &lt;char style="fr"&gt;2.4 &lt;/char&gt;
+  &lt;char style="fk"&gt;The &lt;char style="nd"&gt;Lord&lt;/char&gt;: &lt;/char&gt;
+  &lt;char style="ft"&gt;See &lt;char style="nd"&gt;Lord&lt;/char&gt; in Word List.&lt;/char&gt;
+&lt;/note&gt;</code></pre>
+</div>
 </div>
 </div>
 </div>
