@@ -77,14 +77,23 @@ div.content a:focus, div.content a:hover {
 .doc p code,
 .doc thead code,
 .doc .colist > table code {
-  background: #efefef;
+  background: #eaeaea;
 }
 
 .doc .dlist dt > code {
   color: #d82445;
-  /* color: #3f7bb8; */
-  /* color: #0047AB; */
-  /* color: mediumblue; */
   font-size: 0.925rem;
   font-weight: 500;
+}
+
+mark {
+  /* background-color: #ffe5cc; */
+  background-color: white;
+  padding: 1.5px 0px 1.5px 0px;
+  color: #d82445;
+}
+
+.doc .dlist dt > mark {
+  /* font-size: 0.925rem; */
+  font-weight: 300;
 }
