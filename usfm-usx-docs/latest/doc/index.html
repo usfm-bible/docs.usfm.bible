@@ -768,7 +768,285 @@
 </aside>
 <article class="doc">
 <h1 class="page">Document Structure</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>A USFM or USX document consists of valid elements for <a href="#scripture">Scripture</a> or <a href="#peripheral">Peripheral</a> content organized within a sequence of divisions.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="scripture"><a class="anchor" href="#scripture"></a>Scripture</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#doc-book-identification">Book Identification</a> <code>[BookIdentification]</code></p>
+</li>
+<li>
+<p><a href="#doc-book-headers">Book Headers</a> <code>[BookHeaders]</code></p>
+</li>
+<li>
+<p><a href="#doc-book-titles">Book Titles</a> <code>[BookTitles]</code></p>
+</li>
+<li>
+<p><a href="#doc-book-intro">Book Introduction</a> <code>[BookIntroduction]</code></p>
+</li>
+<li>
+<p><a href="#doc-book-intro-end-titles">Book Introduction End Titles</a> <code>[BookIntroductionEndTitles]</code></p>
+</li>
+<li>
+<p><a href="#doc-chapter-label">Book Chapter Label</a> <code>[BookChapterLabel]</code></p>
+</li>
+<li>
+<p><a href="#doc-book-chapter-content">Chapter Content</a> <code>[Chapter]</code></p>
+</li>
+</ul>
+</div>
+<div id="doc-book-identification" class="openblock tabs is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="doc_book_identification_usfm" class="tab">
+<p>USFM</p>
+</li>
+<li id="doc_book_identification_usx" class="tab">
+<p>USX</p>
+</li>
+</ul>
+</div>
+<div id="doc_book_identification_usfm--panel" class="tabpanel" aria-labelledby="doc_book_identification_usfm">
+<div class="imageblock">
+<div class="content">
+<img src="_images/schema/id_rail.svg" alt="id rail">
+</div>
+</div>
+</div>
+<div id="doc_book_identification_usx--panel" class="tabpanel" aria-labelledby="doc_book_identification_usx">
+<div class="imageblock">
+<div class="content">
+<img src="_images/schema/id_usx.svg" alt="id usx">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><span class="menuseq"><b class="menu">Paragraphs</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="submenu">Identification</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem"></b></span> <a href="../para/identification/id.html" class="xref page">id</a></p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="doc-book-headers"><a class="anchor" href="#doc-book-headers"></a>Book Headers</h3>
+<div id="_tabs_2" class="openblock tabs is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_2_usfm" class="tab">
+<p>USFM</p>
+</li>
+<li id="_tabs_2_usx" class="tab">
+<p>USX</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_2_usfm--panel" class="tabpanel" aria-labelledby="_tabs_2_usfm">
+<div class="imageblock">
+<div class="content">
+<img src="_images/schema/bkhdrs_rail.svg" alt="bkhdrs rail">
+</div>
+</div>
+</div>
+<div id="_tabs_2_usx--panel" class="tabpanel" aria-labelledby="_tabs_2_usx">
+<div class="imageblock">
+<div class="content">
+<img src="_images/schema/bkhdrs_usx.svg" alt="bkhdrs usx">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>An optional collection of one or more <a href="../para/index.html" class="xref page">paragraph</a> elements for book name and abbreviation texts.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><span class="menuseq"><b class="menu">Paragraphs</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="submenu">Identification</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem"></b></span> <a href="../para/identification/ide.html" class="xref page">ide</a>, <a href="../para/identification/h.html" class="xref page">h</a>, <a href="../para/identification/toc.html" class="xref page">toc#</a>, <a href="../para/identification/toca.html" class="xref page">toca#</a>, <a href="../para/identification/rem.html" class="xref page">rem</a>, <a href="../para/identification/usfm.html" class="xref page">usfm</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="doc-book-titles"><a class="anchor" href="#doc-book-titles"></a>Book Titles</h3>
+<div id="_tabs_3" class="openblock tabs is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_3_usfm" class="tab">
+<p>USFM</p>
+</li>
+<li id="_tabs_3_usx" class="tab">
+<p>USX</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_3_usfm--panel" class="tabpanel" aria-labelledby="_tabs_3_usfm">
+<div class="imageblock">
+<div class="content">
+<img src="_images/schema/bktitles_rail.svg" alt="bktitles rail">
+</div>
+</div>
+</div>
+<div id="_tabs_3_usx--panel" class="tabpanel" aria-labelledby="_tabs_3_usx">
+<div class="imageblock">
+<div class="content">
+<img src="_images/schema/bktitles_usx.svg" alt="bktitles usx">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>A collection of one or more <a href="../para/index.html" class="xref page">paragraph</a> elements for book main titles.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><span class="menuseq"><b class="menu">Paragraphs</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="submenu">Titles and Sections</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem"></b></span> <a href="../para/titles-sections/mt.html" class="xref page">mt#</a></p>
+</li>
+<li>
+<p><span class="menuseq"><b class="menu">Paragraphs</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="submenu">Introductions</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem"></b></span> <a href="../para/introductions/imt.html" class="xref page">imt#</a></p>
+</li>
+<li>
+<p><span class="menuseq"><b class="menu">Paragraphs</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="submenu">Identification</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem"></b></span> <a href="../para/identification/rem.html" class="xref page">rem</a></p>
+</li>
+<li>
+<p><a href="../note/footnote/index.html" class="xref page">Footnotes</a> <code>[Footnote]</code></p>
+</li>
+<li>
+<p><a href="../note/crossref/index.html" class="xref page">Cross References</a> <code>[CrossReference]</code></p>
+</li>
+<li>
+<p><a href="../char/index.html" class="xref page">Characters</a> <code>[Char]</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="doc-book-intro"><a class="anchor" href="#doc-book-intro"></a>Book Introduction</h3>
+<div id="_tabs_4" class="openblock tabs is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_4_usfm" class="tab">
+<p>USFM</p>
+</li>
+<li id="_tabs_4_usx" class="tab">
+<p>USX</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_4_usfm--panel" class="tabpanel" aria-labelledby="_tabs_4_usfm">
+<div class="imageblock">
+<div class="content">
+<img src="_images/schema/bkintro_rail.svg" alt="bkintro rail">
+</div>
+</div>
+</div>
+<div id="_tabs_4_usx--panel" class="tabpanel" aria-labelledby="_tabs_4_usx">
+<div class="imageblock">
+<div class="content">
+<img src="_images/schema/bkintro_usx.svg" alt="bkintro usx">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>An optional collection of <a href="../para/index.html" class="xref page">paragraph</a> and <a href="../para/tables/index.html" class="xref page">table</a> elements for book introductions.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><span class="menuseq"><b class="menu">Paragraphs</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="submenu">Introductions</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem"></b></span> <a href="../para/introductions/imt.html" class="xref page">imt#</a>, <a href="../para/introductions/imte.html" class="xref page">imte#</a>, <a href="../para/introductions/ib.html" class="xref page">ib</a>, <a href="../para/introductions/ie.html" class="xref page">ie</a>, <a href="../para/introductions/ili.html" class="xref page">ili#</a>, <a href="../para/introductions/imi.html" class="xref page">imi</a>, <a href="../para/introductions/imq.html" class="xref page">imq</a>, <a href="../para/introductions/im.html" class="xref page">im</a>, <a href="../para/introductions/io.html" class="xref page">io#</a>, <a href="../para/introductions/iot.html" class="xref page">iot</a>, <a href="../para/introductions/ipi.html" class="xref page">ipi</a>, <a href="../para/introductions/ipq.html" class="xref page">ipq</a>, <a href="../para/introductions/ipr.html" class="xref page">ipr</a>, <a href="../para/introductions/ip.html" class="xref page">ip</a>, <a href="../para/introductions/iq.html" class="xref page">iq#</a>, <a href="../para/introductions/is.html" class="xref page">is#</a>, <a href="../para/introductions/iex.html" class="xref page">iex</a>, <a href="../para/identification/rem.html" class="xref page">rem</a></p>
+</li>
+<li>
+<p><a href="../note/footnote/index.html" class="xref page">Footnotes</a> <code>[Footnote]</code></p>
+</li>
+<li>
+<p><a href="../note/crossref/index.html" class="xref page">Cross References</a> <code>[CrossReference]</code></p>
+</li>
+<li>
+<p><a href="../char/index.html" class="xref page">Characters</a> <code>[Char]</code></p>
+</li>
+<li>
+<p><a href="../char/introductions/index.html" class="xref page">Introduction Characters</a> <code>[IntroChar]</code></p>
+</li>
+<li>
+<p><a href="../ms/index.html" class="xref page">Milestones</a> <code>[Milestone]</code></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="doc-book-intro-end-titles"><a class="anchor" href="#doc-book-intro-end-titles"></a>Book Introduction End Titles</h3>
+<div id="_tabs_5" class="openblock tabs is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_5_usfm" class="tab">
+<p>USFM</p>
+</li>
+<li id="_tabs_5_usx" class="tab">
+<p>USX</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_5_usfm--panel" class="tabpanel" aria-labelledby="_tabs_5_usfm">
+<div class="imageblock">
+<div class="content">
+<img src="_images/schema/bkintroend_rail.svg" alt="bkintroend rail">
+</div>
+</div>
+</div>
+<div id="_tabs_5_usx--panel" class="tabpanel" aria-labelledby="_tabs_5_usx">
+<div class="imageblock">
+<div class="content">
+<img src="_images/schema/bkintroend_usx.svg" alt="bkintroend usx">
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="doc-book-chapter-label"><a class="anchor" href="#doc-book-chapter-label"></a>Book Chapter Label</h3>
 
+</div>
+<div class="sect2">
+<h3 id="doc-book-chapter-content"><a class="anchor" href="#doc-book-chapter-content"></a>Chapter Content</h3>
+
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="peripheral"><a class="anchor" href="#peripheral"></a>Peripheral</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Peripheral Book</p>
+</li>
+<li>
+<p>Peripheral Divided Book</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
 <nav class="pagination">
   <span class="prev"><a href="../syntax-docs.html">Docs Syntax Notes</a></span>
   <span class="next"><a href="../cv/index.html">Chapters and Verses</a></span>
