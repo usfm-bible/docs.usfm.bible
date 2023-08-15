@@ -1,3 +1,4 @@
 mediumZoom('.doc img', {
-  background: '#fff'
-})
+    background: '#fff'
+  })
+  
