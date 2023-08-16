@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>v :: USFM / USX Docs</title>
     <link rel="canonical" href="https://docs.usfm.bible/usfm-usx-docs/latest/cv/v.html">
-    <link rel="prev" href="c.html">
-    <link rel="next" href="../para/index.html">
+    <link rel="prev" href="cp.html">
+    <link rel="next" href="va.html">
     <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../../../_/css/site.css">
 <link rel="stylesheet" href="../../../_/css/site-extra.css">
@@ -91,10 +91,28 @@
     <a class="nav-link" href="index.html">Chapters and Verses</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="c.html">c - Chapter</a>
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="c.html">c - Chapter number</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="ca.html">ca - Alternate chapter number</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="cp.html">cp - Published chapter number</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item is-current-page" data-depth="2">
-    <a class="nav-link" href="v.html">v - Verse</a>
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="v.html">v - Verse number</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="va.html">va - Alternate verse number</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="vp.html">vp - Published verse number</a>
+  </li>
+</ul>
   </li>
 </ul>
   </li>
@@ -232,6 +250,9 @@
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../para/titles-sections/sd.html">sd# - Semantic division</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/titles-sections/cl.html">cl - Chapter label</a>
   </li>
 </ul>
   </li>
@@ -461,6 +482,18 @@
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../char/format/sup.html">sup - Smallcap text</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../char/breaks/index.html">Breaks</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../char/breaks/optbreak.html">// - Optional line break</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../char/breaks/pb.html">pb - Page break</a>
   </li>
 </ul>
   </li>
@@ -758,7 +791,7 @@
   <ul>
     <li><a href="../index.html">USFM / USX Docs</a></li>
     <li><a href="index.html">Chapters and Verses</a></li>
-    <li><a href="v.html">v - Verse</a></li>
+    <li><a href="v.html">v - Verse number</a></li>
   </ul>
 </nav>
 <div class="edit-this-page"><a href="https://github.com/usfm-bible/tcdocs/edit/main/manual/antora/modules/cv/pages/v.adoc">Edit this Page</a></div>
@@ -783,7 +816,7 @@
 <div class="ulist">
 <ul>
 <li>
-<p><strong>USFM:</strong> <code>\v </code><mark><em>number</em></mark></p>
+<p><strong>USFM:</strong> <code>\v </code><mark><em>number</em></mark><code> \va </code><mark><em>altnumber</em></mark><code>\va*</code> <em>(see: <a href="va.html" class="xref page">va</a>)</em> <code> \vp </code><mark><em>altnumber</em></mark><code>\vp*</code> <em>(see: <a href="vp.html" class="xref page">vp</a>)</em></p>
 </li>
 <li>
 <p><strong>USX:</strong> <code>&lt;verse style="v" </code><mark><em>@number @altnumber @pubnumber @sid @eid</em></mark><code>/&gt;</code></p>
@@ -860,8 +893,15 @@
 </div>
 </div>
 <div id="_tabs_1_usx--panel" class="tabpanel" aria-labelledby="_tabs_1_usx">
-<div class="paragraph">
-<p><span class="image"><img src="_images/schema/verse_usx.svg" alt="verse usx"></span></p>
+<div class="imageblock">
+<div class="content">
+<img src="_images/schema/verse_usx.svg" alt="verse usx">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/schema/verseend_usx.svg" alt="verseend usx">
+</div>
 </div>
 </div>
 </div>
@@ -956,8 +996,8 @@ disgrace Mary publicly; so he made plans to break the engagement privately.</cod
 </div>
 </div>
 <nav class="pagination">
-  <span class="prev"><a href="c.html">c - Chapter</a></span>
-  <span class="next"><a href="../para/index.html">Paragraphs</a></span>
+  <span class="prev"><a href="cp.html">cp - Published chapter number</a></span>
+  <span class="next"><a href="va.html">va - Alternate verse number</a></span>
 </nav>
 </article>
   </div>

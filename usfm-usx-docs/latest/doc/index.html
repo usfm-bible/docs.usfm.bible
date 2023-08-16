@@ -91,10 +91,28 @@
     <a class="nav-link" href="../cv/index.html">Chapters and Verses</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../cv/c.html">c - Chapter</a>
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../cv/c.html">c - Chapter number</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../cv/ca.html">ca - Alternate chapter number</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../cv/cp.html">cp - Published chapter number</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../cv/v.html">v - Verse</a>
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../cv/v.html">v - Verse number</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../cv/va.html">va - Alternate verse number</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../cv/vp.html">vp - Published verse number</a>
+  </li>
+</ul>
   </li>
 </ul>
   </li>
@@ -232,6 +250,9 @@
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../para/titles-sections/sd.html">sd# - Semantic division</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/titles-sections/cl.html">cl - Chapter label</a>
   </li>
 </ul>
   </li>
@@ -461,6 +482,18 @@
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../char/format/sup.html">sup - Smallcap text</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../char/breaks/index.html">Breaks</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../char/breaks/optbreak.html">// - Optional line break</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../char/breaks/pb.html">pb - Page break</a>
   </li>
 </ul>
   </li>
@@ -781,30 +814,28 @@
 <div class="ulist">
 <ul>
 <li>
-<p><a href="#doc-book-identification">Book Identification</a> <code>[BookIdentification]</code></p>
+<p><code>[BookIdentification]</code> — <a href="#doc-book-identification">Book Identification</a></p>
 </li>
 <li>
-<p><a href="#doc-book-headers">Book Headers</a> <code>[BookHeaders]</code></p>
+<p><code>[BookHeaders]</code> — <a href="#doc-book-headers">Book Headers</a></p>
 </li>
 <li>
-<p><a href="#doc-book-titles">Book Titles</a> <code>[BookTitles]</code></p>
+<p><code>[BookTitles]</code> — <a href="#doc-book-titles">Book Titles</a></p>
 </li>
 <li>
-<p><a href="#doc-book-intro">Book Introduction</a> <code>[BookIntroduction]</code></p>
+<p><code>[BookIntroduction]</code> — <a href="#doc-book-intro">Book Introduction</a></p>
 </li>
 <li>
-<p><a href="#doc-book-intro-end-titles">Book Introduction End Titles</a> <code>[BookIntroductionEndTitles]</code></p>
+<p><code>[BookIntroductionEndTitles]</code> — <a href="#doc-book-intro-end-titles">Book Introduction End Titles</a></p>
 </li>
 <li>
-<p><a href="#doc-chapter-label">Book Chapter Label</a> <code>[BookChapterLabel]</code></p>
+<p><code>[BookChapterLabel]</code> — <a href="#doc-chapter-label">Book Chapter Label</a></p>
 </li>
 <li>
-<p><a href="#doc-book-chapter-content">Chapter Content</a> <code>[Chapter]</code></p>
+<p><code>[Chapter]</code> — <a href="#doc-book-chapter-content">Chapter Content</a></p>
 </li>
 </ul>
 </div>
-<div class="sect2">
-<h3 id="doc-book-identification"><a class="anchor" href="#doc-book-identification"></a>Book Identification</h3>
 <div id="_tabs_1" class="openblock tabs is-loading">
 <div class="content">
 <div class="ulist tablist">
@@ -833,6 +864,8 @@
 </div>
 </div>
 </div>
+<div class="sect2">
+<h3 id="doc-book-identification"><a class="anchor" href="#doc-book-identification"></a>Book Identification</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -877,7 +910,7 @@
 <div class="ulist">
 <ul>
 <li>
-<p><span class="menuseq"><b class="menu">Paragraphs</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="submenu">Identification</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem"></b></span> <a href="../para/identification/ide.html" class="xref page">ide</a>, <a href="../para/identification/h.html" class="xref page">h</a>, <a href="../para/identification/toc.html" class="xref page">toc#</a>, <a href="../para/identification/toca.html" class="xref page">toca#</a>, <a href="../para/identification/rem.html" class="xref page">rem</a>, <a href="../para/identification/usfm.html" class="xref page">usfm</a></p>
+<p><strong>Paragraphs &gt; Identification &gt;a</strong> <a href="../para/identification/ide.html" class="xref page">ide</a>, <a href="../para/identification/h.html" class="xref page">h</a>, <a href="../para/identification/toc.html" class="xref page">toc#</a>, <a href="../para/identification/toca.html" class="xref page">toca#</a>, <a href="../para/identification/rem.html" class="xref page">rem</a>, <a href="../para/identification/usfm.html" class="xref page">usfm</a></p>
 </li>
 </ul>
 </div>
@@ -912,28 +945,42 @@
 </div>
 </div>
 </div>
-<div class="paragraph">
-<p>A collection of one or more <a href="../para/index.html" class="xref page">paragraph</a> elements for book main titles.</p>
-</div>
 <div class="ulist">
 <ul>
 <li>
-<p><span class="menuseq"><b class="menu">Paragraphs</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="submenu">Titles and Sections</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem"></b></span> <a href="../para/titles-sections/mt.html" class="xref page">mt#</a></p>
+<p>A collection of one or more <a href="../para/index.html" class="xref page">paragraph</a> elements for book main titles.</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Paragraphs &gt; Titles and Sections &gt;</strong> <a href="../para/titles-sections/mt.html" class="xref page">mt#</a></p>
 </li>
 <li>
-<p><span class="menuseq"><b class="menu">Paragraphs</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="submenu">Introductions</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem"></b></span> <a href="../para/introductions/imt.html" class="xref page">imt#</a></p>
+<p><strong>Paragraphs &gt; Introductions &gt;</strong> <a href="../para/introductions/imt.html" class="xref page">imt#</a></p>
 </li>
 <li>
-<p><span class="menuseq"><b class="menu">Paragraphs</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="submenu">Identification</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem"></b></span> <a href="../para/identification/rem.html" class="xref page">rem</a></p>
+<p><strong>Paragraphs &gt; Identification &gt;</strong> <a href="../para/identification/rem.html" class="xref page">rem</a></p>
+</li>
+</ul>
+</div>
 </li>
 <li>
-<p><a href="../note/footnote/index.html" class="xref page">Footnotes</a> <code>[Footnote]</code></p>
+<p>An optional collection of one or more embedded elements.</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>[Footnote]</code> — <a href="../note/footnote/index.html" class="xref page">Footnotes</a></p>
 </li>
 <li>
-<p><a href="../note/crossref/index.html" class="xref page">Cross References</a> <code>[CrossReference]</code></p>
+<p><code>[CrossReference]</code> — <a href="../note/crossref/index.html" class="xref page">Cross References</a></p>
 </li>
 <li>
-<p><a href="../char/index.html" class="xref page">Characters</a> <code>[Char]</code></p>
+<p><code>[Char]</code> — <a href="../char/index.html" class="xref page">Characters</a></p>
+</li>
+<li>
+<p><code>[Break]</code> — <a href="../char/breaks/optbreak.html" class="xref page">Optional line break</a></p>
+</li>
+</ul>
+</div>
 </li>
 </ul>
 </div>
@@ -968,28 +1015,42 @@
 </div>
 </div>
 </div>
-<div class="paragraph">
+<div class="ulist">
+<ul>
+<li>
 <p>An optional collection of <a href="../para/index.html" class="xref page">paragraph</a> and <a href="../para/tables/index.html" class="xref page">table</a> elements for book introductions.</p>
-</div>
 <div class="ulist">
 <ul>
 <li>
 <p><span class="menuseq"><b class="menu">Paragraphs</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="submenu">Introductions</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem"></b></span> <a href="../para/introductions/imt.html" class="xref page">imt#</a>, <a href="../para/introductions/imte.html" class="xref page">imte#</a>, <a href="../para/introductions/ib.html" class="xref page">ib</a>, <a href="../para/introductions/ie.html" class="xref page">ie</a>, <a href="../para/introductions/ili.html" class="xref page">ili#</a>, <a href="../para/introductions/imi.html" class="xref page">imi</a>, <a href="../para/introductions/imq.html" class="xref page">imq</a>, <a href="../para/introductions/im.html" class="xref page">im</a>, <a href="../para/introductions/io.html" class="xref page">io#</a>, <a href="../para/introductions/iot.html" class="xref page">iot</a>, <a href="../para/introductions/ipi.html" class="xref page">ipi</a>, <a href="../para/introductions/ipq.html" class="xref page">ipq</a>, <a href="../para/introductions/ipr.html" class="xref page">ipr</a>, <a href="../para/introductions/ip.html" class="xref page">ip</a>, <a href="../para/introductions/iq.html" class="xref page">iq#</a>, <a href="../para/introductions/is.html" class="xref page">is#</a>, <a href="../para/introductions/iex.html" class="xref page">iex</a>, <a href="../para/identification/rem.html" class="xref page">rem</a></p>
 </li>
 <li>
-<p><a href="../note/footnote/index.html" class="xref page">Footnotes</a> <code>[Footnote]</code></p>
+<p><b class="menuref">Paragraphs xref:para:tables/index.adoc</b>,</p>
+</li>
+</ul>
+</div>
 </li>
 <li>
-<p><a href="../note/crossref/index.html" class="xref page">Cross References</a> <code>[CrossReference]</code></p>
+<p>An optional collection of one or more embedded elements.</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>[Footnote]</code> — <a href="../note/footnote/index.html" class="xref page">Footnotes</a></p>
 </li>
 <li>
-<p><a href="../char/index.html" class="xref page">Characters</a> <code>[Char]</code></p>
+<p><code>[CrossReference]</code> — <a href="../note/crossref/index.html" class="xref page">Cross References</a></p>
 </li>
 <li>
-<p><a href="../char/introductions/index.html" class="xref page">Introduction Characters</a> <code>[IntroChar]</code></p>
+<p><code>[Char]</code> — <a href="../char/index.html" class="xref page">Characters</a></p>
 </li>
 <li>
-<p><a href="../ms/index.html" class="xref page">Milestones</a> <code>[Milestone]</code></p>
+<p><code>[IntroChar]</code> <a href="../char/introductions/index.html" class="xref page">Introduction Characters</a></p>
+</li>
+<li>
+<p><code>[Milestone]</code> — <a href="../ms/index.html" class="xref page">Milestones</a></p>
+</li>
+</ul>
+</div>
 </li>
 </ul>
 </div>
@@ -1024,14 +1085,157 @@
 </div>
 </div>
 </div>
+<div class="ulist">
+<ul>
+<li>
+<p>An optional collection of one or more <a href="../para/index.html" class="xref page">paragraph</a> elements for book titles occurring at the end of the book introduction.</p>
+<div class="ulist">
+<ul>
+<li>
+<p><span class="menuseq"><b class="menu">Paragraphs</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="submenu">Introductions</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem"></b></span> <a href="../para/introductions/imt.html" class="xref page">imt#</a></p>
+</li>
+<li>
+<p><span class="menuseq"><b class="menu">Paragraphs</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="submenu">Titles and Sections</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem"></b></span> <a href="../para/titles-sections/mt.html" class="xref page">mt#</a></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>An optional collection of one or more embedded elements.</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>[Footnote]</code> — <a href="../note/footnote/index.html" class="xref page">Footnotes</a></p>
+</li>
+<li>
+<p><code>[CrossReference]</code> — <a href="../note/crossref/index.html" class="xref page">Cross References</a></p>
+</li>
+<li>
+<p><code>[Char]</code> — <a href="../char/index.html" class="xref page">Characters</a></p>
+</li>
+<li>
+<p><code>[Milestone]</code> — <a href="../ms/index.html" class="xref page">Milestones</a></p>
+</li>
+<li>
+<p><code>[Break]</code> — <a href="../char/breaks/optbreak.html" class="xref page">Optional line break</a></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
 </div>
 <div class="sect2">
 <h3 id="doc-book-chapter-label"><a class="anchor" href="#doc-book-chapter-label"></a>Book Chapter Label</h3>
-
+<div class="ulist">
+<ul>
+<li>
+<p>An optional <a href="../para/index.html" class="xref page">paragraph</a> element used for providing a chapter heading text which may be applied when formatting all chapters as headings.</p>
+<div class="ulist">
+<ul>
+<li>
+<p><span class="menuseq"><b class="menu">Paragraphs</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="submenu">Identification</b>&#160;<i class="fa fa-angle-right caret"></i> <b class="menuitem"></b></span> <a href="../para/titles-sections/cl.html" class="xref page">cl</a></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
 </div>
 <div class="sect2">
 <h3 id="doc-book-chapter-content"><a class="anchor" href="#doc-book-chapter-content"></a>Chapter Content</h3>
-
+<div id="_tabs_6" class="openblock tabs is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_6_usfm" class="tab">
+<p>USFM</p>
+</li>
+<li id="_tabs_6_usx" class="tab">
+<p>USX</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_6_usfm--panel" class="tabpanel" aria-labelledby="_tabs_6_usfm">
+<div class="imageblock">
+<div class="content">
+<img src="_images/schema/chaptercontent_rail.svg" alt="chaptercontent rail">
+</div>
+</div>
+</div>
+<div id="_tabs_6_usx--panel" class="tabpanel" aria-labelledby="_tabs_6_usx">
+<div class="imageblock">
+<div class="content">
+<img src="_images/schema/chaptercontent_usx.svg" alt="chaptercontent usx">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>An optional collection of <a href="../cv/c.html" class="xref page">chapter</a>, <a href="../para/titles-sections/index.html" class="xref page">section</a>, <a href="../para/index.html" class="xref page">paragraph/poetry</a>, <a href="../para/lists/index.html" class="xref page">list</a>, <a href="../para/tables/index.html" class="xref page">table</a>, or <a href="../sbar/index.html" class="xref page">sidebar</a> elements for the main content of a scripture book.</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>[Chapter]</code> — <strong>Chapters and Verses &gt;</strong> <a href="../cv/c.html" class="xref page">c</a></p>
+</li>
+<li>
+<p><code>[Section]</code> — <strong>Paragraphs &gt; Titles and Sections &gt;</strong> <a href="../para/titles-sections/cd.html" class="xref page">cd</a>, <a href="../para/titles-sections/cl.html" class="xref page">cl</a>, <a href="../para/introductions/iex.html" class="xref page">iex</a>, <a href="../para/introductions/ip.html" class="xref page">ip</a>, <a href="../para/titles-sections/mr.html" class="xref page">mr</a>, <a href="../para/titles-sections/ms.html" class="xref page">ms#</a>, <a href="../para/titles-sections/mte.html" class="xref page">mte#</a>, <a href="../para/titles-sections/r.html" class="xref page">r</a>, <a href="../para/titles-sections/s.html" class="xref page">s#</a>, <a href="../para/titles-sections/sp.html" class="xref page">sp</a>, <a href="../para/titles-sections/sd.html" class="xref page">sd#</a>, <a href="../para/titles-sections/sr.html" class="xref page">sr</a></p>
+</li>
+<li>
+<p><code>[Para]</code> —</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Paragraphs &gt; Body Paragraphs &gt;</strong> <a href="../para/paragraphs/b.html" class="xref page">b</a>, <a href="../para/paragraphs/cls.html" class="xref page">cls</a>, <a href="../para/paragraphs/m.html" class="xref page">m</a>, <a href="../para/paragraphs/mi.html" class="xref page">mi</a>, <a href="../para/paragraphs/nb.html" class="xref page">nb</a>, <a href="../para/paragraphs/p.html" class="xref page">p</a>, <a href="../para/paragraphs/pc.html" class="xref page">pc</a>, <a href="../para/paragraphs/ph.html" class="xref page">ph</a>, <a href="../para/paragraphs/pi.html" class="xref page">pi#</a>, <a href="../para/paragraphs/pm.html" class="xref page">pm</a>, <a href="../para/paragraphs/pmc.html" class="xref page">pmc</a>, <a href="../para/paragraphs/pmo.html" class="xref page">pmo</a>, <a href="../para/paragraphs/pmr.html" class="xref page">pmr</a>, <a href="../para/paragraphs/po.html" class="xref page">po</a>, <a href="../para/paragraphs/pr.html" class="xref page">pr</a></p>
+</li>
+<li>
+<p><strong>Paragraphs &gt; Poetry &gt;</strong> <a href="../para/poetry/b.html" class="xref page">b</a>, <a href="../para/poetry/q.html" class="xref page">q#</a>, <a href="../para/poetry/qa.html" class="xref page">qa</a>, <a href="../para/poetry/qc.html" class="xref page">qc</a>, <a href="../para/poetry/qd.html" class="xref page">qd</a>, <a href="../para/poetry/qm.html" class="xref page">qm#</a>, <a href="../para/poetry/qr.html" class="xref page">qr</a></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><code>[List]</code> — <strong>Paragraphs &gt; Lists &gt;</strong> <a href="../para/lists/lf.html" class="xref page">lf</a>, <a href="../para/lists/lh.html" class="xref page">lh</a>, <a href="../para/lists/li.html" class="xref page">li#</a>, <a href="../para/lists/lim.html" class="xref page">lim#</a></p>
+</li>
+<li>
+<p><code>[Table]</code> — <strong>Paragraphs &gt;</strong> <a href="../para/tables/index.html" class="xref page">Tables</a></p>
+</li>
+<li>
+<p><code>[Sidebar]</code> — <a href="../sbar/index.html" class="xref page">Sidebars</a></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>An optional collection of one or more embedded elements.</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>[Verse]</code> — <a href="../cv/v.html" class="xref page">v</a></p>
+</li>
+<li>
+<p><code>[Footnote]</code> — <a href="../note/footnote/index.html" class="xref page">Footnotes</a></p>
+</li>
+<li>
+<p><code>[CrossReference]</code> — <a href="../note/crossref/index.html" class="xref page">Cross References</a></p>
+</li>
+<li>
+<p><code>[Char]</code> — <a href="../char/index.html" class="xref page">Characters</a></p>
+</li>
+<li>
+<p><code>[Milestone]</code> — <a href="../ms/index.html" class="xref page">Milestones</a></p>
+</li>
+<li>
+<p><code>[Break]</code> — <a href="../char/breaks/optbreak.html" class="xref page">Optional line break</a></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
 </div>
 </div>
 </div>

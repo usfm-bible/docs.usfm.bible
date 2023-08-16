@@ -6,7 +6,7 @@
     <title>c :: USFM / USX Docs</title>
     <link rel="canonical" href="https://docs.usfm.bible/usfm-usx-docs/latest/cv/c.html">
     <link rel="prev" href="index.html">
-    <link rel="next" href="v.html">
+    <link rel="next" href="ca.html">
     <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../../../_/css/site.css">
 <link rel="stylesheet" href="../../../_/css/site-extra.css">
@@ -91,10 +91,28 @@
     <a class="nav-link" href="index.html">Chapters and Verses</a>
 <ul class="nav-list">
   <li class="nav-item is-current-page" data-depth="2">
-    <a class="nav-link" href="c.html">c - Chapter</a>
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="c.html">c - Chapter number</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="ca.html">ca - Alternate chapter number</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="cp.html">cp - Published chapter number</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="v.html">v - Verse</a>
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="v.html">v - Verse number</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="va.html">va - Alternate verse number</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="vp.html">vp - Published verse number</a>
+  </li>
+</ul>
   </li>
 </ul>
   </li>
@@ -232,6 +250,9 @@
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../para/titles-sections/sd.html">sd# - Semantic division</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/titles-sections/cl.html">cl - Chapter label</a>
   </li>
 </ul>
   </li>
@@ -461,6 +482,18 @@
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../char/format/sup.html">sup - Smallcap text</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../char/breaks/index.html">Breaks</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../char/breaks/optbreak.html">// - Optional line break</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../char/breaks/pb.html">pb - Page break</a>
   </li>
 </ul>
   </li>
@@ -758,7 +791,7 @@
   <ul>
     <li><a href="../index.html">USFM / USX Docs</a></li>
     <li><a href="index.html">Chapters and Verses</a></li>
-    <li><a href="c.html">c - Chapter</a></li>
+    <li><a href="c.html">c - Chapter number</a></li>
   </ul>
 </nav>
 <div class="edit-this-page"><a href="https://github.com/usfm-bible/tcdocs/edit/main/manual/antora/modules/cv/pages/c.adoc">Edit this Page</a></div>
@@ -783,7 +816,14 @@
 <div class="ulist">
 <ul>
 <li>
-<p><strong>USFM:</strong> <code>\c </code><mark><em>number</em></mark></p>
+<p><strong>USFM:</strong> <code>\c </code><mark><em>number</em></mark><code> \ca </code><mark><em>altnumber</em></mark><code>\ca*</code> <em>(see: <a href="ca.html" class="xref page">ca</a>)</em></p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>\cp </code><mark><em>pubnumber</em></mark> <em>(see: <a href="cp.html" class="xref page">cp</a>)</em></p>
+</li>
+</ul>
+</div>
 </li>
 <li>
 <p><strong>USX:</strong> <code>&lt;chapter style="c" </code><mark><em>@number @altnumber @pubnumber @sid @eid</em></mark><code>/&gt;</code></p>
@@ -860,8 +900,15 @@
 </div>
 </div>
 <div id="_tabs_1_usx--panel" class="tabpanel" aria-labelledby="_tabs_1_usx">
-<div class="paragraph">
-<p><span class="image"><img src="_images/schema/chapter_usx.svg" alt="chapter usx"></span></p>
+<div class="imageblock">
+<div class="content">
+<img src="_images/schema/chapter_usx.svg" alt="chapter usx">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/schema/chapterend_usx.svg" alt="chapterend usx">
+</div>
 </div>
 </div>
 </div>
@@ -958,7 +1005,7 @@ who was a descendant of Abraham.</code></pre>
 </div>
 <nav class="pagination">
   <span class="prev"><a href="index.html">Chapters and Verses</a></span>
-  <span class="next"><a href="v.html">v - Verse</a></span>
+  <span class="next"><a href="ca.html">ca - Alternate chapter number</a></span>
 </nav>
 </article>
   </div>
