@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>cd :: USFM / USX Docs</title>
     <link rel="canonical" href="https://docs.usfm.bible/usfm-usx-docs/latest/para/titles-sections/cd.html">
+    <link rel="prev" href="cl.html">
+    <link rel="next" href="ms.html">
     <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../../../../_/css/site.css">
 <link rel="stylesheet" href="../../../../_/css/site-extra.css">
@@ -226,6 +228,12 @@
     <a class="nav-link" href="mte.html">mte# - Main title</a>
   </li>
   <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="cl.html">cl - Chapter label</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="3">
+    <a class="nav-link" href="cd.html">cd - Chapter description</a>
+  </li>
+  <li class="nav-item" data-depth="3">
     <a class="nav-link" href="ms.html">ms# - Major section heading</a>
   </li>
   <li class="nav-item" data-depth="3">
@@ -244,13 +252,10 @@
     <a class="nav-link" href="d.html">d - Descriptive title</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="sp.html">sp - Descriptive title</a>
+    <a class="nav-link" href="sp.html">sp - Speaker identification</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="sd.html">sd# - Semantic division</a>
-  </li>
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="cl.html">cl - Chapter label</a>
   </li>
 </ul>
   </li>
@@ -788,7 +793,9 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../../index.html">USFM / USX Docs</a></li>
-    <li><a href="cd.html">cd</a></li>
+    <li><a href="../index.html">Paragraphs</a></li>
+    <li><a href="index.html">Titles and Sections</a></li>
+    <li><a href="cd.html">cd - Chapter description</a></li>
   </ul>
 </nav>
 <div class="edit-this-page"><a href="https://github.com/usfm-bible/tcdocs/edit/main/manual/antora/modules/para/pages/titles-sections/cd.adoc">Edit this Page</a></div>
@@ -806,36 +813,17 @@
 <dl>
 <dt class="hdlist1">Description</dt>
 <dd>
-<p>Chapter label text.</p>
+<p>Chapter description. A brief description of chapter content – similar to <a href="d.html" class="xref page">d</a> (descriptive heading), or <a href="../introductions/iex.html" class="xref page">iex</a> (introduction explanatory or bridge text).</p>
 </dd>
-</dl>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-<div class="title">Usage note</div>
-<div class="paragraph">
-<p>If <code>cl</code> is added to a text once <em>before</em> <a href="../../cv/c.html" class="xref page">chapter</a> <code>1</code> it represents the label text for “Chapter” to be used throughout the current book. If <code>cl</code> is used <em>after each</em> individual <a href="../../cv/c.html" class="xref page">chapter</a>, it represents the specific label text to be used for the display of the current chapter (e.g. if numbers are being presented as words, not numerals).</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="dlist">
-<dl>
 <dt class="hdlist1">Syntax</dt>
 <dd>
 <div class="ulist">
 <ul>
 <li>
-<p><strong>USFM:</strong> <code>\cl </code><mark><em>content</em></mark></p>
+<p><strong>USFM:</strong> <code>\cd </code><mark><em>content</em></mark></p>
 </li>
 <li>
-<p><strong>USX:</strong> <code>&lt;para style="cl"&gt;</code><mark><em>content</em></mark><code>&lt;/para&gt;</code></p>
+<p><strong>USX:</strong> <code>&lt;para style="cd"&gt;</code><mark><em>content</em></mark><code>&lt;/para&gt;</code></p>
 </li>
 </ul>
 </div>
@@ -864,28 +852,35 @@
 </ul>
 </div>
 <div id="_tabs_1_usfm--panel" class="tabpanel" aria-labelledby="_tabs_1_usfm">
-<div id="src-usfm-para-cl_1" class="listingblock">
-<div class="title">Example 1. Psalm 1 (GNT - markup adapted - general chapter label)</div>
+<div id="src-usfm-para-cd_1" class="listingblock">
+<div class="title">Example 1. Genesis 2 (Russian Synodal Protestant Version)</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\cl Psalm
-\c 1
-\q1
-\v 1 Happy are those
-\q2 who reject the advice of evil people,</code></pre>
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\c 2
+\cd 1 Бог благословляет седьмой день; 8 человек в раю Едемском; четыре реки; дерево
+познания добра и зла. 18 Человек дает названия животным. 21 Создание женщины.
+\p
+\v 1 Так совершены небо и земля и все воинство их.
+\p
+\v 2 И совершил Бог к седьмому дню дела Свои, которые Он делал, и почил в день
+седьмой от всех дел Своих, которые делал.</code></pre>
 </div>
 </div>
 </div>
 <div id="_tabs_1_usx--panel" class="tabpanel" aria-labelledby="_tabs_1_usx">
-<div id="src-usx-para-cl_1" class="listingblock">
-<div class="title">Example 2. Psalm 1 (GNT - markup adapted - general chapter label)</div>
+<div id="src-usx-para-cd_1" class="listingblock">
+<div class="title">Example 2. Genesis 2 (Russian Synodal Protestant Version)</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;para style="cl"&gt;Psalm&lt;/para&gt;
-&lt;chapter number="1" style="c" sid="PSA 1"/&gt;
-&lt;para style="q1"&gt;
-  &lt;verse number="1" style="v" sid="PSA 1:1"/&gt;Happy are those&lt;/para&gt;
-&lt;para style="q2" vid="PSA 1:1"&gt;who reject the advice of evil people,
-  ...
-  &lt;verse eid="PSA 1:1"/&gt;&lt;/para&gt;</code></pre>
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;chapter number="2" style="c" sid="GEN 2"/&gt;
+&lt;para style="cd"&gt;1 Бог благословляет седьмой день; 8 человек в раю Едемском;
+  четыре реки; дерево познания добра и зла. 18 Человек дает названия животным.
+  21 Создание женщины.&lt;/para&gt;
+&lt;para style="p"&gt;
+  &lt;verse number="1" style="v" sid="GEN 2:1"/&gt;Так совершены небо и земля и все
+  воинство их.&lt;verse eid="GEN 2:1"/&gt;&lt;/para&gt;
+&lt;para style="p"&gt;
+  &lt;verse number="2" style="v" sid="GEN 2:2"/&gt;И совершил Бог к седьмому дню дела
+  Свои, которые Он делал, и почил в день седьмой от всех дел Своих, которые делал.
+  &lt;verse eid="GEN 2:2"/&gt;&lt;/para&gt;</code></pre>
 </div>
 </div>
 </div>
@@ -893,53 +888,7 @@
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="../_images/para/cl_1.jpg" alt="Psalm 1 (GNT - markup adapted - general chapter label)" width="300">
-</div>
-</div>
-<div id="_tabs_2" class="openblock tabs is-loading">
-<div class="content">
-<div class="ulist tablist">
-<ul>
-<li id="_tabs_2_usfm" class="tab">
-<p>USFM</p>
-</li>
-<li id="_tabs_2_usx" class="tab">
-<p>USX</p>
-</li>
-</ul>
-</div>
-<div id="_tabs_2_usfm--panel" class="tabpanel" aria-labelledby="_tabs_2_usfm">
-<div id="src-usfm-para-cl_2" class="listingblock">
-<div class="title">Example 3. Psalm 1 (GNT - markup adapted - specific chapter label)</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\c 1
-\cl Psalm One
-\q1
-\v 1 Happy are those
-\q2 who reject the advice of evil people,</code></pre>
-</div>
-</div>
-</div>
-<div id="_tabs_2_usx--panel" class="tabpanel" aria-labelledby="_tabs_2_usx">
-<div id="src-usx-para-cl_2" class="listingblock">
-<div class="title">Example 4. Psalm 1 (GNT - markup adapted - specific chapter label)</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;chapter number="1" style="c" sid="PSA 1"/&gt;
-&lt;para style="cl"&gt;Psalm One&lt;/para&gt;
-&lt;para style="s"&gt;True Happiness&lt;/para&gt;
-&lt;para style="q1"&gt;
-  &lt;verse number="1" style="v" sid="PSA 1:1" /&gt;Happy are those&lt;/para&gt;
-&lt;para style="q2" vid="PSA 1:1"&gt;who reject the advice of evil people,
-  ...
-  &lt;verse eid="PSA 1:1"/&gt;&lt;/para&gt;</code></pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../_images/para/cl_2.jpg" alt="Psalm 1 (GNT - markup adapted - specific chapter label)" width="300">
+<img src="../_images/para/cd_1.jpg" alt="Genesis 2 (Russian Synodal Protestant Version)" width="300">
 </div>
 </div>
 </div>
@@ -955,7 +904,7 @@
 </dd>
 <dt class="hdlist1">OccursUnder</dt>
 <dd>
-<p><code>[ChapterContent]</code></p>
+<p><code>[BookHeaders]</code></p>
 </dd>
 <dt class="hdlist1">TextType</dt>
 <dd>
@@ -975,6 +924,10 @@
 
 </div>
 </div>
+<nav class="pagination">
+  <span class="prev"><a href="cl.html">cl - Chapter label</a></span>
+  <span class="next"><a href="ms.html">ms# - Major section heading</a></span>
+</nav>
 </article>
   </div>
 </main>
