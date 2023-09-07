@@ -67,6 +67,11 @@ div.content a:focus, div.content a:hover {
   width: 2.5rem;
 }
 
+/* Disable hyphenation */
+.doc {
+  hyphens: none
+}
+
 .doc pre.highlight code,
 .doc .listingblock pre:not(.highlight),
 .doc .literalblock pre {

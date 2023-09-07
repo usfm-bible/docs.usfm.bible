@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Syntax Notes :: USFM / USX Docs</title>
+    <title>General Syntax :: USFM / USX Docs</title>
     <link rel="canonical" href="https://docs.usfm.bible/usfm-usx-docs/latest/syntax.html">
-    <link rel="prev" href="release-notes.html">
-    <link rel="next" href="whitespace.html">
+    <link rel="prev" href="introduction.html">
+    <link rel="next" href="bidirectional.html">
     <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../../_/css/site.css">
 <link rel="stylesheet" href="../../_/css/site-extra.css">
@@ -49,29 +49,29 @@
   <li class="nav-item" data-depth="0">
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="index.html">USFM and USX Documentation</a>
-<ul class="nav-list">
-  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="release-notes.html">Release Notes</a>
   </li>
-  <li class="nav-item is-current-page" data-depth="2">
+  <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="syntax.html">Syntax Notes</a>
+    <a class="nav-link" href="introduction.html">Introduction</a>
 <ul class="nav-list">
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="whitespace.html">Whitespace</a>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="syntax.html">General Syntax</a>
   </li>
-  <li class="nav-item" data-depth="3">
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="bidirectional.html">Bidirectional Text</a>
   </li>
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="extensions.html">Extensions</a>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="extensions.html">User Extensions</a>
   </li>
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="syntax-docs.html">Docs Syntax Notes</a>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="normalization.html">Normalization</a>
   </li>
-</ul>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="glossary.html">Glossary of Terms</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="syntax-docs.html">Documentation Syntax</a>
   </li>
 </ul>
   </li>
@@ -787,8 +787,8 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="index.html">USFM / USX Docs</a></li>
-    <li><a href="index.html">USFM and USX Documentation</a></li>
-    <li><a href="syntax.html">Syntax Notes</a></li>
+    <li><a href="introduction.html">Introduction</a></li>
+    <li><a href="syntax.html">General Syntax</a></li>
   </ul>
 </nav>
 <div class="edit-this-page"><a href="https://github.com/usfm-bible/tcdocs/edit/main/manual/antora/modules/ROOT/pages/syntax.adoc">Edit this Page</a></div>
@@ -798,79 +798,111 @@
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">Syntax Notes</h1>
+<h1 class="page">General Syntax</h1>
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p><em>See also:</em></p>
+<p>There are five general categories of USFM/USX markup:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="whitespace.html" class="xref page">Whitespace</a></p>
+<p><a href="para/index.html" class="xref page">Paragraphs</a></p>
 </li>
 <li>
-<p><a href="extensions.html" class="xref page">Extensions</a></p>
+<p><a href="char/index.html" class="xref page">Characters</a></p>
 </li>
 <li>
-<p><a href="syntax-docs.html" class="xref page">Docs Syntax Notes</a></p>
+<p><a href="note/index.html" class="xref page">Notes</a></p>
+</li>
+<li>
+<p><a href="ms/index.html" class="xref page">Milestones</a></p>
+</li>
+<li>
+<p><a href="cv/index.html" class="xref page">Chapters and Verses</a></p>
 </li>
 </ul>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_general_syntax_usfm"><a class="anchor" href="#_general_syntax_usfm"></a>General Syntax (USFM)</h2>
+<h2 id="_usfm"><a class="anchor" href="#_usfm"></a>USFM</h2>
 <div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p>There are three broad categories of USFM markup - <a href="para/index.html" class="xref page">paragraph</a>, <a href="char/index.html" class="xref page">character</a>, and <a href="note/index.html" class="xref page">note</a> types.</p>
-</li>
-<li>
-<p>All USFM markers begin with a backslash character <code>\</code>.</p>
-</li>
-<li>
-<p><a href="para/index.html" class="xref page">Paragraph</a> markers, and the opening marker for <a href="char/index.html" class="xref page">characters</a> and <a href="note/index.html" class="xref page">notes</a> are followed by whitespace.</p>
-</li>
-<li>
-<p><a href="char/index.html" class="xref page">Character</a> markers occur in pairs, marking a span of text within a paragraph.</p>
-<div class="ulist">
-<ul>
-<li>
-<p>The closing marker character is the same as the opening marker, but ends with an asterisk character <code>*</code>. Example: <code>\w grace\w*</code>.</p>
-</li>
-</ul>
+<div class="paragraph">
+<p>In <strong>USFM</strong>, all markers begin with a backslash character <code>\</code>.</p>
 </div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="para/index.html" class="xref page">Paragraph</a> markers, and the opening marker for <a href="char/index.html" class="xref page">characters</a> and <a href="note/index.html" class="xref page">notes</a> are followed by a space. Example: <code>\p </code>.</p>
+</li>
+<li>
+<p><a href="char/index.html" class="xref page">Character</a> markers occur in pairs, marking a span of text within a paragraph. The closing marker is identical to the opening marker, terminated with an asterisk character <code>*</code>. Example: <code>\w grace\w*</code>.</p>
 </li>
 <li>
 <p><a href="note/index.html" class="xref page">Note</a> markers also occur in pairs, marking the start and end of the <a href="note/footnote/index.html" class="xref page">footnote</a> or <a href="note/crossref/index.html" class="xref page">cross reference</a> content.</p>
 </li>
+<li>
+<p><a href="ms/index.html" class="xref page">Milestone</a> markers follow a syntax similar to <a href="char/index.html" class="xref page">character markers</a>, but using a self-closing syntax which immediately terminates the marker with a second backslash plus asterisk <code>\*</code>. Example: <code>\\qt-s\*</code></p>
+</li>
+<li>
+<p><a href="cv/c.html" class="xref page">Chapters</a> and <a href="cv/v.html" class="xref page">verses</a> are unique elements. Their syntax is similar to a paragraph marker. The chapter or verse number itself is added after the marker and its space. Chapter and verses are also like milestones because they identify the location for the start of a chapter or verse. In USFM there is no marker to indicate the end of a chapter or verse.</p>
+</li>
 </ul>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_numbered_markers"><a class="anchor" href="#_numbered_markers"></a>Numbered Markers</h2>
+<h2 id="_usx"><a class="anchor" href="#_usx"></a>USX</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Some USFM markers include an optional numeric variable, which is represented in this documentation by a hash character <code>#</code>. In USFM the number indicates:</p>
+<p><strong>USX</strong> follows the <a href="https://www.w3.org/TR/xml/">standard syntax</a> for XML documents.</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>A portion of a complete element, or relative weighting of the "pieces" of the elements, such as <code>\mt1</code>, <code>\mt2</code>, <code>\mt3</code> which are parts of a major title.</p>
+<p><a href="para/index.html" class="xref page">Paragraphs</a> occur within a <code>&lt;para&gt;</code> element.</p>
 </li>
 <li>
-<p>The level of the division or section (hierarchy).</p>
+<p><a href="char/index.html" class="xref page">Character</a> spans occur within a <code>&lt;char&gt;</code> element.</p>
 </li>
 <li>
-<p>The level of indentation relative to other like elements, as in poetry (<a href="para/poetry/q.html" class="xref page">\q#</a>) or lists (<a href="para/lists/li.html" class="xref page">\li#</a>) or outlines (\io#).</p>
+<p><a href="note/index.html" class="xref page">Notes</a> occur within a <code>&lt;note&gt;</code> element.</p>
+</li>
+<li>
+<p><a href="ms/index.html" class="xref page">Milestones</a> occur as an <code>&lt;ms/&gt;</code> element.</p>
+</li>
+<li>
+<p><a href="cv/c.html" class="xref page">Chapters</a> and <a href="cv/v.html" class="xref page">verses</a> occur as as pairs of 'milestone-like' self-closing <code>&lt;chapter/&gt;</code> or <code>&lt;verse/&gt;</code> elements, which identify the start and end positions for a chapter or verse.</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p><strong>marker = marker1</strong> — The <em>unnumbered</em> version of a marker should only be used when only one level of this marker exists within the text. <em>Numbered</em> markers should always be used when more than one level of the marker exists within the text.</p>
+<p>Different <em>types</em> of paragraph, character, note, or milestones are identified by a <code>style</code> attribute. The <code>style</code> attribute is the value which associates the element with its corresponding USFM marker.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_numbered_markersstyles"><a class="anchor" href="#_numbered_markersstyles"></a>Numbered Markers/Styles</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Some markers or styles include an optional numeric variable, which is represented in this documentation by a hash character <code>#</code>. The number indicates:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>A portion of a larger text, or relative weighting of the components of the text, such as <code>mt1</code>, <code>mt2</code>, <code>mt3</code> which are parts of a <a href="para/titles-sections/mt.html" class="xref page">main title</a>.</p>
+</li>
+<li>
+<p>The level of a division or section (hierarchy).</p>
+</li>
+<li>
+<p>The level of indentation relative to other like elements, as in poetry (<a href="para/poetry/q.html" class="xref page">q#</a>) or lists (<a href="para/lists/li.html" class="xref page">li#</a>) or outlines (<a href="para/introductions/io.html" class="xref page">io#</a>).</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>marker = marker1</strong> — The <em>unnumbered</em> version of a marker or style should only be used when one level of this marker exists within the text (only). <em>Numbered</em> markers should always be used when more than one level of the marker exists within the text.</p>
 </div>
 <div class="admonitionblock caution">
 <table>
@@ -880,7 +912,7 @@
 </td>
 <td class="content">
 <div class="paragraph">
-<p>A specific numbered marker should not be used to indicate a specific occurrence of the element type (e.g. you should not use <code>\s3</code> to represent the the particular section heading occuring before the "Story of Creation" in Genesis 1.)</p>
+<p>A specific numbered marker or style should not be used to indicate a specific occurrence of the element type (i.e. you should not use <code>s3</code> to represent the the particular section heading occuring before the "Story of Creation" in Genesis 1.)</p>
 </div>
 </td>
 </tr>
@@ -889,13 +921,13 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="_endmarkers_in_footnotes_and_cross_references"><a class="anchor" href="#_endmarkers_in_footnotes_and_cross_references"></a>Endmarkers in Footnotes and Cross References</h2>
+<h2 id="_usfm_endmarkers_in_footnotes_and_cross_references"><a class="anchor" href="#_usfm_endmarkers_in_footnotes_and_cross_references"></a>USFM Endmarkers in Footnotes and Cross References</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Elements which make up <a href="note/footnote/index.html" class="xref page">footnote</a> or <a href="note/crossref/index.html" class="xref page">cross reference</a> content are <a href="char/index.html" class="xref page">character</a> level markers, which means that they define a start and end marker. Some USFM editors interpret the presence of a new character marker as an implicit closure of any preceding character level marker. The majority of scripture translation projects working with USFM have followed this syntax for footnotes or cross references (not supplying the explicit end marker) since this reduces the amount of markup within the notes text, making it easier to read as a result.</p>
+<p>Elements which make up <a href="note/footnote/index.html" class="xref page">footnote</a> or <a href="note/crossref/index.html" class="xref page">cross reference</a> content are <a href="char/index.html" class="xref page">character</a> level markers, which means that they are defined with a start and end marker. The majority of scripture translation projects working with USFM have followed a syntax for editing footnotes or cross references which does not require the explicit end marker. This was done in order to reduces the amount of markup within the notes text, making it easier to read.</p>
 </div>
 <div class="paragraph">
-<p>Examples of the two markup approaches for notes is provided below:</p>
+<p>Examples of the two markup approaches for notes are given below. Both of these are syntactically acceptable in USFM.</p>
 </div>
 <div id="_tabs_1" class="openblock tabs is-loading">
 <div class="content">
@@ -1032,7 +1064,7 @@ Word List.\ft*\f*</code></pre>
 </td>
 <td class="content">
 <div class="paragraph">
-<p><a href="char/nesting.html" class="xref page">Nested</a> character markers within notes <em>always</em> require explicit opening and closing markers, and must use the syntax for <a href="char/nesting.html" class="xref page">character marker nesting</a>.</p>
+<p><a href="char/nesting.html" class="xref page">Nested</a> character markers within notes <em>always</em> require explicit opening and closing markers.</p>
 </div>
 </td>
 </tr>
@@ -1041,8 +1073,8 @@ Word List.\ft*\f*</code></pre>
 </div>
 </div>
 <nav class="pagination">
-  <span class="prev"><a href="release-notes.html">Release Notes</a></span>
-  <span class="next"><a href="whitespace.html">Whitespace</a></span>
+  <span class="prev"><a href="introduction.html">Introduction</a></span>
+  <span class="next"><a href="bidirectional.html">Bidirectional Text</a></span>
 </nav>
 </article>
   </div>

@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>z Namespace :: USFM / USX Docs</title>
+    <title>User Extensions ('z' namespace) :: USFM / USX Docs</title>
     <link rel="canonical" href="https://docs.usfm.bible/usfm-usx-docs/latest/extensions.html">
     <link rel="prev" href="bidirectional.html">
-    <link rel="next" href="syntax-docs.html">
+    <link rel="next" href="normalization.html">
     <meta name="generator" content="Antora 3.1.4">
     <link rel="stylesheet" href="../../_/css/site.css">
 <link rel="stylesheet" href="../../_/css/site-extra.css">
@@ -49,29 +49,29 @@
   <li class="nav-item" data-depth="0">
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="index.html">USFM and USX Documentation</a>
-<ul class="nav-list">
-  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="release-notes.html">Release Notes</a>
   </li>
-  <li class="nav-item" data-depth="2">
+  <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="syntax.html">Syntax Notes</a>
+    <a class="nav-link" href="introduction.html">Introduction</a>
 <ul class="nav-list">
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="whitespace.html">Whitespace</a>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="syntax.html">General Syntax</a>
   </li>
-  <li class="nav-item" data-depth="3">
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="bidirectional.html">Bidirectional Text</a>
   </li>
-  <li class="nav-item is-current-page" data-depth="3">
-    <a class="nav-link" href="extensions.html">Extensions</a>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="extensions.html">User Extensions</a>
   </li>
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="syntax-docs.html">Docs Syntax Notes</a>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="normalization.html">Normalization</a>
   </li>
-</ul>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="glossary.html">Glossary of Terms</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="syntax-docs.html">Documentation Syntax</a>
   </li>
 </ul>
   </li>
@@ -787,9 +787,8 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="index.html">USFM / USX Docs</a></li>
-    <li><a href="index.html">USFM and USX Documentation</a></li>
-    <li><a href="syntax.html">Syntax Notes</a></li>
-    <li><a href="extensions.html">Extensions</a></li>
+    <li><a href="introduction.html">Introduction</a></li>
+    <li><a href="extensions.html">User Extensions</a></li>
   </ul>
 </nav>
 <div class="edit-this-page"><a href="https://github.com/usfm-bible/tcdocs/edit/main/manual/antora/modules/ROOT/pages/extensions.adoc">Edit this Page</a></div>
@@ -799,13 +798,13 @@
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">z Namespace</h1>
+<h1 class="page">User Extensions ('z' namespace)</h1>
 <div class="paragraph">
-<p>If private-use markup extensions are required, it is recommended that any user additions begin with <code>\z</code> (e.g. <code>\zMyMarker</code>). Markers in this <code>\z</code> namespace are not considered part of the USFM standard. USFM processors cannot be expected to handle <code>\z</code> markup or associated text, and are free to ignore this markup when it is encountered in a text. It will be the application or user&#8217;s responsibility to support <code>\z</code> markup in ways which meet a local need. Please consider this carefully before introducing non-standard USFM markup within a scripture translation project text.</p>
+<p>Any 'private-use' marker/style extensions should begin with <code>z</code>. Example: <code>\zMyPara</code> or <code>&lt;para style="zMyPara"&gt;</code>. Markers/styles in the <code>z</code> namespace are not considered part of the USFM/USX standard. An application or processor may provided support for <code>z</code> extensions, but are not expected to handle the markup or its associated text in any particular way, and are also free to ignore this markup when it is encountered in a text.</p>
 </div>
 <nav class="pagination">
   <span class="prev"><a href="bidirectional.html">Bidirectional Text</a></span>
-  <span class="next"><a href="syntax-docs.html">Docs Syntax Notes</a></span>
+  <span class="next"><a href="normalization.html">Normalization</a></span>
 </nav>
 </article>
   </div>
