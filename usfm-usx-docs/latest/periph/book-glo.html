@@ -801,8 +801,104 @@
 </aside>
 <article class="doc">
 <h1 class="page">Glossary</h1>
+<div id="preamble">
+<div class="sectionbody">
 <div class="paragraph">
-<p>The <code>GLO</code> <a href="../para/identification/books.html" class="xref page">book</a></p>
+<p>The <code>GLO</code> <a href="../para/identification/books.html" class="xref page">book</a> can be used for adding a glossary.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="../para/titles-sections/mt.html" class="xref page">mt# - Main title</a></p>
+</li>
+<li>
+<p><a href="../para/introductions/is.html" class="xref page">is# - Intro section heading</a></p>
+</li>
+<li>
+<p><a href="../para/introductions/ip.html" class="xref page">ip - Intro paragraph</a></p>
+</li>
+<li>
+<p><a href="../para/titles-sections/s.html" class="xref page">s# - Section heading</a> - Possible use: Headings of alphabetical divisions - 'A', 'B', 'C' etc.</p>
+</li>
+<li>
+<p><a href="../para/paragraphs/p.html" class="xref page">p - Paragraph</a> - Main entry <em>(required)</em>. May also be used for any additional paragraphs in the definition entry (optional).</p>
+</li>
+<li>
+<p><a href="../char/features/k.html" class="xref page">k - Keyword/keyterm</a> - Main entry keyword. <em>(required)</em></p>
+</li>
+<li>
+<p><a href="../para/paragraphs/pi.html" class="xref page">pi - Indented paragraph</a> - Sub-entries, or secondary paragraph(s), if indentation is preferred.</p>
+</li>
+<li>
+<p><a href="../char/features/tl.html" class="xref page">tl - Transliterated words</a> - National idiom word(s).</p>
+</li>
+<li>
+<p><a href="../para/lists/index.html" class="xref page">Lists</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_examples"><a class="anchor" href="#_examples"></a>Examples</h2>
+<div class="sectionbody">
+<div id="_tabs_1" class="openblock tabs is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_1_usfm" class="tab">
+<p>USFM</p>
+</li>
+<li id="_tabs_1_usx" class="tab">
+<p>USX</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_1_usfm--panel" class="tabpanel" aria-labelledby="_tabs_1_usfm">
+<div id="src-usfm-periph-glo_1" class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\id GLO
+\mt Glossary
+\ip This dictionary is divided into 21 sections. The indexes below list all of
+the sections, and all of the entries in alphabetical order, so that you can find
+what you are looking for more easily.
+\p \k Angel\k* A supernatural being who tells God's messages to people or protects
+those who belong to God.
+...
+\p \k Council\k* (1) A group of leaders who meet and make decisions for their
+people.
+\pi (2) The Old Testament refers to God's council as a group of angels who meet
+and talk with God in heaven.
+...</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_1_usx--panel" class="tabpanel" aria-labelledby="_tabs_1_usx">
+<div id="src-usx-periph-glo_1" class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;usx version="3.0"&gt;
+  &lt;book code="GLO" style="id" /&gt;
+  &lt;para style="mt"&gt;Glossary&lt;/para&gt;
+  &lt;para style="ip"&gt;This dictionary is divided into 21 sections. The indexes below
+    list all of the sections, and all of the entries in alphabetical order, so
+    that you can find what you are looking for more easily.&lt;/para&gt;
+  &lt;para style="p"&gt;
+    &lt;char style="k"&gt;Angel&lt;/char&gt; A supernatural being who tells God's messages to
+    people or protects those who belong to God. ...&lt;/para&gt;
+  &lt;para style="p"&gt;
+    &lt;char style="k"&gt;Council&lt;/char&gt; (1) A group of leaders who meet and make
+    decisions for their people.&lt;/para&gt;
+  &lt;para style="pi"&gt;(2) The Old Testament refers to God's council as a group of
+    angels who meet and talk with God in heaven.&lt;/para&gt;
+  ...
+&lt;/usx&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 </div>
 <nav class="pagination">
   <span class="prev"><a href="book-cnc.html">Concordance</a></span>

@@ -801,8 +801,122 @@
 </aside>
 <article class="doc">
 <h1 class="page">Topical Index</h1>
+<div id="preamble">
+<div class="sectionbody">
 <div class="paragraph">
-<p>The <code>TDX</code> <a href="../para/identification/books.html" class="xref page">book</a></p>
+<p>The <code>TDX</code> <a href="../para/identification/books.html" class="xref page">book</a> can be used for adding a topical index.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="../para/titles-sections/mt.html" class="xref page">mt# - Main title</a></p>
+</li>
+<li>
+<p><a href="../para/introductions/is.html" class="xref page">is# - Intro section heading</a></p>
+</li>
+<li>
+<p><a href="../para/introductions/ip.html" class="xref page">ip - Intro paragraph</a></p>
+</li>
+<li>
+<p><a href="../para/titles-sections/s.html" class="xref page">s# - Section heading</a> - Possible use: Headings of alphabetical divisions - 'A', 'B', 'C' etc.</p>
+</li>
+<li>
+<p><a href="../para/paragraphs/p.html" class="xref page">p - Paragraph</a> - Main entry <em>(required)</em>. May also be used for any additional paragraphs in the definition entry (optional).</p>
+</li>
+<li>
+<p><a href="../char/features/k.html" class="xref page">k - Keyword/keyterm</a> - Main entry keyword. <em>(required)</em></p>
+</li>
+<li>
+<p><a href="../char/notes/crossref/xt.html" class="xref page">xt - Target references</a> - Entry target reference(s). <em>(required)</em>. More than one <a href="../char/notes/crossref/xt.html" class="xref page">xt</a> entry can be provided to create logical groupings of references (per chapter; per book etc.).</p>
+</li>
+<li>
+<p><a href="../para/paragraphs/pi.html" class="xref page">pi - Indented paragraph</a> - Sub-entries, or secondary paragraph(s), if indentation is preferred.</p>
+</li>
+<li>
+<p><a href="../para/lists/index.html" class="xref page">Lists</a></p>
+</li>
+<li>
+<p><a href="../para/tables/index.html" class="xref page">Tables</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_examples"><a class="anchor" href="#_examples"></a>Examples</h2>
+<div class="sectionbody">
+<div id="_tabs_1" class="openblock tabs is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_1_usfm" class="tab">
+<p>USFM</p>
+</li>
+<li id="_tabs_1_usx" class="tab">
+<p>USX</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_1_usfm--panel" class="tabpanel" aria-labelledby="_tabs_1_usfm">
+<div id="src-usfm-periph-tdx_1" class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\id TDX
+\mt Subject Index
+\ip Introductory paragraph(s)
+...
+\s A
+\p \k Aaron\k*
+\xt Act 7.40
+\xt Heb 5.4; 7.11; 9.4
+...
+\p \k Angels\k*
+\pi (a) messengers and agents of God
+\xt Mat 1.20-24; 4.11; 13.39,41,49; 16.27; 34.31; 25.31; 28.2-7
+\xt Luk 1.11-19; 26-38; 2.9-21
+\xt Jhn 1.51
+...
+\pi (b) in heaven
+\xt Mat 22.30
+\xt Luk 12.8-9; 15.10; 20.36
+...</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_1_usx--panel" class="tabpanel" aria-labelledby="_tabs_1_usx">
+<div id="src-usx-periph-tdx_1" class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;usx version="3.0"&gt;
+  &lt;book code="TDX" style="id" /&gt;
+  &lt;para style="mt"&gt;Subject Index&lt;/para&gt;
+  &lt;para style="ip"&gt;Introductory paragraph(s) ...&lt;/para&gt;
+  &lt;para style="s"&gt;A&lt;/para&gt;
+  &lt;para style="p"&gt;
+    &lt;char style="k"&gt;Aaron&lt;/char&gt;
+    &lt;char style="xt"&gt;Act 7.40 &lt;/char&gt;
+    &lt;char style="xt"&gt;Heb 5.4; 7.11; 9.4&lt;/char&gt;
+    &lt;/para&gt;
+  ...
+  &lt;para style="p"&gt;
+    &lt;char style="k"&gt;Angels&lt;/char&gt;
+  &lt;/para&gt;
+  &lt;para style="pi"&gt;(a) messengers and agents of God
+    &lt;char style="xt"&gt;Mat 1.20-24; 4.11; 13.39,41,49; 16.27; 34.31; 25.31;
+      28.2-7&lt;/char&gt;
+    &lt;char style="xt"&gt;Luk 1.11-19; 26-38; 2.9-21&lt;/char&gt;
+    &lt;char style="xt" Jhn 1.51&lt;/char&gt;
+    ...&lt;/para&gt;
+  &lt;para style="pi"&gt;(b) in heaven
+    &lt;char style="xt"&gt;Mat 22.30 &lt;/char&gt;
+    &lt;char style="xt"&gt;Luk 12.8-9; 15.10; 20.36&lt;/char&gt;
+    ...&lt;/para&gt;
+&lt;/usx&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 </div>
 <nav class="pagination">
   <span class="prev"><a href="book-glo.html">Glossary</a></span>

@@ -801,8 +801,111 @@
 </aside>
 <article class="doc">
 <h1 class="page">Names Index</h1>
+<div id="preamble">
+<div class="sectionbody">
 <div class="paragraph">
-<p>The <code>NDX</code> <a href="../para/identification/books.html" class="xref page">book</a></p>
+<p>The <code>NDX</code> <a href="../para/identification/books.html" class="xref page">book</a> can be used for adding a names index.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="../para/titles-sections/mt.html" class="xref page">mt# - Main title</a></p>
+</li>
+<li>
+<p><a href="../para/introductions/is.html" class="xref page">is# - Intro section heading</a></p>
+</li>
+<li>
+<p><a href="../para/introductions/ip.html" class="xref page">ip - Intro paragraph</a></p>
+</li>
+<li>
+<p><a href="../para/titles-sections/s.html" class="xref page">s# - Section heading</a> - Possible use: Headings of alphabetical divisions - 'A', 'B', 'C' etc.</p>
+</li>
+<li>
+<p><a href="../para/paragraphs/p.html" class="xref page">p - Paragraph</a> - Main entry <em>(required)</em>. May also be used for any additional paragraphs in the definition entry (optional).</p>
+</li>
+<li>
+<p><a href="../char/features/k.html" class="xref page">k - Keyword/keyterm</a> - Main entry keyword. <em>(required)</em></p>
+</li>
+<li>
+<p><a href="../char/notes/crossref/xt.html" class="xref page">xt - Target references</a> - Entry target reference(s). <em>(required)</em>. More than one <a href="../char/notes/crossref/xt.html" class="xref page">xt</a> entry can be provided to create logical groupings of references (per chapter; per book etc.).</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_examples"><a class="anchor" href="#_examples"></a>Examples</h2>
+<div class="sectionbody">
+<div id="_tabs_1" class="openblock tabs is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_1_usfm" class="tab">
+<p>USFM</p>
+</li>
+<li id="_tabs_1_usx" class="tab">
+<p>USX</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_1_usfm--panel" class="tabpanel" aria-labelledby="_tabs_1_usfm">
+<div id="src-usfm-periph-ndx_1" class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\id NDX
+\mt Names Index
+\ip Introductory paragraph(s) ...
+...
+\s A
+\p \k Aaron\k*
+\xt Exo 4.14-30 (x5)
+\xt Exo 5.1-21 (x5)
+...
+\p \k Abraham\k*
+\p See Also Abram
+\xt Gen 17.5-27 (x8)
+\xt Gen 18.1-33 (x15)
+...
+\s B
+\p \k Baal\k*
+\xt Num 22.41
+\xt Num 25.3-5 (x2)
+...</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_1_usx--panel" class="tabpanel" aria-labelledby="_tabs_1_usx">
+<div id="src-usx-periph-ndx_1" class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;usx version="3.0"&gt;
+  &lt;book code="NDX" style="id" /&gt;
+  &lt;para style="mt"&gt;Names Index&lt;/para&gt;
+  &lt;para style="ip"&gt;Introductory paragraph(s) ...&lt;/para&gt;
+  &lt;para style="s"&gt;A&lt;/para&gt;
+  &lt;para style="p"&gt;
+    &lt;char style="k"&gt;Aaron&lt;/char&gt;
+    &lt;char style="xt" &gt;Exo 4.14-30 (x5)&lt;/char&gt;
+    &lt;char style="xt" &gt;Exo 5.1-21 (x5)&lt;/char&gt;&lt;/para&gt;
+  ...
+  &lt;para style="p"&gt;
+    &lt;char style="k"&gt;Abraham&lt;/char&gt;&lt;/para&gt;
+  &lt;para style="p"&gt;See Also Abram
+    &lt;char style="xt"&gt;Gen 17.5-27 (x8)&lt;/char&gt;
+    &lt;char style="xt"&gt;Gen 18.1-33 (x15)&lt;/char&gt;&lt;/para&gt;
+  ...
+  &lt;para style="s"&gt;B&lt;/para&gt;
+  &lt;para style="p"&gt;
+    &lt;char style="k"&gt;Baal&lt;/char&gt;
+    &lt;char style="xt"&gt;Num 22.41&lt;/char&gt;
+    &lt;char style="xt"&gt;Num 25.3-5 (x2)&lt;/char&gt;&lt;/para&gt;
+  ...
+&lt;/usx&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 </div>
 <nav class="pagination">
   <span class="prev"><a href="book-tdx.html">Topical Index</a></span>

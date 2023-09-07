@@ -801,8 +801,139 @@
 </aside>
 <article class="doc">
 <h1 class="page">Concordance</h1>
+<div id="preamble">
+<div class="sectionbody">
 <div class="paragraph">
-<p>The <code>CNC</code> <a href="../para/identification/books.html" class="xref page">book</a></p>
+<p>The <code>CNC</code> <a href="../para/identification/books.html" class="xref page">book</a> can be used for adding a concordance.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="../para/titles-sections/mt.html" class="xref page">mt# - Main title</a></p>
+</li>
+<li>
+<p><a href="../para/introductions/is.html" class="xref page">is# - Intro section heading</a></p>
+</li>
+<li>
+<p><a href="../para/introductions/ip.html" class="xref page">ip - Intro paragraph</a></p>
+</li>
+<li>
+<p><a href="../para/titles-sections/s.html" class="xref page">s# - Section heading</a> - Possible use: Headings of alphabetical divisions - 'A', 'B', 'C' etc.</p>
+</li>
+<li>
+<p><a href="../para/paragraphs/p.html" class="xref page">p - Paragraph</a> - Main entry + example 'cut string'. <em>(required)</em></p>
+</li>
+<li>
+<p><a href="../char/features/k.html" class="xref page">k - Keyword/keyterm</a> - Main entry keyword. <em>(required)</em></p>
+</li>
+<li>
+<p><a href="../char/notes/crossref/xt.html" class="xref page">xt - Target references</a> - Entry target reference(s). <em>(required)</em></p>
+</li>
+<li>
+<p><a href="../char/format/bd.html" class="xref page">bd - Bold text</a> - Highlight of the main entry within the cut string (in bold).</p>
+</li>
+<li>
+<p><a href="../para/paragraphs/pi.html" class="xref page">pi - Indented paragraph</a> - Sub-entries, or secondary paragraph(s), if indentation is preferred.</p>
+</li>
+<li>
+<p><a href="../char/features/add.html" class="xref page">add - Translator addition</a> - Grammar abbreviation (optional).</p>
+</li>
+<li>
+<p><a href="../para/tables/index.html" class="xref page">Tables</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_examples"><a class="anchor" href="#_examples"></a>Examples</h2>
+<div class="sectionbody">
+<div id="_tabs_1" class="openblock tabs is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_1_usfm" class="tab">
+<p>USFM</p>
+</li>
+<li id="_tabs_1_usx" class="tab">
+<p>USX</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_1_usfm--panel" class="tabpanel" aria-labelledby="_tabs_1_usfm">
+<div id="src-usfm-periph-cnc_1" class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\id CNC
+\mt Concordance
+\ip The entries in this concordance have been carefully selected by a team of
+editors. They have aimed to include all of the verses most likely to be looked up.
+\ip A concordance of this size cannot include every occurrence of each individual
+word.
+...
+\s A
+\p \k Abandon\k*
+\p \xt Lev 19.4\xt* Do not \bd abandon\bd* me and worship idols.
+\p \xt Deu 31.6\xt* He will not fail you or \bd abandon\bd* you.”
+\p \xt Deu 32.15\xt* They \bd abandoned\bd* God their Creator
+...
+\p \k Able\k*
+\p \xt Exo 31.3\xt* understanding, skill, and \bd ability\bd*
+\p \xt Dan 3.17\xt* If the God whom we serve is \bd able\bd*
+\p \xt Mat 26.61\xt* and said, “This man said, ‘I am \bd able\bd*
+...
+\s B
+...</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_1_usx--panel" class="tabpanel" aria-labelledby="_tabs_1_usx">
+<div id="src-usx-periph-cnc_1" class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;usx version="3.0"&gt;
+  &lt;book code="CNC" style="id"/&gt;
+  &lt;para style="mt"&gt;Concordance&lt;/para&gt;
+  &lt;para style="ip"&gt;The entries in this concordance have been carefully selected by
+    a team of editors. They have aimed to include all of the verses most likely to
+    be looked up.&lt;/para&gt;
+  &lt;para style="ip"&gt;A concordance of this size cannot include every occurrence of
+    each individual word. ...&lt;/para&gt;
+  &lt;para style="s"&gt;A&lt;/para&gt;
+  &lt;para style="p"&gt;
+    &lt;char style="k"&gt;Abandon&lt;/char&gt;
+  &lt;/para&gt;
+  &lt;para style="p"&gt;
+    &lt;char style="xt"&gt;Lev 19.4&lt;/char&gt; Do not &lt;char style="bd"&gt;abandon&lt;/char&gt; me and
+    worship idols.&lt;/para&gt;
+  &lt;para style="p"&gt;
+    &lt;char style="xt"&gt;Deu 31.6&lt;/char&gt; He will not fail you or
+    &lt;char style="bd"&gt;abandon&lt;/char&gt; you.”&lt;/para&gt;
+  &lt;para style="p"&gt;
+    &lt;char style="xt"&gt;Deu 32.15&lt;/char&gt; They &lt;char style="bd"&gt;abandoned&lt;/char&gt;
+    God their Creator&lt;/para&gt;
+  ...
+  &lt;para style="p"&gt;
+    &lt;char style="k"&gt;Able&lt;/char&gt;
+  &lt;/para&gt;
+  &lt;para style="p"&gt;
+    &lt;char style="xt"&gt;Exo 31.3&lt;/char&gt; understanding, skill, and
+    &lt;char style="bd"&gt;ability&lt;/char&gt;&lt;/para&gt;
+  &lt;para style="p"&gt;
+    &lt;char style="xt"&gt;Dan 3.17&lt;/char&gt; If the God whom we serve is
+    &lt;char style="bd"&gt;able&lt;/char&gt;&lt;/para&gt;
+  &lt;para style="p"&gt;
+    &lt;char style="xt"&gt;Mat 26.61&lt;/char&gt; and said, “This man said, ‘I am
+    &lt;char style="bd"&gt;able&lt;/char&gt;
+    ...&lt;/para&gt;
+  &lt;para style="s"&gt;B&lt;/para&gt;
+  ...
+&lt;/usx&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
 </div>
 <nav class="pagination">
   <span class="prev"><a href="book-bak.html">Back Matter</a></span>
