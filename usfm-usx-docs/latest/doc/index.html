@@ -719,7 +719,7 @@
     <a class="nav-link" href="../periph/index.html">Peripherals</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../periph/periph.html">periph - Peripheral Division</a>
+    <a class="nav-link" href="../periph/periph.html">periph - Peripheral division</a>
   </li>
   <li class="nav-item" data-depth="2">
     <button class="nav-item-toggle"></button>
@@ -732,8 +732,11 @@
     <a class="nav-link" href="../periph/book-int.html">Introductions</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="../periph/book-bak.html">Back Matter</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Back Matter (Standalone)</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="4">
     <a class="nav-link" href="../periph/book-cnc.html">Concordance</a>
@@ -747,10 +750,10 @@
   <li class="nav-item" data-depth="4">
     <a class="nav-link" href="../periph/book-ndx.html">Names Index</a>
   </li>
-  <li class="nav-item" data-depth="4">
-    <a class="nav-link" href="../periph/book-oth.html">Other</a>
-  </li>
 </ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../periph/book-oth.html">Other</a>
   </li>
 </ul>
   </li>
@@ -1270,17 +1273,224 @@
 <div class="paragraph">
 <p><code>[Peripheral]</code></p>
 </div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>See the documentation section on <a href="../periph/index.html" class="xref page">peripherals</a> for more detail on the strategy for marking project peripheral contents.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>[PeripheralBook]</code> — <a href="#doc-periphbook-periph-book">Peripheral Book</a> - Standalone peripheral book.</p>
+</li>
+<li>
+<p><code>[PeripheralDividedBook]</code> — <a href="#doc-periphbook-periph-dividedBook">Peripheral Divided Book</a> - Peripheral book with optional <a href="../periph/periph.html" class="xref page">divisions</a>.</p>
+</li>
+</ul>
+</div>
+<hr>
 <div class="sect2">
-<h3 id="_peripheral_book"><a class="anchor" href="#_peripheral_book"></a>Peripheral Book</h3>
-
+<h3 id="doc-periphbook-standaloneBook"><a class="anchor" href="#doc-periphbook-standaloneBook"></a>Peripheral Book (Standalone)</h3>
+<div class="paragraph">
+<p><code>[PeripheralBook]</code></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>[BookHeaders]</code> — <a href="#doc-book-headers">Book Headers</a></p>
+</li>
+<li>
+<p><code>[BookTitles]</code> — <a href="#doc-book-titles">Book Titles</a></p>
+</li>
+<li>
+<p><code>[BookIntroduction]</code> — <a href="#doc-book-intro">Book Introduction</a></p>
+</li>
+<li>
+<p><code>[BookIntroductionEndTitles]</code> — <a href="#doc-book-intro-end-titles">Book Introduction End Titles</a></p>
+</li>
+<li>
+<p><code>[PeripheralContent]</code> — <a href="#doc-periphbook-periph-content">Peripheral Content</a></p>
+</li>
+</ul>
+</div>
+<hr>
 </div>
 <div class="sect2">
-<h3 id="_peripheral_divided_book"><a class="anchor" href="#_peripheral_divided_book"></a>Peripheral Divided Book</h3>
+<h3 id="doc-periphbook-dividedBook"><a class="anchor" href="#doc-periphbook-dividedBook"></a>Peripheral Divided Book</h3>
+<div class="paragraph">
+<p><code>[PeripheralDividedBook]</code></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>[PeripheralDivision]</code> — <a href="#doc-periphbook-periph-division">Peripheral Division</a></p>
+</li>
+</ul>
+</div>
 <div class="sect3">
-<h4 id="doc-periphbook-periph-content"><a class="anchor" href="#doc-periphbook-periph-content"></a>Peripheral Content</h4>
+<h4 id="doc-periphbook-periph-division"><a class="anchor" href="#doc-periphbook-periph-division"></a>Peripheral Division</h4>
+<div class="paragraph">
+<p><code>[PeripheralDivision]</code></p>
+</div>
+<div id="_tabs_7" class="openblock tabs is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_7_usfm" class="tab">
+<p>USFM</p>
+</li>
+<li id="_tabs_7_usx" class="tab">
+<p>USX</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_7_usfm--panel" class="tabpanel" aria-labelledby="_tabs_7_usfm">
+<div class="imageblock">
+<div class="content">
+<img src="_images/schema/periph_rail.svg" alt="periph rail">
+</div>
+</div>
+</div>
+<div id="_tabs_7_usx--panel" class="tabpanel" aria-labelledby="_tabs_7_usx">
+<div class="imageblock">
+<div class="content">
+<img src="_images/schema/periph_usx.svg" alt="periph usx">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Peripherals &gt;</strong> <a href="../periph/periph.html" class="xref page">periph - Peripheral division identifier</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>[BookHeaders]</code> — <a href="#doc-book-headers">Book Headers</a></p>
+</li>
+<li>
+<p><code>[BookTitles]</code> — <a href="#doc-book-titles">Book Titles</a></p>
+</li>
+<li>
+<p><code>[BookIntroduction]</code> — <a href="#doc-book-intro">Book Introduction</a></p>
+</li>
+<li>
+<p><code>[BookIntroductionEndTitles]</code> — <a href="#doc-book-intro-end-titles">Book Introduction End Titles</a></p>
+</li>
+<li>
+<p><code>[PeripheralContent]</code> — <a href="#doc-periphbook-periph-content">Peripheral Content</a></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<hr>
+</div>
+</div>
+<div class="sect2">
+<h3 id="doc-periphbook-periph-content"><a class="anchor" href="#doc-periphbook-periph-content"></a>Peripheral Content</h3>
 <div class="paragraph">
 <p><code>[PeripheralContent]</code></p>
 </div>
+<div id="_tabs_8" class="openblock tabs is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_8_usfm" class="tab">
+<p>USFM</p>
+</li>
+<li id="_tabs_8_usx" class="tab">
+<p>USX</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_8_usfm--panel" class="tabpanel" aria-labelledby="_tabs_8_usfm">
+<div class="imageblock">
+<div class="content">
+<img src="_images/schema/chaptercontent_rail.svg" alt="chaptercontent rail">
+</div>
+</div>
+</div>
+<div id="_tabs_8_usx--panel" class="tabpanel" aria-labelledby="_tabs_8_usx">
+<div class="imageblock">
+<div class="content">
+<img src="_images/schema/chaptercontent_usx.svg" alt="chaptercontent usx">
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>An optional collection of <a href="../cv/c.html" class="xref page">chapter</a>, <a href="../para/titles-sections/index.html" class="xref page">section</a>, <a href="../para/index.html" class="xref page">paragraph/poetry</a>, <a href="../para/lists/index.html" class="xref page">list</a>, <a href="../para/tables/index.html" class="xref page">table</a>, or <a href="../sbar/index.html" class="xref page">sidebar</a> elements for the main content of a scripture book.</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>[Chapter]</code> — <strong>Chapters and Verses &gt;</strong> <a href="../cv/c.html" class="xref page">c</a></p>
+</li>
+<li>
+<p><code>[Section]</code> — <strong>Paragraphs &gt; Titles and Sections &gt;</strong> <a href="../para/titles-sections/cd.html" class="xref page">cd</a>, <a href="../para/titles-sections/cl.html" class="xref page">cl</a>, <a href="../para/introductions/iex.html" class="xref page">iex</a>, <a href="../para/introductions/ip.html" class="xref page">ip</a>, <a href="../para/titles-sections/mr.html" class="xref page">mr</a>, <a href="../para/titles-sections/ms.html" class="xref page">ms#</a>, <a href="../para/titles-sections/mte.html" class="xref page">mte#</a>, <a href="../para/titles-sections/r.html" class="xref page">r</a>, <a href="../para/titles-sections/s.html" class="xref page">s#</a>, <a href="../para/titles-sections/sp.html" class="xref page">sp</a>, <a href="../para/titles-sections/sd.html" class="xref page">sd#</a>, <a href="../para/titles-sections/sr.html" class="xref page">sr</a></p>
+</li>
+<li>
+<p><code>[Para]</code> — <strong>Paragraphs &gt; Body Paragraphs &gt;</strong> <a href="../para/paragraphs/b.html" class="xref page">b</a>, <a href="../para/paragraphs/cls.html" class="xref page">cls</a>, <a href="../para/paragraphs/m.html" class="xref page">m</a>, <a href="../para/paragraphs/mi.html" class="xref page">mi</a>, <a href="../para/paragraphs/nb.html" class="xref page">nb</a>, <a href="../para/paragraphs/p.html" class="xref page">p</a>, <a href="../para/paragraphs/pc.html" class="xref page">pc</a>, <a href="../para/paragraphs/ph.html" class="xref page">ph</a>, <a href="../para/paragraphs/pi.html" class="xref page">pi#</a>, <a href="../para/paragraphs/pm.html" class="xref page">pm</a>, <a href="../para/paragraphs/pmc.html" class="xref page">pmc</a>, <a href="../para/paragraphs/pmo.html" class="xref page">pmo</a>, <a href="../para/paragraphs/pmr.html" class="xref page">pmr</a>, <a href="../para/paragraphs/po.html" class="xref page">po</a>, <a href="../para/paragraphs/pr.html" class="xref page">pr</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Paragraphs &gt; Poetry &gt;</strong> <a href="../para/poetry/b.html" class="xref page">b</a>, <a href="../para/poetry/q.html" class="xref page">q#</a>, <a href="../para/poetry/qa.html" class="xref page">qa</a>, <a href="../para/poetry/qc.html" class="xref page">qc</a>, <a href="../para/poetry/qd.html" class="xref page">qd</a>, <a href="../para/poetry/qm.html" class="xref page">qm#</a>, <a href="../para/poetry/qr.html" class="xref page">qr</a></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><code>[List]</code> — <strong>Paragraphs &gt; Lists &gt;</strong> <a href="../para/lists/lf.html" class="xref page">lf</a>, <a href="../para/lists/lh.html" class="xref page">lh</a>, <a href="../para/lists/li.html" class="xref page">li#</a>, <a href="../para/lists/lim.html" class="xref page">lim#</a></p>
+</li>
+<li>
+<p><code>[Table]</code> — <strong>Paragraphs &gt;</strong> <a href="../para/tables/index.html" class="xref page">Tables</a></p>
+</li>
+<li>
+<p><code>[Sidebar]</code> — <a href="../sbar/index.html" class="xref page">Sidebars</a></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>An optional collection of one or more embedded elements.</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>[Verse]</code> — <a href="../cv/v.html" class="xref page">v</a></p>
+</li>
+<li>
+<p><code>[Footnote]</code> — <a href="../note/footnote/index.html" class="xref page">Footnotes</a></p>
+</li>
+<li>
+<p><code>[CrossReference]</code> — <a href="../note/crossref/index.html" class="xref page">Cross References</a></p>
+</li>
+<li>
+<p><code>[Char]</code> — <a href="../char/index.html" class="xref page">Characters</a></p>
+</li>
+<li>
+<p><code>[Milestone]</code> — <a href="../ms/index.html" class="xref page">Milestones</a></p>
+</li>
+<li>
+<p><code>[Break]</code> — <a href="../char/breaks/optbreak.html" class="xref page">Optional line break</a></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
 </div>
 </div>
 </div>

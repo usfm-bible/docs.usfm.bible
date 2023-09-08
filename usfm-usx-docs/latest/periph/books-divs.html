@@ -719,7 +719,7 @@
     <a class="nav-link" href="index.html">Peripherals</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="periph.html">periph - Peripheral Division</a>
+    <a class="nav-link" href="periph.html">periph - Peripheral division</a>
   </li>
   <li class="nav-item is-current-page" data-depth="2">
     <button class="nav-item-toggle"></button>
@@ -732,8 +732,11 @@
     <a class="nav-link" href="book-int.html">Introductions</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="book-bak.html">Back Matter</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Back Matter (Standalone)</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="4">
     <a class="nav-link" href="book-cnc.html">Concordance</a>
@@ -747,10 +750,10 @@
   <li class="nav-item" data-depth="4">
     <a class="nav-link" href="book-ndx.html">Names Index</a>
   </li>
-  <li class="nav-item" data-depth="4">
-    <a class="nav-link" href="book-oth.html">Other</a>
-  </li>
 </ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="book-oth.html">Other</a>
   </li>
 </ul>
   </li>
@@ -800,7 +803,7 @@
 <article class="doc">
 <h1 class="page">Peripheral Books and Divisions</h1>
 <div class="sect1">
-<h2 id="_front_matter"><a class="anchor" href="#_front_matter"></a>Front Matter</h2>
+<h2 id="periph-book-frt"><a class="anchor" href="#periph-book-frt"></a>Front Matter</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p><code>FRT</code> <a href="../para/identification/books.html" class="xref page">book</a></p>
@@ -842,7 +845,7 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="_introductions"><a class="anchor" href="#_introductions"></a>Introductions</h2>
+<h2 id="periph-book-int"><a class="anchor" href="#periph-book-int"></a>Introductions</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p><code>INT</code> <a href="../para/identification/books.html" class="xref page">book</a></p>
@@ -887,7 +890,7 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="_back_matter"><a class="anchor" href="#_back_matter"></a>Back Matter</h2>
+<h2 id="periph-book-bak"><a class="anchor" href="#periph-book-bak"></a>Back Matter</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p><code>BAK</code> <a href="../para/identification/books.html" class="xref page">book</a></p>
@@ -908,8 +911,13 @@
 </li>
 </ul>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="periph-book-standalone"><a class="anchor" href="#periph-book-standalone"></a>Back Matter (Standalone)</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>Some back matter content is large enough that it is most practical to maintain it within its own book file. These contents do not use a <a href="periph.html" class="xref page">periph</a> division identifier.</p>
+<p>Some larger back matter content is maintained it within its own book file. These contents do not use a <a href="periph.html" class="xref page">periph</a> division identifier.</p>
 </div>
 <div class="ulist">
 <ul>
@@ -925,15 +933,30 @@
 <li>
 <p><code>NDX</code> <a href="../para/identification/books.html" class="xref page">book</a> - <a href="book-ndx.html" class="xref page">Names Index</a></p>
 </li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="periph-book-oth"><a class="anchor" href="#periph-book-oth"></a>Other</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><code>OTH</code> <a href="../para/identification/books.html" class="xref page">book</a></p>
+</div>
+<div class="ulist">
+<ul>
 <li>
-<p><code>OTH</code> <a href="../para/identification/books.html" class="xref page">book</a> - <a href="book-oth.html" class="xref page">Other</a></p>
+<p><a href="book-oth.html#periph-oth-cover" class="xref page">Cover</a> - <code>cover</code></p>
+</li>
+<li>
+<p><a href="book-oth.html#periph-oth-spine" class="xref page">Spine</a> - <code>spine</code></p>
 </li>
 </ul>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_user_defined_peripheral_divisions"><a class="anchor" href="#_user_defined_peripheral_divisions"></a>User Defined Peripheral Divisions</h2>
+<h2 id="periph-userDefined"><a class="anchor" href="#periph-userDefined"></a>User Defined Peripheral Divisions</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>If a project adds content for peripheral division which is not defined in the table above, a user-defined division ID should be added which begins with the prefix <code>x-</code>.</p>
@@ -941,7 +964,7 @@
 </div>
 </div>
 <nav class="pagination">
-  <span class="prev"><a href="periph.html">periph - Peripheral Division</a></span>
+  <span class="prev"><a href="periph.html">periph - Peripheral division</a></span>
   <span class="next"><a href="book-frt.html">Front Matter</a></span>
 </nav>
 </article>
