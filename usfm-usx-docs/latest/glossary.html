@@ -802,59 +802,71 @@
 <div class="paragraph">
 <p>Definitions for terms used within the USFM/USX schema and diagrams.</p>
 </div>
-<div class="dlist">
+<div class="dlist glossary">
 <dl>
-<dt class="hdlist1">ws</dt>
+<dt>ws</dt>
 <dd>
-<p>Pattern: <code>[\u0009-\u000D\u0020\u00A0\u1680\u2000-\u200B\u2028\u2029\u202F\u205F]</code></p>
+<p>Pattern: <code>/[\u0009-\u000D\u0020]/</code> A single simple whitespace character that may be reduced</p>
 </dd>
-<dt class="hdlist1">wsnnl</dt>
+<dt>allws</dt>
 <dd>
-<p>Pattern: <code>[\u0009\u0020\u00A0\u1680\u2000-\u200B\u2028\u2029\u202F\u205F]</code></p>
+<p>Pattern: <code>/[\u0009-\u000D\u0020\u00A0\u1680\u2000-\u200B\u2028\u2029\u202F\u205F\u3000]/</code> All possible whitespace characters including content whitespace. Matches a single character</p>
 </dd>
-<dt class="hdlist1">nl</dt>
+<dt>wsnnl</dt>
 <dd>
-<p>Pattern: <code>\u000D?\u000A</code></p>
+<p>Pattern: <code>/[\u0009\u0020]/</code> A single non newline simple whitespace character</p>
 </dd>
-<dt class="hdlist1">NL</dt>
+<dt>nl</dt>
 <dd>
-<p>Pattern: <code>(?:$</code><mark>{nl}</mark><code>|\u000D)+</code></p>
+<p>Pattern: <code>/(?:\u000D?\u000A|\u000D)/</code> A single newline (as supported by all operating systems)</p>
 </dd>
-<dt class="hdlist1">WS</dt>
+<dt>NL</dt>
 <dd>
-<p>Pattern: <code>(?:$</code><mark>{ws}</mark><code>|$</code><mark>{nl}</mark><code>|$)</code></p>
+<p>Pattern: <code>/</code><mark>${nl}</mark><code>+/</code> A sequence of newline characters</p>
 </dd>
-<dt class="hdlist1">WSS</dt>
+<dt>WS</dt>
 <dd>
-<p>Pattern: <code>$</code><mark>{ws}</mark><code>*</code></p>
+<p>Pattern: <code>/(?:</code><mark>${ws}</mark><code>|</code><mark>${nl}</mark><code>|$)/</code> A single reducable whitespace character</p>
 </dd>
-<dt class="hdlist1">TAGEND</dt>
+<dt>WSS</dt>
 <dd>
-<p>Pattern: <code>(?:$</code><mark>{ws}</mark><code>+|(?=[\\|]|$))</code></p>
+<p>Pattern: <code>/</code><mark>${wsnnl}</mark><code>*/</code> A sequence of reducable whitespace characters</p>
 </dd>
-<dt class="hdlist1">TAGPARMEND</dt>
+<dt>TAGEND</dt>
 <dd>
-<p>Pattern: <code>$</code><mark>{wsnnl}</mark><code>+</code></p>
+<p>Pattern: <code>/(?:</code><mark>${ws}</mark><code>+|(?=[\\|]|$))/</code> Delimits a marker</p>
 </dd>
-<dt class="hdlist1">TEXTEND</dt>
+<dt>TAGPARMEND</dt>
 <dd>
-<p>Pattern: <code>$</code><mark>{ws}</mark><code>*(?=[\\]|$)</code></p>
+<p>Pattern: <code>/</code><mark>${wsnnl}</mark><code>+/</code> Delimits an attribute parameter name</p>
 </dd>
-<dt class="hdlist1">ATTRIBTEXTEND</dt>
+<dt>TEXTEND</dt>
 <dd>
-<p>Pattern: <code>$</code><mark>{ws}</mark><code>*(?=[\\|])</code></p>
+<p>Pattern: <code>/</code><mark>${ws}</mark><code>*(?=[\\]|$)/</code> Delimits simple text</p>
 </dd>
-<dt class="hdlist1">TEXT</dt>
+<dt>ATTRIBTEXTEND</dt>
 <dd>
-<p>Pattern: <code>[^\\]+?(?=[\\]|$)</code></p>
+<p>Pattern: <code>/</code><mark>${ws}</mark><code>*(?=[\\|])/</code> Reducable characters following an attribute value</p>
 </dd>
-<dt class="hdlist1">TEXTATTRIB</dt>
+<dt>ATTRIBTEXT</dt>
 <dd>
-<p>Pattern: <code>[^\\|]+?(?=[\\|]|$)</code></p>
+<p>Pattern: <code>/(?:\\['"\\]|[^\\])+?/</code> Matches text inside an attribute value (not including the quotes)</p>
 </dd>
-<dt class="hdlist1">PIPE</dt>
+<dt>ATTRIBNAME</dt>
 <dd>
-<p>Pattern: <code>$</code><mark>{ws}</mark><code>*(?&lt;!\\)\|$</code><mark>{ws}</mark><code>*</code></p>
+<p>Pattern: <code>/[a-zA-Z0-9\-_]+?/</code> Matches an attribute name</p>
+</dd>
+<dt>TEXT</dt>
+<dd>
+<p>Pattern: <code>/[^\\]+?(?=[\\]|$)/</code> Matches simple text</p>
+</dd>
+<dt>TEXTNOTATTRIB</dt>
+<dd>
+<p>Pattern: <code>/[^\\|]+?(?=[\\|]|$)/</code> Matches simple text up to the start of a sequence of attributes delimited by |</p>
+</dd>
+<dt>PIPE</dt>
+<dd>
+<p>Pattern: <code>/</code><mark>${ws}</mark><code>*(?&lt;!\\)\|</code><mark>${ws}</mark><code>*/</code> Matches the attributes list delimiter of |</p>
 </dd>
 </dl>
 </div>
