@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Documentation Syntax Notes :: USFM / USX Docs</title>
     <link rel="canonical" href="https://docs.usfm.bible/usfm-usx-docs/latest/syntax-docs.html">
-    <link rel="prev" href="glossary.html">
-    <link rel="next" href="doc/index.html">
-    <meta name="generator" content="Antora 3.1.4">
+    <link rel="prev" href="whitespace.html">
+    <link rel="next" href="glossary.html">
+    <meta name="generator" content="Antora 3.1.5">
     <link rel="stylesheet" href="../../_/css/site.css">
 <link rel="stylesheet" href="../../_/css/site-extra.css">
 <link rel="stylesheet" href="../../_/css/vendor/tabs.css">
@@ -44,7 +44,7 @@
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
-    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all"></button>
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="index.html">USFM / USX Docs</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -63,13 +63,13 @@
     <a class="nav-link" href="extensions.html">User Extensions</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="normalization.html">Normalization</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="glossary.html">Glossary of Terms</a>
+    <a class="nav-link" href="whitespace.html">Whitespace</a>
   </li>
   <li class="nav-item is-current-page" data-depth="2">
     <a class="nav-link" href="syntax-docs.html">Documentation Syntax</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="glossary.html">Glossary of Terms</a>
   </li>
 </ul>
   </li>
@@ -800,16 +800,73 @@
 </aside>
 <article class="doc">
 <h1 class="page">Documentation Syntax Notes</h1>
-<div class="ulist">
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Throughout this documentation, texts shown between square brackets, with a grey background, in <code>[monospacedFont]</code> are the names used for classes or terminals within the USFM/USX RNG schema. These names correspond to the terminal labels shown in syntax diagrams thoughout the documentation.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_syntax_diagrams"><a class="anchor" href="#_syntax_diagrams"></a>Syntax Diagrams</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>'Railroad' diagrams illustrate the syntax for components of the USFM/USX schema. Where a diagram is provided, USFM and USX expressions are given in separate tabs. The railroad diagrams for the paragraph element are shown below:</p>
+</div>
+<div id="_tabs_1" class="openblock tabs is-loading">
+<div class="content">
+<div class="ulist tablist">
 <ul>
-<li>
-<p>Throughout the documentation, texts shown between square brackets, with a grey background, in <code>[monospacedFont]</code> are names used for various types of definitions within the USFM/USX RNG schema. These names correspond to labels shown in the schema diagrams thoughout the documentation.</p>
+<li id="_tabs_1_usfm" class="tab">
+<p>USFM</p>
+</li>
+<li id="_tabs_1_usx" class="tab">
+<p>USX</p>
 </li>
 </ul>
 </div>
+<div id="_tabs_1_usfm--panel" class="tabpanel" aria-labelledby="_tabs_1_usfm">
+<div class="paragraph">
+<p><span class="image"><img src="para/_images/schema/p_rail.svg" alt="p rail"></span></p>
+</div>
+</div>
+<div id="_tabs_1_usx--panel" class="tabpanel" aria-labelledby="_tabs_1_usx">
+<div class="paragraph">
+<p><span class="image"><img src="para/_images/schema/p_usx.svg" alt="p usx"></span></p>
+</div>
+</div>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Diagrams are read from left to right.</p>
+</li>
+<li>
+<p>USFM markup is shown in containers with a green background. USX is shown with a purple background.</p>
+</li>
+<li>
+<p>Explicit markup text is shown within quotation marks, or (for USX) within XML wedges <code>&lt;&gt;</code>.</p>
+</li>
+<li>
+<p>Markup text which matches a regular expression pattern is shown between 2 forward slashes <code>/&#8230;&#8203;/</code></p>
+</li>
+<li>
+<p>Markup text from an enumeration of options are shown within a dotted outline.</p>
+</li>
+<li>
+<p>Terminals are shown in containers with rounded corners, and labelled in <code>ALLCAPS</code>. The defintions for terminal labels are given in the <a href="glossary.html" class="xref page">glossary</a>.</p>
+</li>
+<li>
+<p>A container identifying a markup element is shown with square corners, with a label identifying the element type (e.g. <a href="note/footnote/index.html" class="xref page">Footnote</a>, <a href="note/crossref/index.html" class="xref page">CrossReference</a>, <a href="char/index.html" class="xref page">Char</a>, <a href="ms/index.html" class="xref page">Milestone</a>, <a href="cv/v.html" class="xref page">Verse</a>).</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
 <nav class="pagination">
-  <span class="prev"><a href="glossary.html">Glossary of Terms</a></span>
-  <span class="next"><a href="doc/index.html">Document Structure</a></span>
+  <span class="prev"><a href="whitespace.html">Whitespace</a></span>
+  <span class="next"><a href="glossary.html">Glossary of Terms</a></span>
 </nav>
 </article>
   </div>

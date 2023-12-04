@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Whitespace :: USFM / USX Docs</title>
     <link rel="canonical" href="https://docs.usfm.bible/usfm-usx-docs/latest/whitespace.html">
-    <meta name="generator" content="Antora 3.1.4">
+    <link rel="prev" href="extensions.html">
+    <link rel="next" href="syntax-docs.html">
+    <meta name="generator" content="Antora 3.1.5">
     <link rel="stylesheet" href="../../_/css/site.css">
 <link rel="stylesheet" href="../../_/css/site-extra.css">
 <link rel="stylesheet" href="../../_/css/vendor/tabs.css">
@@ -42,7 +44,7 @@
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
-    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all"></button>
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
     <h3 class="title"><a href="index.html">USFM / USX Docs</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
@@ -60,14 +62,14 @@
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="extensions.html">User Extensions</a>
   </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="normalization.html">Normalization</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="glossary.html">Glossary of Terms</a>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="whitespace.html">Whitespace</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="syntax-docs.html">Documentation Syntax</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="glossary.html">Glossary of Terms</a>
   </li>
 </ul>
   </li>
@@ -786,6 +788,7 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="index.html">USFM / USX Docs</a></li>
+    <li><a href="introduction.html">Introduction</a></li>
     <li><a href="whitespace.html">Whitespace</a></li>
   </ul>
 </nav>
@@ -797,172 +800,115 @@
 </aside>
 <article class="doc">
 <h1 class="page">Whitespace</h1>
-<div id="preamble">
+<div class="sect1">
+<h2 id="ws-definition"><a class="anchor" href="#ws-definition"></a>Definition</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>USFM considers space (<code>U+0020</code>), tab (<code>U+0009</code>), and <a href="#newlines">newline characters</a> to be whitespace.</p>
+<p>In USFM/USX, a white space (<strong><em>WS</em></strong>) character is <a href="glossary.html" class="xref page">defined</a> by the pattern <code>/(?:</code><mark>${ws}</mark><code>|</code><mark>${nl}</mark><code>|$)/</code>, where:</p>
 </div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">ws</dt>
+<dd>
+<p><code>/[\u0009-\u000D\u0020]/</code></p>
 <div class="ulist">
 <ul>
 <li>
-<p><strong id="significant">Significant whitespace</strong> is a critical part of the USFM document and should always be preserved as is.</p>
-<div class="ulist">
-<ul>
-<li>
-<p>The space after the end of a paragraph marker, or the end of the opening marker within a character or note marker pair.</p>
-</li>
-<li>
-<p>The <a href="#newlines">newline</a> preceding a new paragraph marker.</p>
+<p>A single simple whitespace character that may be reduced</p>
 </li>
 </ul>
 </div>
-</li>
-<li>
-<p><strong id="insignificant">Insignificant whitespace</strong> should be normalized by a USFM processor.</p>
+</dd>
+<dt class="hdlist1">nl</dt>
+<dd>
+<p><code>/(?:\u000D?\u000A|\u000D)/</code></p>
 <div class="ulist">
 <ul>
 <li>
-<p>Multiple whitespace within the body text of a <a href="para/index.html" class="xref page">paragraph</a>.</p>
-</li>
-<li>
-<p>Multiple whitespace preceding a <a href="para/index.html" class="xref page">paragraph</a> marker.</p>
+<p>A single newline (as supported by all operating systems)</p>
 </li>
 </ul>
 </div>
-</li>
-</ul>
+</dd>
+</dl>
+</div>
+<div class="paragraph">
+<p>All other characters, even if formally Unicode whitespace characters, are treated as <em>content</em> characters.</p>
+</div>
+<div class="paragraph">
+<p><strong>Significant</strong> or <em><mark>content</mark></em> whitespace is considered part of the text of the document. It may be reduced but is not deleted.</p>
+</div>
+<div class="paragraph">
+<p><strong>Structural</strong> or <em>non-content</em> whitespace exists either to aid the layout of a source file or to delimit markers. Structural whitespace is explicitly identified in the syntax diagrams and is not part of a <code>TEXT</code> terminal.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="newlines"><a class="anchor" href="#newlines"></a>Newlines</h2>
+<h2 id="ws-reducing"><a class="anchor" href="#ws-reducing"></a>Reducing or Eliminating Whitespace</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p>USFM processors should treat the single <code>CR</code> (<code>U+000D</code>) or <code>LF</code> (<code>U+000A</code>) characters, and the sequence Carriage Return-Line Feed (<code>CRLF</code>), like a single <code>LF</code> character. Applications can save documents using the appropriate line-ending convention.</p>
-</div>
-<div class="paragraph">
-<p>All <strong>paragraph markers</strong> should be preceded by a single newline.</p>
-</div>
-<div class="paragraph">
-<p>As a recommended best practice for USFM editors, <strong>inline markup</strong> (<a href="char/index.html" class="xref page">character-level markup</a>, <a href="note/footnote/index.html" class="xref page">footnotes</a>, or <a href="note/crossref/index.html" class="xref page">cross references</a>) should not be preceded by a newline. It would be acceptable for a <a href="#normalization">whitespace normalization</a> process to replace a newline and any preceding space (multiple spaces) before this inline markup with a single space (#3), but it should not remove all whitespace.</p>
-</div>
-<div class="paragraph">
-<p>In the following example, the footnote <code>\f ...\f*</code> at Matthew 6:27:</p>
-</div>
-<div id="src-wsn_1" class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\v 27 Can any of you live a bit longer
-\f + \fr 6.27: \fq live a bit longer; \ft or \fq grow a bit taller.\f* by
-worrying about it?</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>would be normalized as:</p>
-</div>
-<div id="src-wsn_2" class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\v 27 Can any of you live a bit longer \f + \fr 6.27: \fq live a bit
-longer; \ft or \fq grow a bit taller.\f* by worrying about it?</code></pre>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="normalization"><a class="anchor" href="#normalization"></a>Whitespace Normalization</h2>
-<div class="sectionbody">
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Multiple whitespace between the end of a paragraph marker and the paragraph text are normalized to a single space (U+0020).</p>
-</li>
-<li>
-<p>Multiple whitespace between words are normalized to a single space (U+0020).</p>
-</li>
-<li>
-<p>Multiple whitespace between text and a character or note marker (f, ex, x, ex; not esb or esbe) are normalized to a single space (U+0020).</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Due to the extensive common practice in USFM documents of adding new verse text after a newline, multiple whitespace between text and a <a href="cv/v.html" class="xref page">verse marker</a> should be normalized as a single newline.</p>
+<p>Whitespace is <strong>reduced</strong> according to these rules:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Any string of <strong><em>WS</em></strong> chars including a newline is reduced to a single newline.</p>
+</li>
+<li>
+<p>Any string of <strong><em>WS</em></strong> chars not including a newline is reduced to a single space.</p>
 </li>
 </ul>
 </div>
 </li>
 <li>
-<p>Multiple whitespace preceding a paragraph marker is normalized to a single <a href="#newlines">newline</a>.</p>
-</li>
-<li>
-<p>Normalized whitespace preceding and following a character or note marker pair is preserved. (USFM validation tools may flag suspicious whitespace.)</p>
-</li>
-<li>
-<p>Normalized whitespace preceding the closing marker of a character or note marker pair is preserved. (USFM validation tools may flag suspicious whitespace.)</p>
-</li>
-<li>
-<p><a href="#significant">Significant whitespace</a> should not be added to the text.</p>
-</li>
-</ol>
-</div>
-<div class="sect2">
-<h3 id="_handling_special_contexts"><a class="anchor" href="#_handling_special_contexts"></a>Handling special contexts</h3>
-<div class="paragraph">
-<p>The normalization rules outlined in 3,5,7 can result in whitespace remaining in the text which may be considered insignificant depending on its context.</p>
-</div>
-<div class="paragraph">
-<p>For example, the space preceding the footnote in:</p>
-</div>
-<div id="src-wsn_3" class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\v 27 Can any of you live a bit longer \f + \fr 6.27: \fq live a bit longer;</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>could be removed:</p>
-</div>
-<div id="src-wsn_4" class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\v 27 Can any of you live a bit longer\f + \fr 6.27: \fq live a bit longer;</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>And a space after a cross reference occurring at the start of a verse:</p>
-</div>
-<div id="src-wsn_5" class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">v 7 \x - \xo 2.7: \xt 1 Co 15.45.\x* Then the \nd Lord\nd* God took some soil
-from the ground and formed a man</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>could be removed:</p>
-</div>
-<div id="src-wsn_6" class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">v 7 \x - \xo 2.7: \xt 1 Co 15.45.\x*Then the \nd Lord\nd* God took some soil
-from the ground and formed a man</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Yet, a normalization process cannot <em>generally</em> remove ALL whitespace preceding and following note marker pairs. In many cases a single whitespace is expected between the texts which precede and follows a note. As suggested and recommended earlier:</p>
-</div>
+<p><em><mark>Content</mark></em> whitespace can be <strong>eliminated</strong> when it occurs:</p>
 <div class="ulist">
 <ul>
 <li>
-<p>USFM validation tools may flag suspicious whitespace.</p>
+<p>At the start of any element content.</p>
 </li>
 <li>
-<p>USFM editors can takes steps to discourage ambiguous whitespace wherever possible.</p>
-</li>
-<li>
-<p>USFM normalization tools can identify and handles special contexts (examples above).</p>
-</li>
-<li>
-<p>USFM publication tools and other post processors can identify and handle special contexts in the manner which is most suitable for the intended output.</p>
+<p>At the end of any element content, except inside a <a href="char/index.html" class="xref page">character</a> element, when followed by text or another <a href="char/index.html" class="xref page">character</a> element.</p>
 </li>
 </ul>
 </div>
+</li>
+<li>
+<p>Whitespace <strong>canonicalization</strong> is done as follows:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>A newline before a <a href="char/index.html" class="xref page">character</a> marker is converted to a space. That space is significant <em><mark>content</mark></em>.</p>
+</li>
+<li>
+<p>Any whitespace before a <a href="para/index.html" class="xref page">paragraph</a> marker, including none, is replaced by a newline. This newline is not significant <em><mark>content</mark></em>.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>USX documents contain whitespace that delimits aspects of the XML syntax. XML allows for unlimited whitespace wherever it is permitted in the XML syntax, which is typically added for the purpose of formatting for easier reading ('pretty-printing').</p>
+</div>
+</td>
+</tr>
+</table>
 </div>
 </div>
 </div>
+<nav class="pagination">
+  <span class="prev"><a href="extensions.html">User Extensions</a></span>
+  <span class="next"><a href="syntax-docs.html">Documentation Syntax</a></span>
+</nav>
 </article>
   </div>
 </main>
