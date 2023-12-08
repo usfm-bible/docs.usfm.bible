@@ -376,9 +376,6 @@
     <a class="nav-link" href="char/attributes.html">Attributes</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="char/linking.html">Linking</a>
-  </li>
-  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="char/nesting.html">Nesting</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -393,6 +390,9 @@
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="char/features/dc.html">dc - DC-only content</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="char/features/jmp.html">jmp - Link text</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="char/features/k.html">k - Keyword/keyterm</a>
@@ -805,17 +805,17 @@
 </div>
 <div class="dlist glossary">
 <dl>
-<dt>ws</dt>
+<dt>hs</dt>
 <dd>
-<p>Pattern: <code>/[\u0009-\u000D\u0020]/</code> A single simple whitespace character that may be reduced</p>
+<p>Pattern: <code>/[\u0009\u0020]/</code> A single simple horizontal (non newline) whitespace character</p>
 </dd>
-<dt>allws</dt>
+<dt>HS</dt>
 <dd>
-<p>Pattern: <code>/[\u0009-\u000D\u0020\u00A0\u1680\u2000-\u200B\u2028\u2029\u202F\u205F\u3000]/</code> All possible whitespace characters including content whitespace. Matches a single character</p>
+<p>Pattern: <code>/</code><mark>${hs}</mark><code>+/</code> A sequence of more horizontal whitespace characters</p>
 </dd>
-<dt>wsnnl</dt>
+<dt>Hs</dt>
 <dd>
-<p>Pattern: <code>/[\u0009\u0020]/</code> A single non newline simple whitespace character</p>
+<p>Pattern: <code>/</code><mark>${hs}</mark><code>*/</code> A sequence of zero or more horizontal whitespace characters</p>
 </dd>
 <dt>nl</dt>
 <dd>
@@ -825,33 +825,49 @@
 <dd>
 <p>Pattern: <code>/</code><mark>${nl}</mark><code>+/</code> A sequence of newline characters</p>
 </dd>
+<dt>ws</dt>
+<dd>
+<p>Pattern: <code>/(?:</code><mark>${hs}</mark><code>|</code><mark>${nl}</mark><code>|$)/</code> A reducable whitespace character, including a single newline sequence</p>
+</dd>
+<dt>anyws</dt>
+<dd>
+<p>Pattern: <code>/[\u0009\u000A\u000D\u0020]/</code> Matches any single reducible whitespace character, may split newline</p>
+</dd>
 <dt>WS</dt>
 <dd>
-<p>Pattern: <code>/(?:</code><mark>${ws}</mark><code>|</code><mark>${nl}</mark><code>|$)/</code> A single reducable whitespace character</p>
+<p>Pattern: <code>/</code><mark>${anyws}</mark><code>+/</code> A sequence of reducable whitespace characters</p>
 </dd>
-<dt>WSS</dt>
+<dt>Ws</dt>
 <dd>
-<p>Pattern: <code>/</code><mark>${wsnnl}</mark><code>*/</code> A sequence of reducable whitespace characters</p>
+<p>Pattern: <code>/</code><mark>${anyws}</mark><code>*/</code> A sequence of zero or more reducable whitespace characters</p>
+</dd>
+<dt>allws</dt>
+<dd>
+<p>Pattern: <code>/[\u0009-\u000D\u0020\u00A0\u1680\u2000-\u200B\u2028\u2029\u202F\u205F\u3000]/</code> All possible whitespace characters including content whitespace. Matches a single character</p>
+</dd>
+<dt>WSNL</dt>
+<dd>
+<p>Pattern: <code>/</code><mark>${HS}</mark><code></code><mark>${NL}</mark><code>/</code> A sequence of non-newline whitespace up to and including a newline</p>
 </dd>
 <dt>TAGEND</dt>
 <dd>
-<p>Pattern: <code>/(?:</code><mark>${ws}</mark><code>+|(?=[\\|]|$))/</code> Delimits a marker</p>
-</dd>
-<dt>TAGPARMEND</dt>
-<dd>
-<p>Pattern: <code>/</code><mark>${wsnnl}</mark><code>+/</code> Delimits an attribute parameter name</p>
+<p>Pattern: <code>/(?:</code><mark>${ws}</mark><code>|(?=[\\|]|$))/</code> Delimits a marker</p>
 </dd>
 <dt>TEXTEND</dt>
 <dd>
-<p>Pattern: <code>/</code><mark>${ws}</mark><code>*(?=[\\]|$)/</code> Delimits simple text</p>
+<p>Pattern: <code>/(?=</code><mark>${anyws}</mark><code>*\\|$)/</code> Delimits simple text</p>
 </dd>
 <dt>ATTRIBTEXTEND</dt>
 <dd>
-<p>Pattern: <code>/</code><mark>${ws}</mark><code>*(?=[\\|])/</code> Reducable characters following an attribute value</p>
+<p>Pattern: <code>/</code><mark>${Hs}</mark><code>(?=[\\|])/</code> Reducable characters following an attribute value</p>
 </dd>
 <dt>ATTRIBTEXT</dt>
 <dd>
-<p>Pattern: <code>/(?:\\['"\\]|[^\\])+?/</code> Matches text inside an attribute value (not including the quotes)</p>
+<p>Pattern: <code>/(?:\\["\\=~/]|[^\\"])+/</code> Matches text inside an attribute value (not including the quotes)</p>
+</dd>
+<dt>ATTRIBALL</dt>
+<dd>
+<p>Pattern: <code>/(?:[^\\=]|\\=)+(?=\\)/</code> Matches a default attribute value string</p>
 </dd>
 <dt>ATTRIBNAME</dt>
 <dd>
@@ -859,15 +875,39 @@
 </dd>
 <dt>TEXT</dt>
 <dd>
-<p>Pattern: <code>/[^\\]+?(?=[\\]|$)/</code> Matches simple text</p>
+<p>Pattern: <code>/[^\\]+/</code> Matches simple text up to the next marker</p>
+</dd>
+<dt>TEXTNWS</dt>
+<dd>
+<p>Pattern: <code>/.+(?=</code><mark>${Ws}</mark><code>\\)/</code> Matches simple text without trailing whitespace</p>
 </dd>
 <dt>TEXTNOTATTRIB</dt>
 <dd>
-<p>Pattern: <code>/[^\\|]+?(?=[\\|]|$)/</code> Matches simple text up to the start of a sequence of attributes delimited by |</p>
+<p>Pattern: <code>/(?:[^\\|]|\\["\\~/])+/</code> Matches simple text up to the start of a sequence of attributes delimited by |</p>
 </dd>
 <dt>PIPE</dt>
 <dd>
-<p>Pattern: <code>/</code><mark>${ws}</mark><code>*(?&lt;!\\)\|</code><mark>${ws}</mark><code>*/</code> Matches the attributes list delimiter of |</p>
+<p>Pattern: <code>/</code><mark>${hs}</mark><code>*(?&lt;!\\)\|</code><mark>${hs}</mark><code>*/</code> Matches the attributes list delimiter of |</p>
+</dd>
+<dt>TLC</dt>
+<dd>
+<p>Pattern: <code>/[0-9A-Z]{3}/</code> Three letter uppercase code including digits</p>
+</dd>
+<dt>VERSE</dt>
+<dd>
+<p>Pattern: <code>/[1-9][0-9]*[\p{L}\p{Mn}]*(‏?[\-,][0-9]+[\p{L}\p{Mn}]*)*/</code> Verse number, including ranges and sequences</p>
+</dd>
+<dt>VID</dt>
+<dd>
+<p>Pattern: <code>/[A-Z1-4]{3} ?[‏a-z0-9,\-:\p{L}\p{Mn}]*/</code> USX eid, sid, vid references</p>
+</dd>
+<dt>MID</dt>
+<dd>
+<p>Pattern: <code>/[\p{L}\d_\-\.:]+/</code> Milestone sid or eid any identifier, in effect</p>
+</dd>
+<dt>HREF</dt>
+<dd>
+<p>Pattern: <code>/(.*\/\/\/?(.*\/?)+)|((prj:[A-Za-z\-0-9]{3,8} )?[A-Z1-4]{3} \d+:\d+(\-\d+)?)|(#[^\s]+)/</code> href bible reference</p>
 </dd>
 </dl>
 </div>
