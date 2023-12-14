@@ -6,4 +6,4 @@ https://gitlab.com/antora/antora/-/issues/834
 
 ---
 
-Dev publication rev: 80
+Dev publication rev: 81
