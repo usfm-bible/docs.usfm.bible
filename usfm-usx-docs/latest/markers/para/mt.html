@@ -856,13 +856,17 @@
 <li id="_tabs_1_usx" class="tab">
 <p>USX</p>
 </li>
+<li id="_tabs_1_usj" class="tab">
+<p>USJ</p>
+</li>
 </ul>
 </div>
 <div id="_tabs_1_usfm--panel" class="tabpanel" aria-labelledby="_tabs_1_usfm">
 <div id="src-usfm-para-mt_1" class="listingblock">
 <div class="title">Example 1. Introduction to Acts (GNT)</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\h Acts
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\id ACT
+\h Acts
 \toc1 The Acts of the Apostles
 \toc2 Acts
 \mt1 THE ACTS
@@ -877,15 +881,78 @@ according to Luke\bk*.</code></pre>
 <div id="src-usx-para-mt_1" class="listingblock">
 <div class="title">Example 2. Introduction to Acts (GNT)</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;para style="h"&gt;Acts&lt;/para&gt;
-&lt;para style="toc1"&gt;The Acts of the Apostles&lt;/para&gt;
-&lt;para style="toc2"&gt;Acts&lt;/para&gt;
-&lt;para style="mt1"&gt;THE ACTS&lt;/para&gt;
-&lt;para style="mt2"&gt;of the Apostles&lt;/para&gt;
-&lt;para style="is"&gt;Introduction&lt;/para&gt;
-&lt;para style="ip"&gt;
-  &lt;char style="bk"&gt;The Acts of the Apostles&lt;/char&gt; is a continuation of
-  &lt;char style="bk"&gt;The Gospel according to Luke&lt;/char&gt;.&lt;/para&gt;</code></pre>
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;usx version="3.0"&gt;
+  &lt;para style="h"&gt;Acts&lt;/para&gt;
+  &lt;para style="toc1"&gt;The Acts of the Apostles&lt;/para&gt;
+  &lt;para style="toc2"&gt;Acts&lt;/para&gt;
+  &lt;para style="mt1"&gt;THE ACTS&lt;/para&gt;
+  &lt;para style="mt2"&gt;of the Apostles&lt;/para&gt;
+  &lt;para style="is"&gt;Introduction&lt;/para&gt;
+  &lt;para style="ip"&gt;
+    &lt;char style="bk"&gt;The Acts of the Apostles&lt;/char&gt; is a continuation of
+    &lt;char style="bk"&gt;The Gospel according to Luke&lt;/char&gt;.&lt;/para&gt;
+&lt;/usx&gt;</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_1_usj--panel" class="tabpanel" aria-labelledby="_tabs_1_usj">
+<div id="src-usj-para-mt_1" class="listingblock">
+<div class="title">Example 3. Introduction to Acts (GNT)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "type": "USJ",
+  "version": "0.2.0",
+  "content": [
+    {
+      "type": "para",
+      "marker": "h",
+      "content": ["Acts"]
+    },
+    {
+      "type": "para",
+      "marker": "toc1",
+      "content": ["The Acts of the Apostles"]
+    },
+    {
+      "type": "para",
+      "marker": "toc2",
+      "content": ["Acts"]
+    },
+    {
+      "type": "para",
+      "marker": "mt1",
+      "content": ["THE ACTS"]
+    },
+    {
+      "type": "para",
+      "marker": "mt2",
+      "content": ["of the Apostles"]
+    },
+    {
+      "type": "para",
+      "marker": "is",
+      "content": ["Introduction"]
+    },
+    {
+      "type": "para",
+      "marker": "ip",
+      "content": [
+        {
+          "type": "char",
+          "marker": "bk",
+          "content": ["The Acts of the Apostles"]
+        },
+        "is a continuation of",
+        {
+          "type": "char",
+          "marker": "bk",
+          "content": ["The Gospel according to Luke"]
+        },
+        "."
+      ]
+    }
+  ]
+}</code></pre>
 </div>
 </div>
 </div>
@@ -910,7 +977,7 @@ according to Luke\bk*.</code></pre>
 </div>
 <div id="_tabs_2_usfm--panel" class="tabpanel" aria-labelledby="_tabs_2_usfm">
 <div id="src-usfm-para-mt_2" class="listingblock">
-<div class="title">Example 3. Introduction to John (GNT)</div>
+<div class="title">Example 4. Introduction to John (GNT)</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\h John
 \toc1 The Gospel according to John
@@ -924,7 +991,7 @@ according to Luke\bk*.</code></pre>
 </div>
 <div id="_tabs_2_usx--panel" class="tabpanel" aria-labelledby="_tabs_2_usx">
 <div id="src-usx-para-mt_2" class="listingblock">
-<div class="title">Example 4. Introduction to John (GNT)</div>
+<div class="title">Example 5. Introduction to John (GNT)</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;para style="h"&gt;John&lt;/para&gt;
 &lt;para style="toc1"&gt;The Gospel according to John&lt;/para&gt;

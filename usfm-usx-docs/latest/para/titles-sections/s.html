@@ -859,13 +859,19 @@
 <li id="_tabs_1_usx" class="tab">
 <p>USX</p>
 </li>
+<li id="_tabs_1_usj" class="tab">
+<p>USJ</p>
+</li>
 </ul>
 </div>
 <div id="_tabs_1_usfm--panel" class="tabpanel" aria-labelledby="_tabs_1_usfm">
 <div id="src-usfm-para-s1_1" class="listingblock">
 <div class="title">Example 1. Proverbs 22.17 (GNT)</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\s1 The Thirty Wise Sayings
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\id PRO
+\c 22
+\p ...
+\s1 The Thirty Wise Sayings
 \p
 \v 17 Listen, and I will teach you what the wise have said. Study their
 teachings,
@@ -889,24 +895,122 @@ advantage of those who stand helpless in court.</code></pre>
 <div id="src-usx-para-s1_1" class="listingblock">
 <div class="title">Example 2. Proverbs 22.17 (GNT)</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;para style="s1"&gt;The Thirty Wise Sayings&lt;/para&gt;
-&lt;para style="p"&gt;
-  &lt;verse number="17" style="v" sid="PRO 22:17"/&gt;Listen, and I will teach you what
-  the wise have said. Study their teachings, &lt;verse eid="PRO 22:17"/&gt;
-  &lt;verse number="18" style="v" sid="PRO 22:18"/&gt;and you will be glad if you
-  remember them and can quote them. &lt;verse eid="PRO 22:18"/&gt;
-  &lt;verse number="19" style="v" sid="PRO 22:19"/&gt;I want you to put your trust in
-  the &lt;char style="nd"&gt;Lord&lt;/char&gt;; that is why I am going to tell them to you
-  now. &lt;verse eid="PRO 22:19"/&gt;&lt;verse number="20" style="v" sid="PRO 22:20"/&gt;
-  I have written down thirty sayings for you. They contain knowledge and good
-  advice, &lt;verse eid="PRO 22:20"/&gt;&lt;verse number="21" style="v" sid="PRO 22:21"/&gt;
-  and will teach you what the truth really is. Then when you are sent to find it
-  out, you will bring back the right answer.&lt;verse eid="PRO 22:21"/&gt;&lt;/para&gt;
-&lt;para style="s2"&gt;-1-&lt;/para&gt;
-&lt;para style="p"&gt;
-  &lt;verse number="22" style="v" sid="PRO 22:22"/&gt;Don't take advantage of the poor
-  just because you can; don't take advantage of those who stand helpless in
-  court.&lt;verse eid="PRO 22:22"/&gt;&lt;/para&gt;</code></pre>
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;usx version="3.0"&gt;
+  &lt;chapter number="22" style="c" sid="PRO 22"/&gt;
+  &lt;para style="p"&gt;...&lt;/para&gt;
+  &lt;para style="s1"&gt;The Thirty Wise Sayings&lt;/para&gt;
+  &lt;para style="p"&gt;
+    &lt;verse number="17" style="v" sid="PRO 22:17"/&gt;Listen, and I will teach you what
+    the wise have said. Study their teachings, &lt;verse eid="PRO 22:17"/&gt;
+    &lt;verse number="18" style="v" sid="PRO 22:18"/&gt;and you will be glad if you
+    remember them and can quote them. &lt;verse eid="PRO 22:18"/&gt;
+    &lt;verse number="19" style="v" sid="PRO 22:19"/&gt;I want you to put your trust in
+    the &lt;char style="nd"&gt;Lord&lt;/char&gt;; that is why I am going to tell them to you
+    now. &lt;verse eid="PRO 22:19"/&gt;&lt;verse number="20" style="v" sid="PRO 22:20"/&gt;
+    I have written down thirty sayings for you. They contain knowledge and good
+    advice, &lt;verse eid="PRO 22:20"/&gt;&lt;verse number="21" style="v" sid="PRO 22:21"/&gt;
+    and will teach you what the truth really is. Then when you are sent to find it
+    out, you will bring back the right answer.&lt;verse eid="PRO 22:21"/&gt;&lt;/para&gt;
+  &lt;para style="s2"&gt;-1-&lt;/para&gt;
+  &lt;para style="p"&gt;
+    &lt;verse number="22" style="v" sid="PRO 22:22"/&gt;Don't take advantage of the poor
+    just because you can; don't take advantage of those who stand helpless in
+    court.&lt;verse eid="PRO 22:22"/&gt;&lt;/para&gt;
+&lt;/usx&gt;</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_1_usj--panel" class="tabpanel" aria-labelledby="_tabs_1_usj">
+<div id="src-usj-para-s1_1" class="listingblock">
+<div class="title">Example 3. Proverbs 22.17 (GNT)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "type": "USJ",
+  "version": "0.2.0",
+  "content": [
+    {
+      "type": "chapter",
+      "marker": "c",
+      "number": "22",
+      "sid": "PRO 22"
+    },
+    {
+      "type": "para",
+      "marker": "p",
+      "content": ["..."]
+    },
+    {
+      "type": "para",
+      "marker": "s1",
+      "content": ["The Thirty Wise Sayings"]
+    },
+    {
+      "type": "para",
+      "marker": "p",
+      "content": [
+        {
+          "type": "verse",
+          "marker": "v",
+          "number": "17",
+          "sid": "PRO 22:17"
+        },
+        "Listen, and I will teach you what the wise have said. Study their teachings,",
+        {
+          "type": "verse",
+          "marker": "v",
+          "number": "18",
+          "sid": "PRO 22:18"
+        },
+        "and you will be glad if you remember them and can quote them.",
+        {
+          "type": "verse",
+          "marker": "v",
+          "number": "19",
+          "sid": "PRO 22:19"
+        },
+        "I want you to put your trust in the",
+        {
+          "type": "char",
+          "marker": "nd",
+          "content": ["Lord"]
+        },
+        "; that is why I am going to tell them to you now.",
+        {
+          "type": "verse",
+          "marker": "v",
+          "number": "20",
+          "sid": "PRO 22:20"
+        },
+        "I have written down thirty sayings for you. They contain knowledge and good advice,",
+        {
+          "type": "verse",
+          "marker": "v",
+          "number": "21",
+          "sid": "PRO 22:21"
+        },
+        "and will teach you what the truth really is. Then when you are sent to find it out, you will bring back the right answer."
+      ]
+    },
+    {
+      "type": "para",
+      "marker": "s2",
+      "content": ["-1-"]
+    },
+    {
+      "type": "para",
+      "marker": "p",
+      "content": [
+        {
+          "type": "verse",
+          "marker": "v",
+          "number": "22",
+          "sid": "PRO 22:22"
+        },
+        "Don't take advantage of the poor just because you can; don't take advantage of those who stand helpless in court."
+      ]
+    }
+  ]
+}</code></pre>
 </div>
 </div>
 </div>
@@ -927,13 +1031,19 @@ advantage of those who stand helpless in court.</code></pre>
 <li id="_tabs_2_usx" class="tab">
 <p>USX</p>
 </li>
+<li id="_tabs_2_usj" class="tab">
+<p>USJ</p>
+</li>
 </ul>
 </div>
 <div id="_tabs_2_usfm--panel" class="tabpanel" aria-labelledby="_tabs_2_usfm">
 <div id="src-usfm-par-s2_1" class="listingblock">
-<div class="title">Example 3. Proverbs 22.22,24 (GNT)</div>
+<div class="title">Example 4. Proverbs 22.22,24 (GNT)</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\v 21 and will teach you what the truth really is. Then when you are sent to
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\id PRO
+\c 22
+\p ...
+\v 21 and will teach you what the truth really is. Then when you are sent to
 find it out, you will bring back the right answer.
 \s2 -1-
 \p
@@ -950,9 +1060,12 @@ anyone who threatens theirs.
 </div>
 <div id="_tabs_2_usx--panel" class="tabpanel" aria-labelledby="_tabs_2_usx">
 <div id="src-usx-par-s2_1" class="listingblock">
-<div class="title">Example 4. Proverbs 22.22,24 (GNT)</div>
+<div class="title">Example 5. Proverbs 22.22,24 (GNT)</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">  ...
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;usx version="3.1"&gt;
+  &lt;chapter number="22" style="c" sid="PRO 22"/&gt;
+  &lt;para style="p"&gt;...&lt;/para&gt;
+  &lt;para style="p"&gt;...
   &lt;verse number="21" style="v" sid="PRO 22:21"/&gt;and will teach you what the truth
   really is. Then when you are sent to find it out, you will bring back the right
   answer.&lt;verse eid="PRO 22:21"/&gt;&lt;/para&gt;
@@ -968,7 +1081,102 @@ anyone who threatens theirs.
   &lt;verse number="24" style="v" sid="PRO 22:24"/&gt;Don't make friends with people who
   have hot, violent tempers. &lt;verse eid="PRO 22:24"/&gt;
   &lt;verse number="25" style="v" sid="PRO 22:25"/&gt;You might learn their habits and
-  not be able to change.&lt;verse eid="PRO 22:25"/&gt;&lt;/para&gt;</code></pre>
+  not be able to change.&lt;verse eid="PRO 22:25"/&gt;&lt;/para&gt;
+&lt;/usx&gt;</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_2_usj--panel" class="tabpanel" aria-labelledby="_tabs_2_usj">
+<div id="src-usj-par-s2_1" class="listingblock">
+<div class="title">Example 6. Proverbs 22.22,24 (GNT)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "type": "USJ",
+  "version": "0.2.0",
+  "content": [
+    {
+      "type": "chapter",
+      "marker": "c",
+      "number": "22",
+      "sid": "PRO 22"
+    },
+    {
+      "type": "para",
+      "marker": "p",
+      "content": ["..."]
+    },
+    {
+      "type": "para",
+      "marker": "p",
+      "content": [
+        "...",
+        {
+          "type": "verse",
+          "marker": "v",
+          "number": "21",
+          "sid": "PRO 22:21"
+        },
+        "and will teach you what the truth really is. Then when you are sent to find it out, you will bring back the right answer."
+      ]
+    },
+    {
+      "type": "para",
+      "marker": "s2",
+      "content": ["-1-"]
+    },
+    {
+      "type": "para",
+      "marker": "p",
+      "content": [
+        {
+          "type": "verse",
+          "marker": "v",
+          "number": "22",
+          "sid": "PRO 22:22"
+        },
+        "Don't take advantage of the poor just because you can; don't take advantage of those who stand helpless in court.",
+        {
+          "type": "verse",
+          "marker": "v",
+          "number": "23",
+          "sid": "PRO 22:23"
+        },
+        "The",
+        {
+          "type": "char",
+          "marker": "nd",
+          "content": ["Lord"]
+        },
+        "will argue their case for them and threaten the life of anyone who threatens theirs."
+      ]
+    },
+    {
+      "type": "para",
+      "marker": "s2",
+      "content": ["-2-"]
+    },
+    {
+      "type": "para",
+      "marker": "p",
+      "content": [
+        {
+          "type": "verse",
+          "marker": "v",
+          "number": "24",
+          "sid": "PRO 22:24"
+        },
+        "Don't make friends with people who have hot, violent tempers.",
+        {
+          "type": "verse",
+          "marker": "v",
+          "number": "25",
+          "sid": "PRO 22:25"
+        },
+        "You might learn their habits and not be able to change."
+      ]
+    }
+  ]
+}</code></pre>
 </div>
 </div>
 </div>

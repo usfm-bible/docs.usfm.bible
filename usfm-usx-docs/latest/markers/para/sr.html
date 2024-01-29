@@ -859,13 +859,19 @@
 <li id="_tabs_1_usx" class="tab">
 <p>USX</p>
 </li>
+<li id="_tabs_1_usj" class="tab">
+<p>USJ</p>
+</li>
 </ul>
 </div>
 <div id="_tabs_1_usfm--panel" class="tabpanel" aria-labelledby="_tabs_1_usfm">
 <div id="src-usfm-para-sr_1" class="listingblock">
 <div class="title">Example 1. Proverbs 22.17 (GNT - markup adapted)</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\s1 The Thirty Wise Sayings
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\id PRO
+\c 22
+\p ...
+\s1 The Thirty Wise Sayings
 \sr (22.17--24.22)
 \p
 \v 17 Listen, and I will teach you what the wise have said.
@@ -877,11 +883,62 @@ Study their teachings, ...</code></pre>
 <div id="src-usx-para-sr_1" class="listingblock">
 <div class="title">Example 2. Proverbs 22.17 (GNT - markup adapted)</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;para style="s1"&gt;The Thirty Wise Sayings&lt;/para&gt;
-&lt;para style="sr"&gt;(22.17--24.22)&lt;/para&gt;
-&lt;para style="p"&gt;
-  &lt;verse number="17" style="v" sid="PRO 22:17"/&gt;Listen, and I will teach you what
-  the wise have said. Study their teachings, ...&lt;verse eid="PRO 22:17"/&gt;&lt;/para&gt;</code></pre>
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;usx version="3.1"&gt;
+  &lt;chapter number="22" style="c" sid="PRO 22"/&gt;
+  &lt;para style="p"&gt;...&lt;/para&gt;
+  &lt;para style="s1"&gt;The Thirty Wise Sayings&lt;/para&gt;
+  &lt;para style="sr"&gt;(22.17--24.22)&lt;/para&gt;
+  &lt;para style="p"&gt;
+    &lt;verse number="17" style="v" sid="PRO 22:17"/&gt;Listen, and I will teach you what
+    the wise have said. Study their teachings, ...&lt;verse eid="PRO 22:17"/&gt;&lt;/para&gt;
+&lt;/usx&gt;</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_1_usj--panel" class="tabpanel" aria-labelledby="_tabs_1_usj">
+<div id="src-usj-para-sr_1" class="listingblock">
+<div class="title">Example 3. Proverbs 22.17 (GNT - markup adapted)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "type": "USJ",
+  "version": "0.2.0",
+  "content": [
+    {
+      "type": "chapter",
+      "marker": "c",
+      "number": "22",
+      "sid": "PRO 22"
+    },
+    {
+      "type": "para",
+      "marker": "p",
+      "content": ["..."]
+    },
+    {
+      "type": "para",
+      "marker": "s1",
+      "content": ["The Thirty Wise Sayings"]
+    },
+    {
+      "type": "para",
+      "marker": "sr",
+      "content": ["(22.17--24.22)"]
+    },
+    {
+      "type": "para",
+      "marker": "p",
+      "content": [
+        {
+          "type": "verse",
+          "marker": "v",
+          "number": "17",
+          "sid": "PRO 22:17"
+        },
+        "Listen, and I will teach you what the wise have said. Study their teachings, ..."
+      ]
+    }
+  ]
+}</code></pre>
 </div>
 </div>
 </div>

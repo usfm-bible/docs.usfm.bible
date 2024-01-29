@@ -856,13 +856,17 @@
 <li id="_tabs_1_usx" class="tab">
 <p>USX</p>
 </li>
+<li id="_tabs_1_usj" class="tab">
+<p>USJ</p>
+</li>
 </ul>
 </div>
 <div id="_tabs_1_usfm--panel" class="tabpanel" aria-labelledby="_tabs_1_usfm">
 <div id="src-usfm-para-mr_1" class="listingblock">
 <div class="title">Example 1. Psalm 1 (Book 1 division) (GNT)</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\c 1
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\id PSA
+\c 1
 \ms1 Book One
 \mr (Psalms 1–41)
 \s True Happiness
@@ -876,14 +880,68 @@
 <div id="src-usx-para-mr_1" class="listingblock">
 <div class="title">Example 2. Psalm 1 (Book 1 division) (GNT)</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;chapter number="1" style="c" sid="PSA 1"/&gt;
-&lt;para style="ms1"&gt;Book One&lt;/para&gt;
-&lt;para style="mr"&gt;(Psalms 1–41)&lt;/para&gt;
-&lt;para style="s"&gt;True Happiness&lt;/para&gt;
-&lt;para style="q1"&gt;
-  &lt;verse number="1" style="v" sid="PSA 1:1"/&gt;Happy are those&lt;/para&gt;
-&lt;para style="q2" vid="PSA 1:1"&gt;who reject the advice of evil people,
-  &lt;verse eid="PSA 1:1"/&gt;&lt;/para&gt;</code></pre>
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;usx version="3.0"&gt;
+  &lt;chapter number="1" style="c" sid="PSA 1"/&gt;
+  &lt;para style="ms1"&gt;Book One&lt;/para&gt;
+  &lt;para style="mr"&gt;(Psalms 1–41)&lt;/para&gt;
+  &lt;para style="s"&gt;True Happiness&lt;/para&gt;
+  &lt;para style="q1"&gt;
+    &lt;verse number="1" style="v" sid="PSA 1:1"/&gt;Happy are those&lt;/para&gt;
+  &lt;para style="q2" vid="PSA 1:1"&gt;who reject the advice of evil people,
+    &lt;verse eid="PSA 1:1"/&gt;&lt;/para&gt;
+&lt;/usx&gt;</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_1_usj--panel" class="tabpanel" aria-labelledby="_tabs_1_usj">
+<div id="src-usj-para-mr_1" class="listingblock">
+<div class="title">Example 3. Psalm 1 (Book 1 division) (GNT)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "type": "USJ",
+  "version": "0.2.0",
+  "content": [
+    {
+      "type": "chapter",
+      "marker": "c",
+      "number": "1",
+      "sid": "PSA 1"
+    },
+    {
+      "type": "para",
+      "marker": "ms1",
+      "content": ["Book One"]
+    },
+    {
+      "type": "para",
+      "marker": "mr",
+      "content": ["(Psalms 1–41)"]
+    },
+    {
+      "type": "para",
+      "marker": "s",
+      "content": ["True Happiness"]
+    },
+    {
+      "type": "para",
+      "marker": "q1",
+      "content": [
+        {
+          "type": "verse",
+          "marker": "v",
+          "number": "1",
+          "sid": "PSA 1:1"
+        },
+        "Happy are those"
+      ]
+    },
+    {
+      "type": "para",
+      "marker": "q2",
+      "content": ["who reject the advice of evil people,"]
+    }
+  ]
+}</code></pre>
 </div>
 </div>
 </div>
