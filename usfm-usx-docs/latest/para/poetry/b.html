@@ -7,7 +7,7 @@
     <link rel="canonical" href="https://docs.usfm.bible/usfm-usx-docs/latest/para/poetry/b.html">
     <link rel="prev" href="qd.html">
     <link rel="next" href="../lists/index.html">
-    <meta name="generator" content="Antora 3.1.5">
+    <meta name="generator" content="Antora 3.1.7">
     <link rel="stylesheet" href="../../../../_/css/site.css">
 <link rel="stylesheet" href="../../../../_/css/site-extra.css">
 <link rel="stylesheet" href="../../../../_/css/vendor/tabs.css">
@@ -769,7 +769,7 @@
   </div>
   <ul class="components">
     <li class="component is-current">
-      <a class="title" href="../../index.html">USFM / USX Docs</a>
+      <div class="title"><a href="../../index.html">USFM / USX Docs</a></div>
       <ul class="versions">
         <li class="version is-current is-latest">
           <a href="../../index.html">default</a>
@@ -852,13 +852,17 @@
 <li id="_tabs_1_usx" class="tab">
 <p>USX</p>
 </li>
+<li id="_tabs_1_usj" class="tab">
+<p>USJ</p>
+</li>
 </ul>
 </div>
 <div id="_tabs_1_usfm--panel" class="tabpanel" aria-labelledby="_tabs_1_usfm">
 <div id="src-usfm-para-b_1" class="listingblock">
 <div class="title">Example 1. Psalm 3 (GNT)</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\c 3
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\id PSA
+\c 3
 \s1 Morning Prayer for Help
 \q1
 \v 1 I have so many enemies, \nd Lord\nd*,
@@ -888,39 +892,212 @@
 <div id="src-usx-para-b_1" class="listingblock">
 <div class="title">Example 2. Psalm 3 (GNT)</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;chapter number="3" style="c" sid="PSA 3"/&gt;
-&lt;para style="s1"&gt;Morning Prayer for Help&lt;/para&gt;
-&lt;para style="q1"&gt;
-  &lt;verse number="1" style="v" sid="PSA 3:1"/&gt;I have so many enemies,
-  &lt;char style="nd"&gt;Lord&lt;/char&gt;,&lt;/para&gt;
-&lt;para style="q2" vid="PSA 3:1"&gt;so many who turn against me!&lt;verse eid="PSA 3:1"/&gt;
-  &lt;/para&gt;
-&lt;para style="q1"&gt;
-  &lt;verse number="2" style="v" sid="PSA 3:2"/&gt;They talk about me and say,&lt;/para&gt;
-&lt;para style="q2" vid="PSA 3:2"&gt;“God will not help him.”&lt;verse eid="PSA 3:2"/&gt;
-  &lt;/para&gt;
-&lt;para style="b"/&gt;
-&lt;para style="q1"&gt;
-  &lt;verse number="3" style="v" sid="PSA 3:3"/&gt;But you, O
-  &lt;char style="nd"&gt;Lord&lt;/char&gt;, are always my shield from danger;&lt;/para&gt;
-&lt;para style="q2" vid="PSA 3:3"&gt;you give me victory&lt;/para&gt;
-&lt;para style="q2" vid="PSA 3:3"&gt;and restore my courage.&lt;verse eid="PSA 3:3"/&gt;
-  &lt;/para&gt;
-&lt;para style="q1"&gt;
-  &lt;verse number="4" style="v" sid="PSA 3:4"/&gt;I call to the
-  &lt;char style="nd"&gt;Lord&lt;/char&gt;for help,&lt;/para&gt;
-&lt;para style="q2" vid="PSA 3:4"&gt;and from his sacred hill he answers me.
-  &lt;verse eid="PSA 3:4"/&gt;&lt;/para&gt;
-&lt;para style="b"/&gt;
-&lt;para style="q1"&gt;
-  &lt;verse number="5" style="v" sid="PSA 3:5"/&gt;I lie down and sleep,&lt;/para&gt;
-&lt;para style="q2" vid="PSA 3:5"&gt;and all night long the
-  &lt;char style="nd"&gt;Lord&lt;/char&gt;protects me.&lt;verse eid="PSA 3:5"/&gt;&lt;/para&gt;
-&lt;para style="q1"&gt;
-  &lt;verse number="6" style="v" sid="PSA 3:6"/&gt;I am not afraid of the thousands of
-  enemies&lt;/para&gt;
-&lt;para style="q2" vid="PSA 3:6"&gt;who surround me on every side.
-  &lt;verse eid="PSA 3:6"/&gt;&lt;/para&gt;</code></pre>
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;usx version="3.0"&gt;
+  &lt;chapter number="3" style="c" sid="PSA 3"/&gt;
+  &lt;para style="s1"&gt;Morning Prayer for Help&lt;/para&gt;
+  &lt;para style="q1"&gt;
+    &lt;verse number="1" style="v" sid="PSA 3:1"/&gt;I have so many enemies,
+    &lt;char style="nd"&gt;Lord&lt;/char&gt;,&lt;/para&gt;
+  &lt;para style="q2" vid="PSA 3:1"&gt;so many who turn against me!&lt;verse eid="PSA 3:1"/&gt;
+    &lt;/para&gt;
+  &lt;para style="q1"&gt;
+    &lt;verse number="2" style="v" sid="PSA 3:2"/&gt;They talk about me and say,&lt;/para&gt;
+  &lt;para style="q2" vid="PSA 3:2"&gt;“God will not help him.”&lt;verse eid="PSA 3:2"/&gt;
+    &lt;/para&gt;
+  &lt;para style="b"/&gt;
+  &lt;para style="q1"&gt;
+    &lt;verse number="3" style="v" sid="PSA 3:3"/&gt;But you, O
+    &lt;char style="nd"&gt;Lord&lt;/char&gt;, are always my shield from danger;&lt;/para&gt;
+  &lt;para style="q2" vid="PSA 3:3"&gt;you give me victory&lt;/para&gt;
+  &lt;para style="q2" vid="PSA 3:3"&gt;and restore my courage.&lt;verse eid="PSA 3:3"/&gt;
+    &lt;/para&gt;
+  &lt;para style="q1"&gt;
+    &lt;verse number="4" style="v" sid="PSA 3:4"/&gt;I call to the
+    &lt;char style="nd"&gt;Lord&lt;/char&gt;for help,&lt;/para&gt;
+  &lt;para style="q2" vid="PSA 3:4"&gt;and from his sacred hill he answers me.
+    &lt;verse eid="PSA 3:4"/&gt;&lt;/para&gt;
+  &lt;para style="b"/&gt;
+  &lt;para style="q1"&gt;
+    &lt;verse number="5" style="v" sid="PSA 3:5"/&gt;I lie down and sleep,&lt;/para&gt;
+  &lt;para style="q2" vid="PSA 3:5"&gt;and all night long the
+    &lt;char style="nd"&gt;Lord&lt;/char&gt;protects me.&lt;verse eid="PSA 3:5"/&gt;&lt;/para&gt;
+  &lt;para style="q1"&gt;
+    &lt;verse number="6" style="v" sid="PSA 3:6"/&gt;I am not afraid of the thousands of
+    enemies&lt;/para&gt;
+  &lt;para style="q2" vid="PSA 3:6"&gt;who surround me on every side.
+    &lt;verse eid="PSA 3:6"/&gt;&lt;/para&gt;
+&lt;/usx&gt;</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_1_usj--panel" class="tabpanel" aria-labelledby="_tabs_1_usj">
+<div id="src-usj-para-b_1" class="listingblock">
+<div class="title">Example 3. Psalm 3 (GNT)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "type": "USJ",
+  "version": "0.2.0",
+  "content": [
+    {
+      "type": "chapter",
+      "marker": "c",
+      "number": "3",
+      "sid": "PSA 3"
+    },
+    {
+      "type": "para",
+      "marker": "s1",
+      "content": ["Morning Prayer for Help"]
+    },
+    {
+      "type": "para",
+      "marker": "q1",
+      "content": [
+        {
+          "type": "verse",
+          "marker": "v",
+          "number": "1",
+          "sid": "PSA 3:1"
+        },
+        "I have so many enemies,",
+        {
+          "type": "char",
+          "marker": "nd",
+          "content": ["Lord"]
+        },
+        ","
+      ]
+    },
+    {
+      "type": "para",
+      "marker": "q2",
+      "content": ["so many who turn against me!"]
+    },
+    {
+      "type": "para",
+      "marker": "q1",
+      "content": [
+        {
+          "type": "verse",
+          "marker": "v",
+          "number": "2",
+          "sid": "PSA 3:2"
+        },
+        "They talk about me and say,"
+      ]
+    },
+    {
+      "type": "para",
+      "marker": "q2",
+      "content": ["“God will not help him.”"]
+    },
+    {
+      "type": "optbreak",
+      "marker": "b"
+    },
+    {
+      "type": "para",
+      "marker": "q1",
+      "content": [
+        {
+          "type": "verse",
+          "marker": "v",
+          "number": "3",
+          "sid": "PSA 3:3"
+        },
+        "But you, O",
+        {
+          "type": "char",
+          "marker": "nd",
+          "content": ["Lord"]
+        },
+        ", are always my shield from danger;"
+      ]
+    },
+    {
+      "type": "para",
+      "marker": "q2",
+      "content": ["you give me victory"]
+    },
+    {
+      "type": "para",
+      "marker": "q2",
+      "content": ["and restore my courage."]
+    },
+    {
+      "type": "para",
+      "marker": "q1",
+      "content": [
+        {
+          "type": "verse",
+          "marker": "v",
+          "number": "4",
+          "sid": "PSA 3:4"
+        },
+        "I call to the",
+        {
+          "type": "char",
+          "marker": "nd",
+          "content": ["Lord"]
+        },
+        "for help,"
+      ]
+    },
+    {
+      "type": "para",
+      "marker": "q2",
+      "content": ["and from his sacred hill he answers me."]
+    },
+    {
+      "type": "optbreak",
+      "marker": "b"
+    },
+    {
+      "type": "para",
+      "marker": "q1",
+      "content": [
+        {
+          "type": "verse",
+          "marker": "v",
+          "number": "5",
+          "sid": "PSA 3:5"
+        },
+        "I lie down and sleep,"
+      ]
+    },
+    {
+      "type": "para",
+      "marker": "q2",
+      "content": [
+        "and all night long the",
+        {
+          "type": "char",
+          "marker": "nd",
+          "content": ["Lord"]
+        },
+        "protects me."
+      ]
+    },
+    {
+      "type": "para",
+      "marker": "q1",
+      "content": [
+        {
+          "type": "verse",
+          "marker": "v",
+          "number": "6",
+          "sid": "PSA 3:6"
+        },
+        "I am not afraid of the thousands of enemies"
+      ]
+    },
+    {
+      "type": "para",
+      "marker": "q2",
+      "content": ["who surround me on every side."]
+    }
+  ]
+}</code></pre>
 </div>
 </div>
 </div>
@@ -941,13 +1118,17 @@
 <li id="_tabs_2_usx" class="tab">
 <p>USX</p>
 </li>
+<li id="_tabs_2_usx_2" class="tab">
+<p>USX</p>
+</li>
 </ul>
 </div>
 <div id="_tabs_2_usfm--panel" class="tabpanel" aria-labelledby="_tabs_2_usfm">
 <div id="src-usfm-para-b_2" class="listingblock">
-<div class="title">Example 3. Habakkuk 3.1 (GNT)</div>
+<div class="title">Example 4. Habakkuk 3.1 (GNT)</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\c 3
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\id HAB
+\c 3
 \s1 A Prayer of Habakkuk
 \p
 \v 1 This is a prayer of the prophet Habakkuk:
@@ -960,19 +1141,86 @@
 </div>
 <div id="_tabs_2_usx--panel" class="tabpanel" aria-labelledby="_tabs_2_usx">
 <div id="src-usx-para-b_2" class="listingblock">
-<div class="title">Example 4. Habakkuk 3.1 (GNT)</div>
+<div class="title">Example 5. Habakkuk 3.1 (GNT)</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;chapter number="3" style="c" sid="HAB 3"/&gt;
-&lt;para style="s1"&gt;A Prayer of Habakkuk&lt;/para&gt;
-&lt;para style="p"&gt;
-  &lt;verse number="1" style="v" sid="HAB 3:1"/&gt;This is a prayer of the prophet
-  Habakkuk:&lt;verse eid="HAB 3:1"/&gt;&lt;/para&gt;
-&lt;para style="b"/&gt;
-&lt;para style="q1"&gt;
-  &lt;verse number="2" style="v" sid="HAB 3:2"/&gt;O &lt;char style="nd"&gt;Lord&lt;/char&gt;,
-  I have heard of what you have done,&lt;/para&gt;
-&lt;para style="q2" vid="HAB 3:2"&gt;and I am filled with awe.&lt;verse eid="HAB 3:2"/&gt;
-  &lt;/para&gt;</code></pre>
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;usx version="3.0"&gt;
+  &lt;chapter number="3" style="c" sid="HAB 3"/&gt;
+  &lt;para style="s1"&gt;A Prayer of Habakkuk&lt;/para&gt;
+  &lt;para style="p"&gt;
+    &lt;verse number="1" style="v" sid="HAB 3:1"/&gt;This is a prayer of the prophet
+    Habakkuk:&lt;verse eid="HAB 3:1"/&gt;&lt;/para&gt;
+  &lt;para style="b"/&gt;
+  &lt;para style="q1"&gt;
+    &lt;verse number="2" style="v" sid="HAB 3:2"/&gt;O &lt;char style="nd"&gt;Lord&lt;/char&gt;,
+    I have heard of what you have done,&lt;/para&gt;
+  &lt;para style="q2" vid="HAB 3:2"&gt;and I am filled with awe.&lt;verse eid="HAB 3:2"/&gt;
+    &lt;/para&gt;
+&lt;/usx&gt;</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_2_usx_2--panel" class="tabpanel" aria-labelledby="_tabs_2_usx_2">
+<div id="src-usj-para-b_2" class="listingblock">
+<div class="title">Example 6. Habakkuk 3.1 (GNT)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "type": "USJ",
+  "version": "0.2.0",
+  "content": [
+    {
+      "type": "chapter",
+      "marker": "c",
+      "number": "3",
+      "sid": "HAB 3"
+    },
+    {
+      "type": "para",
+      "marker": "s1",
+      "content": ["A Prayer of Habakkuk"]
+    },
+    {
+      "type": "para",
+      "marker": "p",
+      "content": [
+        {
+          "type": "verse",
+          "marker": "v",
+          "number": "1",
+          "sid": "HAB 3:1"
+        },
+        "This is a prayer of the prophet Habakkuk:"
+      ]
+    },
+    {
+      "type": "optbreak",
+      "marker": "b"
+    },
+    {
+      "type": "para",
+      "marker": "q1",
+      "content": [
+        {
+          "type": "verse",
+          "marker": "v",
+          "number": "2",
+          "sid": "HAB 3:2"
+        },
+        "O",
+        {
+          "type": "char",
+          "marker": "nd",
+          "content": ["Lord"]
+        },
+        ", I have heard of what you have done,"
+      ]
+    },
+    {
+      "type": "para",
+      "marker": "q2",
+      "content": ["and I am filled with awe."]
+    }
+  ]
+}</code></pre>
 </div>
 </div>
 </div>

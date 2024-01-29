@@ -7,7 +7,7 @@
     <link rel="canonical" href="https://docs.usfm.bible/usfm-usx-docs/latest/para/paragraphs/pm.html">
     <link rel="prev" href="pc.html">
     <link rel="next" href="pmo.html">
-    <meta name="generator" content="Antora 3.1.5">
+    <meta name="generator" content="Antora 3.1.7">
     <link rel="stylesheet" href="../../../../_/css/site.css">
 <link rel="stylesheet" href="../../../../_/css/site-extra.css">
 <link rel="stylesheet" href="../../../../_/css/vendor/tabs.css">
@@ -769,7 +769,7 @@
   </div>
   <ul class="components">
     <li class="component is-current">
-      <a class="title" href="../../index.html">USFM / USX Docs</a>
+      <div class="title"><a href="../../index.html">USFM / USX Docs</a></div>
       <ul class="versions">
         <li class="version is-current is-latest">
           <a href="../../index.html">default</a>
@@ -852,13 +852,19 @@
 <li id="_tabs_1_usx" class="tab">
 <p>USX</p>
 </li>
+<li id="_tabs_1_usj" class="tab">
+<p>USJ</p>
+</li>
 </ul>
 </div>
 <div id="_tabs_1_usfm--panel" class="tabpanel" aria-labelledby="_tabs_1_usfm">
 <div id="src-usfm-para-pm_1" class="listingblock">
 <div class="title">Example 1. Act 15.24-27,28-29 (CEV)</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\pmo We apostles and leaders send friendly greetings to all of you Gentiles
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\id ACT
+\c 15
+\p ...
+\pmo We apostles and leaders send friendly greetings to all of you Gentiles
 who are followers of the Lord in Antioch, Syria, and Cilicia.
 \pm
 \v 24 We have heard that some people from here have terribly upset you by what
@@ -878,22 +884,104 @@ on you...</code></pre>
 <div id="src-usx-para-pm_1" class="listingblock">
 <div class="title">Example 2. Act 15.24-27,28-29 (CEV)</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;para style="pmo"&gt;We apostles and leaders send friendly greetings to all of you
-  Gentiles who are followers of the Lord in Antioch, Syria, and Cilicia.&lt;/para&gt;
-&lt;para style="pm"&gt;
-  &lt;verse number="24" style="v" sid="ACT 15:24"/&gt;We have heard that some people
-  from here have terribly upset you by what they said. But we did not send them!
-  &lt;verse eid="ACT 15:24"/&gt;&lt;verse number="25" style="v" sid="ACT 15:25"/&gt;So we met
-  together and decided to choose some men and to send them to you along with our
-  good friends Barnabas and Paul. &lt;verse eid="ACT 15:25"/&gt;
-  &lt;verse number="26" style="v" sid="ACT 15:26"/&gt;These men have risked their lives
-  for our Lord Jesus Christ. &lt;verse eid="ACT 15:26"/&gt;
-  &lt;verse number="27" style="v" sid="ACT 15:27"/&gt;We are also sending Judas and Silas,
-  who will tell you in person the same things that we are writing.
-  &lt;verse eid="ACT 15:27"/&gt;&lt;/para&gt;
-&lt;para style="pm"&gt;
-  &lt;verse number="28" style="v" sid="ACT 15:28"/&gt;The Holy Spirit has shown us that
-  we should not place any extra burden on you...&lt;verse eid="ACT 15:28"/&gt;&lt;/para&gt;</code></pre>
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;usx version="3.0"&gt;
+  &lt;chapter number="15" style="c" sid="ACT 15"/&gt;
+  &lt;para style="p"&gt;...&lt;/para&gt;
+  &lt;para style="pmo"&gt;We apostles and leaders send friendly greetings to all of you
+    Gentiles who are followers of the Lord in Antioch, Syria, and Cilicia.&lt;/para&gt;
+  &lt;para style="pm"&gt;
+    &lt;verse number="24" style="v" sid="ACT 15:24"/&gt;We have heard that some people
+    from here have terribly upset you by what they said. But we did not send them!
+    &lt;verse eid="ACT 15:24"/&gt;&lt;verse number="25" style="v" sid="ACT 15:25"/&gt;So we met
+    together and decided to choose some men and to send them to you along with our
+    good friends Barnabas and Paul. &lt;verse eid="ACT 15:25"/&gt;
+    &lt;verse number="26" style="v" sid="ACT 15:26"/&gt;These men have risked their lives
+    for our Lord Jesus Christ. &lt;verse eid="ACT 15:26"/&gt;
+    &lt;verse number="27" style="v" sid="ACT 15:27"/&gt;We are also sending Judas and
+    Silas, who will tell you in person the same things that we are writing.
+    &lt;verse eid="ACT 15:27"/&gt;&lt;/para&gt;
+  &lt;para style="pm"&gt;
+    &lt;verse number="28" style="v" sid="ACT 15:28"/&gt;The Holy Spirit has shown us that
+    we should not place any extra burden on you...&lt;verse eid="ACT 15:28"/&gt;&lt;/para&gt;
+&lt;/usx&gt;</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_1_usj--panel" class="tabpanel" aria-labelledby="_tabs_1_usj">
+<div id="src-usj-para-pm_1" class="listingblock">
+<div class="title">Example 3. Act 15.24-27,28-29 (CEV)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "type": "USJ",
+  "version": "0.2.0",
+  "content": [
+    {
+      "type": "chapter",
+      "marker": "c",
+      "number": "15",
+      "sid": "ACT 15"
+    },
+    {
+      "type": "para",
+      "marker": "p",
+      "content": ["..."]
+    },
+    {
+      "type": "para",
+      "marker": "pmo",
+      "content": [
+        "We apostles and leaders send friendly greetings to all of you Gentiles who are followers of the Lord in Antioch, Syria, and Cilicia."
+      ]
+    },
+    {
+      "type": "para",
+      "marker": "pm",
+      "content": [
+        {
+          "type": "verse",
+          "marker": "v",
+          "number": "24",
+          "sid": "ACT 15:24"
+        },
+        "We have heard that some people from here have terribly upset you by what they said. But we did not send them!",
+        {
+          "type": "verse",
+          "marker": "v",
+          "number": "25",
+          "sid": "ACT 15:25"
+        },
+        "So we met together and decided to choose some men and to send them to you along with our good friends Barnabas and Paul.",
+        {
+          "type": "verse",
+          "marker": "v",
+          "number": "26",
+          "sid": "ACT 15:26"
+        },
+        "These men have risked their lives for our Lord Jesus Christ.",
+        {
+          "type": "verse",
+          "marker": "v",
+          "number": "27",
+          "sid": "ACT 15:27"
+        },
+        "We are also sending Judas and Silas, who will tell you in person the same things that we are writing."
+      ]
+    },
+    {
+      "type": "para",
+      "marker": "pm",
+      "content": [
+        {
+          "type": "verse",
+          "marker": "v",
+          "number": "28",
+          "sid": "ACT 15:28"
+        },
+        "The Holy Spirit has shown us that we should not place any extra burden on you..."
+      ]
+    }
+  ]
+}</code></pre>
 </div>
 </div>
 </div>

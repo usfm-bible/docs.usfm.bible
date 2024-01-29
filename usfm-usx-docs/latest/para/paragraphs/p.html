@@ -7,7 +7,7 @@
     <link rel="canonical" href="https://docs.usfm.bible/usfm-usx-docs/latest/para/paragraphs/p.html">
     <link rel="prev" href="index.html">
     <link rel="next" href="m.html">
-    <meta name="generator" content="Antora 3.1.5">
+    <meta name="generator" content="Antora 3.1.7">
     <link rel="stylesheet" href="../../../../_/css/site.css">
 <link rel="stylesheet" href="../../../../_/css/site-extra.css">
 <link rel="stylesheet" href="../../../../_/css/vendor/tabs.css">
@@ -769,7 +769,7 @@
   </div>
   <ul class="components">
     <li class="component is-current">
-      <a class="title" href="../../index.html">USFM / USX Docs</a>
+      <div class="title"><a href="../../index.html">USFM / USX Docs</a></div>
       <ul class="versions">
         <li class="version is-current is-latest">
           <a href="../../index.html">default</a>
@@ -861,7 +861,8 @@
 <div id="src-usfm-para-p_1" class="listingblock">
 <div class="title">Example 1. Mark 1.1-4 (GNT)</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\c 1
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\id MRK
+\c 1
 \s1 The Preaching of John the Baptist
 \r (Matthew 3.1-12; Luke 3.1-18; John 1.19-28)
 \p
@@ -883,28 +884,29 @@ sins and be baptized,” he told the people, “and God will forgive your sins.�
 <div id="src-usx-para-p_1" class="listingblock">
 <div class="title">Example 2. Mark 1.1-4 (GNT)</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;chapter number="1" style="c" sid="MRK 1" /&gt;
-&lt;para style="s1"&gt;The Preaching of John the Baptist&lt;/para&gt;
-&lt;para style="r"&gt;(Matthew 3.1-12; Luke 3.1-18; John 1.19-28)&lt;/para&gt;
-&lt;para style="p"&gt;
-  &lt;verse number="1" style="v" sid="MRK 1:1" /&gt;This is the Good News about Jesus
-  Christ, the Son of God. &lt;verse eid="MRK 1:1" /&gt;&lt;verse number="2" style="v"
-  sid="MRK 1:2" /&gt;It began as the prophet Isaiah had written:&lt;/para&gt;
-&lt;para style="q1" vid="MRK 1:2"&gt;“God said, ‘I will send my messenger ahead of you
-  &lt;/para&gt;
-&lt;para style="q2" vid="MRK 1:2"&gt;to open the way for you.’&lt;verse eid="MRK 1:2" /&gt;
-  &lt;/para&gt;
-&lt;para style="q1"&gt;
-  &lt;verse number="3" style="v" sid="MRK 1:3" /&gt;Someone is shouting in the desert,
-  &lt;/para&gt;
-&lt;para style="q2" vid="MRK 1:3"&gt;‘Get the road ready for the Lord;&lt;/para&gt;
-&lt;para style="q2" vid="MRK 1:3"&gt;make a straight path for him to travel!’”
-  &lt;verse eid="MRK 1:3" /&gt;&lt;/para&gt;
-&lt;para style="p"&gt;
-  &lt;verse number="4" style="v" sid="MRK 1:4" /&gt;So John appeared in the desert,
-  baptizing and preaching. “Turn away from your sins and be baptized,” he told
-  the people, “and God will forgive your sins.”&lt;verse eid="MRK 1:4" /&gt;&lt;/para&gt;
-...</code></pre>
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;usx version="3.0"&gt;
+  &lt;chapter number="1" style="c" sid="MRK 1" /&gt;
+  &lt;para style="s1"&gt;The Preaching of John the Baptist&lt;/para&gt;
+  &lt;para style="r"&gt;(Matthew 3.1-12; Luke 3.1-18; John 1.19-28)&lt;/para&gt;
+  &lt;para style="p"&gt;
+    &lt;verse number="1" style="v" sid="MRK 1:1" /&gt;This is the Good News about Jesus
+    Christ, the Son of God. &lt;verse eid="MRK 1:1" /&gt;&lt;verse number="2" style="v"
+    sid="MRK 1:2" /&gt;It began as the prophet Isaiah had written:&lt;/para&gt;
+  &lt;para style="q1" vid="MRK 1:2"&gt;“God said, ‘I will send my messenger ahead of you
+    &lt;/para&gt;
+  &lt;para style="q2" vid="MRK 1:2"&gt;to open the way for you.’&lt;verse eid="MRK 1:2" /&gt;
+    &lt;/para&gt;
+  &lt;para style="q1"&gt;
+    &lt;verse number="3" style="v" sid="MRK 1:3" /&gt;Someone is shouting in the desert,
+    &lt;/para&gt;
+  &lt;para style="q2" vid="MRK 1:3"&gt;‘Get the road ready for the Lord;&lt;/para&gt;
+  &lt;para style="q2" vid="MRK 1:3"&gt;make a straight path for him to travel!’”
+    &lt;verse eid="MRK 1:3" /&gt;&lt;/para&gt;
+  &lt;para style="p"&gt;
+    &lt;verse number="4" style="v" sid="MRK 1:4" /&gt;So John appeared in the desert,
+    baptizing and preaching. “Turn away from your sins and be baptized,” he told
+    the people, “and God will forgive your sins.”&lt;verse eid="MRK 1:4" /&gt;&lt;/para&gt;
+&lt;/usx&gt;</code></pre>
 </div>
 </div>
 </div>
@@ -914,7 +916,7 @@ sins and be baptized,” he told the people, “and God will forgive your sins.�
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
   "type": "USJ",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "content": [
     {
       "type": "chapter",
@@ -925,16 +927,12 @@ sins and be baptized,” he told the people, “and God will forgive your sins.�
     {
       "type": "para",
       "marker": "s1",
-      "content": [
-        "The Preaching of John the Baptist"
-      ]
+      "content": ["The Preaching of John the Baptist"]
     },
     {
       "type": "para",
       "marker": "r",
-      "content": [
-        "(Matthew 3.1-12; Luke 3.1-18; John 1.19-28)"
-      ]
+      "content": ["(Matthew 3.1-12; Luke 3.1-18; John 1.19-28)"]
     },
     {
       "type": "para",
@@ -959,16 +957,12 @@ sins and be baptized,” he told the people, “and God will forgive your sins.�
     {
       "type": "para",
       "marker": "q1",
-      "content": [
-        "\u201cGod said, \u2018I will send my messenger ahead of you"
-      ]
+      "content": ["“God said, ‘I will send my messenger ahead of you"]
     },
     {
       "type": "para",
       "marker": "q2",
-      "content": [
-        "to open the way for you.\u2019"
-      ]
+      "content": ["to open the way for you.’"]
     },
     {
       "type": "para",
@@ -986,16 +980,12 @@ sins and be baptized,” he told the people, “and God will forgive your sins.�
     {
       "type": "para",
       "marker": "q2",
-      "content": [
-        "\u2018Get the road ready for the Lord;"
-      ]
+      "content": ["‘Get the road ready for the Lord;"]
     },
     {
       "type": "para",
       "marker": "q2",
-      "content": [
-        "make a straight path for him to travel!\u2019\u201d"
-      ]
+      "content": ["make a straight path for him to travel!’”"]
     },
     {
       "type": "para",
@@ -1007,7 +997,7 @@ sins and be baptized,” he told the people, “and God will forgive your sins.�
           "number": "4",
           "sid": "MRK 1:4"
         },
-        "So John appeared in the desert, baptizing and preaching. \u201cTurn away from your sins and be baptized,\u201d he told the people, \u201cand God will forgive your sins.\u201d"
+        "So John appeared in the desert, baptizing and preaching. “Turn away from your sins and be baptized,” he told the people, “and God will forgive your sins.”"
       ]
     }
   ]

@@ -6,7 +6,7 @@
     <title>pc :: USFM / USX Docs</title>
     <link rel="canonical" href="https://docs.usfm.bible/usfm-usx-docs/latest/markers/para/pc.html">
     <meta name="description" content="Centered paragraph">
-    <meta name="generator" content="Antora 3.1.5">
+    <meta name="generator" content="Antora 3.1.7">
     <link rel="stylesheet" href="../../../../_/css/site.css">
 <link rel="stylesheet" href="../../../../_/css/site-extra.css">
 <link rel="stylesheet" href="../../../../_/css/vendor/tabs.css">
@@ -768,7 +768,7 @@
   </div>
   <ul class="components">
     <li class="component is-current">
-      <a class="title" href="../../index.html">USFM / USX Docs</a>
+      <div class="title"><a href="../../index.html">USFM / USX Docs</a></div>
       <ul class="versions">
         <li class="version is-current is-latest">
           <a href="../../index.html">default</a>
@@ -856,13 +856,19 @@
 <li id="_tabs_1_usx" class="tab">
 <p>USX</p>
 </li>
+<li id="_tabs_1_usj" class="tab">
+<p>USJ</p>
+</li>
 </ul>
 </div>
 <div id="_tabs_1_usfm--panel" class="tabpanel" aria-labelledby="_tabs_1_usfm">
 <div id="src-usfm-para-pc_1" class="listingblock">
 <div class="title">Example 1. Revelation 17.5 (CEV)</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\v 4 The woman was dressed in purple and scarlet robes, and she wore jewelry
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\id REV
+\c 17
+\p ...
+\v 4 The woman was dressed in purple and scarlet robes, and she wore jewelry
 made of gold, precious stones, and pearls. In her hand she held a gold cup
 filled with the filthy and nasty things she had done.
 \v 5 On her forehead a mysterious name was written:
@@ -878,18 +884,82 @@ had given their lives for Jesus. This surprising sight amazed me, ...</code></pr
 <div id="src-usx-para-pc_1" class="listingblock">
 <div class="title">Example 2. Revelation 17.5 (CEV)</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">  ...
-  &lt;verse number="4" style="v" sid="REV 17:4"/&gt;The woman was dressed in purple and
-  scarlet robes, and she wore jewelry made of gold, precious stones, and pearls.
-  In her hand she held a gold cup filled with the filthy and nasty things she had
-  done. &lt;verse eid="REV 17:4"/&gt;&lt;verse number="5" style="v" sid="REV 17:5"/&gt;On her
-  forehead a mysterious name was written:&lt;/para&gt;
-&lt;para style="pc" vid="REV 17:5"&gt;I AM THE GREAT CITY OF BABYLON, THE MOTHER OF
-  EVERY IMMORAL AND FILTHY THING ON EARTH.&lt;verse eid="REV 17:5"/&gt;&lt;/para&gt;
-&lt;para style="m"&gt;
-  &lt;verse number="6" style="v" sid="REV 17:6"/&gt;I could tell that the woman was
-  drunk on the blood of God's people who had given their lives for Jesus. This
-  surprising sight amazed me, ...&lt;verse eid="REV 17:6"/&gt;&lt;/para&gt;</code></pre>
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;usx version="3.0"&gt;
+  &lt;chapter number="17" style="c" sid="REV 17" /&gt;
+  &lt;para style="p" vid="REV 17:3"&gt;
+    ...
+    &lt;verse number="4" style="v" sid="REV 17:4"/&gt;The woman was dressed in purple and
+    scarlet robes, and she wore jewelry made of gold, precious stones, and pearls.
+    In her hand she held a gold cup filled with the filthy and nasty things she had
+    done. &lt;verse eid="REV 17:4"/&gt;&lt;verse number="5" style="v" sid="REV 17:5"/&gt;On her
+    forehead a mysterious name was written:&lt;/para&gt;
+  &lt;para style="pc" vid="REV 17:5"&gt;I AM THE GREAT CITY OF BABYLON, THE MOTHER OF
+    EVERY IMMORAL AND FILTHY THING ON EARTH.&lt;verse eid="REV 17:5"/&gt;&lt;/para&gt;
+  &lt;para style="m"&gt;
+    &lt;verse number="6" style="v" sid="REV 17:6"/&gt;I could tell that the woman was
+    drunk on the blood of God's people who had given their lives for Jesus. This
+    surprising sight amazed me, ...&lt;verse eid="REV 17:6"/&gt;&lt;/para&gt;
+&lt;/usx&gt;</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_1_usj--panel" class="tabpanel" aria-labelledby="_tabs_1_usj">
+<div id="src-usj-para-pc_1" class="listingblock">
+<div class="title">Example 3. Revelation 17.5 (CEV)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "type": "USJ",
+  "version": "0.2.0",
+  "content": [
+    {
+      "type": "chapter",
+      "marker": "c",
+      "number": "17",
+      "sid": "REV 17"
+    },
+    {
+      "type": "para",
+      "marker": "p",
+      "content": [
+        "...",
+        {
+          "type": "verse",
+          "marker": "v",
+          "number": "4",
+          "sid": "REV 17:4"
+        },
+        "The woman was dressed in purple and scarlet robes, and she wore jewelry made of gold, precious stones, and pearls. In her hand she held a gold cup filled with the filthy and nasty things she had done.",
+        {
+          "type": "verse",
+          "marker": "v",
+          "number": "5",
+          "sid": "REV 17:5"
+        },
+        "On her forehead a mysterious name was written:"
+      ]
+    },
+    {
+      "type": "para",
+      "marker": "pc",
+      "content": [
+        "I AM THE GREAT CITY OF BABYLON, THE MOTHER OF EVERY IMMORAL AND FILTHY THING ON EARTH."
+      ]
+    },
+    {
+      "type": "para",
+      "marker": "m",
+      "content": [
+        {
+          "type": "verse",
+          "marker": "v",
+          "number": "6",
+          "sid": "REV 17:6"
+        },
+        "I could tell that the woman was drunk on the blood of God's people who had given their lives for Jesus. This surprising sight amazed me, ..."
+      ]
+    }
+  ]
+}</code></pre>
 </div>
 </div>
 </div>

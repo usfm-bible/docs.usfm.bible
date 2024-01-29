@@ -6,7 +6,7 @@
     <title>pi# :: USFM / USX Docs</title>
     <link rel="canonical" href="https://docs.usfm.bible/usfm-usx-docs/latest/markers/para/pi.html">
     <meta name="description" content="Indented paragraph">
-    <meta name="generator" content="Antora 3.1.5">
+    <meta name="generator" content="Antora 3.1.7">
     <link rel="stylesheet" href="../../../../_/css/site.css">
 <link rel="stylesheet" href="../../../../_/css/site-extra.css">
 <link rel="stylesheet" href="../../../../_/css/vendor/tabs.css">
@@ -768,7 +768,7 @@
   </div>
   <ul class="components">
     <li class="component is-current">
-      <a class="title" href="../../index.html">USFM / USX Docs</a>
+      <div class="title"><a href="../../index.html">USFM / USX Docs</a></div>
       <ul class="versions">
         <li class="version is-current is-latest">
           <a href="../../index.html">default</a>
@@ -855,13 +855,19 @@
 <li id="_tabs_1_usx" class="tab">
 <p>USX</p>
 </li>
+<li id="_tabs_1_usj" class="tab">
+<p>USJ</p>
+</li>
 </ul>
 </div>
 <div id="_tabs_1_usfm--panel" class="tabpanel" aria-labelledby="_tabs_1_usfm">
 <div id="src-usfm-para-pi_1" class="listingblock">
 <div class="title">Example 1. Matthew 13.37-39 (CEV)</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\s1 Jesus Explains the Story about the Weeds
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\id MAT
+\c 13
+\p ...
+\s1 Jesus Explains the Story about the Weeds
 \p
 \v 36 After Jesus left the crowd and went inside, his disciples came to him
 and said, “Explain to us the story about the weeds in the wheat field.”
@@ -879,20 +885,100 @@ time, and angels are the ones who bring in the harvest.</code></pre>
 <div id="src-usx-para-pi_1" class="listingblock">
 <div class="title">Example 2. Matthew 13.37-39 (CEV)</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;para style="s1"&gt;Jesus Explains the Story about the Weeds&lt;/para&gt;
-&lt;para style="p"&gt;
-  &lt;verse number="36" style="v" sid="MAT 13:36"/&gt;After Jesus left the crowd and
-  went inside, his disciples came to him and said, “Explain to us the story about
-  the weeds in the wheat field.”&lt;verse eid="MAT 13:36"/&gt;&lt;/para&gt;
-&lt;para style="p"&gt;
-  &lt;verse number="37" style="v" sid="MAT 13:37"/&gt;Jesus answered:&lt;/para&gt;
-&lt;para style="pi" vid="MAT 13:37"&gt;The one who scattered the good seed is the Son of
-  Man. &lt;verse eid="MAT 13:37"/&gt;&lt;verse number="38" style="v" sid="MAT 13:38"/&gt;The
-  field is the world, and the good seeds are the people who belong to the kingdom.
-  The weed seeds are those who belong to the evil one, &lt;verse eid="MAT 13:38"/&gt;
-  &lt;verse number="39" style="v" sid="MAT 13:39"/&gt;and the one who scattered them is
-  the devil. The harvest is the end of time, and angels are the ones who bring in
-  the harvest.&lt;verse eid="MAT 13:39"/&gt;&lt;/para&gt;</code></pre>
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;usx version="3.0"&gt;
+  &lt;chapter number="13" style="c" sid="MAT 13"/&gt;
+  &lt;para style="p"&gt;...&lt;/para&gt;
+  &lt;para style="s1"&gt;Jesus Explains the Story about the Weeds&lt;/para&gt;
+  &lt;para style="p"&gt;
+    &lt;verse number="36" style="v" sid="MAT 13:36"/&gt;After Jesus left the crowd and
+    went inside, his disciples came to him and said, “Explain to us the story about
+    the weeds in the wheat field.”&lt;verse eid="MAT 13:36"/&gt;&lt;/para&gt;
+  &lt;para style="p"&gt;
+    &lt;verse number="37" style="v" sid="MAT 13:37"/&gt;Jesus answered:&lt;/para&gt;
+  &lt;para style="pi" vid="MAT 13:37"&gt;The one who scattered the good seed is the Son of
+    Man. &lt;verse eid="MAT 13:37"/&gt;&lt;verse number="38" style="v" sid="MAT 13:38"/&gt;The
+    field is the world, and the good seeds are the people who belong to the kingdom.
+    The weed seeds are those who belong to the evil one, &lt;verse eid="MAT 13:38"/&gt;
+    &lt;verse number="39" style="v" sid="MAT 13:39"/&gt;and the one who scattered them is
+    the devil. The harvest is the end of time, and angels are the ones who bring in
+    the harvest.&lt;verse eid="MAT 13:39"/&gt;&lt;/para&gt;
+&lt;/usx&gt;</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_1_usj--panel" class="tabpanel" aria-labelledby="_tabs_1_usj">
+<div id="src-usj-para-pi_1" class="listingblock">
+<div class="title">Example 3. Matthew 13.37-39 (CEV)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "type": "USJ",
+  "version": "0.2.0",
+  "content": [
+    {
+      "type": "chapter",
+      "marker": "c",
+      "number": "13",
+      "sid": "MAT 13"
+    },
+    {
+      "type": "para",
+      "marker": "p",
+      "content": ["..."]
+    },
+    {
+      "type": "para",
+      "marker": "s1",
+      "content": ["Jesus Explains the Story about the Weeds"]
+    },
+    {
+      "type": "para",
+      "marker": "p",
+      "content": [
+        {
+          "type": "verse",
+          "marker": "v",
+          "number": "36",
+          "sid": "MAT 13:36"
+        },
+        "After Jesus left the crowd and went inside, his disciples came to him and said, “Explain to us the story about the weeds in the wheat field.”"
+      ]
+    },
+    {
+      "type": "para",
+      "marker": "p",
+      "content": [
+        {
+          "type": "verse",
+          "marker": "v",
+          "number": "37",
+          "sid": "MAT 13:37"
+        },
+        "Jesus answered:"
+      ]
+    },
+    {
+      "type": "para",
+      "marker": "pi",
+      "content": [
+        "The one who scattered the good seed is the Son of Man.",
+        {
+          "type": "verse",
+          "marker": "v",
+          "number": "38",
+          "sid": "MAT 13:38"
+        },
+        "The field is the world, and the good seeds are the people who belong to the kingdom. The weed seeds are those who belong to the evil one,",
+        {
+          "type": "verse",
+          "marker": "v",
+          "number": "39",
+          "sid": "MAT 13:39"
+        },
+        "and the one who scattered them is the devil. The harvest is the end of time, and angels are the ones who bring in the harvest."
+      ]
+    }
+  ]
+}</code></pre>
 </div>
 </div>
 </div>

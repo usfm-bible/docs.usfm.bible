@@ -7,7 +7,7 @@
     <link rel="canonical" href="https://docs.usfm.bible/usfm-usx-docs/latest/para/paragraphs/pmo.html">
     <link rel="prev" href="pm.html">
     <link rel="next" href="pmc.html">
-    <meta name="generator" content="Antora 3.1.5">
+    <meta name="generator" content="Antora 3.1.7">
     <link rel="stylesheet" href="../../../../_/css/site.css">
 <link rel="stylesheet" href="../../../../_/css/site-extra.css">
 <link rel="stylesheet" href="../../../../_/css/vendor/tabs.css">
@@ -769,7 +769,7 @@
   </div>
   <ul class="components">
     <li class="component is-current">
-      <a class="title" href="../../index.html">USFM / USX Docs</a>
+      <div class="title"><a href="../../index.html">USFM / USX Docs</a></div>
       <ul class="versions">
         <li class="version is-current is-latest">
           <a href="../../index.html">default</a>
@@ -852,13 +852,19 @@
 <li id="_tabs_1_usx" class="tab">
 <p>USX</p>
 </li>
+<li id="_tabs_1_usj" class="tab">
+<p>USJ</p>
+</li>
 </ul>
 </div>
 <div id="_tabs_1_usfm--panel" class="tabpanel" aria-labelledby="_tabs_1_usfm">
 <div id="src-usfm-para-pmo_1" class="listingblock">
 <div class="title">Example 1. Acts 15.24 (CEV)</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\p
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\id ACT
+\c 15
+\p ...
+\p
 \v 22 The apostles, the leaders, and all the church members decided to send
 some men to Antioch along with Paul and Barnabas. They chose Silas and Judas
 Barsabbas, who were two leaders of the Lord's followers.
@@ -875,20 +881,88 @@ they said. But we did not send them!</code></pre>
 <div id="src-usx-para-pmo_1" class="listingblock">
 <div class="title">Example 2. Acts 15.24 (CEV)</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;para style="p"&gt;
-  &lt;verse number="22" style="v" sid="ACT 15:22"/&gt;The apostles, the leaders, and all
-  the church members decided to send some men to Antioch along with Paul and
-  Barnabas. They chose Silas and Judas Barsabbas, who were two leaders of the
-  Lord's followers. &lt;verse eid="ACT 15:22"/&gt;
-  &lt;verse number="23" style="v" sid="ACT 15:23"/&gt;They wrote a letter that said:
-  &lt;/para&gt;
-&lt;para style="pmo" vid="ACT 15:23"&gt;We apostles and leaders send friendly greetings
-  to all of you Gentiles who are followers of the Lord in Antioch, Syria, and
-  Cilicia.&lt;verse eid="ACT 15:23"/&gt;&lt;/para&gt;
-&lt;para style="pm"&gt;
-  &lt;verse number="24" style="v" sid="ACT 15:24"/&gt;We have heard that some people
-  from here have terribly upset you by what they said. But we did not send them!
-  &lt;verse eid="ACT 15:24"/&gt;&lt;/para&gt;</code></pre>
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;usx version="3.0"&gt;
+  &lt;chapter number="15" style="c" sid="MRK 15"/&gt;
+  &lt;para style="p"&gt;...&lt;/para&gt;
+  &lt;para style="p"&gt;
+    &lt;verse number="22" style="v" sid="ACT 15:22"/&gt;The apostles, the leaders, and
+    all the church members decided to send some men to Antioch along with Paul
+    and Barnabas. They chose Silas and Judas Barsabbas, who were two leaders of
+    the Lord's followers. &lt;verse eid="ACT 15:22"/&gt;
+    &lt;verse number="23" style="v" sid="ACT 15:23"/&gt;They wrote a letter that said:
+    &lt;/para&gt;
+  &lt;para style="pmo" vid="ACT 15:23"&gt;We apostles and leaders send friendly greetings
+    to all of you Gentiles who are followers of the Lord in Antioch, Syria, and
+    Cilicia.&lt;verse eid="ACT 15:23"/&gt;&lt;/para&gt;
+  &lt;para style="pm"&gt;
+    &lt;verse number="24" style="v" sid="ACT 15:24"/&gt;We have heard that some people
+    from here have terribly upset you by what they said. But we did not send them!
+    &lt;verse eid="ACT 15:24"/&gt;&lt;/para&gt;
+&lt;/usx&gt;</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_1_usj--panel" class="tabpanel" aria-labelledby="_tabs_1_usj">
+<div id="src-usj-para-pmo_1" class="listingblock">
+<div class="title">Example 3. Acts 15.24 (CEV)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "type": "USJ",
+  "version": "0.2.0",
+  "content": [
+    {
+      "type": "chapter",
+      "marker": "c",
+      "number": "15",
+      "sid": "MRK 15"
+    },
+    {
+      "type": "para",
+      "marker": "p",
+      "content": ["..."]
+    },
+    {
+      "type": "para",
+      "marker": "p",
+      "content": [
+        {
+          "type": "verse",
+          "marker": "v",
+          "number": "22",
+          "sid": "ACT 15:22"
+        },
+        "The apostles, the leaders, and all the church members decided to send some men to Antioch along with Paul and Barnabas. They chose Silas and Judas Barsabbas, who were two leaders of the Lord's followers.",
+        {
+          "type": "verse",
+          "marker": "v",
+          "number": "23",
+          "sid": "ACT 15:23"
+        },
+        "They wrote a letter that said:"
+      ]
+    },
+    {
+      "type": "para",
+      "marker": "pmo",
+      "content": [
+        "We apostles and leaders send friendly greetings to all of you Gentiles who are followers of the Lord in Antioch, Syria, and Cilicia."
+      ]
+    },
+    {
+      "type": "para",
+      "marker": "pm",
+      "content": [
+        {
+          "type": "verse",
+          "marker": "v",
+          "number": "24",
+          "sid": "ACT 15:24"
+        },
+        "We have heard that some people from here have terribly upset you by what they said. But we did not send them!"
+      ]
+    }
+  ]
+}</code></pre>
 </div>
 </div>
 </div>
