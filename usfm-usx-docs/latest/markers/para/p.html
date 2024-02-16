@@ -882,7 +882,8 @@ sins and be baptized,” he told the people, “and God will forgive your sins.�
 <div class="title">Example 2. Mark 1.1-4 (GNT)</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;usx version="3.1"&gt;
-  &lt;chapter number="1" style="c" sid="MRK 1" /&gt;
+  &lt;book code="MRK" style="id"/&gt;
+  &lt;chapter number="1" style="c" sid="MRK 1"/&gt;
   &lt;para style="s1"&gt;The Preaching of John the Baptist&lt;/para&gt;
   &lt;para style="r"&gt;(Matthew 3.1-12; Luke 3.1-18; John 1.19-28)&lt;/para&gt;
   &lt;para style="p"&gt;
@@ -913,8 +914,14 @@ sins and be baptized,” he told the people, “and God will forgive your sins.�
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
   "type": "USJ",
-  "version": "0.2.0",
+  "version": "3.1",
   "content": [
+    {
+      "type": "book",
+      "marker": "id",
+      "code": "MRK",
+      "content": []
+    },
     {
       "type": "chapter",
       "marker": "c",

@@ -852,13 +852,17 @@
 <li id="_tabs_1_usx" class="tab">
 <p>USX</p>
 </li>
+<li id="_tabs_1_usx_2" class="tab">
+<p>USX</p>
+</li>
 </ul>
 </div>
 <div id="_tabs_1_usfm--panel" class="tabpanel" aria-labelledby="_tabs_1_usfm">
 <div id="src-usfm-para-ipr_1" class="listingblock">
 <div class="title">Example 1. Introduction to Genesis (CEV)</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\ip ... One of these brothers, Joseph, had become the governor of Egypt.
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\id GEN
+\ip ... One of these brothers, Joseph, had become the governor of Egypt.
 But Joseph knew that God would someday keep his promise to his people:
 \ib
 \ipq Before Joseph died, he told his brothers, “I won't live much longer.
@@ -874,16 +878,68 @@ promised Abraham, Isaac, and Jacob.”
 <div id="src-usx-para-ipr_1" class="listingblock">
 <div class="title">Example 2. Introduction to Genesis (CEV)</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;para style="ip"&gt;... One of these brothers, Joseph, had become the governor of
-  Egypt. But Joseph knew that God would someday keep his promise to his people:
-  &lt;/para&gt;
-&lt;para style="ib"/&gt;
-&lt;para style="ipq"&gt;Before Joseph died, he told his brothers, “I won't live much
-  longer. But God will take care of you and lead you out of Egypt to the land he
-  promised Abraham, Isaac, and Jacob.”&lt;/para&gt;
-&lt;para style="ipr"&gt;(50.24)&lt;/para&gt;
-&lt;para style="iot"&gt;A QUICK LOOK AT THIS BOOK&lt;/para&gt;
-...</code></pre>
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;usx version="3.1"&gt;
+  &lt;book code="GEN" style="id"/&gt;
+  &lt;para style="ip"&gt;... One of these brothers, Joseph, had become the governor of
+    Egypt. But Joseph knew that God would someday keep his promise to his people:
+    &lt;/para&gt;
+  &lt;para style="ib"/&gt;
+  &lt;para style="ipq"&gt;Before Joseph died, he told his brothers, “I won't live much
+    longer. But God will take care of you and lead you out of Egypt to the land he
+    promised Abraham, Isaac, and Jacob.”&lt;/para&gt;
+  &lt;para style="ipr"&gt;(50.24)&lt;/para&gt;
+  &lt;para style="iot"&gt;A QUICK LOOK AT THIS BOOK&lt;/para&gt;
+  ...
+&lt;/usx&gt;</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_1_usx_2--panel" class="tabpanel" aria-labelledby="_tabs_1_usx_2">
+<div id="src-usj-para-ipr_1" class="listingblock">
+<div class="title">Example 3. Introduction to Genesis (CEV)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "type": "USJ",
+  "version": "3.1",
+  "content": [
+    {
+      "type": "book",
+      "marker": "id",
+      "code": "GEN",
+      "content": []
+    },
+    {
+      "type": "para",
+      "marker": "ip",
+      "content": [
+        "... One of these brothers, Joseph, had become the governor of Egypt. But Joseph knew that God would someday keep his promise to his people:"
+      ]
+    },
+    {
+      "type": "para",
+      "marker": "ib",
+      "content": []
+    },
+    {
+      "type": "para",
+      "marker": "ipq",
+      "content": [
+        "Before Joseph died, he told his brothers, “I won't live much longer. But God will take care of you and lead you out of Egypt to the land he promised Abraham, Isaac, and Jacob.”"
+      ]
+    },
+    {
+      "type": "para",
+      "marker": "ipr",
+      "content": ["(50.24)"]
+    },
+    {
+      "type": "para",
+      "marker": "iot",
+      "content": ["A QUICK LOOK AT THIS BOOK"]
+    },
+    "..."
+  ]
+}</code></pre>
 </div>
 </div>
 </div>

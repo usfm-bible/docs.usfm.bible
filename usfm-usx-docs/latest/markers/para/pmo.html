@@ -878,7 +878,8 @@ they said. But we did not send them!</code></pre>
 <div id="src-usx-para-pmo_1" class="listingblock">
 <div class="title">Example 2. Acts 15.24 (CEV)</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;usx version="3.1"&gt;
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml"> &lt;usx version="3.1"&gt;
+  &lt;book code="MRK" style="id"/&gt;
   &lt;chapter number="15" style="c" sid="MRK 15"/&gt;
   &lt;para style="p"&gt;...&lt;/para&gt;
   &lt;para style="p"&gt;
@@ -905,8 +906,14 @@ they said. But we did not send them!</code></pre>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
   "type": "USJ",
-  "version": "0.2.0",
+  "version": "3.1",
   "content": [
+    {
+      "type": "book",
+      "marker": "id",
+      "code": "ACT",
+      "content": []
+    },
     {
       "type": "chapter",
       "marker": "c",

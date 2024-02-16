@@ -872,13 +872,17 @@
 <li id="_tabs_1_usx" class="tab">
 <p>USX</p>
 </li>
+<li id="_tabs_1_usj" class="tab">
+<p>USJ</p>
+</li>
 </ul>
 </div>
 <div id="_tabs_1_usfm--panel" class="tabpanel" aria-labelledby="_tabs_1_usfm">
 <div id="src-usfm-para-toc_1" class="listingblock">
 <div class="title">Example 1. Matthew (GNT)</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\h Matthew
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\id MAT
+\h Matthew
 \toc1 The Gospel According to Matthew
 \toc2 Matthew
 \toc3 Mat</code></pre>
@@ -889,10 +893,52 @@
 <div id="src-usx-para-toc_1" class="listingblock">
 <div class="title">Example 2. Matthew (GNT)</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;para style="h"&gt;Matthew&lt;/para&gt;
-&lt;para style="toc1"&gt;The Gospel According to Matthew&lt;/para&gt;
-&lt;para style="toc2"&gt;Matthew&lt;/para&gt;
-&lt;para style="toc3"&gt;Mat&lt;/para&gt;</code></pre>
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;usx version="3.1"&gt;
+  &lt;book code="MAT" style="id"/&gt;
+  &lt;para style="h"&gt;Matthew&lt;/para&gt;
+  &lt;para style="toc1"&gt;The Gospel According to Matthew&lt;/para&gt;
+  &lt;para style="toc2"&gt;Matthew&lt;/para&gt;
+  &lt;para style="toc3"&gt;Mat&lt;/para&gt;
+&lt;/usx&gt;</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_1_usj--panel" class="tabpanel" aria-labelledby="_tabs_1_usj">
+<div id="src-usj-para-toc_1" class="listingblock">
+<div class="title">Example 3. Matthew (GNT)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "type": "USJ",
+  "version": "3.1",
+  "content": [
+    {
+      "type": "book",
+      "marker": "id",
+      "code": "MAT",
+      "content": []
+    },
+    {
+      "type": "para",
+      "marker": "h",
+      "content": ["Matthew"]
+    },
+    {
+      "type": "para",
+      "marker": "toc1",
+      "content": ["The Gospel According to Matthew"]
+    },
+    {
+      "type": "para",
+      "marker": "toc2",
+      "content": ["Matthew"]
+    },
+    {
+      "type": "para",
+      "marker": "toc3",
+      "content": ["Mat"]
+    }
+  ]
+}</code></pre>
 </div>
 </div>
 </div>

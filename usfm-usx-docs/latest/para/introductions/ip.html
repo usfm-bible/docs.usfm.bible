@@ -852,13 +852,17 @@
 <li id="_tabs_1_usx" class="tab">
 <p>USX</p>
 </li>
+<li id="_tabs_1_usj" class="tab">
+<p>USJ</p>
+</li>
 </ul>
 </div>
 <div id="_tabs_1_usfm--panel" class="tabpanel" aria-labelledby="_tabs_1_usfm">
 <div id="src-usfm-para-ip_1" class="listingblock">
 <div class="title">Example 1. Introduction to Mark (GNT)</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\h Mark
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\id MRK
+\h Mark
 \mt2 The Gospel according to
 \mt1 MARK
 \is Introduction
@@ -874,16 +878,70 @@ the Son of Man, who came to give his life to set people free from sin.</code></p
 <div id="src-usx-para-ip_1" class="listingblock">
 <div class="title">Example 2. Introduction to Mark (GNT)</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;para style="h"&gt;Mark&lt;/para&gt;
-&lt;para style="mt2"&gt;The Gospel according to&lt;/para&gt;
-&lt;para style="mt1"&gt;MARK&lt;/para&gt;
-&lt;para style="is"&gt;Introduction&lt;/para&gt;
-&lt;para style="ip"&gt;
-  &lt;char style="bk"&gt;The Gospel according to Mark&lt;/char&gt; begins with the statement
-  that it is “the Good News about Jesus Christ, the Son of God.” Jesus is pictured
-  as a man of action and authority. His authority is seen in his teaching, in his
-  power over demons, and in forgiving people's sins. Jesus speaks of himself as
-  the Son of Man, who came to give his life to set people free from sin.&lt;/para&gt;</code></pre>
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;usx version="3.1"&gt;
+  &lt;book code="MRK" style="id"/&gt;
+  &lt;para style="h"&gt;Mark&lt;/para&gt;
+  &lt;para style="mt2"&gt;The Gospel according to&lt;/para&gt;
+  &lt;para style="mt1"&gt;MARK&lt;/para&gt;
+  &lt;para style="is"&gt;Introduction&lt;/para&gt;
+  &lt;para style="ip"&gt;
+    &lt;char style="bk"&gt;The Gospel according to Mark&lt;/char&gt; begins with the statement
+    that it is “the Good News about Jesus Christ, the Son of God.” Jesus is pictured
+    as a man of action and authority. His authority is seen in his teaching, in his
+    power over demons, and in forgiving people's sins. Jesus speaks of himself as
+    the Son of Man, who came to give his life to set people free from sin.&lt;/para&gt;
+&lt;/usx&gt;</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_1_usj--panel" class="tabpanel" aria-labelledby="_tabs_1_usj">
+<div id="src-usj-para-ip_1" class="listingblock">
+<div class="title">Example 3. Introduction to Mark (GNT)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "type": "USJ",
+  "version": "3.1",
+  "content": [
+    {
+      "type": "book",
+      "marker": "id",
+      "code": "MRK",
+      "content": []
+    },
+    {
+      "type": "para",
+      "marker": "h",
+      "content": ["Mark"]
+    },
+    {
+      "type": "para",
+      "marker": "mt2",
+      "content": ["The Gospel according to"]
+    },
+    {
+      "type": "para",
+      "marker": "mt1",
+      "content": ["MARK"]
+    },
+    {
+      "type": "para",
+      "marker": "is",
+      "content": ["Introduction"]
+    },
+    {
+      "type": "para",
+      "marker": "ip",
+      "content": [
+        {
+          "type": "char",
+          "marker": "bk",
+          "content": ["The Gospel according to Mark"]
+        },
+        "begins with the statement that it is “the Good News about Jesus Christ, the Son of God.” Jesus is pictured as a man of action and authority. His authority is seen in his teaching, in his power over demons, and in forgiving people's sins. Jesus speaks of himself as the Son of Man, who came to give his life to set people free from sin."
+      ]
+    }
+  ]
+}</code></pre>
 </div>
 </div>
 </div>

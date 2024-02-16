@@ -856,13 +856,17 @@
 <li id="_tabs_1_usx" class="tab">
 <p>USX</p>
 </li>
+<li id="_tabs_1_usj" class="tab">
+<p>USJ</p>
+</li>
 </ul>
 </div>
 <div id="_tabs_1_usfm--panel" class="tabpanel" aria-labelledby="_tabs_1_usfm">
 <div id="src-usfm-para-is_1" class="listingblock">
 <div class="title">Example 1. Introduction to Mark (RVE)</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\h SAN MARCOS
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\id MRK
+\h SAN MARCOS
 \mt2 Evangelio según
 \mt1 SAN MARCOS
 \imt1 INTRODUCCIÓN
@@ -876,14 +880,79 @@ aparezca igualmente en \bk Mateo\bk* y \bk Lucas\bk*.</code></pre>
 <div id="src-usx-para-is_1" class="listingblock">
 <div class="title">Example 2. Introduction to Mark (RVE)</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;para style="h"&gt;SAN MARCOS&lt;/para&gt;
-&lt;para style="mt2"&gt;Evangelio según&lt;/para&gt;
-&lt;para style="mt1"&gt;SAN MARCOS&lt;/para&gt;
-&lt;para style="imt1"&gt;INTRODUCCIÓN&lt;/para&gt;
-&lt;para style="is1"&gt;Importancia del evangelio de Marcos&lt;/para&gt;
-&lt;para style="ip"&gt;Este evangelio, segundo de los libros del NT, contiene poco
-  material que no aparezca igualmente en &lt;char style="bk"&gt;Mateo&lt;/char&gt; y
-  &lt;char style="bk"&gt;Lucas.&lt;/char&gt;&lt;/para&gt;</code></pre>
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;usx version="3.1"&gt;
+  &lt;book code="MRK" style="id"/&gt;
+  &lt;para style="h"&gt;SAN MARCOS&lt;/para&gt;
+  &lt;para style="mt2"&gt;Evangelio según&lt;/para&gt;
+  &lt;para style="mt1"&gt;SAN MARCOS&lt;/para&gt;
+  &lt;para style="imt1"&gt;INTRODUCCIÓN&lt;/para&gt;
+  &lt;para style="is1"&gt;Importancia del evangelio de Marcos&lt;/para&gt;
+  &lt;para style="ip"&gt;Este evangelio, segundo de los libros del NT, contiene poco
+    material que no aparezca igualmente en &lt;char style="bk"&gt;Mateo&lt;/char&gt; y
+    &lt;char style="bk"&gt;Lucas.&lt;/char&gt;&lt;/para&gt;
+&lt;/usx&gt;</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_1_usj--panel" class="tabpanel" aria-labelledby="_tabs_1_usj">
+<div id="src-usj-para-is_1" class="listingblock">
+<div class="title">Example 3. Introduction to Mark (RVE)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "type": "USJ",
+  "version": "3.1",
+  "content": [
+    {
+      "type": "book",
+      "marker": "id",
+      "code": "MRK",
+      "content": []
+    },
+    {
+      "type": "para",
+      "marker": "h",
+      "content": ["SAN MARCOS"]
+    },
+    {
+      "type": "para",
+      "marker": "mt2",
+      "content": ["Evangelio según"]
+    },
+    {
+      "type": "para",
+      "marker": "mt1",
+      "content": ["SAN MARCOS"]
+    },
+    {
+      "type": "para",
+      "marker": "imt1",
+      "content": ["INTRODUCCIÓN"]
+    },
+    {
+      "type": "para",
+      "marker": "is1",
+      "content": ["Importancia del evangelio de Marcos"]
+    },
+    {
+      "type": "para",
+      "marker": "ip",
+      "content": [
+        "Este evangelio, segundo de los libros del NT, contiene poco material que no aparezca igualmente en",
+        {
+          "type": "char",
+          "marker": "bk",
+          "content": ["Mateo"]
+        },
+        "y",
+        {
+          "type": "char",
+          "marker": "bk",
+          "content": ["Lucas."]
+        }
+      ]
+    }
+  ]
+}</code></pre>
 </div>
 </div>
 </div>

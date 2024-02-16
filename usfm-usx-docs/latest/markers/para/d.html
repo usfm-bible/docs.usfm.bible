@@ -875,7 +875,8 @@
 <div id="src-usx-para-d_1" class="listingblock">
 <div class="title">Example 2. Psalm 3.1 (NRSV)</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;usx version="3.1"&gt;
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml"> &lt;usx version="3.1"&gt;
+  &lt;book code="PSA" style="id"/&gt;
   &lt;chapter number="3" style="c" sid="PSA 3"/&gt;
   &lt;para style="s1"&gt;Trust in God under Adversity&lt;/para&gt;
   &lt;para style="d"&gt;A Psalm of David, when he fled from his son Absalom.&lt;/para&gt;
@@ -898,8 +899,14 @@
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
   "type": "USJ",
-  "version": "0.2.0",
+  "version": "3.1",
   "content": [
+    {
+      "type": "book",
+      "marker": "id",
+      "code": "PSA",
+      "content": []
+    },
     {
       "type": "chapter",
       "marker": "c",

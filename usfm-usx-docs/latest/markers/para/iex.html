@@ -856,13 +856,19 @@
 <li id="_tabs_1_usx" class="tab">
 <p>USX</p>
 </li>
+<li id="_tabs_1_usj" class="tab">
+<p>USJ</p>
+</li>
 </ul>
 </div>
 <div id="_tabs_1_usfm--panel" class="tabpanel" aria-labelledby="_tabs_1_usfm">
 <div id="src-usfm-para-iex_1" class="listingblock">
 <div class="title">Example 1. After Romans 16 (KJV54 - BFBS)</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\v 27 to God only wise, \add be\add* glory through Jesus Christ for ever. Amen.
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\id ROM
+\c 16
+\p ...
+\v 27 to God only wise, \add be\add* glory through Jesus Christ for ever. Amen.
 \iex Written to the Romans from Corinthus, and sent by Phebe servant of the
 church at Cenchrea.</code></pre>
 </div>
@@ -872,11 +878,67 @@ church at Cenchrea.</code></pre>
 <div id="src-usx-para-iex_1" class="listingblock">
 <div class="title">Example 2. After Romans 16 (KJV54 - BFBS)</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;para style="p"&gt;... &lt;verse number="27" style="v" sid="ROM 16:27"/&gt;to God only
-  wise, &lt;char style="add"&gt;be&lt;/char&gt; glory through Jesus Christ for ever. Amen.
-  &lt;verse eid="ROM 16:27"/&gt;&lt;/para&gt;
-&lt;para style="iex"&gt;Written to the Romans from Corinthus, and sent by Phebe servant
-  of the church at Cenchrea.&lt;/para&gt;</code></pre>
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;usx version="3.1"&gt;
+  &lt;book code="ROM" style="id"/&gt;
+  &lt;chapter number="16" style="c" sid="ROM 16"/&gt;
+  &lt;para style="p"&gt;... &lt;verse number="27" style="v" sid="ROM 16:27"/&gt;to God only
+    wise, &lt;char style="add"&gt;be&lt;/char&gt; glory through Jesus Christ for ever. Amen.
+    &lt;verse eid="ROM 16:27"/&gt;&lt;/para&gt;
+  &lt;para style="iex"&gt;Written to the Romans from Corinthus, and sent by Phebe servant
+    of the church at Cenchrea.&lt;/para&gt;
+&lt;/usx&gt;</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_1_usj--panel" class="tabpanel" aria-labelledby="_tabs_1_usj">
+<div id="src-usj-para-iex_1" class="listingblock">
+<div class="title">Example 3. After Romans 16 (KJV54 - BFBS)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "type": "USJ",
+  "version": "3.1",
+  "content": [
+    {
+      "type": "book",
+      "marker": "id",
+      "code": "ROM",
+      "content": []
+    },
+    {
+      "type": "chapter",
+      "marker": "c",
+      "number": "16",
+      "sid": "ROM 16"
+    },
+    {
+      "type": "para",
+      "marker": "p",
+      "content": [
+        "...",
+        {
+          "type": "verse",
+          "marker": "v",
+          "number": "27",
+          "sid": "ROM 16:27"
+        },
+        "to God only wise,",
+        {
+          "type": "char",
+          "marker": "add",
+          "content": ["be"]
+        },
+        "glory through Jesus Christ for ever. Amen."
+      ]
+    },
+    {
+      "type": "para",
+      "marker": "iex",
+      "content": [
+        "Written to the Romans from Corinthus, and sent by Phebe servant of the church at Cenchrea."
+      ]
+    }
+  ]
+}</code></pre>
 </div>
 </div>
 </div>

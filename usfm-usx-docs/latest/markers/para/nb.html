@@ -879,7 +879,8 @@ to him, and he sat down and started teaching them.</code></pre>
 <div id="src-usx-para-nb_1" class="listingblock">
 <div class="title">Example 2. John 7.53–8.2 (CEV)</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;usx version="3.1"&gt;
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml"> &lt;usx version="3.1"&gt;
+  &lt;book code="JHN" style="id"/&gt;
   &lt;chapter number="12" style="c" sid="JHN 7"/&gt;
   &lt;para style="p"&gt;...&lt;/para&gt;
   &lt;para style="p"&gt;
@@ -907,8 +908,14 @@ to him, and he sat down and started teaching them.</code></pre>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
   "type": "USJ",
-  "version": "0.2.0",
+  "version": "3.1",
   "content": [
+    {
+      "type": "book",
+      "marker": "id",
+      "code": "JHN",
+      "content": []
+    },
     {
       "type": "chapter",
       "marker": "c",

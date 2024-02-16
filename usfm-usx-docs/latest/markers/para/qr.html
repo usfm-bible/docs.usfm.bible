@@ -849,13 +849,17 @@
 <li id="_tabs_1_usx" class="tab">
 <p>USX</p>
 </li>
+<li id="_tabs_1_usj" class="tab">
+<p>USJ</p>
+</li>
 </ul>
 </div>
 <div id="_tabs_1_usfm--panel" class="tabpanel" aria-labelledby="_tabs_1_usfm">
 <div id="src-usfm-para-qr_1" class="listingblock">
 <div class="title">Example 1. Psalm 136.1-3 (CEV - markup adapted)</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\c 136
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\id PSA
+\c 136
 \s1 God's Love Never Fails
 \q1
 \v 1 Praise the \nd Lord\nd*! He is good.
@@ -873,21 +877,114 @@
 <div id="src-usx-para-qr_1" class="listingblock">
 <div class="title">Example 2. Psalm 136.1-3 (CEV - markup adapted)</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;chapter number="136" style="c" sid="PSA 136"/&gt;
-&lt;para style="s1"&gt;God's Love Never Fails&lt;/para&gt;
-&lt;para style="q1"&gt;
-  &lt;verse number="1" style="v" sid="PSA 136:1"/&gt;Praise the
-  &lt;char style="nd"&gt;Lord&lt;/char&gt;! He is good.&lt;/para&gt;
-&lt;para style="qr" vid="PSA 136:1"&gt;God's love never fails.&lt;verse eid="PSA 136:1"/&gt;
-  &lt;/para&gt;
-&lt;para style="q1"&gt;
-  &lt;verse number="2" style="v" sid="PSA 136:2"/&gt;Praise the God of all gods.&lt;/para&gt;
-&lt;para style="qr" vid="PSA 136:2"&gt;God's love never fails.&lt;verse eid="PSA 136:2"/&gt;
-  &lt;/para&gt;
-&lt;para style="q1"&gt;
-  &lt;verse number="3" style="v" sid="PSA 136:3"/&gt;Praise the Lord of lords.&lt;/para&gt;
-&lt;para style="qr" vid="PSA 136:3"&gt;God's love never fails.&lt;verse eid="PSA 136:3"/&gt;
-  &lt;/para&gt;</code></pre>
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml"> &lt;usx version="3.1"&gt;
+  &lt;book code="PSA" style="id"/&gt;
+  &lt;chapter number="136" style="c" sid="PSA 136"/&gt;
+  &lt;para style="s1"&gt;God's Love Never Fails&lt;/para&gt;
+  &lt;para style="q1"&gt;
+    &lt;verse number="1" style="v" sid="PSA 136:1"/&gt;Praise the
+    &lt;char style="nd"&gt;Lord&lt;/char&gt;! He is good.&lt;/para&gt;
+  &lt;para style="qr" vid="PSA 136:1"&gt;God's love never fails.&lt;verse eid="PSA 136:1"/&gt;
+    &lt;/para&gt;
+  &lt;para style="q1"&gt;
+    &lt;verse number="2" style="v" sid="PSA 136:2"/&gt;Praise the God of all gods.&lt;/para&gt;
+  &lt;para style="qr" vid="PSA 136:2"&gt;God's love never fails.&lt;verse eid="PSA 136:2"/&gt;
+    &lt;/para&gt;
+  &lt;para style="q1"&gt;
+    &lt;verse number="3" style="v" sid="PSA 136:3"/&gt;Praise the Lord of lords.&lt;/para&gt;
+  &lt;para style="qr" vid="PSA 136:3"&gt;God's love never fails.&lt;verse eid="PSA 136:3"/&gt;
+    &lt;/para&gt;
+&lt;/usx&gt;</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_1_usj--panel" class="tabpanel" aria-labelledby="_tabs_1_usj">
+<div id="src-usj-para-qr_1" class="listingblock">
+<div class="title">Example 3. Psalm 136.1-3 (CEV - markup adapted)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "type": "USJ",
+  "version": "3.1",
+  "content": [
+    {
+      "type": "book",
+      "marker": "id",
+      "code": "PSA",
+      "content": []
+    },
+    {
+      "type": "chapter",
+      "marker": "c",
+      "number": "136",
+      "sid": "PSA 136"
+    },
+    {
+      "type": "para",
+      "marker": "s1",
+      "content": ["God's Love Never Fails"]
+    },
+    {
+      "type": "para",
+      "marker": "q1",
+      "content": [
+        {
+          "type": "verse",
+          "marker": "v",
+          "number": "1",
+          "sid": "PSA 136:1"
+        },
+        "Praise the",
+        {
+          "type": "char",
+          "marker": "nd",
+          "content": ["Lord"]
+        },
+        "! He is good."
+      ]
+    },
+    {
+      "type": "para",
+      "marker": "qr",
+      "content": ["God's love never fails."]
+    },
+    {
+      "type": "para",
+      "marker": "q1",
+      "content": [
+        {
+          "type": "verse",
+          "marker": "v",
+          "number": "2",
+          "sid": "PSA 136:2"
+        },
+        "Praise the God of all gods."
+      ]
+    },
+    {
+      "type": "para",
+      "marker": "qr",
+      "content": ["God's love never fails."]
+    },
+    {
+      "type": "para",
+      "marker": "q1",
+      "content": [
+        {
+          "type": "verse",
+          "marker": "v",
+          "number": "3",
+          "sid": "PSA 136:3"
+        },
+        "Praise the Lord of lords."
+      ]
+    },
+    {
+      "type": "para",
+      "marker": "qr",
+      "content": ["God's love never fails."]
+    }
+  ]
+}</code></pre>
 </div>
 </div>
 </div>

@@ -885,7 +885,8 @@ time, and angels are the ones who bring in the harvest.</code></pre>
 <div id="src-usx-para-pi_1" class="listingblock">
 <div class="title">Example 2. Matthew 13.37-39 (CEV)</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;usx version="3.1"&gt;
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml"> &lt;usx version="3.1"&gt;
+  &lt;book code="MAT" style="id"/&gt;
   &lt;chapter number="13" style="c" sid="MAT 13"/&gt;
   &lt;para style="p"&gt;...&lt;/para&gt;
   &lt;para style="s1"&gt;Jesus Explains the Story about the Weeds&lt;/para&gt;
@@ -912,8 +913,14 @@ time, and angels are the ones who bring in the harvest.</code></pre>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
   "type": "USJ",
-  "version": "0.2.0",
+  "version": "3.1",
   "content": [
+    {
+      "type": "book",
+      "marker": "id",
+      "code": "MAT",
+      "content": []
+    },
     {
       "type": "chapter",
       "marker": "c",

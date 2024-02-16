@@ -852,13 +852,17 @@
 <li id="_tabs_1_usx" class="tab">
 <p>USX</p>
 </li>
+<li id="_tabs_1_usj" class="tab">
+<p>USJ</p>
+</li>
 </ul>
 </div>
 <div id="_tabs_1_usfm--panel" class="tabpanel" aria-labelledby="_tabs_1_usfm">
 <div id="src-usfm-para-ie_1" class="listingblock">
 <div class="title">Example 1. Introduction to Mark (GNT)</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\io1 The resurrection of Jesus (16.1-8)
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\id MRK
+\io1 The resurrection of Jesus (16.1-8)
 \io1 The appearances and ascension of the risen Lord (16.9-20)
 \ie
 \c 1
@@ -873,15 +877,81 @@
 <div id="src-usx-para-ie_1" class="listingblock">
 <div class="title">Example 2. Introduction to Mark (GNT)</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;para style="io1"&gt;The resurrection of Jesus (16.1-8)&lt;/para&gt;
-&lt;para style="io1"&gt;The appearances and ascension of the risen Lord (16.9-20)&lt;/para&gt;
-&lt;para style="ie"/&gt;
-&lt;chapter number="1" style="c" sid="MRK 1"/&gt;
-&lt;para style="s"&gt;The Preaching of John the Baptist&lt;/para&gt;
-&lt;para style="r"&gt;(Matthew 3.1-12; Luke 3.1-18; John 1.19-28)&lt;/para&gt;
-&lt;para style="p"&gt;
-  &lt;verse number="1" style="v" sid="MRK 1:1"/&gt;This is the Good News about Jesus
-  Christ ...&lt;/para&gt;</code></pre>
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;usx version="3.1"&gt;
+  &lt;book code="MRK" style="id"/&gt;
+  &lt;para style="io1"&gt;The resurrection of Jesus (16.1-8)&lt;/para&gt;
+  &lt;para style="io1"&gt;The appearances and ascension of the risen Lord (16.9-20)&lt;/para&gt;
+  &lt;para style="ie"/&gt;
+  &lt;chapter number="1" style="c" sid="MRK 1"/&gt;
+  &lt;para style="s"&gt;The Preaching of John the Baptist&lt;/para&gt;
+  &lt;para style="r"&gt;(Matthew 3.1-12; Luke 3.1-18; John 1.19-28)&lt;/para&gt;
+  &lt;para style="p"&gt;
+    &lt;verse number="1" style="v" sid="MRK 1:1"/&gt;This is the Good News about Jesus
+    Christ ...&lt;/para&gt;
+&lt;/usx&gt;</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_1_usj--panel" class="tabpanel" aria-labelledby="_tabs_1_usj">
+<div id="src-usj-para-ie_1" class="listingblock">
+<div class="title">Example 3. Introduction to Mark (GNT)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "type": "USJ",
+  "version": "3.1",
+  "content": [
+    {
+      "type": "book",
+      "marker": "id",
+      "code": "MRK",
+      "content": []
+    },
+    {
+      "type": "para",
+      "marker": "io1",
+      "content": ["The resurrection of Jesus (16.1-8)"]
+    },
+    {
+      "type": "para",
+      "marker": "io1",
+      "content": ["The appearances and ascension of the risen Lord (16.9-20)"]
+    },
+    {
+      "type": "para",
+      "marker": "ie",
+      "content": []
+    },
+    {
+      "type": "chapter",
+      "marker": "c",
+      "number": "1",
+      "sid": "MRK 1"
+    },
+    {
+      "type": "para",
+      "marker": "s",
+      "content": ["The Preaching of John the Baptist"]
+    },
+    {
+      "type": "para",
+      "marker": "r",
+      "content": ["(Matthew 3.1-12; Luke 3.1-18; John 1.19-28)"]
+    },
+    {
+      "type": "para",
+      "marker": "p",
+      "content": [
+        {
+          "type": "verse",
+          "marker": "v",
+          "number": "1",
+          "sid": "MRK 1:1"
+        },
+        "This is the Good News about Jesus Christ ..."
+      ]
+    }
+  ]
+}</code></pre>
 </div>
 </div>
 </div>

@@ -856,13 +856,17 @@
 <li id="_tabs_1_usx" class="tab">
 <p>USX</p>
 </li>
+<li id="_tabs_1_usj" class="tab">
+<p>USJ</p>
+</li>
 </ul>
 </div>
 <div id="_tabs_1_usfm--panel" class="tabpanel" aria-labelledby="_tabs_1_usfm">
 <div id="src-usfm-para-iq_1" class="listingblock">
 <div class="title">Example 1. Introduction to Titus (CEV)</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\ip Paul also tells how we are saved:
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\id TIT
+\ip Paul also tells how we are saved:
 \ib
 \iq1 God our Savior showed us
 \iq2 how good and kind he is.
@@ -879,16 +883,88 @@
 <div id="src-usx-para-iq_1" class="listingblock">
 <div class="title">Example 2. Introduction to Titus (CEV)</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;para style="ip"&gt;Paul also tells how we are saved:&lt;/para&gt;
-&lt;para style="ib"/&gt;
-&lt;para style="iq1"&gt;God our Savior showed us&lt;/para&gt;
-&lt;para style="iq2"&gt;how good and kind he is.&lt;/para&gt;
-&lt;para style="iq1"&gt;He saved us because&lt;/para&gt;
-&lt;para style="iq2"&gt;of his mercy,&lt;/para&gt;
-&lt;para style="iq1"&gt;and not because&lt;/para&gt;
-&lt;para style="iq2"&gt;of any good things&lt;/para&gt;
-&lt;para style="iq2"&gt;that we have done.&lt;/para&gt;
-&lt;para style="ipr"&gt;(3.4,5a)&lt;/para&gt;</code></pre>
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;usx version="3.1"&gt;
+  &lt;book code="TIT" style="id"/&gt;
+  &lt;para style="ip"&gt;Paul also tells how we are saved:&lt;/para&gt;
+  &lt;para style="ib"/&gt;
+  &lt;para style="iq1"&gt;God our Savior showed us&lt;/para&gt;
+  &lt;para style="iq2"&gt;how good and kind he is.&lt;/para&gt;
+  &lt;para style="iq1"&gt;He saved us because&lt;/para&gt;
+  &lt;para style="iq2"&gt;of his mercy,&lt;/para&gt;
+  &lt;para style="iq1"&gt;and not because&lt;/para&gt;
+  &lt;para style="iq2"&gt;of any good things&lt;/para&gt;
+  &lt;para style="iq2"&gt;that we have done.&lt;/para&gt;
+  &lt;para style="ipr"&gt;(3.4,5a)&lt;/para&gt;
+&lt;/usx&gt;</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_1_usj--panel" class="tabpanel" aria-labelledby="_tabs_1_usj">
+<div id="src-usj-para-iq_1" class="listingblock">
+<div class="title">Example 3. Introduction to Titus (CEV)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "type": "USJ",
+  "version": "3.1",
+  "content": [
+    {
+      "type": "book",
+      "marker": "id",
+      "code": "TIT",
+      "content": []
+    },
+    {
+      "type": "para",
+      "marker": "ip",
+      "content": ["Paul also tells how we are saved:"]
+    },
+    {
+      "type": "para",
+      "marker": "ib",
+      "content": []
+    },
+    {
+      "type": "para",
+      "marker": "iq1",
+      "content": ["God our Savior showed us"]
+    },
+    {
+      "type": "para",
+      "marker": "iq2",
+      "content": ["how good and kind he is."]
+    },
+    {
+      "type": "para",
+      "marker": "iq1",
+      "content": ["He saved us because"]
+    },
+    {
+      "type": "para",
+      "marker": "iq2",
+      "content": ["of his mercy,"]
+    },
+    {
+      "type": "para",
+      "marker": "iq1",
+      "content": ["and not because"]
+    },
+    {
+      "type": "para",
+      "marker": "iq2",
+      "content": ["of any good things"]
+    },
+    {
+      "type": "para",
+      "marker": "iq2",
+      "content": ["that we have done."]
+    },
+    {
+      "type": "para",
+      "marker": "ipr",
+      "content": ["(3.4,5a)"]
+    }
+  ]
+}</code></pre>
 </div>
 </div>
 </div>

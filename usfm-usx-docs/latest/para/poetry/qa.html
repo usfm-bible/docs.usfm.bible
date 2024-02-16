@@ -852,13 +852,17 @@
 <li id="_tabs_1_usx" class="tab">
 <p>USX</p>
 </li>
+<li id="_tabs_1_usj" class="tab">
+<p>USJ</p>
+</li>
 </ul>
 </div>
 <div id="_tabs_1_usfm--panel" class="tabpanel" aria-labelledby="_tabs_1_usfm">
 <div id="src-usfm-para-qa_1" class="listingblock">
 <div class="title">Example 1. Psalm 119 (NIV)</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\c 119
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\id PSA
+\c 119
 \qa Aleph
 \q1
 \v 1 Blessed are they whose ways are blameless,
@@ -875,20 +879,103 @@
 <div id="src-usx-para-qa_1" class="listingblock">
 <div class="title">Example 2. Psalm 119 (NIV)</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;chapter number="119" style="c" sid="PSA 119"/&gt;
-&lt;para style="qa"&gt;Aleph&lt;/para&gt;
-&lt;para style="q1"&gt;
-  &lt;verse number="1" style="v" sid="PSA 119:1"/&gt;Blessed are they whose ways are
-  blameless,&lt;/para&gt;
-&lt;para style="q2" vid="PSA 119:1"&gt;who walk according to the law of the
-  &lt;char style="nd"&gt;Lord&lt;/char&gt;.&lt;verse eid="PSA 119:1"/&gt;&lt;/para&gt;
-...
-&lt;para style="qa"&gt;Beth&lt;/para&gt;
-&lt;para style="q1"&gt;
-  &lt;verse number="9" style="v" sid="PSA 119:9"/&gt;How can a young man keep his way
-  pure?&lt;/para&gt;
-&lt;para style="q2" vid="PSA 119:9"&gt;By living according to your word.
-  &lt;verse eid="PSA 119:9"/&gt;&lt;/para&gt;</code></pre>
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml"> &lt;usx version="3.1"&gt;
+  &lt;book code="PSA" style="id"/&gt;
+  &lt;chapter number="119" style="c" sid="PSA 119"/&gt;
+  &lt;para style="qa"&gt;Aleph&lt;/para&gt;
+  &lt;para style="q1"&gt;
+    &lt;verse number="1" style="v" sid="PSA 119:1"/&gt;Blessed are they whose ways are
+    blameless,&lt;/para&gt;
+  &lt;para style="q2" vid="PSA 119:1"&gt;who walk according to the law of the
+    &lt;char style="nd"&gt;Lord&lt;/char&gt;.&lt;verse eid="PSA 119:1"/&gt;&lt;/para&gt;
+  ...
+  &lt;para style="qa"&gt;Beth&lt;/para&gt;
+  &lt;para style="q1"&gt;
+    &lt;verse number="9" style="v" sid="PSA 119:9"/&gt;How can a young man keep his way
+    pure?&lt;/para&gt;
+  &lt;para style="q2" vid="PSA 119:9"&gt;By living according to your word.
+    &lt;verse eid="PSA 119:9"/&gt;&lt;/para&gt;
+&lt;/usx&gt;</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_1_usj--panel" class="tabpanel" aria-labelledby="_tabs_1_usj">
+<div id="src-usj-para-qa_1" class="listingblock">
+<div class="title">Example 3. Psalm 119 (NIV)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "type": "USJ",
+  "version": "3.1",
+  "content": [
+    {
+      "type": "book",
+      "marker": "id",
+      "code": "PSA",
+      "content": []
+    },
+    {
+      "type": "chapter",
+      "marker": "c",
+      "number": "119",
+      "sid": "PSA 119"
+    },
+    {
+      "type": "para",
+      "marker": "qa",
+      "content": ["Aleph"]
+    },
+    {
+      "type": "para",
+      "marker": "q1",
+      "content": [
+        {
+          "type": "verse",
+          "marker": "v",
+          "number": "1",
+          "sid": "PSA 119:1"
+        },
+        "Blessed are they whose ways are blameless,"
+      ]
+    },
+    {
+      "type": "para",
+      "marker": "q2",
+      "content": [
+        "who walk according to the law of the",
+        {
+          "type": "char",
+          "marker": "nd",
+          "content": ["Lord"]
+        },
+        "."
+      ]
+    },
+    "...",
+    {
+      "type": "para",
+      "marker": "qa",
+      "content": ["Beth"]
+    },
+    {
+      "type": "para",
+      "marker": "q1",
+      "content": [
+        {
+          "type": "verse",
+          "marker": "v",
+          "number": "9",
+          "sid": "PSA 119:9"
+        },
+        "How can a young man keep his way pure?"
+      ]
+    },
+    {
+      "type": "para",
+      "marker": "q2",
+      "content": ["By living according to your word."]
+    }
+  ]
+}</code></pre>
 </div>
 </div>
 </div>
@@ -908,7 +995,7 @@
 <dl>
 <dt class="hdlist1">TextType</dt>
 <dd>
-<p>VerseText</p>
+<p>Other</p>
 </dd>
 <dt class="hdlist1">TextProperties</dt>
 <dd>

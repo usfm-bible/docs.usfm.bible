@@ -861,8 +861,11 @@
 <li id="_tabs_1_usfm" class="tab">
 <p>USFM</p>
 </li>
-<li id="_tabs_1_usfm_2" class="tab">
-<p>USFM</p>
+<li id="_tabs_1_usx" class="tab">
+<p>USX</p>
+</li>
+<li id="_tabs_1_usj" class="tab">
+<p>USJ</p>
 </li>
 </ul>
 </div>
@@ -874,11 +877,32 @@
 </div>
 </div>
 </div>
-<div id="_tabs_1_usfm_2--panel" class="tabpanel" aria-labelledby="_tabs_1_usfm_2">
+<div id="_tabs_1_usx--panel" class="tabpanel" aria-labelledby="_tabs_1_usx">
 <div id="src-usx-para-id_1" class="listingblock">
 <div class="title">Example 2. Matthew (GNT)</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;book code="MAT" style="id"&gt;41MATGNT92.SFM, Good News Translation, June 2003&lt;/book&gt;</code></pre>
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;usx&gt;
+  &lt;book code="MAT" style="id"&gt;41MATGNT92.SFM, Good News Translation, June 2003&lt;/book&gt;
+&lt;/usx&gt;</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_1_usj--panel" class="tabpanel" aria-labelledby="_tabs_1_usj">
+<div id="src-usj-para-id_1" class="listingblock">
+<div class="title">Example 3. Matthew (GNT)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "type": "USJ",
+  "version": "3.1",
+  "content": [
+    {
+      "type": "book",
+      "marker": "id",
+      "code": "MAT",
+      "content": ["41MATGNT92.SFM, Good News Translation, June 2003"]
+    }
+  ]
+}</code></pre>
 </div>
 </div>
 </div>

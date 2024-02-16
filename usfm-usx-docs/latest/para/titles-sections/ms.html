@@ -883,7 +883,8 @@
 <div id="src-usx-para-ms1_1" class="listingblock">
 <div class="title">Example 2. Psalm 1 (Book 1 division) (GNT)</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;usx version="3.1"&gt;
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml"> &lt;usx version="3.1"&gt;
+  &lt;book code="PSA" style="id"/&gt;
   &lt;chapter number="1" style="c" sid="PSA 1"/&gt;
   &lt;para style="ms1"&gt;Book One&lt;/para&gt;
   &lt;para style="mr"&gt;(Psalms 1–41)&lt;/para&gt;
@@ -902,8 +903,14 @@
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
   "type": "USJ",
-  "version": "0.2.0",
+  "version": "3.1",
   "content": [
+    {
+      "type": "book",
+      "marker": "id",
+      "code": "PSA",
+      "content": []
+    },
     {
       "type": "chapter",
       "marker": "c",
@@ -997,7 +1004,8 @@ of Babylonia attacked Jerusalem and surrounded the city.</code></pre>
 <div id="src-usx-par-ms1_2" class="listingblock">
 <div class="title">Example 5. Daniel 1.1 (GNT)</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;usx version="3.1"&gt;
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml"> &lt;usx version="3.1"&gt;
+  &lt;book code="DAN" style="id"/&gt;
   &lt;chapter number="1" style="c" sid="DAN 1"/&gt;
   &lt;para style="ms1"&gt;The Story of Daniel and His Friends&lt;/para&gt;
   &lt;para style="mr"&gt;(1.1—6.28)&lt;/para&gt;
@@ -1016,8 +1024,14 @@ of Babylonia attacked Jerusalem and surrounded the city.</code></pre>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
   "type": "USJ",
-  "version": "0.2.0",
+  "version": "3.1",
   "content": [
+    {
+      "type": "book",
+      "marker": "id",
+      "code": "DAN",
+      "content": []
+    },
     {
       "type": "chapter",
       "marker": "c",
