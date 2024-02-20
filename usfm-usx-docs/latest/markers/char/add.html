@@ -849,13 +849,19 @@
 <li id="_tabs_1_usx" class="tab">
 <p>USX</p>
 </li>
+<li id="_tabs_1_usj" class="tab">
+<p>USJ</p>
+</li>
 </ul>
 </div>
 <div id="_tabs_1_usfm--panel" class="tabpanel" aria-labelledby="_tabs_1_usfm">
 <div id="src-usfm-char-add_1" class="listingblock">
 <div class="title">Example 1. Genesis 5.29 (Russian Synodal)</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\p
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\id GEN
+\c 5
+\p ...
+\p
 \v 29 И нарек ему имя: Ной, сказав: он утешит нас в работе нашей и в трудах рук
 наших при \add возделывании\add* земли, которую проклял Господь.</code></pre>
 </div>
@@ -865,10 +871,57 @@
 <div id="src-usx-char-add_1" class="listingblock">
 <div class="title">Example 2. Genesis 5.29 (Russian Synodal)</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;para style="p"&gt;
-  &lt;verse number="29" style="v" sid="GEN 5:29"/&gt;И нарек ему имя: Ной, сказав: он
-  утешит нас в работе нашей и в трудах рук наших при &lt;char style="add"&gt;
-  возделывании&lt;/char&gt; земли, которую проклял Господь.&lt;verse eid="GEN 5:29"/&gt;&lt;/para&gt;</code></pre>
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;usx version="3.1"&gt;
+  &lt;book code="GEN" style="id"/&gt;
+  &lt;para style="p"&gt;...&lt;/para&gt;
+  &lt;para style="p"&gt;
+    &lt;verse number="29" style="v" sid="GEN 5:29"/&gt;И нарек ему имя: Ной, сказав: он
+    утешит нас в работе нашей и в трудах рук наших при &lt;char style="add"&gt;
+    возделывании&lt;/char&gt; земли, которую проклял Господь.&lt;verse eid="GEN 5:29"/&gt;&lt;/para&gt;
+&lt;/usx&gt;</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_1_usj--panel" class="tabpanel" aria-labelledby="_tabs_1_usj">
+<div id="src-usj-char-add_1" class="listingblock">
+<div class="title">Example 3. Genesis 5.29 (Russian Synodal)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "type": "USJ",
+  "version": "3.1",
+  "content": [
+    {
+      "type": "book",
+      "marker": "id",
+      "code": "GEN",
+      "content": []
+    },
+    {
+      "type": "para",
+      "marker": "p",
+      "content": ["..."]
+    },
+    {
+      "type": "para",
+      "marker": "p",
+      "content": [
+        {
+          "type": "verse",
+          "marker": "v",
+          "number": "29",
+          "sid": "GEN 5:29"
+        },
+        "И нарек ему имя: Ной, сказав: он утешит нас в работе нашей и в трудах рук наших при ",
+        {
+          "type": "char",
+          "marker": "add",
+          "content": ["возделывании"]
+        },
+        " земли, которую проклял Господь."
+      ]
+    }
+  ]
+}</code></pre>
 </div>
 </div>
 </div>

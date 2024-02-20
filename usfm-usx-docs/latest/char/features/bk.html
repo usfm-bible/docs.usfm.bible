@@ -852,13 +852,17 @@
 <li id="_tabs_1_usx" class="tab">
 <p>USX</p>
 </li>
+<li id="_tabs_1_usj" class="tab">
+<p>USJ</p>
+</li>
 </ul>
 </div>
 <div id="_tabs_1_usfm--panel" class="tabpanel" aria-labelledby="_tabs_1_usfm">
 <div id="src-usfm-char-bk_1" class="listingblock">
 <div class="title">Example 1. Introduction to Mark (GNT)</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\mt1 The Acts
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\id MRK
+\mt1 The Acts
 \mt2 of the Apostles
 \is Introduction
 \ip \bk The Acts of the Apostles\bk* is a continuation of \bk The Gospel
@@ -872,15 +876,70 @@ of Judea and Samaria, and to the ends of the earth” (1.8).</code></pre>
 <div id="src-usx-char-bk_1" class="listingblock">
 <div class="title">Example 2. Introduction to Mark (GNT)</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;para style="mt1"&gt;The Acts&lt;/para&gt;
-&lt;para style="mt2"&gt;of the Apostles&lt;/para&gt;
-&lt;para style="is"&gt;Introduction&lt;/para&gt;
-&lt;para style="ip"&gt;
-  &lt;char style="bk"&gt;The Acts of the Apostles&lt;/char&gt; is a continuation of
-  &lt;char style="bk"&gt;The Gospel according to Luke&lt;/char&gt; Its chief purpose is to tell
-  how Jesus' early followers, led by the Holy Spirit, spread the Good News about
-  him “in Jerusalem, in all of Judea and Samaria, and to the ends of the earth”
-  (1.8).&lt;/para&gt;</code></pre>
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;usx version="3.1"&gt;
+  &lt;book code="MRK" style="id"/&gt;
+  &lt;para style="mt1"&gt;The Acts&lt;/para&gt;
+  &lt;para style="mt2"&gt;of the Apostles&lt;/para&gt;
+  &lt;para style="is"&gt;Introduction&lt;/para&gt;
+  &lt;para style="ip"&gt;
+    &lt;char style="bk"&gt;The Acts of the Apostles&lt;/char&gt; is a continuation of
+    &lt;char style="bk"&gt;The Gospel according to Luke&lt;/char&gt; Its chief purpose is to tell
+    how Jesus' early followers, led by the Holy Spirit, spread the Good News about
+    him “in Jerusalem, in all of Judea and Samaria, and to the ends of the earth”
+    (1.8).&lt;/para&gt;
+&lt;/usx&gt;</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_1_usj--panel" class="tabpanel" aria-labelledby="_tabs_1_usj">
+<div id="src-usj-char-bk_1" class="listingblock">
+<div class="title">Example 3. Introduction to Mark (GNT)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "type": "USJ",
+  "version": "3.1",
+  "content": [
+    {
+      "type": "book",
+      "marker": "id",
+      "code": "MRK",
+      "content": []
+    },
+    {
+      "type": "para",
+      "marker": "mt1",
+      "content": ["The Acts"]
+    },
+    {
+      "type": "para",
+      "marker": "mt2",
+      "content": ["of the Apostles"]
+    },
+    {
+      "type": "para",
+      "marker": "is",
+      "content": ["Introduction"]
+    },
+    {
+      "type": "para",
+      "marker": "ip",
+      "content": [
+        {
+          "type": "char",
+          "marker": "bk",
+          "content": ["The Acts of the Apostles"]
+        },
+        " is a continuation of ",
+        {
+          "type": "char",
+          "marker": "bk",
+          "content": ["The Gospel according to Luke"]
+        },
+        " Its chief purpose is to tell how Jesus' early followers, led by the Holy Spirit, spread the Good News about him “in Jerusalem, in all of Judea and Samaria, and to the ends of the earth” (1.8)."
+      ]
+    }
+  ]
+}</code></pre>
 </div>
 </div>
 </div>

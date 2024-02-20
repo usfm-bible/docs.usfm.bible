@@ -894,15 +894,21 @@
 <li id="_tabs_1_usx" class="tab">
 <p>USX</p>
 </li>
+<li id="_tabs_1_usj" class="tab">
+<p>USJ</p>
+</li>
 </ul>
 </div>
 <div id="_tabs_1_usfm--panel" class="tabpanel" aria-labelledby="_tabs_1_usfm">
 <div id="src-usfm-char-jmp_1" class="listingblock">
 <div class="title">Example 1. Link to other project text</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">The traditional translation of verse 1, as given in
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\id GEN
+\c 1
+\p
+\v 1 \ef - \fr 1:2 \ft The traditional translation of verse 1, as given in
 \jmp RSV|link-href="x-prj:RSV52 GEN 1:1" link-title="Revised Standard
-Version"\jmp*, may be appropriate.</code></pre>
+Version"\jmp*, may be appropriate.\ef*</code></pre>
 </div>
 </div>
 </div>
@@ -910,9 +916,75 @@ Version"\jmp*, may be appropriate.</code></pre>
 <div id="src-usx-char-jmp_1" class="listingblock">
 <div class="title">Example 2. Link to other project text</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">The traditional translation of verse 1, as given in
-&lt;char style="jmp" link-href="x-prj:RSV52 GEN 1:1" link-title="Revised Standard
-Version"&gt;RSV&lt;/char&gt;, may be quite appropriate.</code></pre>
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;usx version="3.1"&gt;
+  &lt;book code="GEN" style="id"/&gt;
+  &lt;para style="p"&gt;
+    &lt;verse number="1" style="v" sid="GEN 1:1"/&gt;
+    &lt;note caller="-" style="ef"&gt;
+      &lt;char style="fr"&gt;1.1: &lt;/char&gt;&lt;char style="ft"&gt;The traditional translation
+      of verse 1, as given in &lt;char style="jmp" link-href="x-prj:RSV52 GEN 1:1"
+      link-title="Revised Standard Version"&gt;RSV&lt;/char&gt;, may be appropriate.&lt;/char&gt;
+    &lt;/note&gt;
+  &lt;/para&gt;
+&lt;/usx&gt;</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_1_usj--panel" class="tabpanel" aria-labelledby="_tabs_1_usj">
+<div id="src-usj-char-jmp_1" class="listingblock">
+<div class="title">Example 3. Link to other project text</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "type": "USJ",
+  "version": "3.1",
+  "content": [
+    {
+      "type": "book",
+      "marker": "id",
+      "code": "GEN",
+      "content": []
+    },
+    {
+      "type": "para",
+      "marker": "p",
+      "content": [
+        {
+          "type": "verse",
+          "marker": "v",
+          "number": "1",
+          "sid": "GEN 1:1"
+        },
+        {
+          "type": "note",
+          "marker": "ef",
+          "caller": "-",
+          "content": [
+            {
+              "type": "char",
+              "marker": "fr",
+              "content": ["1.1:"]
+            },
+            {
+              "type": "char",
+              "marker": "ft",
+              "content": [
+                "The traditional translation of verse 1, as given in",
+                {
+                  "type": "char",
+                  "marker": "jmp",
+                  "link-href": "x-prj:RSV52 GEN 1:1",
+                  "link-title": "Revised Standard Version",
+                  "content": ["RSV"]
+                },
+                ", may be appropriate."
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}</code></pre>
 </div>
 </div>
 </div>
@@ -928,11 +1000,14 @@ Version"&gt;RSV&lt;/char&gt;, may be quite appropriate.</code></pre>
 <li id="_tabs_2_usx" class="tab">
 <p>USX</p>
 </li>
+<li id="_tabs_2_usj" class="tab">
+<p>USJ</p>
+</li>
 </ul>
 </div>
 <div id="_tabs_2_usfm--panel" class="tabpanel" aria-labelledby="_tabs_2_usfm">
 <div id="src-usfm-char-jmp_2" class="listingblock">
-<div class="title">Example 3. Link to illustration / media</div>
+<div class="title">Example 4. Link to illustration / media</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\p Storehouses, as used here, refers to large buildings with walls and roof,
 where grain was kept until needed. (See illustration:
@@ -943,13 +1018,35 @@ link-title="Ancient storehouse"\jmp*)</code></pre>
 </div>
 <div id="_tabs_2_usx--panel" class="tabpanel" aria-labelledby="_tabs_2_usx">
 <div id="src-usx-char-jmp_2" class="listingblock">
-<div class="title">Example 4. Link to other project text</div>
+<div class="title">Example 5. Link to other project text</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;para style="p"&gt;Storehouses, as used here, refers to large buildings with
 walls and roof, where grain was kept until needed. (See illustration:
 &lt;char style="jmp" link-href="figures/storehouse.png"
 link-title="Ancient storehouse"&gt;Storehouse&lt;/char&gt;)
 ...&lt;/para&gt;</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_2_usj--panel" class="tabpanel" aria-labelledby="_tabs_2_usj">
+<div id="src-usj-char-jmp_2" class="listingblock">
+<div class="title">Example 6. Link to other project text</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "type": "para",
+  "marker": "p",
+  "content": [
+    "Storehouses, as used here, refers to large buildings with walls and roof, where grain was kept until needed. (See illustration:",
+    {
+      "type": "char",
+      "marker": "jmp",
+      "link-href": "figures/storehouse.png",
+      "link-title": "Ancient storehouse",
+      "content": ["Storehouse"]
+    },
+    ") ..."
+  ]
+}</code></pre>
 </div>
 </div>
 </div>
@@ -965,13 +1062,18 @@ link-title="Ancient storehouse"&gt;Storehouse&lt;/char&gt;)
 <li id="_tabs_3_usx" class="tab">
 <p>USX</p>
 </li>
+<li id="_tabs_3_usj" class="tab">
+<p>USJ</p>
+</li>
 </ul>
 </div>
 <div id="_tabs_3_usfm--panel" class="tabpanel" aria-labelledby="_tabs_3_usfm">
 <div id="src-usfm-char-jmp_3" class="listingblock">
-<div class="title">Example 5. Assigning an identifier (anchor)</div>
+<div class="title">Example 7. Assigning an identifier (anchor)</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\q1 “Someone is shouting in the desert,
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\id MRK
+\c 1
+\q1 “Someone is shouting in the desert,
 \q2 ‘Prepare a road for the Lord;
 \q2 make a straight path for him to travel!’ ”
 \esb \cat People\cat*\jmp |link-id="article-john_the_baptist"\jmp*
@@ -986,19 +1088,84 @@ of God's “Chosen One” (Messiah).
 </div>
 <div id="_tabs_3_usx--panel" class="tabpanel" aria-labelledby="_tabs_3_usx">
 <div id="src-usx-char-jmp_3" class="listingblock">
-<div class="title">Example 6. Assigning an identifier (anchor)</div>
+<div class="title">Example 8. Assigning an identifier (anchor)</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;para style="q1"&gt;“Someone is shouting in the desert,&lt;/para&gt;
-&lt;para style="q2"&gt;‘Prepare a road for the Lord;&lt;/para&gt;
-&lt;para style="q2"&gt;make a straight path for him to travel!’ ”&lt;/para&gt;
-&lt;sidebar style="esb" category="people"&gt;
-  &lt;para style="ms"&gt;&lt;char style="jmp" link-id="article-john_the_baptist" /&gt;John the
-    Baptist&lt;/para&gt;
-  &lt;para style="p"&gt;John is sometimes called the last “Old Testament prophet”
-    because of the warnings he  brought about God's judgment and because he
-    announced the coming of God's “Chosen One” (Messiah).&lt;/para&gt;
-  ...
-&lt;/sidebar&gt;</code></pre>
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;usx version="3.1"&gt;
+  &lt;book code="MRK" style="id"/&gt;
+  &lt;para style="q1"&gt;“Someone is shouting in the desert,&lt;/para&gt;
+  &lt;para style="q2"&gt;‘Prepare a road for the Lord;&lt;/para&gt;
+  &lt;para style="q2"&gt;make a straight path for him to travel!’ ”&lt;/para&gt;
+  &lt;sidebar style="esb" category="people"&gt;
+    &lt;para style="ms"&gt;&lt;char style="jmp" link-id="article-john_the_baptist" /&gt;John the
+      Baptist&lt;/para&gt;
+    &lt;para style="p"&gt;John is sometimes called the last “Old Testament prophet”
+      because of the warnings he  brought about God's judgment and because he
+      announced the coming of God's “Chosen One” (Messiah).&lt;/para&gt;
+    ...
+  &lt;/sidebar&gt;
+&lt;/usx&gt;</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_3_usj--panel" class="tabpanel" aria-labelledby="_tabs_3_usj">
+<div id="src-usj-char-jmp_3" class="listingblock">
+<div class="title">Example 9. Assigning an identifier (anchor)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "type": "USJ",
+  "version": "3.1",
+  "content": [
+    {
+      "type": "book",
+      "marker": "id",
+      "code": "MRK",
+      "content": []
+    },
+    {
+      "type": "para",
+      "marker": "q1",
+      "content": ["“Someone is shouting in the desert,"]
+    },
+    {
+      "type": "para",
+      "marker": "q2",
+      "content": ["‘Prepare a road for the Lord;"]
+    },
+    {
+      "type": "para",
+      "marker": "q2",
+      "content": ["make a straight path for him to travel!’ ”"]
+    },
+    {
+      "type": "sidebar",
+      "marker": "esb",
+      "category": "people",
+      "content": [
+        {
+          "type": "para",
+          "marker": "ms",
+          "content": [
+            {
+              "type": "char",
+              "marker": "jmp",
+              "link-id": "article-john_the_baptist",
+              "content": []
+            },
+            "John the Baptist"
+          ]
+        },
+        {
+          "type": "para",
+          "marker": "p",
+          "content": [
+            "John is sometimes called the last “Old Testament prophet” because of the warnings he brought about God's judgment and because he announced the coming of God's “Chosen One” (Messiah)."
+          ]
+        },
+        " ... "
+      ]
+    }
+  ]
+}</code></pre>
 </div>
 </div>
 </div>
@@ -1014,13 +1181,18 @@ of God's “Chosen One” (Messiah).
 <li id="_tabs_4_usx" class="tab">
 <p>USX</p>
 </li>
+<li id="_tabs_4_usj" class="tab">
+<p>USJ</p>
+</li>
 </ul>
 </div>
 <div id="_tabs_4_usfm--panel" class="tabpanel" aria-labelledby="_tabs_4_usfm">
 <div id="src-usfm-char-jmp_5" class="listingblock">
-<div class="title">Example 7. Reference to named target within the same project</div>
+<div class="title">Example 10. Reference to named target within the same project</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\p
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\id MAT
+\c 1
+\p
 \v 2-6a From Abraham to King David, the following ancestors are listed: Abraham,
 Isaac, Jacob, Judah and his brothers; then Perez and Zerah (their mother was
 Tamar*), Hezron, Ram, Amminadab, Nahshon, Salmon, Boaz (his mother was Rahab*),
@@ -1031,16 +1203,58 @@ David.</code></pre>
 </div>
 <div id="_tabs_4_usx--panel" class="tabpanel" aria-labelledby="_tabs_4_usx">
 <div id="src-usx-char-jmp_5" class="listingblock">
-<div class="title">Example 8. Reference to named target within the same project</div>
+<div class="title">Example 11. Reference to named target within the same project</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;para style="p"&gt;
-  &lt;verse number="2-6a" style="v" sid="MAT 1:2-6a" /&gt;From Abraham to King David,
-  the following ancestors are listed: Abraham, Isaac, Jacob, Judah and his
-  brothers; then Perez and Zerah (their mother was Tamar), Hezron, Ram, Amminadab,
-  Nahshon, Salmon, Boaz (his mother was Rahab), Obed (his mother was
-  &lt;char style="jmp" link-href="#article-Ruth"&gt;Ruth&lt;/char&gt;), Jesse, and King
-  David.&lt;verse eid="MAT 1:2-6a"/&gt;
-&lt;/para&gt;</code></pre>
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;usx version="3.1"&gt;
+  &lt;book code="MAT" style="id"/&gt;
+  &lt;para style="p"&gt;
+    &lt;verse number="2-6a" style="v" sid="MAT 1:2-6a" /&gt;From Abraham to King David,
+    the following ancestors are listed: Abraham, Isaac, Jacob, Judah and his
+    brothers; then Perez and Zerah (their mother was Tamar), Hezron, Ram, Amminadab,
+    Nahshon, Salmon, Boaz (his mother was Rahab), Obed (his mother was
+    &lt;char style="jmp" link-href="#article-Ruth"&gt;Ruth&lt;/char&gt;), Jesse, and King
+    David.&lt;verse eid="MAT 1:2-6a"/&gt;
+  &lt;/para&gt;
+&lt;/usx&gt;</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_4_usj--panel" class="tabpanel" aria-labelledby="_tabs_4_usj">
+<div id="src-usj-char-jmp_5" class="listingblock">
+<div class="title">Example 12. Reference to named target within the same project</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "type": "USJ",
+  "version": "3.1",
+  "content": [
+    {
+      "type": "book",
+      "marker": "id",
+      "code": "MAT",
+      "content": []
+    },
+    {
+      "type": "para",
+      "marker": "p",
+      "content": [
+        {
+          "type": "verse",
+          "marker": "v",
+          "number": "2-6a",
+          "sid": "MAT 1:2-6a"
+        },
+        "From Abraham to King David, the following ancestors are listed: Abraham, Isaac, Jacob, Judah and his brothers; then Perez and Zerah (their mother was Tamar), Hezron, Ram, Amminadab, Nahshon, Salmon, Boaz (his mother was Rahab), Obed (his mother was ",
+        {
+          "type": "char",
+          "marker": "jmp",
+          "link-href": "#article-Ruth",
+          "content": ["Ruth"]
+        },
+        "), Jesse, and King David."
+      ]
+    }
+  ]
+}</code></pre>
 </div>
 </div>
 </div>
@@ -1056,28 +1270,108 @@ David.</code></pre>
 <li id="_tabs_5_usx" class="tab">
 <p>USX</p>
 </li>
+<li id="_tabs_5_usj" class="tab">
+<p>USJ</p>
+</li>
 </ul>
 </div>
 <div id="_tabs_5_usfm--panel" class="tabpanel" aria-labelledby="_tabs_5_usfm">
 <div id="src-usfm-char-jmp_6" class="listingblock">
-<div class="title">Example 9. Nested within extended footnote text.</div>
+<div class="title">Example 13. Nested within extended footnote text.</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\ef - \fr 1.2-6a: \fq Ruth: \ft A Moabite (Ruth 1.4). Only outstanding
-women were normally included in Jewish genealogical lists. See article
-on \+jmp Ruth|link-href="#article-Ruth"\+jmp*\ef*</code></pre>
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\id MAT
+\c 1
+\p
+\v 2-6a From Abraham to King David, the following ancestors are listed: Abraham,
+Isaac, Jacob, Judah and his brothers; then Perez and Zerah (their mother was
+Tamar*), Hezron, Ram, Amminadab, Nahshon, Salmon, Boaz (his mother was Rahab*),
+Obed (his mother was Ruth\ef - \fr 1.2-6a: \fq Ruth: \ft A Moabite (Ruth 1.4).
+Only outstanding women were normally included in Jewish genealogical lists. See
+article on \+jmp Ruth|link-href="#article-Ruth"\+jmp*\ef*), Jesse, and King David.</code></pre>
 </div>
 </div>
 </div>
 <div id="_tabs_5_usx--panel" class="tabpanel" aria-labelledby="_tabs_5_usx">
 <div id="src-usx-char-jmp_6" class="listingblock">
-<div class="title">Example 10. Reference to named target within the same project</div>
+<div class="title">Example 14. Reference to named target within the same project</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;note caller="-" style="ef"&gt;
-  &lt;char style="fr"&gt;1.2-6a: &lt;/char&gt;&lt;char style="fq"&gt;Ruth: &lt;/char&gt;
-  &lt;char style="ft"&gt;A Moabite. Only outstanding women were normally included in
-  Jewish genealogical lists. See article on &lt;char style="jmp"
-  link-href="#article-Ruth"&gt;Ruth&lt;/char&gt;
-&lt;/note&gt;</code></pre>
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;usx version="3.1"&gt;
+  &lt;book code="MAT" style="id"/&gt;
+  &lt;para style="p"&gt;
+    &lt;verse number="2-6a" style="v" sid="MAT 1:2-6a" /&gt;From Abraham to King David,
+    the following ancestors are listed: Abraham, Isaac, Jacob, Judah and his
+    brothers; then Perez and Zerah (their mother was Tamar), Hezron, Ram, Amminadab,
+    Nahshon, Salmon, Boaz (his mother was Rahab), Obed (his mother was
+    Ruth&lt;note caller="-" style="ef"&gt;
+      &lt;char style="fr"&gt;1.2-6a: &lt;/char&gt;&lt;char style="fq"&gt;Ruth: &lt;/char&gt;
+        &lt;char style="ft"&gt;A Moabite. Only outstanding women were normally included in
+        Jewish genealogical lists. See article on
+        &lt;char style="jmp" link-href="#article-Ruth"&gt;Ruth&lt;/char&gt;&lt;/char&gt;&lt;/note&gt;),
+    Jesse, and King David. ...&lt;verse eid="MAT 1:2-6a"/&gt;&lt;/para&gt;
+&lt;/usx&gt;</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_5_usj--panel" class="tabpanel" aria-labelledby="_tabs_5_usj">
+<div id="src-usj-char-jmp_6" class="listingblock">
+<div class="title">Example 15. Reference to named target within the same project</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "type": "USJ",
+  "version": "3.1",
+  "content": [
+    {
+      "type": "book",
+      "marker": "id",
+      "code": "MAT",
+      "content": []
+    },
+    {
+      "type": "para",
+      "marker": "p",
+      "content": [
+        {
+          "type": "verse",
+          "marker": "v",
+          "number": "2-6a",
+          "sid": "MAT 1:2-6a"
+        },
+        "From Abraham to King David, the following ancestors are listed: Abraham, Isaac, Jacob, Judah and his brothers; then Perez and Zerah (their mother was Tamar), Hezron, Ram, Amminadab, Nahshon, Salmon, Boaz (his mother was Rahab), Obed (his mother was Ruth",
+        {
+          "type": "note",
+          "marker": "ef",
+          "caller": "-",
+          "content": [
+            {
+              "type": "char",
+              "marker": "fr",
+              "content": ["1.2-6a:"]
+            },
+            {
+              "type": "char",
+              "marker": "fq",
+              "content": ["Ruth:"]
+            },
+            {
+              "type": "char",
+              "marker": "ft",
+              "content": [
+                "A Moabite. Only outstanding women were normally included in Jewish genealogical lists. See article on",
+                {
+                  "type": "char",
+                  "marker": "jmp",
+                  "link-href": "#article-Ruth",
+                  "content": ["Ruth"]
+                }
+              ]
+            }
+          ]
+        },
+        "), Jesse, and King David. ..."
+      ]
+    }
+  ]
+}</code></pre>
 </div>
 </div>
 </div>

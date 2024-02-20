@@ -826,6 +826,9 @@
 <li id="_tabs_1_usx" class="tab">
 <p>USX</p>
 </li>
+<li id="_tabs_1_usj" class="tab">
+<p>USJ</p>
+</li>
 </ul>
 </div>
 <div id="_tabs_1_usfm--panel" class="tabpanel" aria-labelledby="_tabs_1_usfm">
@@ -841,6 +844,19 @@
 <div class="title">Example 2. Glossary word with <code>lemma</code> attribute</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;char style="w" lemma="grace"&gt;gracious&lt;/char&gt;</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_1_usj--panel" class="tabpanel" aria-labelledby="_tabs_1_usj">
+<div id="src-usj-char-w-attrib_1" class="listingblock">
+<div class="title">Example 3. Glossary word with <code>lemma</code> attribute</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "type": "char",
+  "marker": "w",
+  "lemma": "grace",
+  "content": ["gracious"]
+}</code></pre>
 </div>
 </div>
 </div>
@@ -881,11 +897,14 @@
 <li id="_tabs_2_usx" class="tab">
 <p>USX</p>
 </li>
+<li id="_tabs_2_usj" class="tab">
+<p>USJ</p>
+</li>
 </ul>
 </div>
 <div id="_tabs_2_usfm--panel" class="tabpanel" aria-labelledby="_tabs_2_usfm">
 <div id="src-usfm-char-w-attrib-default" class="listingblock">
-<div class="title">Example 3. Glossary word with un-named default <code>lemma</code> attribute</div>
+<div class="title">Example 4. Glossary word with un-named default <code>lemma</code> attribute</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\w gracious|grace\w*</code></pre>
 </div>
@@ -893,9 +912,22 @@
 </div>
 <div id="_tabs_2_usx--panel" class="tabpanel" aria-labelledby="_tabs_2_usx">
 <div id="src-usx-char-w-attrib_2" class="listingblock">
-<div class="title">Example 4. USX: Glossary word with <code>lemma</code> attribute</div>
+<div class="title">Example 5. USX: Glossary word with <code>lemma</code> attribute</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;char style="w" lemma="grace"&gt;gracious&lt;/char&gt;</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_2_usj--panel" class="tabpanel" aria-labelledby="_tabs_2_usj">
+<div id="src-usj-char-w-attrib_2" class="listingblock">
+<div class="title">Example 6. USX: Glossary word with <code>lemma</code> attribute</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "type": "char",
+  "marker": "w",
+  "lemma": "grace",
+  "content": ["gracious"]
+}</code></pre>
 </div>
 </div>
 </div>
@@ -919,11 +951,14 @@
 <li id="_tabs_3_usx" class="tab">
 <p>USX</p>
 </li>
+<li id="_tabs_3_usj" class="tab">
+<p>USJ</p>
+</li>
 </ul>
 </div>
 <div id="_tabs_3_usfm--panel" class="tabpanel" aria-labelledby="_tabs_3_usfm">
 <div id="src-usfm-char-w-attrib-strong" class="listingblock">
-<div class="title">Example 5. Glossary word with multiple <code>strong</code> values</div>
+<div class="title">Example 7. Glossary word with multiple <code>strong</code> values</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\w gracious|strong="H1234,G5485"\w*</code></pre>
 </div>
@@ -931,9 +966,22 @@
 </div>
 <div id="_tabs_3_usx--panel" class="tabpanel" aria-labelledby="_tabs_3_usx">
 <div id="src-usx-char-w-attrib-strong" class="listingblock">
-<div class="title">Example 6. Glossary word with multiple <code>strong</code> values</div>
+<div class="title">Example 8. Glossary word with multiple <code>strong</code> values</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;char style="w" strong="H1234,G5485"&gt;gracious&lt;/char&gt;</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_3_usj--panel" class="tabpanel" aria-labelledby="_tabs_3_usj">
+<div id="src-usj-char-w-attrib-strong" class="listingblock">
+<div class="title">Example 9. Glossary word with multiple <code>strong</code> values</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "type": "char",
+  "marker": "w",
+  "strong": "H1234,G5485",
+  "content": ["gracious"]
+}</code></pre>
 </div>
 </div>
 </div>
@@ -982,23 +1030,49 @@
 <li id="_tabs_4_usx" class="tab">
 <p>USX</p>
 </li>
+<li id="_tabs_4_usj" class="tab">
+<p>USJ</p>
+</li>
 </ul>
 </div>
 <div id="_tabs_4_usfm--panel" class="tabpanel" aria-labelledby="_tabs_4_usfm">
 <div id="src-usfm-char-w-attrib-user" class="listingblock">
-<div class="title">Example 7. Glossary word with user defined attribute</div>
+<div class="title">Example 10. Glossary word with user defined attribute</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\w gracious|x-myattr="value"\w*
+
 \w gracious|lemma="grace" x-myattr="value"\w*</code></pre>
 </div>
 </div>
 </div>
 <div id="_tabs_4_usx--panel" class="tabpanel" aria-labelledby="_tabs_4_usx">
 <div id="src-usx-char-w-attrib-user" class="listingblock">
-<div class="title">Example 8. Glossary word with user defined attribute</div>
+<div class="title">Example 11. Glossary word with user defined attribute</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;char style="w" x-myattr="value"&gt;gracious&lt;/char&gt;
+
 &lt;char style="w" lemma="grace" x-myattr="value"&gt;gracious&lt;/char&gt;</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_4_usj--panel" class="tabpanel" aria-labelledby="_tabs_4_usj">
+<div id="src-usj-char-w-attrib-user" class="listingblock">
+<div class="title">Example 12. Glossary word with user defined attribute</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "type": "char",
+  "marker": "w",
+  "x-myattr": "value",
+  "content": ["gracious"]
+}
+
+{
+  "type": "char",
+  "marker": "w",
+  "lemma": "grace",
+  "x-myattr": "value",
+  "content": ["gracious"]
+}</code></pre>
 </div>
 </div>
 </div>

@@ -835,12 +835,15 @@
 <li id="_tabs_1_usx" class="tab">
 <p>USX</p>
 </li>
+<li id="_tabs_1_usj" class="tab">
+<p>USJ</p>
+</li>
 </ul>
 </div>
 <div id="_tabs_1_usfm--panel" class="tabpanel" aria-labelledby="_tabs_1_usfm">
 <div id="src-usfm-char-nesting_1" class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">... The following is a \add translator's addition containing the
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\p The following is a \add translator's addition containing the
 word \nd Lord\nd* within it\add* ...</code></pre>
 </div>
 </div>
@@ -848,8 +851,35 @@ word \nd Lord\nd* within it\add* ...</code></pre>
 <div id="_tabs_1_usx--panel" class="tabpanel" aria-labelledby="_tabs_1_usx">
 <div id="src-usx-char-nesting_1" class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">... The following is a &lt;char style="add"&gt;translator's addition containing the
-  word &lt;char style="nd"&gt;Lord&lt;/char&gt; within it&lt;/char&gt; ...</code></pre>
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;para style="p"&gt;The following is a &lt;char style="add"&gt;translator's addition
+  containing the word &lt;char style="nd"&gt;Lord&lt;/char&gt; within it&lt;/char&gt; ...&lt;/para&gt;</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_1_usj--panel" class="tabpanel" aria-labelledby="_tabs_1_usj">
+<div id="src-usj-char-nesting_1" class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "type": "para",
+  "marker": "p",
+  "content": [
+    "The following is a",
+    {
+      "type": "char",
+      "marker": "add",
+      "content": [
+        "translator's addition containing the word",
+        {
+          "type": "char",
+          "marker": "nd",
+          "content": ["Lord"]
+        },
+        " within it"
+      ]
+    },
+    " ..."
+  ]
+}</code></pre>
 </div>
 </div>
 </div>
@@ -876,6 +906,9 @@ word \nd Lord\nd* within it\add* ...</code></pre>
 <li id="_tabs_2_usx" class="tab">
 <p>USX</p>
 </li>
+<li id="_tabs_2_usj" class="tab">
+<p>USJ</p>
+</li>
 </ul>
 </div>
 <div id="_tabs_2_usfm--panel" class="tabpanel" aria-labelledby="_tabs_2_usfm">
@@ -891,10 +924,45 @@ word \nd Lord\nd* within it\add* ...</code></pre>
 <div id="src-usx-char-nesting_4" class="listingblock">
 <div class="title">Example 2. Numbers 21.14 (GNT) - bk + nd nested</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;verse number="14" style="v" sid="NUM 22:14"/&gt;That is why
-  &lt;char style="bk"&gt;The Book of the &lt;char style="nd"&gt;Lord&lt;/char&gt;'s Battles&lt;/char&gt;
-  speaks of “...the town of Waheb in the area of Suphah, and the valleys; the Arnon
-  River,&lt;verse eid="NUM 22:14"/&gt;</code></pre>
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;para style="p"&gt;...&lt;verse number="14" style="v" sid="NUM 21:14"/&gt;That is why &lt;char
+    style="bk"&gt;The Book of the &lt;char style="nd"&gt;Lord&lt;/char&gt;'s Battles&lt;/char&gt;
+  speaks of “...the town of Waheb in the area of Suphah, and the valleys; the
+  Arnon River, &lt;verse eid="NUM 22:14"/&gt;&lt;/para&gt;</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_2_usj--panel" class="tabpanel" aria-labelledby="_tabs_2_usj">
+<div id="src-usj-char-nesting_4" class="listingblock">
+<div class="title">Example 3. Numbers 21.14 (GNT) - bk + nd nested</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "type": "para",
+  "marker": "p",
+  "content": [
+    "...",
+    {
+      "type": "verse",
+      "marker": "v",
+      "number": "14",
+      "sid": "NUM 21:14"
+    },
+    "That is why ",
+    {
+      "type": "char",
+      "marker": "bk",
+      "content": [
+        "The Book of the",
+        {
+          "type": "char",
+          "marker": "nd",
+          "content": ["Lord"]
+        },
+        "'s Battles"
+      ]
+    },
+    " speaks of “...the town of Waheb in the area of Suphah, and the valleys; the Arnon River, "
+  ]
+}</code></pre>
 </div>
 </div>
 </div>
@@ -915,14 +983,16 @@ word \nd Lord\nd* within it\add* ...</code></pre>
 <li id="_tabs_3_usx" class="tab">
 <p>USX</p>
 </li>
+<li id="_tabs_3_usj" class="tab">
+<p>USJ</p>
+</li>
 </ul>
 </div>
 <div id="_tabs_3_usfm--panel" class="tabpanel" aria-labelledby="_tabs_3_usfm">
 <div id="src-usfm-char-nesting_5" class="listingblock">
-<div class="title">Example 3. Genesis 2.4 (GNT) - fk and ft + nd nested</div>
+<div class="title">Example 4. Genesis 2.4 (GNT) - fk and ft + nd nested</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\s1 The Garden of Eden
-\p When the \nd Lord\nd* \f + \fr 2.4: \fk the \nd Lord\nd*: \ft Where the
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\p When the \nd Lord\nd* \f + \fr 2.4: \fk the \nd Lord\nd*: \ft Where the
 Hebrew text has Yahweh, traditionally transliterated as Jehovah, this
 translation employs \nd Lord\nd* with capital letters, following a usage
 which is widespread in English versions.\f* God made the universe,
@@ -932,10 +1002,9 @@ which is widespread in English versions.\f* God made the universe,
 </div>
 <div id="_tabs_3_usx--panel" class="tabpanel" aria-labelledby="_tabs_3_usx">
 <div id="src-usx-char-nesting_5" class="listingblock">
-<div class="title">Example 4. Genesis 2.4 (GNT) - fk and ft + nd nested</div>
+<div class="title">Example 5. Genesis 2.4 (GNT) - fk and ft + nd nested</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;para style="s" vid="GEN 2:4"&gt;The Garden of Eden&lt;/para&gt;
-&lt;para style="p" vid="GEN 2:4"&gt;When the &lt;char style="nd"&gt;Lord&lt;/char&gt;
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;para style="p" vid="GEN 2:4"&gt;When the &lt;char style="nd"&gt;Lord&lt;/char&gt;
   &lt;note caller="+" style="f"&gt;
     &lt;char style="fr" closed="false"&gt;2.4: &lt;/char&gt;
     &lt;char style="fk" closed="false"&gt;the
@@ -946,8 +1015,66 @@ which is widespread in English versions.\f* God made the universe,
       &lt;char style="nd"&gt;Lord&lt;/char&gt; with capital letters, following a usage
       which is widespread in English versions.
     &lt;/char&gt;
-  &lt;/note&gt; God made the universe, &lt;verse eid="GEN 2:4" /&gt;
-  ...</code></pre>
+  &lt;/note&gt; God made the universe, &lt;verse eid="GEN 2:4" /&gt;</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_3_usj--panel" class="tabpanel" aria-labelledby="_tabs_3_usj">
+<div id="src-usj-char-nesting_5" class="listingblock">
+<div class="title">Example 6. Genesis 2.4 (GNT) - fk and ft + nd nested</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "type": "USJ",
+  "marker": "p",
+  "content": [
+    "When the",
+    {
+      "type": "char",
+      "marker": "nd",
+      "content": ["Lord"]
+    },
+    {
+      "type": "note",
+      "marker": "f",
+      "caller": "+",
+      "content": [
+        {
+          "type": "char",
+          "marker": "fr",
+          "content": ["2.4:"]
+        },
+        {
+          "type": "char",
+          "marker": "fk",
+          "content": [
+            "the",
+            {
+              "type": "char",
+              "marker": "nd",
+              "content": ["Lord"]
+            },
+            ": "
+          ]
+        },
+        {
+          "type": "char",
+          "marker": "ft",
+          "content": [
+            "Where the Hebrew text has Yahweh, traditionally transliterated as Jehovah, this translation employs",
+            {
+              "type": "char",
+              "marker": "nd",
+              "content": ["Lord"]
+            },
+            " with capital letters, following a usage which is widespread in English versions. "
+          ]
+        }
+      ]
+    },
+    " God made the universe, ",
+    "..."
+  ]
+}</code></pre>
 </div>
 </div>
 </div>
