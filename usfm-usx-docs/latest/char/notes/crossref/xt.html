@@ -416,6 +416,9 @@
     <a class="nav-link" href="../../features/rb.html">rb - Ruby gloss</a>
   </li>
   <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../features/ref.html">ref - Scripture reference</a>
+  </li>
+  <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../../features/sig.html">sig - Author&#8217;s signature</a>
   </li>
   <li class="nav-item" data-depth="3">
@@ -810,37 +813,23 @@
 <dt class="hdlist1">Description</dt>
 <dd>
 <p><a href="../../../note/crossref/index.html" class="xref page">Cross Reference</a> - Target references. A list of scripture references normally written as book abbreviation + chapter + verse(s). The punctuation character between chapter and verse numbers is specific to the project text, but is commonly a colon <code>:</code> or period <code>.</code>. Trailing punctuation at the end of a list of references is optional.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Supply an explicit target reference by enclosing the reference string with <a href="../../features/ref.html" class="xref page">ref</a>.</p>
+</li>
+</ul>
+</div>
 </dd>
 <dt class="hdlist1">Syntax</dt>
 <dd>
 <div class="ulist">
 <ul>
 <li>
-<p><strong>USFM:</strong> <code>\xt </code><mark><em>content</em></mark><code>|</code><mark><em>@link-href</em></mark></p>
+<p><strong>USFM:</strong> <code>\xt </code><mark><em>content</em></mark></p>
 </li>
 <li>
-<p><strong>USX:</strong> <code>&lt;char style="xt" </code><mark><em>@link-href</em></mark><code>&gt;</code><mark><em>content</em></mark><code>`&lt;/char&gt;</code></p>
-<div class="dlist">
-<dl>
-<dt class="hdlist1"><mark>link-href</mark></dt>
-<dd>
-<p>Unambiguously identifies the scripture target reference using a standard scripture reference format. <em>(default attribute)</em></p>
-<div class="ulist">
-<ul>
-<li>
-<p>Book names must be one a standard <a href="../../../para/identification/books.html" class="xref page">book identifier</a>. Chapter + verse separator is always a colon <code>:</code>. A string of pattern <code>[A-Z1-4]{3}(-[A-Z1-4]{3})? ?[a-z0-9\-:]*</code></p>
-</li>
-<li>
-<p>In some scenarios a target reference is written in a format which cannot be accurately parsed and identified. Providing the <code>link-href</code> attribute allows greater flexibility in the use of <a href="xt.html" class="xref page">xt</a>.</p>
-</li>
-<li>
-<p>In this context (<a href="xt.html" class="xref page">xt</a>), <code>link-href</code> should only target scripture references for the current text (i.e. references to other project texts or non-scripture URIs are not allowed).</p>
-</li>
-</ul>
-</div>
-</dd>
-</dl>
-</div>
+<p><strong>USX:</strong> <code>&lt;char style="xt"&gt;</code><mark><em>content</em></mark><code>`&lt;/char&gt;</code></p>
 </li>
 </ul>
 </div>
@@ -859,7 +848,33 @@
 </dd>
 <dt class="hdlist1">Updated</dt>
 <dd>
-<p>3.0 (attributes)</p>
+<div class="ulist">
+<ul>
+<li>
+<p>3.1</p>
+<div class="ulist">
+<ul>
+<li>
+<p><em>Deprecated</em> use of the attribute <mark><em>@link-href</em></mark>. See: <a href="../../features/ref.html" class="xref page">ref</a>.</p>
+</li>
+<li>
+<p><em>Deprecated</em> use of <a href="xt.html" class="xref page">xt</a> outside of <a href="../../../note/crossref/x.html" class="xref page">cross-reference</a>. See: <a href="../../features/ref.html" class="xref page">ref</a>.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>3.0</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Attributes</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
 </dd>
 </dl>
 </div>
@@ -904,9 +919,10 @@ will be called a Nazarene.”</code></pre>
   there. He was given more instructions in a dream, so he went to the province of
   Galilee&lt;verse eid="MAT 2:22"/&gt;
   &lt;verse number="23" style="v" sid="MAT 2:23"/&gt;&lt;note caller="-" style="x"&gt;
-    &lt;char style="xo" closed="false"&gt;2.23: &lt;/char&gt;
-    &lt;char style="xt" closed="false"&gt;&lt;ref loc="MRK 1:24"&gt;Mk 1.24&lt;/ref&gt;;
-    &lt;ref loc="LUK 2:39"&gt;Lk 2.39&lt;/ref&gt;; &lt;ref loc="JHN 1:45"&gt;Jn 1.45&lt;/ref&gt;.&lt;/char&gt;
+    &lt;char style="xo"&gt;2.23: &lt;/char&gt;
+    &lt;char style="xt"&gt;&lt;ref loc="MRK 1:24" gen="true"&gt;Mk 1.24&lt;/ref&gt;;
+    &lt;ref loc="LUK 2:39" gen="true"&gt;Lk 2.39&lt;/ref&gt;;
+    &lt;ref loc="JHN 1:45" gen="true"&gt;Jn 1.45&lt;/ref&gt;.&lt;/char&gt;
   &lt;/note&gt;and made his home in a town named Nazareth. And so what the prophets had
   said came true: “He will be called a Nazarene.”&lt;verse eid="MAT 2:23"/&gt;&lt;/para&gt;</code></pre>
 </div>
@@ -955,23 +971,23 @@ do not cheat; respect your father and your mother.’”</code></pre>
   asked him. “No one is good except God alone.&lt;verse eid="MRK 10:18"/&gt;
   &lt;verse number="19" style="v" sid="MRK 10:19"/&gt;&lt;note caller="-" style="x"&gt;
     &lt;char style="xo"&gt;10.19: a &lt;/char&gt;
-    &lt;char style="xt"&gt;&lt;ref loc="EXO 20:13"&gt;Ex 20.13&lt;/ref&gt;;
-    &lt;ref loc="DEU 5:17"&gt;Dt 5.17&lt;/ref&gt;; &lt;/char&gt;
+    &lt;char style="xt"&gt;&lt;ref loc="EXO 20:13" gen="true"&gt;Ex 20.13&lt;/ref&gt;;
+    &lt;ref loc="DEU 5:17" gen="true"&gt;Dt 5.17&lt;/ref&gt;; &lt;/char&gt;
     &lt;char style="xo"&gt;b &lt;/char&gt;
-    &lt;char style="xt"&gt;&lt;ref loc="EXO 20:14"&gt;Ex 20.14&lt;/ref&gt;;
-    &lt;ref loc="DEU 5:18"&gt;Dt 5.18&lt;/ref&gt;; &lt;/char&gt;
+    &lt;char style="xt"&gt;&lt;ref loc="EXO 20:14" gen="true"&gt;Ex 20.14&lt;/ref&gt;;
+    &lt;ref loc="DEU 5:18" gen="true"&gt;Dt 5.18&lt;/ref&gt;; &lt;/char&gt;
     &lt;char style="xo"&gt;c &lt;/char&gt;
-    &lt;char style="xt"&gt;&lt;ref loc="EXO 20:15"&gt;Ex 20.15&lt;/ref&gt;;
-    &lt;ref loc="DEU 5:19"&gt;Dt 5.19&lt;/ref&gt;; &lt;/char&gt;
+    &lt;char style="xt"&gt;&lt;ref loc="EXO 20:15" gen="true"&gt;Ex 20.15&lt;/ref&gt;;
+    &lt;ref loc="DEU 5:19" gen="true"&gt;Dt 5.19&lt;/ref&gt;; &lt;/char&gt;
     &lt;char style="xo"&gt;d &lt;/char&gt;
-    &lt;char style="xt"&gt;&lt;ref loc="EXO 20:16"&gt;Ex 20.16&lt;/ref&gt;;
-    &lt;ref loc="DEU 5:20"&gt;Dt 5.20&lt;/ref&gt;; &lt;/char&gt;
+    &lt;char style="xt"&gt;&lt;ref loc="EXO 20:16" gen="true"&gt;Ex 20.16&lt;/ref&gt;;
+    &lt;ref loc="DEU 5:20" gen="true"&gt;Dt 5.20&lt;/ref&gt;; &lt;/char&gt;
     &lt;char style="xo"&gt;e &lt;/char&gt;
-    &lt;char style="xt"&gt;&lt;ref loc="EXO 20:12"&gt;Ex 20.12&lt;/ref&gt;;
-    &lt;ref loc="DEU 5:16"&gt;Dt 5.16&lt;/ref&gt;.&lt;/char&gt;&lt;/note&gt;You know the commandments:
-  ‘Do not commit murder; do not commit adultery; do not steal; do not accuse
-  anyone falsely; do not cheat; respect your father and your mother.’”
-  &lt;verse eid="MRK 10:19"/&gt;&lt;/para&gt;</code></pre>
+    &lt;char style="xt"&gt;&lt;ref loc="EXO 20:12" gen="true"&gt;Ex 20.12&lt;/ref&gt;;
+    &lt;ref loc="DEU 5:16" gen="true"&gt;Dt 5.16&lt;/ref&gt;.&lt;/char&gt;&lt;/note&gt;You know the
+    commandments: ‘Do not commit murder; do not commit adultery; do not steal;
+    do not accuse anyone falsely; do not cheat; respect your father and your
+    mother.’”&lt;verse eid="MRK 10:19"/&gt;&lt;/para&gt;</code></pre>
 </div>
 </div>
 </div>

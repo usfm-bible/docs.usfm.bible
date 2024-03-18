@@ -416,6 +416,9 @@
     <a class="nav-link" href="char/features/rb.html">rb - Ruby gloss</a>
   </li>
   <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="char/features/ref.html">ref - Scripture reference</a>
+  </li>
+  <li class="nav-item" data-depth="3">
     <a class="nav-link" href="char/features/sig.html">sig - Author&#8217;s signature</a>
   </li>
   <li class="nav-item" data-depth="3">
@@ -811,7 +814,7 @@
 </dd>
 <dt>HS</dt>
 <dd>
-<p>Pattern: <code>/</code><mark>${hs}</mark><code>+/</code> A sequence of horizontal whitespace characters</p>
+<p>Pattern: <code>/</code><mark>${hs}</mark><code>+/</code> A sequence of more horizontal whitespace characters</p>
 </dd>
 <dt>Hs</dt>
 <dd>
@@ -863,7 +866,7 @@
 </dd>
 <dt>ATTRIBTEXT</dt>
 <dd>
-<p>Pattern: <code>/(?:\\["\\=~/]|[^\\"])+/</code> Matches text inside an attribute value (not including the quotes)</p>
+<p>Pattern: <code>/(?:\\["\\=~/|]|[^\\"])+/</code> Matches text inside an attribute value (not including the quotes)</p>
 </dd>
 <dt>ATTRIBALL</dt>
 <dd>
@@ -875,15 +878,15 @@
 </dd>
 <dt>TEXT</dt>
 <dd>
-<p>Pattern: <code>/[^\\]+/</code> Matches simple text up to the next marker</p>
+<p>Pattern: <code>/([^\\]|\\[/~\\|])+/</code> Matches simple text up to the next marker</p>
 </dd>
 <dt>TEXTNWS</dt>
 <dd>
-<p>Pattern: <code>/.+(?=</code><mark>${Ws}</mark><code>\\)/</code> Matches simple text without trailing whitespace</p>
+<p>Pattern: <code>/.+(?=</code><mark>${Ws}</mark><code>\\[^~/\\])/</code> Matches simple text without trailing whitespace</p>
 </dd>
 <dt>TEXTNOTATTRIB</dt>
 <dd>
-<p>Pattern: <code>/(?:[^\\|]|\\["\\~/])+/</code> Matches simple text up to the start of a sequence of attributes delimited by |</p>
+<p>Pattern: <code>/(?:[^\\|]|\\[\\~/|])+/</code> Matches simple text up to the start of a sequence of attributes delimited by |</p>
 </dd>
 <dt>PIPE</dt>
 <dd>
