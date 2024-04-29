@@ -806,15 +806,111 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>Throughout this documentation, texts shown between square brackets, with a grey background, in <code>[monospacedFont]</code> are the names used for classes or terminals within the USFM/USX RNG schema. These names correspond to the terminal labels shown in syntax diagrams thoughout the documentation.</p>
+<p>A brief explanation of the syntax used throughout this documention is given below.</p>
+</div>
+<div class="paragraph">
+<p>Most documentation pages for USFM/USX markup contain one or more of the following sections.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#_summary">Summary</a></p>
+</li>
+<li>
+<p><a href="#_diagrams">Diagrams</a></p>
+</li>
+<li>
+<p><a href="#_examples">Examples</a></p>
+</li>
+<li>
+<p><a href="#_properties">Properties</a></p>
+</li>
+<li>
+<p><a href="#_publication_issues">Publication Issues</a></p>
+</li>
+</ul>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_syntax_diagrams"><a class="anchor" href="#_syntax_diagrams"></a>Syntax Diagrams</h2>
+<h2 id="_summary"><a class="anchor" href="#_summary"></a>Summary</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>'Railroad' diagrams illustrate the syntax for components of the USFM/USX schema. Where a diagram is provided, USFM and USX expressions are given in separate tabs. The railroad diagrams for the paragraph element are shown below:</p>
+<p>A summary of the 1) <strong>type</strong> of markup found in the current documentation section (e.g. <a href="para/index.html" class="xref page">paragraphs</a>, <a href="char/index.html" class="xref page">characters</a>), <a href="note/index.html" class="xref page">notes</a>, or 2) a <strong>specific instance</strong> of a markup type (e.g. <a href="para/paragraphs/p.html" class="xref page">p - paragraph</a>, <a href="char/features/nd.html" class="xref page">nd - Name of God</a>, <a href="note/footnote/index.html" class="xref page">footnote</a>).</p>
+</div>
+<div class="sect2">
+<h3 id="_description"><a class="anchor" href="#_description"></a>Description</h3>
+<div class="paragraph">
+<p>A short description of the markup.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_syntax"><a class="anchor" href="#_syntax"></a>Syntax</h3>
+<div class="paragraph">
+<p>A summary of the markup syntax is given in both <strong>USFM</strong> and <strong>USX</strong> syntax. The following conventions are used:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>markup</code> : Monospaced text with a grey background is the explicit marker text required.</p>
+</li>
+<li>
+<p><mark><em>placeholder</em></mark> : Red, italic text is a placeholder. The content which should be provided at the position of the placeholder is described below the syntax summary.</p>
+</li>
+<li>
+<p><mark><em>@attribute</em></mark> : Required or optional <a href="char/attributes.html" class="xref page">attributes</a> are listed as placeholders in red, italic text preceded by an <mark><em>@</em></mark> symbol.</p>
+</li>
+<li>
+<p><mark><em>placeholder</em></mark> or <mark><em>@attribute</em></mark> content which is required is identified by an <strong>*</strong> asterisk.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_style_type"><a class="anchor" href="#_style_type"></a>Style Type</h3>
+<div class="paragraph">
+<p>If the documentation page is for a specific instance of a markup type, a link to the summary documentation for that marker type is given. For example: <a href="para/paragraphs/p.html" class="xref page">p</a> is a type of <a href="para/index.html" class="xref page">Paragraph</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_valid_in"><a class="anchor" href="#_valid_in"></a>Valid In</h3>
+<div class="paragraph">
+<p>The <a href="doc/index.html" class="xref page">document division</a>, <a href="para/index.html" class="xref page">paragraph</a>, or <a href="note/index.html" class="xref page">note</a> type where the selected markup is valid.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_added"><a class="anchor" href="#_added"></a>Added</h3>
+<div class="paragraph">
+<p>The version of USFM/USX when this markup was added.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_updated"><a class="anchor" href="#_updated"></a>Updated</h3>
+<div class="paragraph">
+<p>The version of USFM/USX when this markup was updated, corrected, or possibly deprecated.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Throughout this documentation, texts shown between square brackets, with a grey background, in <code>[monospacedFont]</code> are the names used for classes or terminals within the USFM/USX RNG schema. These names correspond to the terminal labels shown in syntax diagrams thoughout the documentation.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_diagrams"><a class="anchor" href="#_diagrams"></a>Diagrams</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>'Railroad' diagrams illustrate the syntax for components of the USFM/USX schema. Where a diagram is provided, USFM and USX expressions are given in separate tabs. Railroad diagrams for the <a href="para/index.html" class="xref page">paragraph</a> element are shown below:</p>
 </div>
 <div id="_tabs_1" class="openblock tabs is-loading">
 <div class="content">
@@ -861,9 +957,210 @@
 <p>Terminals are shown in containers with rounded corners, and labelled in <code>ALLCAPS</code>. The defintions for terminal labels are given in the <a href="glossary.html" class="xref page">glossary</a>.</p>
 </li>
 <li>
-<p>A container identifying a markup element is shown with square corners, with a label identifying the element type (e.g. <a href="note/footnote/index.html" class="xref page">Footnote</a>, <a href="note/crossref/index.html" class="xref page">CrossReference</a>, <a href="char/index.html" class="xref page">Char</a>, <a href="ms/index.html" class="xref page">Milestone</a>, <a href="cv/v.html" class="xref page">Verse</a>).</p>
+<p>A container identifying a markup type is shown with square corners, with a label identifying the type (e.g. <a href="note/footnote/index.html" class="xref page">Footnote</a>, <a href="note/crossref/index.html" class="xref page">CrossReference</a>, <a href="char/index.html" class="xref page">Char</a>, <a href="ms/index.html" class="xref page">Milestone</a>, <a href="cv/v.html" class="xref page">Verse</a>).</p>
 </li>
 </ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_examples"><a class="anchor" href="#_examples"></a>Examples</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>One or more working text examples in USFM, USX, and USJ are given, usually together with a formatting sample. Examples for <a href="para/paragraphs/p.html" class="xref page">p - paragraph</a> are shown below:</p>
+</div>
+<div id="_tabs_2" class="openblock tabs is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_2_usfm" class="tab">
+<p>USFM</p>
+</li>
+<li id="_tabs_2_usx" class="tab">
+<p>USX</p>
+</li>
+<li id="_tabs_2_usj" class="tab">
+<p>USJ</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_2_usfm--panel" class="tabpanel" aria-labelledby="_tabs_2_usfm">
+<div id="src-usfm-para-p_1" class="listingblock">
+<div class="title">Example 1. Mark 1.1-4 (GNT)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\id MRK
+\c 1
+\s1 The Preaching of John the Baptist
+\r (Matthew 3.1-12; Luke 3.1-18; John 1.19-28)
+\p
+\v 1 This is the Good News about Jesus Christ, the Son of God.
+\v 2 It began as the prophet Isaiah had written:
+\q1 “God said, ‘I will send my messenger ahead of you
+\q2 to open the way for you.’
+\q1
+\v 3 Someone is shouting in the desert,
+\q2 ‘Get the road ready for the Lord;
+\q2 make a straight path for him to travel!’”
+\p
+\v 4 So John appeared in the desert, baptizing and preaching. “Turn away from your
+sins and be baptized,” he told the people, “and God will forgive your sins.”</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_2_usx--panel" class="tabpanel" aria-labelledby="_tabs_2_usx">
+<div id="src-usx-para-p_1" class="listingblock">
+<div class="title">Example 2. Mark 1.1-4 (GNT)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;usx version="3.1"&gt;
+  &lt;book code="MRK" style="id"/&gt;
+  &lt;chapter number="1" style="c" sid="MRK 1"/&gt;
+  &lt;para style="s1"&gt;The Preaching of John the Baptist&lt;/para&gt;
+  &lt;para style="r"&gt;(Matthew 3.1-12; Luke 3.1-18; John 1.19-28)&lt;/para&gt;
+  &lt;para style="p"&gt;
+    &lt;verse number="1" style="v" sid="MRK 1:1" /&gt;This is the Good News about Jesus
+    Christ, the Son of God. &lt;verse eid="MRK 1:1" /&gt;&lt;verse number="2" style="v"
+    sid="MRK 1:2" /&gt;It began as the prophet Isaiah had written:&lt;/para&gt;
+  &lt;para style="q1" vid="MRK 1:2"&gt;“God said, ‘I will send my messenger ahead of you
+    &lt;/para&gt;
+  &lt;para style="q2" vid="MRK 1:2"&gt;to open the way for you.’&lt;verse eid="MRK 1:2" /&gt;
+    &lt;/para&gt;
+  &lt;para style="q1"&gt;
+    &lt;verse number="3" style="v" sid="MRK 1:3" /&gt;Someone is shouting in the desert,
+    &lt;/para&gt;
+  &lt;para style="q2" vid="MRK 1:3"&gt;‘Get the road ready for the Lord;&lt;/para&gt;
+  &lt;para style="q2" vid="MRK 1:3"&gt;make a straight path for him to travel!’”
+    &lt;verse eid="MRK 1:3" /&gt;&lt;/para&gt;
+  &lt;para style="p"&gt;
+    &lt;verse number="4" style="v" sid="MRK 1:4" /&gt;So John appeared in the desert,
+    baptizing and preaching. “Turn away from your sins and be baptized,” he told
+    the people, “and God will forgive your sins.”&lt;verse eid="MRK 1:4" /&gt;&lt;/para&gt;
+&lt;/usx&gt;</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_2_usj--panel" class="tabpanel" aria-labelledby="_tabs_2_usj">
+<div id="src-usj-para-p_1" class="listingblock">
+<div class="title">Example 3. Mark 1.1-4 (GNT)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "type": "USJ",
+  "version": "3.1",
+  "content": [
+    {
+      "type": "book",
+      "marker": "id",
+      "code": "MRK",
+      "content": []
+    },
+    {
+      "type": "chapter",
+      "marker": "c",
+      "number": "1",
+      "sid": "MRK 1"
+    },
+    {
+      "type": "para",
+      "marker": "s1",
+      "content": ["The Preaching of John the Baptist"]
+    },
+    {
+      "type": "para",
+      "marker": "r",
+      "content": ["(Matthew 3.1-12; Luke 3.1-18; John 1.19-28)"]
+    },
+    {
+      "type": "para",
+      "marker": "p",
+      "content": [
+        {
+          "type": "verse",
+          "marker": "v",
+          "number": "1",
+          "sid": "MRK 1:1"
+        },
+        "This is the Good News about Jesus Christ, the Son of God. ",
+        {
+          "type": "verse",
+          "marker": "v",
+          "number": "2",
+          "sid": "MRK 1:2"
+        },
+        "It began as the prophet Isaiah had written:"
+      ]
+    },
+    {
+      "type": "para",
+      "marker": "q1",
+      "content": ["“God said, ‘I will send my messenger ahead of you"]
+    },
+    {
+      "type": "para",
+      "marker": "q2",
+      "content": ["to open the way for you.’"]
+    },
+    {
+      "type": "para",
+      "marker": "q1",
+      "content": [
+        {
+          "type": "verse",
+          "marker": "v",
+          "number": "3",
+          "sid": "MRK 1:3"
+        },
+        "Someone is shouting in the desert, "
+      ]
+    },
+    {
+      "type": "para",
+      "marker": "q2",
+      "content": ["‘Get the road ready for the Lord;"]
+    },
+    {
+      "type": "para",
+      "marker": "q2",
+      "content": ["make a straight path for him to travel!’”"]
+    },
+    {
+      "type": "para",
+      "marker": "p",
+      "content": [
+        {
+          "type": "verse",
+          "marker": "v",
+          "number": "4",
+          "sid": "MRK 1:4"
+        },
+        "So John appeared in the desert, baptizing and preaching. “Turn away from your sins and be baptized,” he told the people, “and God will forgive your sins.”"
+      ]
+    }
+  ]
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="markers/_images/para/p_1.jpg" alt="Mark 1.1-4 (GNT)" width="300">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_properties"><a class="anchor" href="#_properties"></a>Properties</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A list of additional properties for the current markup type or specific markup instance.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_publication_issues"><a class="anchor" href="#_publication_issues"></a>Publication Issues</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A list of notes, guidance, or specific concerns related to publishing the content used with the current markup.</p>
 </div>
 </div>
 </div>
