@@ -57,7 +57,7 @@
     <a class="nav-link" href="introduction.html">Introduction</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="syntax.html">General Syntax</a>
+    <a class="nav-link" href="syntax.html">General Markup Syntax</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="extensions.html">User Extensions</a>
@@ -854,7 +854,7 @@
 </dd>
 <dt>TAGEND</dt>
 <dd>
-<p>Pattern: <code>/(?:</code><mark>${ws}</mark><code>|(?=[\\|]|$))/</code> Delimits a marker</p>
+<p>Pattern: <code>/(?:</code><mark>${ws}</mark><code>+|(?=[\\|]|$))/</code> Delimits a marker</p>
 </dd>
 <dt>TEXTEND</dt>
 <dd>
@@ -887,6 +887,10 @@
 <dt>TEXTNOTATTRIB</dt>
 <dd>
 <p>Pattern: <code>/(?:[^\\|]|\\[\\~/|])+/</code> Matches simple text up to the start of a sequence of attributes delimited by |</p>
+</dd>
+<dt>TEXTNOTATTRIBOPT</dt>
+<dd>
+<p>Pattern: <code>/(?:[^\\|]|\\[\\~/|])*/</code> Matches simple text up to the start of a sequence of attributes delimited by | if present</p>
 </dd>
 <dt>PIPE</dt>
 <dd>
