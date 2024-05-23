@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>User Extensions ('z' namespace) :: USFM / USX Docs</title>
+    <title>User Extensions :: USFM / USX Docs</title>
     <link rel="canonical" href="https://docs.usfm.bible/usfm-usx-docs/latest/extensions.html">
     <link rel="prev" href="syntax.html">
     <link rel="next" href="whitespace.html">
@@ -802,9 +802,150 @@
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">User Extensions ('z' namespace)</h1>
+<h1 class="page">User Extensions</h1>
+<div id="preamble">
+<div class="sectionbody">
 <div class="paragraph">
-<p>Any 'private-use' marker/style extensions should begin with <code>z</code>. Example: <code>\zMyPara</code> or <code>&lt;para style="zMyPara"&gt;</code>. Markers/styles in the <code>z</code> namespace are not considered part of the USFM/USX standard. An application or processor may provide support for <code>z</code> extensions, but are not expected to handle the markup or its associated text in any particular way, and are also free to ignore this markup when it is encountered in a text.</p>
+<p>Users may create and use non-standard markup extensions. User created markers should always begin with <code>z</code>. For Example: <code>\zmyp</code> or <code>&lt;para style="zmyp"&gt;</code>. User extended markup is NOT considered part of the USFM/USX standard. An application or processor is not required to provide support for user extensions, and is also free to ignore this markup when it is encountered in a text.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_defining_extensions"><a class="anchor" href="#_defining_extensions"></a>Defining Extensions</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A basic specification for markup extensions used in a text should be provided in a file named <code>markers.ext</code>. For each marker, supply the following:</p>
+</div>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><mark><code>\marker</code></mark></dt>
+<dd>
+<p>Marker text</p>
+</dd>
+<dt class="hdlist1"><mark><code>\category</code></mark></dt>
+<dd>
+<p>Marker category, from the following list:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="para/index.html" class="xref page">Paragraph</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>header</code> - Header/identification paragraph</p>
+</li>
+<li>
+<p><code>title</code> - Book title paragraph</p>
+</li>
+<li>
+<p><code>introduction</code> - Introduction text paragraph</p>
+</li>
+<li>
+<p><code>sectionpara</code> - Section heading paragraph</p>
+</li>
+<li>
+<p><code>versepara</code> - Verse text paragraph</p>
+</li>
+<li>
+<p><code>list</code> - List paragraph (verse text)</p>
+</li>
+<li>
+<p><code>otherpara</code> - Other (non verse text) paragraph</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="note/index.html" class="xref page">Note</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>crossreference</code> - Cross Reference container</p>
+</li>
+<li>
+<p><code>footnote</code> - Footnote container</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="char/index.html" class="xref page">Character</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>char</code> - Character-level container (span)</p>
+</li>
+<li>
+<p><code>introchar</code> - Introduction text character span</p>
+</li>
+<li>
+<p><code>listchar</code> - List text character span</p>
+</li>
+<li>
+<p><code>footnotechar</code> - Footnote text character span</p>
+</li>
+<li>
+<p><code>crossreferencechar</code> - Cross reference text character span</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><a href="ms/index.html" class="xref page">Milestone</a></p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>milestone</code> - Milestone</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Other</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>internal</code> - Internal</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1"><mark><code>\description</code></mark></dt>
+<dd>
+<p>Marker description</p>
+</dd>
+<dt class="hdlist1"><mark><code>\attribute</code></mark></dt>
+<dd>
+<p><em>As needed</em> - Required or optional attribute (used with Character marker categories). If more than one attribute is specified for the marker, provide a separate \attribute field for each.</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_examples"><a class="anchor" href="#_examples"></a>Examples</h2>
+<div class="sectionbody">
+<div id="src-markers-ext_1" class="listingblock">
+<div class="title">Example 1. markers.ext</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-ext hljs" data-lang="ext">\marker zmyp
+\category versepara
+\description An paragraph marker extension.</code></pre>
+</div>
+</div>
+<div id="src-markers-ext_2" class="listingblock">
+<div class="title">Example 2. markers.ext</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-ext hljs" data-lang="ext">\marker zmyc
+\category char
+\description A character marker extension.
+\attribute x-myattr1</code></pre>
+</div>
+</div>
+</div>
 </div>
 <nav class="pagination">
   <span class="prev"><a href="syntax.html">General Markup Syntax</a></span>
