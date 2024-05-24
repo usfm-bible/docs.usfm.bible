@@ -807,7 +807,7 @@
 <h2 id="ws-definition"><a class="anchor" href="#ws-definition"></a>Definition</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>In USFM/USX, a white space (<strong><em>WS</em></strong>) character is <a href="glossary.html" class="xref page">defined</a> by the pattern <code>/(?:</code><mark>${ws}</mark><code>|</code><mark>${nl}</mark><code>|$)/</code>, where:</p>
+<p>In USFM/USX, a 'common whitespace' (<strong><em>WS</em></strong>) character is <a href="glossary.html" class="xref page">defined</a> by the pattern <code>/(?:</code><mark>${ws}</mark><code>|</code><mark>${nl}</mark><code>|$)/</code>, where:</p>
 </div>
 <div class="dlist">
 <dl>
@@ -817,7 +817,7 @@
 <div class="ulist">
 <ul>
 <li>
-<p>A single simple whitespace character that may be reduced</p>
+<p>A single whitespace character.</p>
 </li>
 </ul>
 </div>
@@ -828,7 +828,7 @@
 <div class="ulist">
 <ul>
 <li>
-<p>A single newline (as supported by all operating systems)</p>
+<p>A single newline (as supported by all operating systems).</p>
 </li>
 </ul>
 </div>
@@ -836,56 +836,56 @@
 </dl>
 </div>
 <div class="paragraph">
-<p>All other characters, even if formally Unicode whitespace characters, are treated as <em>content</em> characters.</p>
+<p>Common whitespace is found throughout the document <em><mark>content</mark></em> for most languages.</p>
 </div>
 <div class="paragraph">
-<p><strong>Significant</strong> or <em><mark>content</mark></em> whitespace is considered part of the text of the document. It may be reduced but is not deleted.</p>
+<p><em>Some</em> common whitespace in USFM/USX documents is 'structural whitespace'. Structural (<em>non-content</em>) whitespace exists either to aid in the readability of a source file, or to delimit markers. Structural whitespace is identified in the documentation&#8217;s syntax diagrams (<code>WS</code>/<code>Ws</code>/<code>HS</code>/<code>Hs</code>) and is not part of the document <em><mark>content</mark></em>.</p>
 </div>
 <div class="paragraph">
-<p><strong>Structural</strong> or <em>non-content</em> whitespace exists either to aid the layout of a source file or to delimit markers. Structural whitespace is explicitly identified in the syntax diagrams and is not part of a <code>TEXT</code> terminal.</p>
+<p>All other characters are always treated as <em><mark>content</mark></em> (including other <a href="https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp?a=%3Awhitespace%3A&amp;g=Lb&amp;i" target="_blank" rel="noopener">Unicode whitespace</a> characters).</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="ws-reducing"><a class="anchor" href="#ws-reducing"></a>Reducing or Eliminating Whitespace</h2>
+<h2 id="ws-reducing"><a class="anchor" href="#ws-reducing"></a>Reducing or Eliminating Common Whitespace</h2>
 <div class="sectionbody">
 <div class="ulist">
 <ul>
 <li>
-<p>Whitespace is <strong>reduced</strong> according to these rules:</p>
+<p>Any common whitespace is <strong>reduced</strong> according to these rules:</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Any string of <strong><em>WS</em></strong> chars including a newline is reduced to a single newline.</p>
+<p>Any string of <strong><em>WS</em></strong> chars which includes a newline is reduced to a single newline.</p>
 </li>
 <li>
-<p>Any string of <strong><em>WS</em></strong> chars not including a newline is reduced to a single space.</p>
+<p>Any string of <strong><em>WS</em></strong> chars which does not include a newline is reduced to a single space.</p>
 </li>
 </ul>
 </div>
 </li>
 <li>
-<p><em><mark>Content</mark></em> whitespace can be <strong>eliminated</strong> when it occurs:</p>
+<p>Common whitespace can be <strong>eliminated</strong> when it occurs:</p>
 <div class="ulist">
 <ul>
 <li>
-<p>At the start of any element content.</p>
+<p>At the start of any element&#8217;s <em><mark>content</mark></em>.</p>
 </li>
 <li>
-<p>At the end of any element content, except inside a <a href="char/index.html" class="xref page">character</a> element, when followed by text or another <a href="char/index.html" class="xref page">character</a> element.</p>
+<p>At the end of any element&#8217;s <em><mark>content</mark></em>, except inside a <a href="char/index.html" class="xref page">character</a> element, when followed by text or another <a href="char/index.html" class="xref page">character</a> element.</p>
 </li>
 </ul>
 </div>
 </li>
 <li>
-<p>Whitespace <strong>canonicalization</strong> is done as follows:</p>
+<p>Common whitespace <strong>canonicalization</strong> is done as follows:</p>
 <div class="ulist">
 <ul>
 <li>
-<p>A newline before a <a href="char/index.html" class="xref page">character</a> marker is converted to a space. That space is significant <em><mark>content</mark></em>.</p>
+<p>A newline before a <a href="char/index.html" class="xref page">character</a> marker is converted to a space. That space is <em><mark>content</mark></em>.</p>
 </li>
 <li>
-<p>Any whitespace before a <a href="para/index.html" class="xref page">paragraph</a> marker, including none, is replaced by a newline. This newline is not significant <em><mark>content</mark></em>.</p>
+<p>Any whitespace before a <a href="para/index.html" class="xref page">paragraph</a> marker, including none, is replaced by a newline. This newline is not <em><mark>content</mark></em>.</p>
 </li>
 </ul>
 </div>
@@ -900,7 +900,7 @@
 </td>
 <td class="content">
 <div class="paragraph">
-<p>USX documents contain whitespace that delimits aspects of the XML syntax. XML allows for unlimited whitespace wherever it is permitted in the XML syntax, which is typically added for the purpose of formatting for easier reading ('pretty-printing').</p>
+<p>USX documents contain common whitespace that delimits aspects of the XML syntax itself. XML allows for unlimited whitespace wherever it is permitted by the XML syntax, which is typically added for the purpose of formatting for easier reading (i.e. 'pretty-printing').</p>
 </div>
 </td>
 </tr>
