@@ -419,6 +419,9 @@
     <a class="nav-link" href="char/features/rb.html">rb - Ruby gloss</a>
   </li>
   <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="char/features/rq.html">rq - Inline quotation refs</a>
+  </li>
+  <li class="nav-item" data-depth="3">
     <a class="nav-link" href="char/features/ref.html">ref - Scripture reference</a>
   </li>
   <li class="nav-item" data-depth="3">
@@ -803,22 +806,16 @@
 <article class="doc">
 <h1 class="page">Release Notes</h1>
 <div class="sect1">
-<h2 id="_3_0_1"><a class="anchor" href="#_3_0_1"></a>3.0.1</h2>
+<h2 id="_3_1"><a class="anchor" href="#_3_1"></a>3.1</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><em>January 2020</em></p>
-</div>
-<div class="paragraph">
-<p>This update is primarily for providing documentation fixes, as well as minor updates to Paratext stylesheets (enable PT9 ColorNames feature; allow \xt in more contexts)</p>
+<p><em>June 2024</em></p>
 </div>
 </div>
 </div>
 <div class="sect1">
 <h2 id="_3_0"><a class="anchor" href="#_3_0"></a>3.0</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p>USFM 3.0 additions or revisions are highlighted throughout this documentation using the badge 'usfm 3.0'</p>
-</div>
 <div class="paragraph">
 <p><em>April 2018</em></p>
 </div>
@@ -827,22 +824,64 @@
 <div class="ulist">
 <ul>
 <li>
-<p>USFM version identifier: <code>\usfm</code></p>
+<p>USFM version identifier: <a href="para/identification/usfm.html" class="xref page">\usfm</a>.</p>
 </li>
 <li>
-<p>Alternate language table of contents texts: <code>\toca#`</code></p>
+<p>Alternate language table of contents texts: <a href="para/identification/toca.html" class="xref page">\toca#</a></p>
 </li>
 <li>
-<p>List of witnesses in footnotes (for critical editions): <code>\fw …\fw*</code></p>
+<p>Letter opening: <a href="para/paragraphs/po.html" class="xref page">\po</a></p>
 </li>
 <li>
-<p>Target references “added” text: <code>\xta …\xta*</code></p>
+<p>List header and footer elements: <a href="para/lists/lh.html" class="xref page">\lh</a> and <a href="para/lists/lf.html" class="xref page">\lf</a></p>
 </li>
 <li>
-<p>Superscript: <code>\sup …\sup*</code></p>
+<p>Embedded list: <a href="para/lists/lim.html" class="xref page">\lim#</a></p>
 </li>
 <li>
-<p>Translator’s section (chunk) milestones: <code>\ts-s*</code> and <code>\ts-e\*</code></p>
+<p>Structured list items: <a href="char/lists/lik.html" class="xref page">\lik &#8230;&#8203;\lik*</a> and <a href="char/lists/liv.html" class="xref page">\liv# &#8230;&#8203;\liv#*</a></p>
+</li>
+<li>
+<p>List item total: <a href="char/lists/litl.html" class="xref page">\litl &#8230;&#8203;\litl*</a></p>
+</li>
+<li>
+<p>Hebrew note: <a href="para/poetry/qd.html" class="xref page">\qd</a></p>
+</li>
+<li>
+<p>Semantic division: <a href="para/titles-sections/sd.html" class="xref page">\sd#</a></p>
+</li>
+<li>
+<p>Aramaic wordlist entry: <a href="char/features/wa.html" class="xref page">\wa &#8230;&#8203;\wa*</a></p>
+</li>
+<li>
+<p>Geographic proper name: <a href="char/features/png.html" class="xref page">\png &#8230;&#8203;\png*</a></p>
+</li>
+<li>
+<p>List of witnesses in footnotes (for critical editions): <a href="char/notes/footnote/fw.html" class="xref page">\fw &#8230;&#8203;\fw*</a></p>
+</li>
+<li>
+<p>Target references “added” text: <a href="char/notes/crossref/xta.html" class="xref page">\xta &#8230;&#8203;\xta*</a></p>
+</li>
+<li>
+<p>Published cross reference origin text: <a href="char/notes/crossref/xop.html" class="xref page">\xop &#8230;&#8203;\xop*</a></p>
+</li>
+<li>
+<p>Link text: <a href="char/features/jmp.html" class="xref page">\jmp &#8230;&#8203;\jmp*</a></p>
+</li>
+<li>
+<p>Ruby glosses (CJK texts): <a href="char/features/rb.html" class="xref page">\rb &#8230;&#8203;\rb*</a></p>
+</li>
+<li>
+<p>Superscript: <a href="char/format/sup.html" class="xref page">\sup &#8230;&#8203;\sup*</a></p>
+</li>
+<li>
+<p>Quotation start/end milestones: <a href="ms/qt.html" class="xref page">\qt#-s*</a> and <a href="ms/qt.html" class="xref page">\qt#-e\*</a></p>
+</li>
+<li>
+<p>Translator’s section (chunk) milestones: <a href="ms/ts.html" class="xref page">\ts-s*</a> and <a href="ms/ts.html" class="xref page">\ts-e\*</a></p>
+</li>
+<li>
+<p>Common <a href="periph/books-divs.html" class="xref page">peripheral identifiers</a>.</p>
 </li>
 </ul>
 </div>
@@ -852,172 +891,64 @@
 <div class="ulist">
 <ul>
 <li>
-<p>Revised syntax for ruby glosses (CJK texts): <code>\rb …\rb*</code></p>
+<p>Restored <a href="para/paragraphs/pr.html" class="xref page">\pr</a> for use as “text refrain”.</p>
 </li>
 <li>
-<p>Add descriptive attribute gloss for <code>\rb …\rb*</code></p>
+<p>Support for explicit <a href="char/tables/tc.html" class="xref page">table cell column spanning</a>.</p>
 </li>
 <li>
-<p>Added default link-href linking attribute for <code>\xt …\xt*</code></p>
+<p>Support citation form for wordlist/glossary text (update <a href="char/features/w.html" class="xref page">\w &#8230;&#8203;\w*</a>).</p>
 </li>
 <li>
-<p>Changed common attributes for milestones:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Replace single id with separate start <code>sid</code> and end <code>eid</code> milestone attributes. This update aligns USFM with the corresponding single <code>&lt;ms&gt;</code> milestone element in USX, where the id attribute content would not be unique for <code>&lt;ms&gt;</code>.</p>
-</li>
-</ul>
-</div>
+<p>Revised syntax for figures/illustrations - applying descriptive attributes: <a href="fig/fig.html" class="xref page">\fig &#8230;&#8203;\fig*</a></p>
 </li>
 <li>
-<p>Changed name of linking attribute <code>link-name</code> to <code>link-id</code>.</p>
+<p>Deprecated cross reference and footnote DC content markers: <a href="char/notes/crossref/xdc.html" class="xref page">\xdc &#8230;&#8203;\xdc*</a> and <a href="char/notes/footnote/fdc.html" class="xref page">\fdc &#8230;&#8203;\fdc*</a></p>
 </li>
 <li>
-<p>Restored <code>\pr</code> for use as “text refrain”.</p>
+<p>Deprecated combined marker for proper name within translator’s addition: <a href="char/features/addpn.html" class="xref page">\addpn &#8230;&#8203;\addpn*</a></p>
+</li>
+<li>
+<p>Deprecated numbered running header: <a href="para/identification/h.html" class="xref page">\h#</a></p>
+</li>
+<li>
+<p>Deprecated pronunciation info marker: <a href="char/features/pro.html" class="xref page">\pro &#8230;&#8203;\pro*</a> in favour of ruby annotations <a href="char/features/rb.html" class="xref page">\rb &#8230;&#8203;\rb*</a></p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_syntax_and_features"><a class="anchor" href="#_syntax_and_features"></a>Syntax and Features</h3>
-<div class="paragraph">
-<p>Clarify and support syntax for standalone milestones.</p>
-</div>
-<div class="paragraph">
-<p>Document best practice for attributes containing multiple values, or multiple parts (see the gloss attribute for <code>\rb …\rb*</code>)</p>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_3_0rc1"><a class="anchor" href="#_3_0rc1"></a>3.0rc1</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p><em>October 2016</em></p>
-</div>
-<div class="sect2">
-<h3 id="_marker_additions_2"><a class="anchor" href="#_marker_additions_2"></a>Marker Additions</h3>
 <div class="ulist">
 <ul>
 <li>
-<p>Letter opening: <code>\po</code></p>
-</li>
-<li>
-<p>List header and footer elements: <code>\lh</code> and <code>\lf</code></p>
-</li>
-<li>
-<p>Embedded list: <code>\lim#</code></p>
-</li>
-<li>
-<p>Hebrew note: <code>\qd</code></p>
-</li>
-<li>
-<p>Semantic division: <code>\sd#</code></p>
-</li>
-<li>
-<p>Aramaic wordlist entry: <code>\wa …\wa*</code></p>
-</li>
-<li>
-<p>Geographic proper name (Chinese texts): <code>\png …\png*</code></p>
-</li>
-<li>
-<p>Target references “added” text: <code>\xta …\xta*</code></p>
-</li>
-<li>
-<p>Published cross reference origin text: <code>\xop …\xop*</code></p>
-</li>
-<li>
-<p>Structured list items: <code>\lik …\lik*</code> and <code>\liv# …\liv#*</code></p>
-</li>
-<li>
-<p>List item total: <code>\litl …\litl*</code></p>
-</li>
-<li>
-<p>Link text: <code>\jmp …\jmp*</code></p>
-</li>
-<li>
-<p>Common peripheral identifiers</p>
-</li>
-<li>
-<p>Ruby glosses (CJK texts): <code>\rb …\rb*</code></p>
-</li>
-<li>
-<p>Quotation start / end milestones: <code>\qt#-s*</code> and <code>\qt#-e\*</code></p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_marker_revisions_2"><a class="anchor" href="#_marker_revisions_2"></a>Marker Revisions</h3>
+<p>Syntax for assigning <a href="char/attributes.html" class="xref page">character-level attributes</a>.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Support citation form for wordlist / glossary text (update <code>\w …\w*</code>).</p>
+<p>Attributes for <a href="char/features/w.html" class="xref page">\w &#8230;&#8203;\w*</a>.</p>
 </li>
 <li>
-<p>Support for explicit table cell column spanning.</p>
-</li>
-<li>
-<p>Revised syntax for figures / illustrations applying descriptive attributes: <code>\fig …\fig*</code></p>
-</li>
-<li>
-<p>Deprecated cross reference and footnote DC content markers: <code>\xdc …\xdc*</code> and <code>\fdc …\fdc*</code></p>
-</li>
-<li>
-<p>Deprecated combined marker for proper name within translator’s addition: <code>\addpn …\addpn*</code></p>
-</li>
-<li>
-<p>Deprecated numbered running header: <code>\h#</code></p>
-</li>
-<li>
-<p>Deprecated pronunciation info marker: <code>\pro …\pro*</code> in favour of ruby annotations proposal.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_syntax_and_features_2"><a class="anchor" href="#_syntax_and_features_2"></a>Syntax and Features</h3>
-<div class="ulist">
-<ul>
-<li>
-<p>Syntax for assigning word-level descriptive attributes.</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Descriptive attributes for <code>\w …\w*</code></p>
-</li>
-<li>
-<p>Descriptive attributes for <code>\fig …\fig*</code></p>
+<p>Attributes for <a href="fig/fig.html" class="xref page">\fig &#8230;&#8203;\fig*</a>.</p>
 </li>
 </ul>
 </div>
 </li>
 <li>
-<p>Syntax for assigning word-level linking attributes.</p>
-</li>
-<li>
-<p>Syntax for milestones.</p>
+<p>Syntax for assigning word-level <a href="char/features/jmp.html" class="xref page">linking attributes</a>.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Quotation start / end milestones: <code>\qt#-s*</code> and <code>\qt#-e\*</code>.</p>
-</li>
-<li>
-<p>Syntax for peripheral (<code>\periph</code>) identifiers.</p>
+<p>Default link-href linking attribute for <a href="char/notes/crossref/xt.html" class="xref page">\xt &#8230;&#8203;\xt*</a>.</p>
 </li>
 </ul>
 </div>
 </li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_standard_reference"><a class="anchor" href="#_standard_reference"></a>Standard Reference</h3>
-<div class="ulist">
-<ul>
 <li>
-<p>Clarify and document specification regarding whitespace and new lines.</p>
+<p>Syntax for <a href="ms/index.html" class="xref page">milestones</a>.</p>
+</li>
+<li>
+<p>Syntax for peripheral (<a href="periph/periph.html" class="xref page">\periph</a>) <a href="periph/books-divs.html" class="xref page">identifiers</a>.</p>
 </li>
 </ul>
 </div>
@@ -1027,61 +958,299 @@
 <div class="sect1">
 <h2 id="_2_5"><a class="anchor" href="#_2_5"></a>2.5</h2>
 <div class="sectionbody">
-
+<div class="paragraph">
+<p><em>October 2013</em></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Stylesheet only configuration update for Paratext 7.5 release.</p>
+</li>
+</ul>
+</div>
 </div>
 </div>
 <div class="sect1">
 <h2 id="_2_4"><a class="anchor" href="#_2_4"></a>2.4</h2>
 <div class="sectionbody">
-
+<div class="paragraph">
+<p><em>June 2013</em></p>
+</div>
+<div class="sect2">
+<h3 id="_marker_additions_2"><a class="anchor" href="#_marker_additions_2"></a>Marker Additions</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Support for <a href="char/nesting.html" class="xref page">nesting</a> character markup.</p>
+</li>
+</ul>
 </div>
 </div>
-<div class="sect1">
-<h2 id="_2_35"><a class="anchor" href="#_2_35"></a>2.35</h2>
-<div class="sectionbody">
-
 </div>
 </div>
 <div class="sect1">
 <h2 id="_2_3"><a class="anchor" href="#_2_3"></a>2.3</h2>
 <div class="sectionbody">
-
+<div class="paragraph">
+<p><em>July 2010</em></p>
+</div>
+<div class="sect2">
+<h3 id="_marker_additions_3"><a class="anchor" href="#_marker_additions_3"></a>Marker Additions</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Added study Bible cross reference marker <a href="note/crossref/ex.html" class="xref page">\ex</a> for adding additional cross-references to the notes project.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_marker_revisions_2"><a class="anchor" href="#_marker_revisions_2"></a>Marker Revisions</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>DEPRECATED - Study Bible footnote marker <code>\fs</code> for marking a footnote summary text.</p>
+</li>
+<li>
+<p>Revised markup specification for study Bible <a href="sbar/index.html" class="xref page">sidebars</a> (use any title, paragraph, poetry, table, or special text marker elements).</p>
+</li>
+</ul>
+</div>
+</div>
 </div>
 </div>
 <div class="sect1">
 <h2 id="_2_2"><a class="anchor" href="#_2_2"></a>2.2</h2>
 <div class="sectionbody">
-
+<div class="paragraph">
+<p><em>October 2008</em></p>
+</div>
+<div class="sect2">
+<h3 id="_marker_additions_4"><a class="anchor" href="#_marker_additions_4"></a>Marker Additions</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Added character markers <a href="char/notes/crossref/xot.html" class="xref page">\xot &#8230;&#8203;\xot*</a> and <a href="char/notes/crossref/xnt.html" class="xref page">\xnt &#8230;&#8203;\xnt*</a> for uniquely marking target references to OT and NT passages (use of these markers is optional)</p>
+</li>
+<li>
+<p>Added <a href="char/introductions/iqt.html" class="xref page">\iqt &#8230;&#8203;\iqt*</a> to mark (scripture) quotations appearing in the introduction.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_marker_revisions_3"><a class="anchor" href="#_marker_revisions_3"></a>Marker Revisions</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="para/introductions/imte.html" class="xref page">\imte#</a> now includes an optional numeric variable (multiple levels).</p>
+</li>
+<li>
+<p>No-break space should now be marked using ~ (tilde), not !$</p>
+</li>
+</ul>
+</div>
+</div>
 </div>
 </div>
 <div class="sect1">
 <h2 id="_2_1"><a class="anchor" href="#_2_1"></a>2.1</h2>
 <div class="sectionbody">
-
+<div class="paragraph">
+<p><em>April 2007</em></p>
+</div>
+<div class="sect2">
+<h3 id="_marker_additions_5"><a class="anchor" href="#_marker_additions_5"></a>Marker Additions</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Added <a href="para/introductions/ili.html" class="xref page">\ili</a> for marking introduction list items.</p>
+</li>
+<li>
+<p>Reviewed and finalized <a href="periph/index.html" class="xref page">Peripheral</a> content markup:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Added new back matter books <a href="periph/book-cnc.html" class="xref page">CNC</a>, <a href="periph/book-glo.html" class="xref page">GLO</a>, <a href="periph/book-tdx.html" class="xref page">TDX</a>, <a href="periph/book-ndx.html" class="xref page">NDX</a>.</p>
+</li>
+<li>
+<p>Added <a href="periph/book-int.html" class="xref page">INT</a> book for scripture division Introductions.</p>
+</li>
+<li>
+<p>Updated scheme for marking content divisions in <a href="periph/book-frt.html" class="xref page">FRT</a>, <a href="periph/book-int.html" class="xref page">INT</a>, <a href="periph/book-bak.html" class="xref page">BAK</a>, <a href="periph/book-oth.html" class="xref page">OTH</a></p>
+</li>
+<li>
+<p>Added various new content division markers.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_marker_revisions_4"><a class="anchor" href="#_marker_revisions_4"></a>Marker Revisions</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Finalized Study Bible Content markup.</p>
+</li>
+<li>
+<p>Reviewed and finalized <a href="periph/index.html" class="xref page">Peripheral</a> content markup.</p>
+</li>
+<li>
+<p>Changed <a href="char/features/rq.html" class="xref page">\rq &#8230;&#8203;\rq*</a> from paragraph to character level markup.</p>
+</li>
+<li>
+<p>Changed <a href="cv/ca.html" class="xref page">\ca &#8230;&#8203;\ca*</a> from paragraph to character level markup.</p>
+</li>
+</ul>
+</div>
+</div>
 </div>
 </div>
 <div class="sect1">
 <h2 id="_2_05"><a class="anchor" href="#_2_05"></a>2.05</h2>
 <div class="sectionbody">
-
+<div class="paragraph">
+<p><em>June 2006</em></p>
+</div>
+<div class="sect2">
+<h3 id="_marker_additions_6"><a class="anchor" href="#_marker_additions_6"></a>Marker Additions</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Added <a href="char/features/rq.html" class="xref page">\rq</a> for marking inline quotation references.</p>
+</li>
+</ul>
+</div>
+</div>
 </div>
 </div>
 <div class="sect1">
 <h2 id="_2_04"><a class="anchor" href="#_2_04"></a>2.04</h2>
 <div class="sectionbody">
-
+<div class="paragraph">
+<p><em>October 2005</em></p>
+</div>
+<div class="sect2">
+<h3 id="_marker_additions_7"><a class="anchor" href="#_marker_additions_7"></a>Marker Additions</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Added <a href="para/identification/toc.html" class="xref page">\toc3</a> for providing the standard abbreviation for a book.</p>
+</li>
+</ul>
+</div>
+</div>
 </div>
 </div>
 <div class="sect1">
 <h2 id="_2_03"><a class="anchor" href="#_2_03"></a>2.03</h2>
 <div class="sectionbody">
-
+<div class="paragraph">
+<p><em>August 2005</em></p>
+</div>
+<div class="sect2">
+<h3 id="_marker_additions_8"><a class="anchor" href="#_marker_additions_8"></a>Marker Additions</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Added <a href="para/identification/toc.html" class="xref page">\toc1</a> and <a href="para/identification/toc.html" class="xref page">\toc2</a> for providing and marking long and short table of contents texts.</p>
+</li>
+<li>
+<p>Added <a href="char/notes/footnote/fl.html" class="xref page">\fl</a> for marking footnote “label” text items.</p>
+</li>
+<li>
+<p>Added <a href="char/notes/footnote/fp.html" class="xref page">\fp</a> for marking footnote additional paragraphs.</p>
+</li>
+</ul>
+</div>
+</div>
 </div>
 </div>
 <div class="sect1">
 <h2 id="_2_0"><a class="anchor" href="#_2_0"></a>2.0</h2>
 <div class="sectionbody">
-
+<div class="paragraph">
+<p><em>October 2004</em></p>
+</div>
+<div class="paragraph">
+<p>Changes in USFM from 1.53 to 2.0.</p>
+</div>
+<div class="sect2">
+<h3 id="_marker_revisions_5"><a class="anchor" href="#_marker_revisions_5"></a>Marker Revisions</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Removed <code>\pdi</code> and `\pde, and substitute with embedded text markup (see Additions, below)</p>
+</li>
+<li>
+<p>Removed <code>\wr &#8230;&#8203;\wr*</code>. This was really a duplicate of \w …w* used for marking words in the scripture text which are included in the wordlist.</p>
+</li>
+<li>
+<p>Removed <code>\ps</code>. This is used in conjunction with <a href="para/paragraphs/nb.html" class="xref page">\nb</a> to indicate that the paragraph spans the chapter boundary. It should be sufficient to just start the new chapter with <code>\nb</code> and use the appropriate paragraph marker for the previous chapter (<code>\p</code>, <code>\m</code> etc.)</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_marker_additions_9"><a class="anchor" href="#_marker_additions_9"></a>Marker Additions</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Add character style <a href="char/features/em.html" class="xref page">\em &#8230;&#8203;\em*</a> for “emphasis”.</p>
+</li>
+<li>
+<p>In Peripherals:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Add <code>\intro</code> section to Front Matter (in addition to Preface).</p>
+</li>
+<li>
+<p>Add <code>\maps</code> (Maps Index) section to Back Matter.</p>
+</li>
+<li>
+<p>Define <a href="para/identification/books.html" class="xref page">books</a> for FRT, BAK, and OTH rather than using the book names XXA, XXB, and XXC for these materials.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Add <a href="para/titles-sections/sr.html" class="xref page">\sr</a> for marking the text references range listed under a section heading \s.</p>
+</li>
+<li>
+<p>Add the following markers for “embedded text” (see example references – not all versions mark these items the same).</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="para/paragraphs/pm.html" class="xref page">\pm</a> - Embedded text paragraph</p>
+</li>
+<li>
+<p><a href="para/paragraphs/pmo.html" class="xref page">\pmo</a> - Embedded text opening</p>
+</li>
+<li>
+<p><a href="para/paragraphs/pmc.html" class="xref page">\pmc</a> - Embedded text closing</p>
+</li>
+<li>
+<p><a href="para/paragraphs/pmr.html" class="xref page">\pmr</a> - Embedded text refrain</p>
+</li>
+<li>
+<p><a href="para/poetry/qm.html" class="xref page">\qm#</a> - Embedded text poetic line</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Add character style \pro &#8230;&#8203;\pro* for indicating pronunciation (in CJK texts). (Deprecated - <em>See</em> <a href="char/features/rb.html" class="xref page">\rb &#8230;&#8203;\rb*</a>)</p>
+</li>
+<li>
+<p>Add character style <a href="char/features/w.html" class="xref page">\wj &#8230;&#8203;\wj*</a> for marking words of Jesus.</p>
+</li>
+</ul>
+</div>
+</div>
 </div>
 </div>
 <nav class="pagination">
