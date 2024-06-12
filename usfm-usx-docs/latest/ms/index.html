@@ -1028,71 +1028,7 @@
 <h2 id="_attributes"><a class="anchor" href="#_attributes"></a>Attributes</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The following optional <a href="../char/attributes.html" class="xref page">attributes</a> can be added to any USFM milestone marker.</p>
-</div>
-<div class="dlist">
-<dl>
-<dt class="hdlist1">sid</dt>
-<dd>
-<p>A unique identifier which can be used to unambiguously identify the starting milestone, and to clearly associate the starting milestone with the ending milestone (<code>eid</code>). The <code>sid</code> can be composed of any mixture of numbers, letters, and underscores, and should be a unique <code>sid</code> throughout the scripture text.</p>
-</dd>
-<dt class="hdlist1">eid</dt>
-<dd>
-<p>A unique identifier which can be used to unambiguously identify the ending milestone, and to clearly associate the ending milestone with the starting milestone (<code>sid</code>). If an <code>sid</code> attribute is used for the starting milestone in a milestone pair, the ending milestone must include <code>eid</code>.</p>
-</dd>
-</dl>
-</div>
-<div class="paragraph">
-<p>Additional attributes may be available for or required by a specific milestone type (e.g the use of the <code>who</code> attribute in the following quotation milestone example).</p>
-</div>
-<div id="_tabs_4" class="openblock tabs is-loading">
-<div class="content">
-<div class="ulist tablist">
-<ul>
-<li id="_tabs_4_usfm" class="tab">
-<p>USFM</p>
-</li>
-<li id="_tabs_4_usx" class="tab">
-<p>USX</p>
-</li>
-</ul>
-</div>
-<div id="_tabs_4_usfm--panel" class="tabpanel" aria-labelledby="_tabs_4_usfm">
-<div id="src-ms-attrib" class="listingblock">
-<div class="title">Example 5. USFM: Milestone attributes sid, eid, who</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\p
-\v 1 Early in the morning the chief priests met hurriedly with the elders,
-the teachers of the Law, and the whole Council, and made their plans. They
-put Jesus in chains, led him away, and handed him over to Pilate.
-\v 2 Pilate questioned him, \qt-s |sid="qt.MRK.15:2.1" who="Pilate"\*“Are
-you the king of the Jews?”\qt-e |eid="qt.MRK.15:2.1"\*
-\p Jesus answered, \qt-s |sid="qt.MRK.15:2.2" who="Jesus"\*“So you say.”
-\qt-e |eid="qt.MRK.15:2.2"\*</code></pre>
-</div>
-</div>
-</div>
-<div id="_tabs_4_usx--panel" class="tabpanel" aria-labelledby="_tabs_4_usx">
-<div id="src-usx-ms-attrib" class="listingblock">
-<div class="title">Example 6. USX: Milestone attributes sid, eid, who</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;para style="p"&gt;
-  &lt;verse number="1" style="v" sid="MRK 15:1" /&gt; Early in the morning the
-  chief priests met hurriedly with the elders, the teachers of the Law,
-  and the whole Council, and made their plans. They put Jesus in chains,
-  led him away, and handed him over to Pilate.&lt;verse eid="MRK 15:1" /&gt;
-  &lt;verse number="2" style="v" sid="MRK 15:2" /&gt;Pilate questioned him,
-  &lt;ms style="qt-s" sid="qt.MRK.15:2.1" who="Pilate"/&gt;“Are you the king of
-  the Jews?”&lt;ms style="qt-e" sid="qt.MRK.15:2.1"/&gt;
-&lt;/para&gt;
-&lt;para style="p" vid="MRK 15:2"&gt;
-  Jesus answered, &lt;ms style="qt-s" sid="qt.MRK.15:2.2" who="Jesus"/&gt;“So
-  you say.”&lt;ms style="qt-e" eid="qt.MRK.15:2.2"/&gt;&lt;verse eid="MRK 15:2"/&gt;
-&lt;/para&gt;</code></pre>
-</div>
-</div>
-</div>
-</div>
+<p>Attributes may be available for or required by a specific milestone type. For example: the <mark><em>@who</em></mark> attribute for the <a href="qt.html" class="xref page">qt</a> milestone.</p>
 </div>
 </div>
 </div>

@@ -852,6 +852,12 @@
 <p>All <a href="char/index.html" class="xref page">character</a> elements must be closed <em>explicitly</em>, with the exception of note structural elements (below).</p>
 </li>
 <li>
+<p>Deprecate the <code>link-</code> prefix in <a href="char/features/jmp.html" class="xref page">jmp</a> attributes.</p>
+</li>
+<li>
+<p>Add <mark><em>@key</em></mark> attribute to the <a href="char/features/k.html" class="xref page">k</a> character element.</p>
+</li>
+<li>
 <p>Note specific <a href="char/notes/index.html" class="xref page">character</a> elements (i.e. <code>f</code>&#8230;&#8203; <a href="char/notes/footnote/fr.html" class="xref page">fr</a>, <a href="char/notes/footnote/fq.html" class="xref page">fq</a>, <a href="char/notes/footnote/ft.html" class="xref page">ft</a>, or <code>x</code>&#8230;&#8203; <a href="char/notes/crossref/xo.html" class="xref page">xo</a>, <a href="char/notes/crossref/xt.html" class="xref page">xt</a> etc.) are considered note structural elements, and continue to support (and recommend) the common pratice of implicit closure.</p>
 </li>
 <li>
@@ -862,6 +868,9 @@
 </li>
 <li>
 <p>Use of the <code>` prefix for nested USFM xref:char:index.adoc[character] markup is supported but is _deprecated_. Note that future versions of USFM may remove support for the ``\<code><mark><em>style</em></mark></code> <code><mark><em>content</em></mark></code>\+<code><mark><em>style</em></mark></code>*`</code> syntax entirely.</p>
+</li>
+<li>
+<p><mark><em>@sid</em></mark> and <mark><em>@eid</em></mark> attributes are not automatically available for all <a href="ms/index.html" class="xref page">milestones</a>, but may be used when specified directly (e.g. <a href="ms/qt.html" class="xref page">qt</a> and <a href="ms/ts.html" class="xref page">ts</a>)</p>
 </li>
 <li>
 <p><code>\</code> escaping is required and supported for a number of key characters: <code>\</code>, <code>'</code>, <code>"</code>, <code>|</code>, <code>~</code>, <code>/</code></p>
@@ -964,16 +973,16 @@
 <p>Revised syntax for figures/illustrations - applying descriptive attributes: <a href="fig/fig.html" class="xref page">\fig &#8230;&#8203;\fig*</a></p>
 </li>
 <li>
-<p>Deprecated cross reference and footnote DC content markers: <a href="char/notes/crossref/xdc.html" class="xref page">\xdc &#8230;&#8203;\xdc*</a> and <a href="char/notes/footnote/fdc.html" class="xref page">\fdc &#8230;&#8203;\fdc*</a></p>
+<p><em>Deprecated</em> cross reference and footnote DC content markers: <a href="char/notes/crossref/xdc.html" class="xref page">\xdc &#8230;&#8203;\xdc*</a> and <a href="char/notes/footnote/fdc.html" class="xref page">\fdc &#8230;&#8203;\fdc*</a></p>
 </li>
 <li>
-<p>Deprecated combined marker for proper name within translator’s addition: <a href="char/features/addpn.html" class="xref page">\addpn &#8230;&#8203;\addpn*</a></p>
+<p><em>Deprecated</em> combined marker for proper name within translator’s addition: <a href="char/features/addpn.html" class="xref page">\addpn &#8230;&#8203;\addpn*</a></p>
 </li>
 <li>
-<p>Deprecated numbered running header: <a href="para/identification/h.html" class="xref page">\h#</a></p>
+<p><em>Deprecated</em> numbered running header: <a href="para/identification/h.html" class="xref page">\h#</a></p>
 </li>
 <li>
-<p>Deprecated pronunciation info marker: <a href="char/features/pro.html" class="xref page">\pro &#8230;&#8203;\pro*</a> in favour of ruby annotations <a href="char/features/rb.html" class="xref page">\rb &#8230;&#8203;\rb*</a></p>
+<p><em>Deprecated</em> pronunciation info marker: <a href="char/features/pro.html" class="xref page">\pro &#8230;&#8203;\pro*</a> in favour of ruby annotations <a href="char/features/rb.html" class="xref page">\rb &#8230;&#8203;\rb*</a></p>
 </li>
 </ul>
 </div>
@@ -1070,7 +1079,7 @@
 <div class="ulist">
 <ul>
 <li>
-<p>DEPRECATED - Study Bible footnote marker <code>\fs</code> for marking a footnote summary text.</p>
+<p><em>Deprecated</em> - Study Bible footnote marker <code>\fs</code> for marking a footnote summary text.</p>
 </li>
 <li>
 <p>Revised markup specification for study Bible <a href="sbar/index.html" class="xref page">sidebars</a> (use any title, paragraph, poetry, table, or special text marker elements).</p>

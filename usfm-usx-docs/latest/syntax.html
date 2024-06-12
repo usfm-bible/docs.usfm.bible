@@ -931,10 +931,13 @@
 <h2 id="_usfm_endmarkers_in_footnotes_and_cross_references"><a class="anchor" href="#_usfm_endmarkers_in_footnotes_and_cross_references"></a>USFM Endmarkers in Footnotes and Cross References</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Elements which make up <a href="note/footnote/index.html" class="xref page">footnote</a> or <a href="note/crossref/index.html" class="xref page">cross reference</a> content are <a href="char/index.html" class="xref page">character</a> level markers, which means that they are defined with a start and end marker. The majority of scripture translation projects working with USFM have followed a syntax for editing footnotes or cross references which does not require the explicit end marker. This was done in order to reduces the amount of markup within the notes text, making it easier to read.</p>
+<p>Elements which make up <a href="note/footnote/index.html" class="xref page">footnote</a> or <a href="note/crossref/index.html" class="xref page">cross reference</a> content are <a href="char/index.html" class="xref page">character</a> level markers.  <strong>With USFM 3.1</strong>, ending character markers have been made required — except for the markers used to start sections in footnotes and cross references (the note&#8217;s 'structural elements'). The majority of scripture translation projects working with USFM already follow the implicit closure syntax for footnote or cross reference structural markup.</p>
 </div>
 <div class="paragraph">
-<p>Examples of the two markup approaches for notes are given below. Both of these are syntactically acceptable in USFM.</p>
+<p>Examples of the two markup approaches for notes are given below. Both of these are syntactically acceptable in USFM, but the implicit syntax is strongly recommended. Note content <em>must always occur within a submarker</em>; there can be no unmarked note content only within the <a href="note/index.html" class="xref page">note container</a> itself.</p>
+</div>
+<div class="paragraph">
+<p>Other <a href="char/nesting.html" class="xref page">nested</a> character markers within a notes structural sections <em>always</em> require explicit opening and closing markers.</p>
 </div>
 <div id="_tabs_1" class="openblock tabs is-loading">
 <div class="content">
@@ -1038,14 +1041,14 @@
 <div id="_tabs_3_usfm_implicit_closure--panel" class="tabpanel" aria-labelledby="_tabs_3_usfm_implicit_closure">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\f + \fr 2.4 \fk The \+nd Lord\+nd*: \ft See \+nd Lord\+nd* in Word List.\f*</code></pre>
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\f + \fr 2.4 \fk The \nd Lord\nd*: \ft See \nd Lord\nd* in Word List.\f*</code></pre>
 </div>
 </div>
 </div>
 <div id="_tabs_3_usfm_explicit_closure--panel" class="tabpanel" aria-labelledby="_tabs_3_usfm_explicit_closure">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\f + \fr 2.4 \fr*\fk The \+nd Lord\+nd*: \fk*\ft See \+nd Lord\+nd* in
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\f + \fr 2.4 \fr*\fk The \nd Lord\nd*: \fk*\ft See \nd Lord\nd* in
 Word List.\ft*\f*</code></pre>
 </div>
 </div>
@@ -1062,20 +1065,6 @@ Word List.\ft*\f*</code></pre>
 </div>
 </div>
 </div>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-<div class="paragraph">
-<p><a href="char/nesting.html" class="xref page">Nested</a> character markers within notes <em>always</em> require explicit opening and closing markers.</p>
-</div>
-</td>
-</tr>
-</table>
 </div>
 </div>
 </div>

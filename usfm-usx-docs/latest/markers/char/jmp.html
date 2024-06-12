@@ -818,13 +818,13 @@
 <div class="ulist">
 <ul>
 <li>
-<p><strong>USFM:</strong> <code>\jmp </code><mark><em>content</em></mark><code>|</code><mark><em>@link-href @link-title @link-id</em></mark><code>\jmp*</code></p>
+<p><strong>USFM:</strong> <code>\jmp </code><mark><em>content</em></mark><code>|</code><mark><em>@href @title @id</em></mark><code>\jmp*</code></p>
 </li>
 <li>
-<p><strong>USX:</strong> <code>&lt;char style="jmp" </code><mark><em>@link-href @link-title @link-id</em></mark><code>&gt;</code><mark><em>content</em></mark><code>&lt;/char&gt;</code></p>
+<p><strong>USX:</strong> <code>&lt;char style="jmp" </code><mark><em>@href @title @id</em></mark><code>&gt;</code><mark><em>content</em></mark><code>&lt;/char&gt;</code></p>
 <div class="dlist">
 <dl>
-<dt class="hdlist1"><mark>link-href</mark></dt>
+<dt class="hdlist1"><mark>href</mark></dt>
 <dd>
 <p>Identifies the resource being linked to as a URI. <em>(default attribute)</em></p>
 <div class="ulist">
@@ -836,7 +836,7 @@
 <p>User defined URI prefixes must begin with the prefix <code>x-</code>.</p>
 </li>
 <li>
-<p>When a <mark>link-href</mark> specifies a scripture reference, follow the pattern: <code>[A-Z1-4]{3}(-[A-Z1-4]{3})? ?[a-z0-9\-:]*</code>. Example: <code>MAT 3:1-4</code>, where:</p>
+<p>When an <mark>href</mark> specifies a scripture reference, follow the pattern: <code>[A-Z1-4]{3}(-[A-Z1-4]{3})? ?[a-z0-9\-:]*</code>. Example: <code>MAT 3:1-4</code>, where:</p>
 <div class="ulist">
 <ul>
 <li>
@@ -854,11 +854,11 @@
 </ul>
 </div>
 </dd>
-<dt class="hdlist1"><mark>link-title</mark></dt>
+<dt class="hdlist1"><mark>title</mark></dt>
 <dd>
 <p>Plain text describing the resource being linked to (for example - to display in a tooltip when hovering over the link).</p>
 </dd>
-<dt class="hdlist1"><mark>link-id</mark></dt>
+<dt class="hdlist1"><mark>id</mark></dt>
 <dd>
 <p>A unique identifier for a specific content location (i.e. an anchor).</p>
 </dd>
@@ -879,6 +879,17 @@
 <dt class="hdlist1">Added</dt>
 <dd>
 <p>3.0</p>
+</dd>
+<dt class="hdlist1">Updated</dt>
+<dd>
+<p>3.1</p>
+<div class="ulist">
+<ul>
+<li>
+<p><em>Deprecated</em> the <code>link-</code> prefix in the attribute names.</p>
+</li>
+</ul>
+</div>
 </dd>
 </dl>
 </div>
@@ -910,7 +921,7 @@
 \c 1
 \p
 \v 1 \ef - \fr 1:2 \ft The traditional translation of verse 1, as given in
-\jmp RSV|link-href="x-prj:RSV52 GEN 1:1" link-title="Revised Standard
+\jmp RSV|href="x-prj:RSV52 GEN 1:1" title="Revised Standard
 Version"\jmp*, may be appropriate.\ef*</code></pre>
 </div>
 </div>
@@ -925,8 +936,8 @@ Version"\jmp*, may be appropriate.\ef*</code></pre>
     &lt;verse number="1" style="v" sid="GEN 1:1"/&gt;
     &lt;note caller="-" style="ef"&gt;
       &lt;char style="fr"&gt;1.1: &lt;/char&gt;&lt;char style="ft"&gt;The traditional translation
-      of verse 1, as given in &lt;char style="jmp" link-href="x-prj:RSV52 GEN 1:1"
-      link-title="Revised Standard Version"&gt;RSV&lt;/char&gt;, may be appropriate.&lt;/char&gt;
+      of verse 1, as given in &lt;char style="jmp" href="x-prj:RSV52 GEN 1:1"
+      title="Revised Standard Version"&gt;RSV&lt;/char&gt;, may be appropriate.&lt;/char&gt;
     &lt;/note&gt;
   &lt;/para&gt;
 &lt;/usx&gt;</code></pre>
@@ -975,8 +986,8 @@ Version"\jmp*, may be appropriate.\ef*</code></pre>
                 {
                   "type": "char",
                   "marker": "jmp",
-                  "link-href": "x-prj:RSV52 GEN 1:1",
-                  "link-title": "Revised Standard Version",
+                  "href": "x-prj:RSV52 GEN 1:1",
+                  "title": "Revised Standard Version",
                   "content": ["RSV"]
                 },
                 ", may be appropriate."
@@ -1014,8 +1025,8 @@ Version"\jmp*, may be appropriate.\ef*</code></pre>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\p Storehouses, as used here, refers to large buildings with walls and roof,
 where grain was kept until needed. (See illustration:
-\jmp Storehouse|link-href="figures/storehouse.png"
-link-title="Ancient storehouse"\jmp*)</code></pre>
+\jmp Storehouse|href="figures/storehouse.png"
+title="Ancient storehouse"\jmp*)</code></pre>
 </div>
 </div>
 </div>
@@ -1025,8 +1036,8 @@ link-title="Ancient storehouse"\jmp*)</code></pre>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;para style="p"&gt;Storehouses, as used here, refers to large buildings with
 walls and roof, where grain was kept until needed. (See illustration:
-&lt;char style="jmp" link-href="figures/storehouse.png"
-link-title="Ancient storehouse"&gt;Storehouse&lt;/char&gt;)
+&lt;char style="jmp" href="figures/storehouse.png"
+title="Ancient storehouse"&gt;Storehouse&lt;/char&gt;)
 ...&lt;/para&gt;</code></pre>
 </div>
 </div>
@@ -1043,8 +1054,8 @@ link-title="Ancient storehouse"&gt;Storehouse&lt;/char&gt;)
     {
       "type": "char",
       "marker": "jmp",
-      "link-href": "figures/storehouse.png",
-      "link-title": "Ancient storehouse",
+      "href": "figures/storehouse.png",
+      "title": "Ancient storehouse",
       "content": ["Storehouse"]
     },
     ") ..."
@@ -1079,7 +1090,7 @@ link-title="Ancient storehouse"&gt;Storehouse&lt;/char&gt;)
 \q1 “Someone is shouting in the desert,
 \q2 ‘Prepare a road for the Lord;
 \q2 make a straight path for him to travel!’ ”
-\esb \cat People\cat*\jmp |link-id="article-john_the_baptist"\jmp*
+\esb \cat People\cat*\jmp |id="article-john_the_baptist"\jmp*
 \ms John the Baptist
 \p John is sometimes called the last “Old Testament prophet” because of the
 warnings he brought about God's judgment and because he announced the coming
@@ -1099,7 +1110,7 @@ of God's “Chosen One” (Messiah).
   &lt;para style="q2"&gt;‘Prepare a road for the Lord;&lt;/para&gt;
   &lt;para style="q2"&gt;make a straight path for him to travel!’ ”&lt;/para&gt;
   &lt;sidebar style="esb" category="people"&gt;
-    &lt;para style="ms"&gt;&lt;char style="jmp" link-id="article-john_the_baptist" /&gt;John the
+    &lt;para style="ms"&gt;&lt;char style="jmp" id="article-john_the_baptist" /&gt;John the
       Baptist&lt;/para&gt;
     &lt;para style="p"&gt;John is sometimes called the last “Old Testament prophet”
       because of the warnings he  brought about God's judgment and because he
@@ -1151,7 +1162,7 @@ of God's “Chosen One” (Messiah).
             {
               "type": "char",
               "marker": "jmp",
-              "link-id": "article-john_the_baptist",
+              "id": "article-john_the_baptist",
               "content": []
             },
             "John the Baptist"
@@ -1199,7 +1210,7 @@ of God's “Chosen One” (Messiah).
 \v 2-6a From Abraham to King David, the following ancestors are listed: Abraham,
 Isaac, Jacob, Judah and his brothers; then Perez and Zerah (their mother was
 Tamar*), Hezron, Ram, Amminadab, Nahshon, Salmon, Boaz (his mother was Rahab*),
-Obed (his mother was \jmp Ruth|link-href="#article-Ruth"\jmp*), Jesse, and King
+Obed (his mother was \jmp Ruth|href="#article-Ruth"\jmp*), Jesse, and King
 David.</code></pre>
 </div>
 </div>
@@ -1215,7 +1226,7 @@ David.</code></pre>
     the following ancestors are listed: Abraham, Isaac, Jacob, Judah and his
     brothers; then Perez and Zerah (their mother was Tamar), Hezron, Ram, Amminadab,
     Nahshon, Salmon, Boaz (his mother was Rahab), Obed (his mother was
-    &lt;char style="jmp" link-href="#article-Ruth"&gt;Ruth&lt;/char&gt;), Jesse, and King
+    &lt;char style="jmp" href="#article-Ruth"&gt;Ruth&lt;/char&gt;), Jesse, and King
     David.&lt;verse eid="MAT 1:2-6a"/&gt;
   &lt;/para&gt;
 &lt;/usx&gt;</code></pre>
@@ -1250,7 +1261,7 @@ David.</code></pre>
         {
           "type": "char",
           "marker": "jmp",
-          "link-href": "#article-Ruth",
+          "href": "#article-Ruth",
           "content": ["Ruth"]
         },
         "), Jesse, and King David."
@@ -1290,7 +1301,7 @@ Isaac, Jacob, Judah and his brothers; then Perez and Zerah (their mother was
 Tamar*), Hezron, Ram, Amminadab, Nahshon, Salmon, Boaz (his mother was Rahab*),
 Obed (his mother was Ruth\ef - \fr 1.2-6a: \fq Ruth: \ft A Moabite (Ruth 1.4).
 Only outstanding women were normally included in Jewish genealogical lists. See
-article on \+jmp Ruth|link-href="#article-Ruth"\+jmp*\ef*), Jesse, and King David.</code></pre>
+article on \jmp Ruth|href="#article-Ruth"\jmp*\ef*), Jesse, and King David.</code></pre>
 </div>
 </div>
 </div>
@@ -1309,7 +1320,7 @@ article on \+jmp Ruth|link-href="#article-Ruth"\+jmp*\ef*), Jesse, and King Davi
       &lt;char style="fr"&gt;1.2-6a: &lt;/char&gt;&lt;char style="fq"&gt;Ruth: &lt;/char&gt;
         &lt;char style="ft"&gt;A Moabite. Only outstanding women were normally included in
         Jewish genealogical lists. See article on
-        &lt;char style="jmp" link-href="#article-Ruth"&gt;Ruth&lt;/char&gt;&lt;/char&gt;&lt;/note&gt;),
+        &lt;char style="jmp" href="#article-Ruth"&gt;Ruth&lt;/char&gt;&lt;/char&gt;&lt;/note&gt;),
     Jesse, and King David. ...&lt;verse eid="MAT 1:2-6a"/&gt;&lt;/para&gt;
 &lt;/usx&gt;</code></pre>
 </div>
@@ -1363,7 +1374,7 @@ article on \+jmp Ruth|link-href="#article-Ruth"\+jmp*\ef*), Jesse, and King Davi
                 {
                   "type": "char",
                   "marker": "jmp",
-                  "link-href": "#article-Ruth",
+                  "href": "#article-Ruth",
                   "content": ["Ruth"]
                 }
               ]
