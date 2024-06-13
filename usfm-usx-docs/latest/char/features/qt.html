@@ -858,6 +858,9 @@
 <li id="_tabs_1_usx" class="tab">
 <p>USX</p>
 </li>
+<li id="_tabs_1_usj" class="tab">
+<p>USJ</p>
+</li>
 </ul>
 </div>
 <div id="_tabs_1_usfm--panel" class="tabpanel" aria-labelledby="_tabs_1_usfm">
@@ -886,6 +889,57 @@
 </div>
 </div>
 </div>
+<div id="_tabs_1_usj--panel" class="tabpanel" aria-labelledby="_tabs_1_usj">
+<div id="src-usj-char-qt_1" class="listingblock">
+<div class="title">Example 3. Poetic format, where all text is a quotation</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "type": "para",
+  "marker": "q1",
+  "content": [
+    {
+      "type": "char",
+      "marker": "qt",
+      "content": ["........................................"]
+    }
+  ]
+},
+{
+  "type": "para",
+  "marker": "q2",
+  "content": [
+    {
+      "type": "char",
+      "marker": "qt",
+      "content": ["........................................"]
+    }
+  ]
+},
+{
+  "type": "para",
+  "marker": "q1",
+  "content": [
+    {
+      "type": "char",
+      "marker": "qt",
+      "content": ["........................................"]
+    }
+  ]
+},
+{
+  "type": "para",
+  "marker": "q2",
+  "content": [
+    {
+      "type": "char",
+      "marker": "qt",
+      "content": ["........................................"]
+    }
+  ]
+}</code></pre>
+</div>
+</div>
+</div>
 </div>
 </div>
 <div id="_tabs_2" class="openblock tabs is-loading">
@@ -898,11 +952,14 @@
 <li id="_tabs_2_usx" class="tab">
 <p>USX</p>
 </li>
+<li id="_tabs_2_usj" class="tab">
+<p>USJ</p>
+</li>
 </ul>
 </div>
 <div id="_tabs_2_usfm--panel" class="tabpanel" aria-labelledby="_tabs_2_usfm">
 <div id="src-usfm-char-qt_2" class="listingblock">
-<div class="title">Example 3. Poetic format, where text is mixed (only some text is a quotation)</div>
+<div class="title">Example 4. Poetic format, where text is mixed (only some text is a quotation)</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\q1 \qt ...............\qt* ..............\qt ........\qt*
 \q2 \qt .....\qt* ................................
@@ -913,7 +970,7 @@
 </div>
 <div id="_tabs_2_usx--panel" class="tabpanel" aria-labelledby="_tabs_2_usx">
 <div id="src-usx-char-qt_2" class="listingblock">
-<div class="title">Example 4. Poetic format, where text is mixed (only some text is a quotation)</div>
+<div class="title">Example 5. Poetic format, where text is mixed (only some text is a quotation)</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;para style="q1"&gt;
   &lt;char style="qt"&gt;...............&lt;/char&gt; ..............
@@ -926,6 +983,58 @@
 </div>
 </div>
 </div>
+<div id="_tabs_2_usj--panel" class="tabpanel" aria-labelledby="_tabs_2_usj">
+<div id="src-usj-char-qt_2" class="listingblock">
+<div class="title">Example 6. Poetic format, where text is mixed (only some text is a quotation)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "type": "para",
+  "marker": "q1",
+  "content": [
+    {
+      "type": "char",
+      "marker": "qt",
+      "content": ["..............."]
+    },
+    " .............. ",
+    {
+      "type": "char",
+      "marker": "qt",
+      "content": [" ........"]
+    }
+  ]
+},
+{
+  "type": "para",
+  "marker": "q2",
+  "content": [
+    {
+      "type": "char",
+      "marker": "qt",
+      "content": ["....."]
+    },
+    " ................................"
+  ]
+},
+{
+  "type": "para",
+  "marker": "q1",
+  "content": [".................................................."]
+},
+{
+  "type": "para",
+  "marker": "q2",
+  "content": [
+    {
+      "type": "char",
+      "marker": "qt",
+      "content": ["......................................... "]
+    }
+  ]
+}</code></pre>
+</div>
+</div>
+</div>
 </div>
 </div>
 <div id="_tabs_3" class="openblock tabs is-loading">
@@ -935,16 +1044,21 @@
 <li id="_tabs_3_usfm" class="tab">
 <p>USFM</p>
 </li>
-<li id="_tabs_3_usfm_2" class="tab">
-<p>USFM</p>
+<li id="_tabs_3_usx" class="tab">
+<p>USX</p>
+</li>
+<li id="_tabs_3_usj" class="tab">
+<p>USJ</p>
 </li>
 </ul>
 </div>
 <div id="_tabs_3_usfm--panel" class="tabpanel" aria-labelledby="_tabs_3_usfm">
 <div id="src-usfm-char-qt_3" class="listingblock">
-<div class="title">Example 5. Mark 1.2-3 (GNT)</div>
+<div class="title">Example 7. Mark 1.2-3 (GNT)</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\p
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\id MRK
+\c 1
+\p
 \v 1 This is the Good News about Jesus Christ, the Son of God.
 \v 2 It began as the prophet Isaiah had written:
 \q1 \qt “God said, ‘I will send my messenger ahead of you\qt*
@@ -956,29 +1070,149 @@
 </div>
 </div>
 </div>
-<div id="_tabs_3_usfm_2--panel" class="tabpanel" aria-labelledby="_tabs_3_usfm_2">
+<div id="_tabs_3_usx--panel" class="tabpanel" aria-labelledby="_tabs_3_usx">
 <div id="src-usx-char-qt_3" class="listingblock">
-<div class="title">Example 6. Mark 1.2-3 (GNT)</div>
+<div class="title">Example 8. Mark 1.2-3 (GNT)</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;para style="p"&gt;
-  &lt;verse number="1" style="v" sid="MRK 1:1"/&gt;This is the Good News about Jesus
-  Christ, the Son of God. &lt;verse eid="MRK 1:1"/&gt;
-  &lt;verse number="2" style="v" sid="MRK 1:2"/&gt;It began as the prophet Isaiah had
-  written:&lt;/para&gt;
-&lt;para style="q1" vid="MRK 1:2"&gt;
-  &lt;char style="qt"&gt;“God said, ‘I will send my messenger ahead of you&lt;/char&gt;
-  &lt;/para&gt;
-&lt;para style="q2" vid="MRK 1:2"&gt;
-  &lt;char style="qt"&gt;to open the way for you.’&lt;/char&gt;
-  &lt;verse eid="MRK 1:2"/&gt;&lt;/para&gt;
-&lt;para style="q1"&gt;
-  &lt;verse number="3" style="v" sid="MRK 1:3"/&gt;
-  &lt;char style="qt"&gt;Someone is shouting in the desert,&lt;/char&gt;&lt;/para&gt;
-&lt;para style="q2" vid="MRK 1:3"&gt;
-  &lt;char style="qt"&gt;‘Get the road ready for the Lord;&lt;/char&gt;&lt;/para&gt;
-&lt;para style="q2" vid="MRK 1:3"&gt;
-  &lt;char style="qt"&gt;make a straight path for him to travel!’ ”&lt;/char&gt;
-  &lt;verse eid="MRK 1:3"/&gt;&lt;/para&gt;</code></pre>
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;usx version="3.1"&gt;
+  &lt;book code="MRK" style="id"/&gt;
+  &lt;chapter number="1" style="c" sid="MRK 1"/&gt;
+  &lt;para style="p"&gt;
+    &lt;verse number="1" style="v" sid="MRK 1:1"/&gt;This is the Good News about Jesus
+    Christ, the Son of God. &lt;verse eid="MRK 1:1"/&gt;
+    &lt;verse number="2" style="v" sid="MRK 1:2"/&gt;It began as the prophet Isaiah
+    had written:&lt;/para&gt;
+  &lt;para style="q1" vid="MRK 1:2"&gt;
+    &lt;char style="qt"&gt;“God said, ‘I will send my messenger ahead of you&lt;/char&gt;
+    &lt;/para&gt;
+  &lt;para style="q2" vid="MRK 1:2"&gt;
+    &lt;char style="qt"&gt;to open the way for you.’&lt;/char&gt;
+    &lt;verse eid="MRK 1:2"/&gt;&lt;/para&gt;
+  &lt;para style="q1"&gt;
+    &lt;verse number="3" style="v" sid="MRK 1:3"/&gt;
+    &lt;char style="qt"&gt;Someone is shouting in the desert,&lt;/char&gt;&lt;/para&gt;
+  &lt;para style="q2" vid="MRK 1:3"&gt;
+    &lt;char style="qt"&gt;‘Get the road ready for the Lord;&lt;/char&gt;&lt;/para&gt;
+  &lt;para style="q2" vid="MRK 1:3"&gt;
+    &lt;char style="qt"&gt;make a straight path for him to travel!’ ”&lt;/char&gt;
+    &lt;verse eid="MRK 1:3"/&gt;&lt;/para&gt;
+&lt;/usx&gt;</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_3_usj--panel" class="tabpanel" aria-labelledby="_tabs_3_usj">
+<div id="src-usj-char-qt_3" class="listingblock">
+<div class="title">Example 9. Mark 1.2-3 (GNT)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "type": "USJ",
+  "version": "3.1",
+  "content": [
+    {
+      "type": "book",
+      "marker": "id",
+      "code": "MRK",
+      "content": []
+    },
+    {
+      "type": "chapter",
+      "marker": "c",
+      "number": "1",
+      "sid": "MRK 1"
+    },
+    {
+      "type": "para",
+      "marker": "p",
+      "content": [
+        {
+          "type": "verse",
+          "marker": "v",
+          "number": "1",
+          "sid": "MRK 1:1"
+        },
+        "This is the Good News about Jesus Christ, the Son of God. ",
+        {
+          "type": "verse",
+          "marker": "v",
+          "number": "2",
+          "sid": "MRK 1:2"
+        },
+        "It began as the prophet Isaiah had written:"
+      ]
+    },
+    {
+      "type": "para",
+      "marker": "q1",
+      "content": [
+        {
+          "type": "char",
+          "marker": "qt",
+          "content": [
+            "“God said, ‘I will send my messenger ahead of you"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "para",
+      "marker": "q2",
+      "content": [
+        {
+          "type": "char",
+          "marker": "qt",
+          "content": [
+            "to open the way for you.’"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "para",
+      "marker": "q1",
+      "content": [
+        {
+          "type": "verse",
+          "marker": "v",
+          "number": "3",
+          "sid": "MRK 1:3"
+        },
+        {
+          "type": "char",
+          "marker": "qt",
+          "content": [
+            "Someone is shouting in the desert,"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "para",
+      "marker": "q2",
+      "content": [
+        {
+          "type": "char",
+          "marker": "qt",
+          "content": [
+            "‘Get the road ready for the Lord;"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "para",
+      "marker": "q2",
+      "content": [
+        {
+          "type": "char",
+          "marker": "qt",
+          "content": [
+            "make a straight path for him to travel!’ ”"
+          ]
+        }
+      ]
+    }
+  ]
+}</code></pre>
 </div>
 </div>
 </div>

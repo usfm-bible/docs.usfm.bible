@@ -855,13 +855,18 @@
 <li id="_tabs_1_usx" class="tab">
 <p>USX</p>
 </li>
+<li id="_tabs_1_usj" class="tab">
+<p>USJ</p>
+</li>
 </ul>
 </div>
 <div id="_tabs_1_usfm--panel" class="tabpanel" aria-labelledby="_tabs_1_usfm">
 <div id="src-usfm-char-nd_1" class="listingblock">
 <div class="title">Example 1. Exodus 3.15 (GNT)</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\p
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\id EXO
+\c 3
+\p
 \v 14 God said, “I am who I am. You must tell them: ‘The one who is called
 I AM has sent me to you.’
 \v 15 Tell the Israelites that I, the \nd Lord\nd*, the God of their ancestors,
@@ -874,14 +879,69 @@ forever; this is what all future generations are to call me.</code></pre>
 <div id="src-usx-char-nd_1" class="listingblock">
 <div class="title">Example 2. Exodus 3.15 (GNT)</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;para style="p"&gt;
-  &lt;verse number="14" style="v" sid="EXO 3:14"/&gt;God said, “I am who I am. You must
-  tell them: ‘The one who is called I AM has sent me to you.’
-  &lt;verse eid="EXO 3:14"/&gt;&lt;verse number="15" style="v" sid="EXO 3:15"/&gt;Tell the
-  Israelites that I, the &lt;char style="nd"&gt;Lord&lt;/char&gt;, the God of their ancestors,
-  the God of Abraham, Isaac, and Jacob, have sent you to them. This is my name
-  forever; this is what all future generations are to call me.
-  &lt;verse eid="EXO 3:15"/&gt;</code></pre>
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;usx version="3.1"&gt;
+  &lt;book code="EXO" style="id"/&gt;
+  &lt;chapter number="3" style="c" sid="MAT 3"/&gt;
+  &lt;para style="p"&gt;
+    &lt;verse number="14" style="v" sid="EXO 3:14"/&gt;God said, “I am who I am. You
+    must tell them: ‘The one who is called I AM has sent me to you.’
+    &lt;verse eid="EXO 3:14"/&gt;&lt;verse number="15" style="v" sid="EXO 3:15"/&gt;Tell
+    the Israelites that I, the &lt;char style="nd"&gt;Lord&lt;/char&gt;, the God of their
+    ancestors, the God of Abraham, Isaac, and Jacob, have sent you to them. This
+    is my name forever; this is what all future generations are to call me.
+    &lt;verse eid="EXO 3:15"/&gt;&lt;/para&gt;
+&lt;/usx&gt;</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_1_usj--panel" class="tabpanel" aria-labelledby="_tabs_1_usj">
+<div id="src-usj-char-nd_1" class="listingblock">
+<div class="title">Example 3. Exodus 3.15 (GNT)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "type": "USJ",
+  "version": "3.1",
+  "content": [
+    {
+      "type": "book",
+      "marker": "id",
+      "code": "EXO",
+      "content": []
+    },
+    {
+      "type": "chapter",
+      "marker": "c",
+      "number": "3",
+      "sid": "MAT 3"
+    },
+    {
+      "type": "para",
+      "marker": "p",
+      "content": [
+        {
+          "type": "verse",
+          "marker": "v",
+          "number": "14",
+          "sid": "EXO 3:14"
+        },
+        "God said, “I am who I am. You must tell them: ‘The one who is called I AM has sent me to you.’ ",
+        {
+          "type": "verse",
+          "marker": "v",
+          "number": "15",
+          "sid": "EXO 3:15"
+        },
+        "Tell the Israelites that I, the ",
+        {
+          "type": "char",
+          "marker": "nd",
+          "content": ["Lord"]
+        },
+        ", the God of their ancestors, the God of Abraham, Isaac, and Jacob, have sent you to them. This is my name forever; this is what all future generations are to call me. "
+      ]
+    }
+  ]
+}</code></pre>
 </div>
 </div>
 </div>
