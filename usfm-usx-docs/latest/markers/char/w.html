@@ -885,21 +885,94 @@
 <li id="_tabs_1_usx" class="tab">
 <p>USX</p>
 </li>
+<li id="_tabs_1_usj" class="tab">
+<p>USJ</p>
+</li>
 </ul>
 </div>
 <div id="_tabs_1_usfm--panel" class="tabpanel" aria-labelledby="_tabs_1_usfm">
 <div id="src-usfm-char-w_1" class="listingblock">
-<div class="title">Example 1. Glossay word without attributes</div>
+<div class="title">Example 1. Glossay word without attributes - Nehemiah 9.31 (GNT)</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\w gracious\w*</code></pre>
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\id NEH
+\c 9
+\q1
+\v 31 And yet, because your mercy is great,
+\q2 you did not forsake or destroy them.
+\q1 You are a \w gracious\w* and merciful God!</code></pre>
 </div>
 </div>
 </div>
 <div id="_tabs_1_usx--panel" class="tabpanel" aria-labelledby="_tabs_1_usx">
 <div id="src-usx-char-w_1" class="listingblock">
-<div class="title">Example 2. Glossay word without attributes</div>
+<div class="title">Example 2. Glossay word without attributes - Nehemiah 9.31 (GNT)</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;char style="w"&gt;gracious&lt;/char&gt;</code></pre>
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;usx version="3.1"&gt;
+  &lt;book code="NEH" style="id"/&gt;
+  &lt;chapter number="9" style="c" sid="NEH 9"/&gt;
+  &lt;para style="q1"&gt;
+    &lt;verse number="31" style="v" sid="NEH 9:31"/&gt;And yet, because your mercy is
+    great,&lt;/para&gt;
+  &lt;para style="q2" vid="NEH 9:31"&gt;you did not forsake or destroy them.&lt;/para&gt;
+  &lt;para style="q1" vid="NEH 9:31"&gt;You are a &lt;char style="w"&gt;gracious&lt;/char&gt; and
+    merciful God!&lt;verse eid="NEH 9:31"/&gt;&lt;/para&gt;
+&lt;/usx&gt;</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_1_usj--panel" class="tabpanel" aria-labelledby="_tabs_1_usj">
+<div id="src-usj-char-w_1" class="listingblock">
+<div class="title">Example 3. Glossay word without attributes - Nehemiah 9.31 (GNT)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "type": "USJ",
+  "version": "3.1",
+  "content": [
+    {
+      "type": "book",
+      "marker": "id",
+      "code": "NEH",
+      "content": []
+    },
+    {
+      "type": "chapter",
+      "marker": "c",
+      "number": "9",
+      "sid": "NEH 9"
+    },
+    {
+      "type": "para",
+      "marker": "q1",
+      "content": [
+        {
+          "type": "verse",
+          "marker": "v",
+          "number": "31",
+          "sid": "NEH 9:31"
+        },
+        "And yet, because your mercy is great,"
+      ]
+    },
+    {
+      "type": "para",
+      "marker": "q2",
+      "content": ["you did not forsake or destroy them."]
+    },
+    {
+      "type": "para",
+      "marker": "q1",
+      "content": [
+        "You are a ",
+        {
+          "type": "char",
+          "marker": "w",
+          "content": ["gracious"]
+        },
+        " and merciful God!"
+      ]
+    }
+  ]
+}</code></pre>
 </div>
 </div>
 </div>
@@ -915,21 +988,96 @@
 <li id="_tabs_2_usx" class="tab">
 <p>USX</p>
 </li>
+<li id="_tabs_2_usj" class="tab">
+<p>USJ</p>
+</li>
 </ul>
 </div>
 <div id="_tabs_2_usfm--panel" class="tabpanel" aria-labelledby="_tabs_2_usfm">
 <div id="src-usfm-char-w_2" class="listingblock">
-<div class="title">Example 3. Glossay word with (unnamed) default "lemma" attribute</div>
+<div class="title">Example 4. Glossay word with (unnamed) default "lemma" attribute - Nehemiah 9.31 (GNT)</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\w gracious|grace\w*</code></pre>
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\id NEH
+\c 9
+\q1
+\v 31 And yet, because your mercy is great,
+\q2 you did not forsake or destroy them.
+\q1 You are a \w gracious|grace\w* and merciful God!</code></pre>
 </div>
 </div>
 </div>
 <div id="_tabs_2_usx--panel" class="tabpanel" aria-labelledby="_tabs_2_usx">
 <div id="src-usx-char-w_2" class="listingblock">
-<div class="title">Example 4. Glossay word with "lemma" attribute</div>
+<div class="title">Example 5. Glossay word with "lemma" attribute - Nehemiah 9.31 (GNT)</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;char style="w" lemma="grace"&gt;gracious&lt;/char&gt;</code></pre>
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;usx version="3.1"&gt;
+  &lt;book code="NEH" style="id"/&gt;
+  &lt;chapter number="9" style="c" sid="NEH 9"/&gt;
+  &lt;para style="q1"&gt;
+    &lt;verse number="31" style="v" sid="NEH 9:31"/&gt;And yet, because your mercy
+    is great,&lt;/para&gt;
+  &lt;para style="q2" vid="NEH 9:31"&gt;you did not forsake or destroy them.&lt;/para&gt;
+  &lt;para style="q1" vid="NEH 9:31"&gt;You are a
+    &lt;char style="w" lemma="grace"&gt;gracious&lt;/char&gt; and merciful
+    God!&lt;verse eid="NEH 9:31"/&gt;&lt;/para&gt;
+&lt;/usx&gt;</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_2_usj--panel" class="tabpanel" aria-labelledby="_tabs_2_usj">
+<div id="src-usj-char-w_2" class="listingblock">
+<div class="title">Example 6. Glossay word with "lemma" attribute - Nehemiah 9.31 (GNT)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "type": "USJ",
+  "version": "3.1",
+  "content": [
+    {
+      "type": "book",
+      "marker": "id",
+      "code": "NEH",
+      "content": []
+    },
+    {
+      "type": "chapter",
+      "marker": "c",
+      "number": "9",
+      "sid": "NEH 9"
+    },
+    {
+      "type": "para",
+      "marker": "q1",
+      "content": [
+        {
+          "type": "verse",
+          "marker": "v",
+          "number": "31",
+          "sid": "NEH 9:31"
+        },
+        "And yet, because your mercy is great,"
+      ]
+    },
+    {
+      "type": "para",
+      "marker": "q2",
+      "content": ["you did not forsake or destroy them."]
+    },
+    {
+      "type": "para",
+      "marker": "q1",
+      "content": [
+        "You are a ",
+        {
+          "type": "char",
+          "marker": "w",
+          "lemma": "grace",
+          "content": [" gracious"]
+        },
+        " and merciful God!"
+      ]
+    }
+  ]
+}</code></pre>
 </div>
 </div>
 </div>
@@ -945,21 +1093,96 @@
 <li id="_tabs_3_usx" class="tab">
 <p>USX</p>
 </li>
+<li id="_tabs_3_usj" class="tab">
+<p>USJ</p>
+</li>
 </ul>
 </div>
 <div id="_tabs_3_usfm--panel" class="tabpanel" aria-labelledby="_tabs_3_usfm">
 <div id="src-usfm-char-w_3" class="listingblock">
-<div class="title">Example 5. Glossay word with explicit "lemma" attribute</div>
+<div class="title">Example 7. Glossay word with explicit "lemma" attribute - Nehemiah 9.31 (GNT)</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\w gracious|lemma="grace"\w*</code></pre>
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\id NEH
+\c 9
+\q1
+\v 31 And yet, because your mercy is great,
+\q2 you did not forsake or destroy them.
+\q1 You are a \w gracious|lemma="grace"\w* and merciful God!</code></pre>
 </div>
 </div>
 </div>
 <div id="_tabs_3_usx--panel" class="tabpanel" aria-labelledby="_tabs_3_usx">
 <div id="src-usx-char-w_3" class="listingblock">
-<div class="title">Example 6. Glossay word with explicit "lemma" attribute</div>
+<div class="title">Example 8. Glossay word with explicit "lemma" attribute - Nehemiah 9.31 (GNT)</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;char style="w" lemma="grace"&gt;gracious&lt;/char&gt;</code></pre>
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;usx version="3.1"&gt;
+  &lt;book code="NEH" style="id"/&gt;
+  &lt;chapter number="9" style="c" sid="NEH 9"/&gt;
+  &lt;para style="q1"&gt;
+    &lt;verse number="31" style="v" sid="NEH 9:31"/&gt;And yet, because your mercy
+    is great,&lt;/para&gt;
+  &lt;para style="q2" vid="NEH 9:31"&gt;you did not forsake or destroy them.&lt;/para&gt;
+  &lt;para style="q1" vid="NEH 9:31"&gt;You are a
+    &lt;char style="w" lemma="grace"&gt;gracious&lt;/char&gt; and merciful
+    God!&lt;verse eid="NEH 9:31"/&gt;&lt;/para&gt;
+&lt;/usx&gt;</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_3_usj--panel" class="tabpanel" aria-labelledby="_tabs_3_usj">
+<div id="src-usj-char-w_3" class="listingblock">
+<div class="title">Example 9. Glossay word with "lemma" attribute - Nehemiah 9.31 (GNT)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "type": "USJ",
+  "version": "3.1",
+  "content": [
+    {
+      "type": "book",
+      "marker": "id",
+      "code": "NEH",
+      "content": []
+    },
+    {
+      "type": "chapter",
+      "marker": "c",
+      "number": "9",
+      "sid": "NEH 9"
+    },
+    {
+      "type": "para",
+      "marker": "q1",
+      "content": [
+        {
+          "type": "verse",
+          "marker": "v",
+          "number": "31",
+          "sid": "NEH 9:31"
+        },
+        "And yet, because your mercy is great,"
+      ]
+    },
+    {
+      "type": "para",
+      "marker": "q2",
+      "content": ["you did not forsake or destroy them."]
+    },
+    {
+      "type": "para",
+      "marker": "q1",
+      "content": [
+        "You are a ",
+        {
+          "type": "char",
+          "marker": "w",
+          "lemma": "grace",
+          "content": [" gracious"]
+        },
+        " and merciful God!"
+      ]
+    }
+  ]
+}</code></pre>
 </div>
 </div>
 </div>
@@ -972,28 +1195,100 @@
 <li id="_tabs_4_usfm" class="tab">
 <p>USFM</p>
 </li>
-<li id="_tabs_4_usfm_2" class="tab">
-<p>USFM</p>
+<li id="_tabs_4_usx" class="tab">
+<p>USX</p>
+</li>
+<li id="_tabs_4_usj" class="tab">
+<p>USJ</p>
 </li>
 </ul>
 </div>
 <div id="_tabs_4_usfm--panel" class="tabpanel" aria-labelledby="_tabs_4_usfm">
 <div id="src-usfm-char-w_4" class="listingblock">
-<div class="title">Example 7. Glossay word with "lemma" and "strong"</div>
+<div class="title">Example 10. Glossay word with "lemma" and "strong" - Nehemiah 9.31 (GNT)</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\w gracious|lemma="grace" strong="G5485"\w*
-\w gracious|strong="G5485"\w*
-\w gracious|strong="H1234,G5485"\w*</code></pre>
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\id NEH
+\c 9
+\q1
+\v 31 And yet, because your mercy is great,
+\q2 you did not forsake or destroy them.
+\q1 You are a \w gracious|lemma="grace" strong="H2587,G5485"\w* and merciful God!</code></pre>
 </div>
 </div>
 </div>
-<div id="_tabs_4_usfm_2--panel" class="tabpanel" aria-labelledby="_tabs_4_usfm_2">
+<div id="_tabs_4_usx--panel" class="tabpanel" aria-labelledby="_tabs_4_usx">
 <div id="src-usx-char-w_4" class="listingblock">
-<div class="title">Example 8. Glossay word with "lemma" and "strong"</div>
+<div class="title">Example 11. Glossay word with "lemma" and "strong" - Nehemiah 9.31 (GNT)</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;char style="w" lemma="grace" strong="G5485"&gt;gracious&lt;/char&gt;
-&lt;char style="w" strong="G5485"&gt;gracious&lt;/char&gt;
-&lt;char style="w" strong="H1234,G5485"&gt;gracious&lt;/char&gt;</code></pre>
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;usx version="3.1"&gt;
+  &lt;book code="NEH" style="id"/&gt;
+  &lt;chapter number="9" style="c" sid="NEH 9"/&gt;
+  &lt;para style="q1"&gt;
+    &lt;verse number="31" style="v" sid="NEH 9:31"/&gt;And yet, because your mercy
+    is great,&lt;/para&gt;
+  &lt;para style="q2" vid="NEH 9:31"&gt;you did not forsake or destroy them.&lt;/para&gt;
+  &lt;para style="q1" vid="NEH 9:31"&gt;You are a
+    &lt;char style="w" lemma="grace" strong="H2587,G5485"&gt;gracious&lt;/char&gt; and
+    merciful God!&lt;verse eid="NEH 9:31"/&gt;&lt;/para&gt;
+&lt;/usx&gt;</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_4_usj--panel" class="tabpanel" aria-labelledby="_tabs_4_usj">
+<div id="src-usj-char-w_4" class="listingblock">
+<div class="title">Example 12. Glossay word with "lemma" and "strong" - Nehemiah 9.31 (GNT)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "type": "USJ",
+  "version": "3.1",
+  "content": [
+    {
+      "type": "book",
+      "marker": "id",
+      "code": "NEH",
+      "content": []
+    },
+    {
+      "type": "chapter",
+      "marker": "c",
+      "number": "9",
+      "sid": "NEH 9"
+    },
+    {
+      "type": "para",
+      "marker": "q1",
+      "content": [
+        {
+          "type": "verse",
+          "marker": "v",
+          "number": "31",
+          "sid": "NEH 9:31"
+        },
+        "And yet, because your mercy is great,"
+      ]
+    },
+    {
+      "type": "para",
+      "marker": "q2",
+      "content": ["you did not forsake or destroy them."]
+    },
+    {
+      "type": "para",
+      "marker": "q1",
+      "content": [
+        "You are a ",
+        {
+          "type": "char",
+          "marker": "w",
+          "lemma": "grace",
+          "strong": "H2587,G5485",
+          "content": ["gracious"]
+        },
+        " and merciful God!"
+      ]
+    }
+  ]
+}</code></pre>
 </div>
 </div>
 </div>

@@ -858,29 +858,105 @@
 <li id="_tabs_1_usx" class="tab">
 <p>USX</p>
 </li>
+<li id="_tabs_1_usj" class="tab">
+<p>USJ</p>
+</li>
 </ul>
 </div>
 <div id="_tabs_1_usfm--panel" class="tabpanel" aria-labelledby="_tabs_1_usfm">
 <div id="src-usfm-char-wj_1" class="listingblock">
-<div class="title">Example 1. Missing</div>
+<div class="title">Example 1. Mark 4:39-40 (GNT)</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">Missing</code></pre>
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\id MRK
+\c 4
+\p
+\v 39 Jesus stood up and commanded the wind, \wj “Be quiet!”\wj* and he said to
+the waves, \wj “Be still!”\wj* The wind died down, and there was a great calm.
+\v 40 Then Jesus said to his disciples, \wj “Why are you frightened? Do you still
+have no faith?”\wj*</code></pre>
 </div>
 </div>
 </div>
 <div id="_tabs_1_usx--panel" class="tabpanel" aria-labelledby="_tabs_1_usx">
 <div id="src-usx-char-wj_1" class="listingblock">
-<div class="title">Example 2. Missing</div>
+<div class="title">Example 2. Mark 4:39-40 (GNT)</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">Missing</code></pre>
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;usx version="3.0"&gt;
+  &lt;book code="MRK" style="id"/&gt;
+  &lt;chapter number="4" style="c" sid="MRK 4"/&gt;
+  &lt;para style="p"&gt;
+    &lt;verse number="39" style="v" sid="MRK 4:39"/&gt;Jesus stood up and commanded
+    the wind, &lt;char style="wj"&gt;“Be quiet!”&lt;/char&gt; and he said to the waves,
+    &lt;char style="wj"&gt;“Be still!”&lt;/char&gt; The wind died down, and there was a great
+    calm. &lt;verse eid="MRK 4:39"/&gt;&lt;verse number="40" style="v" sid="MRK 4:40"/&gt;Then
+    Jesus said to his disciples, &lt;char style="wj"&gt;“Why are you frightened? Do
+    you still have no faith?”&lt;/char&gt;&lt;verse eid="MRK 4:40"/&gt;&lt;/para&gt;
+&lt;/usx&gt;</code></pre>
 </div>
 </div>
 </div>
-</div>
-</div>
-<div class="imageblock">
+<div id="_tabs_1_usj--panel" class="tabpanel" aria-labelledby="_tabs_1_usj">
+<div id="src-usj-char-wj_1" class="listingblock">
+<div class="title">Example 3. Mark 4:39-40 (GNT)</div>
 <div class="content">
-<img src="../_images/char/missing.jpg" alt="missing" width="300">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "type": "USJ",
+  "version": "3.1",
+  "content": [
+    {
+      "type": "book",
+      "marker": "id",
+      "code": "MRK",
+      "content": []
+    },
+    {
+      "type": "chapter",
+      "marker": "c",
+      "number": "4",
+      "sid": "MRK 4"
+    },
+    {
+      "type": "para",
+      "marker": "p",
+      "content": [
+        {
+          "type": "verse",
+          "marker": "v",
+          "number": "39",
+          "sid": "MRK 4:39"
+        },
+        "Jesus stood up and commanded the wind, ",
+        {
+          "type": "char",
+          "marker": "wj",
+          "content": ["“Be quiet!”"]
+        },
+        " and he said to the waves, ",
+        {
+          "type": "char",
+          "marker": "wj",
+          "content": ["“Be still!”"]
+        },
+        " The wind died down, and there was a great calm. ",
+        {
+          "type": "verse",
+          "marker": "v",
+          "number": "40",
+          "sid": "MRK 4:40"
+        },
+        "Then Jesus said to his disciples, ",
+        {
+          "type": "char",
+          "marker": "wj",
+          "content": ["“Why are you frightened? Do you still have no faith?”"]
+        }
+      ]
+    }
+  ]
+}</code></pre>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>

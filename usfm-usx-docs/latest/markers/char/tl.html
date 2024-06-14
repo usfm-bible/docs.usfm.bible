@@ -855,13 +855,18 @@
 <li id="_tabs_1_usx" class="tab">
 <p>USX</p>
 </li>
+<li id="_tabs_1_usj" class="tab">
+<p>USJ</p>
+</li>
 </ul>
 </div>
 <div id="_tabs_1_usfm--panel" class="tabpanel" aria-labelledby="_tabs_1_usfm">
 <div id="src-usfm-char-tl_1" class="listingblock">
 <div class="title">Example 1. Matthew 27.46 (GNT)</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\s1 The Death of Jesus
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\id MAT
+\c 27
+\s1 The Death of Jesus
 \r (Mark 15.33-41; Luke 23.44-49; John 19.28-30)
 \p
 \v 45 At noon the whole country was covered with darkness, which lasted for
@@ -875,15 +880,80 @@ lema sabachthani?”\tl* which means, “My God, my God, why did you abandon me?
 <div id="src-usx-char-tl_1" class="listingblock">
 <div class="title">Example 2. Matthew 27.46 (GNT)</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;para style="s1"&gt;The Death of Jesus&lt;/para&gt;
-&lt;para style="r"&gt;(Mark 15.33-41; Luke 23.44-49; John 19.28-30)&lt;/para&gt;
-&lt;para style="p"&gt;
-  &lt;verse number="45" style="v" sid="MAT 27:45"/&gt;At noon the whole country was
-  covered with darkness, which lasted for three hours.
-  &lt;verse eid="MAT 27:45"/&gt;&lt;verse number="46" style="v" sid="MAT 27:46"/&gt;At about
-  three o'clock Jesus cried out with a loud shout, &lt;char style="tl"&gt;“Eli, Eli,
-  lema sabachthani?”&lt;/char&gt; which means, “My God, my God, why did you abandon me?”
-  &lt;verse eid="MAT 27:46"/&gt;&lt;/para&gt;</code></pre>
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;usx version="3.1"&gt;
+  &lt;book code="MAT" style="id"/&gt;
+  &lt;chapter number="27" style="c" sid="MAT 27"/&gt;
+  &lt;para style="s1"&gt;The Death of Jesus&lt;/para&gt;
+  &lt;para style="r"&gt;(Mark 15.33-41; Luke 23.44-49; John 19.28-30)&lt;/para&gt;
+  &lt;para style="p"&gt;
+    &lt;verse number="45" style="v" sid="MAT 27:45"/&gt;At noon the whole country was
+    covered with darkness, which lasted for three hours.
+    &lt;verse eid="MAT 27:45"/&gt;&lt;verse number="46" style="v" sid="MAT 27:46"/&gt;At
+    about three o'clock Jesus cried out with a loud shout, &lt;char style="tl"&gt;“Eli,
+    Eli, lema sabachthani?”&lt;/char&gt; which means, “My God, my God, why did you
+    abandon me?”&lt;verse eid="MAT 27:46"/&gt;&lt;/para&gt;
+&lt;/usx&gt;</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_1_usj--panel" class="tabpanel" aria-labelledby="_tabs_1_usj">
+<div id="src-usj-char-tl_1" class="listingblock">
+<div class="title">Example 3. Matthew 27.46 (GNT)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "type": "USJ",
+  "version": "3.1",
+  "content": [
+    {
+      "type": "book",
+      "marker": "id",
+      "code": "MAT",
+      "content": []
+    },
+    {
+      "type": "chapter",
+      "marker": "c",
+      "number": "27",
+      "sid": "MAT 27"
+    },
+    {
+      "type": "para",
+      "marker": "s1",
+      "content": ["The Death of Jesus"]
+    },
+    {
+      "type": "para",
+      "marker": "r",
+      "content": ["(Mark 15.33-41; Luke 23.44-49; John 19.28-30)"]
+    },
+    {
+      "type": "para",
+      "marker": "p",
+      "content": [
+        {
+          "type": "verse",
+          "marker": "v",
+          "number": "45",
+          "sid": "MAT 27:45"
+        },
+        "At noon the whole country was covered with darkness, which lasted for three hours. ",
+        {
+          "type": "verse",
+          "marker": "v",
+          "number": "46",
+          "sid": "MAT 27:46"
+        },
+        "At about three o'clock Jesus cried out with a loud shout, ",
+        {
+          "type": "char",
+          "marker": "tl",
+          "content": ["“Eli, Eli, lema sabachthani?”"]
+        },
+        " which means, “My God, my God, why did you abandon me?”"
+      ]
+    }
+  ]
+}</code></pre>
 </div>
 </div>
 </div>

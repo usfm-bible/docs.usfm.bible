@@ -889,6 +889,9 @@
 <li id="_tabs_1_usx" class="tab">
 <p>USX</p>
 </li>
+<li id="_tabs_1_usj" class="tab">
+<p>USJ</p>
+</li>
 </ul>
 </div>
 <div id="_tabs_1_usfm--panel" class="tabpanel" aria-labelledby="_tabs_1_usfm">
@@ -928,6 +931,83 @@ again. It has become worthless, so it is thrown out and people trample on it.</c
 </div>
 </div>
 </div>
+<div id="_tabs_1_usj--panel" class="tabpanel" aria-labelledby="_tabs_1_usj">
+<div id="src-usj-ref_1" class="listingblock">
+<div class="title">Example 3. Corresponding target references with auto-generated ref tags - Matthew 5.13 (GNT)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "type": "USJ",
+  "version": "3.1",
+  "content": [
+    {
+      "type": "book",
+      "marker": "id",
+      "code": "MAT",
+      "content": []
+    },
+    {
+      "type": "chapter",
+      "marker": "c",
+      "number": "5",
+      "sid": "MAT 5"
+    },
+    {
+      "type": "para",
+      "marker": "p",
+      "content": [
+        {
+          "type": "verse",
+          "marker": "v",
+          "number": "13",
+          "sid": "MAT 5:13"
+        },
+        {
+          "type": "note",
+          "marker": "x",
+          "caller": "-",
+          "content": [
+            {
+              "type": "char",
+              "marker": "xo",
+              "content": ["5.13: "]
+            },
+            {
+              "type": "char",
+              "marker": "xt",
+              "content": [
+                {
+                  "type": "ref",
+                  "loc": "MRK 9:50",
+                  "gen": "true",
+                  "content": ["Mk 9.50"]
+                },
+                "; ",
+                {
+                  "type": "ref",
+                  "loc": "LUK 14:34",
+                  "gen": "true",
+                  "content": ["Lk 14.34"]
+                },
+                ",",
+                {
+                  "type": "ref",
+                  "loc": "LUK 14:35",
+                  "gen": "true",
+                  "content": ["35"]
+                },
+                "."
+              ]
+            }
+          ]
+        },
+        "“You are like salt for the whole human race. But if salt loses its saltiness, there is no way to make it salty again. It has become worthless, so it is thrown out and people trample on it."
+      ]
+    }
+  ]
+}</code></pre>
+</div>
+</div>
+</div>
 </div>
 </div>
 <div id="_tabs_2" class="openblock tabs is-loading">
@@ -940,11 +1020,14 @@ again. It has become worthless, so it is thrown out and people trample on it.</c
 <li id="_tabs_2_usx" class="tab">
 <p>USX</p>
 </li>
+<li id="_tabs_2_usj" class="tab">
+<p>USJ</p>
+</li>
 </ul>
 </div>
 <div id="_tabs_2_usfm--panel" class="tabpanel" aria-labelledby="_tabs_2_usfm">
 <div id="src-usfm-ref_2" class="listingblock">
-<div class="title">Example 3. Target references in \xt with supplied \ref - Matthew 5.13 (GNT)</div>
+<div class="title">Example 4. Target references in \xt with supplied \ref - Matthew 5.13 (GNT)</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\id MAT
 \c 13
@@ -960,7 +1043,7 @@ salty again. It has become worthless, so it is thrown out and people trample on 
 </div>
 <div id="_tabs_2_usx--panel" class="tabpanel" aria-labelledby="_tabs_2_usx">
 <div id="src-usx-ref_2" class="listingblock">
-<div class="title">Example 4. Target references with ref tags - Matthew 5.13 (GNT)</div>
+<div class="title">Example 5. Target references with ref tags - Matthew 5.13 (GNT)</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;usx version="3.1"&gt;
   &lt;book code="MAT" style="id"/&gt;
@@ -976,6 +1059,80 @@ salty again. It has become worthless, so it is thrown out and people trample on 
     saltiness, there is no way to make it salty again. It has become worthless,
     so it is thrown out and people trample on it.&lt;verse eid="MAT 5:13"/&gt;&lt;/para&gt;
 &lt;/usx&gt;</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_2_usj--panel" class="tabpanel" aria-labelledby="_tabs_2_usj">
+<div id="src-usj-ref_2" class="listingblock">
+<div class="title">Example 6. Target references with ref tags - Matthew 5.13 (GNT)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "type": "USJ",
+  "version": "3.1",
+  "content": [
+    {
+      "type": "book",
+      "marker": "id",
+      "code": "MAT",
+      "content": []
+    },
+    {
+      "type": "chapter",
+      "marker": "c",
+      "number": "5",
+      "sid": "MAT 5"
+    },
+    {
+      "type": "para",
+      "marker": "p",
+      "content": [
+        {
+          "type": "verse",
+          "marker": "v",
+          "number": "13",
+          "sid": "MAT 5:13"
+        },
+        {
+          "type": "note",
+          "marker": "x",
+          "caller": "-",
+          "content": [
+            {
+              "type": "char",
+              "marker": "xo",
+              "content": ["5.13: "]
+            },
+            {
+              "type": "char",
+              "marker": "xt",
+              "content": [
+                {
+                  "type": "ref",
+                  "loc": "MRK 9:50",
+                  "content": ["Mk 9.50"]
+                },
+                "; ",
+                {
+                  "type": "ref",
+                  "loc": "LUK 14:34",
+                  "content": ["Lk 14.34"]
+                },
+                ",",
+                {
+                  "type": "ref",
+                  "loc": "LUK 14:35",
+                  "content": ["35"]
+                },
+                "."
+              ]
+            }
+          ]
+        },
+        "“You are like salt for the whole human race. But if salt loses its saltiness, there is no way to make it salty again. It has become worthless, so it is thrown out and people trample on it."
+      ]
+    }
+  ]
+}</code></pre>
 </div>
 </div>
 </div>
