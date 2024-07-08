@@ -7,7 +7,7 @@
     <link rel="canonical" href="https://docs.usfm.bible/usfm-usx-docs/latest/release-notes.html">
     <link rel="prev" href="index.html">
     <link rel="next" href="introduction.html">
-    <meta name="generator" content="Antora 3.1.8">
+    <meta name="generator" content="Antora 3.1.9">
     <link rel="stylesheet" href="../../_/css/site.css">
 <link rel="stylesheet" href="../../_/css/site-extra.css">
 <link rel="stylesheet" href="../../_/css/vendor/tabs.css">
@@ -809,7 +809,7 @@
 <h2 id="_3_1"><a class="anchor" href="#_3_1"></a>3.1</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><em>June 2024</em></p>
+<p><em>July 2024</em></p>
 </div>
 <div class="sect2">
 <h3 id="_background_on_usfm_3_1"><a class="anchor" href="#_background_on_usfm_3_1"></a>Background on USFM 3.1</h3>
@@ -849,13 +849,11 @@
 <p>The <a href="para/index.html" class="xref page">paragraph</a> <mark><em>@vid</em></mark> attribute has an extended reference syntax.</p>
 </li>
 <li>
+<p><a href="char/index.html" class="xref page">Character</a> markers and <a href="char/nesting.html" class="xref page">nesting</a>:</p>
+<div class="ulist">
+<ul>
+<li>
 <p>All <a href="char/index.html" class="xref page">character</a> elements must be closed <em>explicitly</em>, with the exception of note structural elements (below).</p>
-</li>
-<li>
-<p>Deprecate the <code>link-</code> prefix in <a href="char/features/jmp.html" class="xref page">jmp</a> attributes.</p>
-</li>
-<li>
-<p>Add <mark><em>@key</em></mark> attribute to the <a href="char/features/k.html" class="xref page">k</a> character element.</p>
 </li>
 <li>
 <p>Note specific <a href="char/notes/index.html" class="xref page">character</a> elements (i.e. <code>f</code>&#8230;&#8203; <a href="char/notes/footnote/fr.html" class="xref page">fr</a>, <a href="char/notes/footnote/fq.html" class="xref page">fq</a>, <a href="char/notes/footnote/ft.html" class="xref page">ft</a>, or <code>x</code>&#8230;&#8203; <a href="char/notes/crossref/xo.html" class="xref page">xo</a>, <a href="char/notes/crossref/xt.html" class="xref page">xt</a> etc.) are considered note <em>submarker elements</em>. They provide structure to the note content. These note submarker elements continue to support (and recommend) the common pratice of implicit closure.</p>
@@ -868,6 +866,31 @@
 </li>
 <li>
 <p>Use of the <code>+</code> prefix for nested USFM <a href="char/index.html" class="xref page">character</a> markup is supported but is <em>deprecated</em>. Note that future versions of USFM may remove support for the <code>\+</code> syntax entirely.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Markings scripture references&#8201;&#8212;&#8201;<a href="char/features/ref.html" class="xref page">ref</a> and <a href="char/notes/crossref/xt.html" class="xref page">xt</a>:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Added <a href="char/features/ref.html" class="xref page">ref</a> for marking scripture references in all contexts (including <a href="char/notes/crossref/xt.html" class="xref page">xt</a>), with an optional machine-readable target location.</p>
+</li>
+<li>
+<p><em>Deprecated</em> use of the attribute <mark><em>@link-href</em></mark> with <a href="char/notes/crossref/xt.html" class="xref page">xt</a>. Use <a href="char/features/ref.html" class="xref page">ref</a>.</p>
+</li>
+<li>
+<p><em>Deprecated</em> use of <a href="char/notes/crossref/xt.html" class="xref page">xt</a> outside of <a href="note/crossref/x.html" class="xref page">cross-reference</a>. Use: <a href="char/features/ref.html" class="xref page">ref</a>.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Deprecate the <code>link-</code> prefix in <a href="char/features/jmp.html" class="xref page">jmp</a> attributes.</p>
+</li>
+<li>
+<p>Add <mark><em>@key</em></mark> attribute to the <a href="char/features/k.html" class="xref page">k</a> character element.</p>
 </li>
 <li>
 <p><mark><em>@sid</em></mark> and <mark><em>@eid</em></mark> attributes are not automatically available for all <a href="ms/index.html" class="xref page">milestones</a>, but may be used when specified directly (e.g. <a href="ms/qt.html" class="xref page">qt</a> and <a href="ms/ts.html" class="xref page">ts</a>)</p>
