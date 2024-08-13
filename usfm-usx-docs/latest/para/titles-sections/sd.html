@@ -78,7 +78,22 @@
   <li class="nav-item" data-depth="0">
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="../../doc/index.html">Document Structure</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../doc/id.html">id - Book identification</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../doc/books.html">Book IDs</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../doc/usfm.html">usfm - USFM version</a>
+  </li>
+</ul>
   </li>
 </ul>
   </li>
@@ -120,18 +135,6 @@
     <button class="nav-item-toggle"></button>
     <a class="nav-link" href="../identification/index.html">Identification</a>
 <ul class="nav-list">
-  <li class="nav-item" data-depth="3">
-    <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="../identification/id.html">id - Book identification</a>
-<ul class="nav-list">
-  <li class="nav-item" data-depth="4">
-    <a class="nav-link" href="../identification/books.html">Book IDs</a>
-  </li>
-</ul>
-  </li>
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../identification/usfm.html">usfm - USFM version</a>
-  </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../identification/ide.html">ide - Character encoding</a>
   </li>
@@ -556,6 +559,9 @@
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../../char/tables/tcr.html">tcr# - Table cell - right aligned</a>
   </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../char/tables/tcc.html">tcc# - Table cell - center aligned</a>
+  </li>
 </ul>
   </li>
   <li class="nav-item" data-depth="2">
@@ -817,11 +823,11 @@
 <dl>
 <dt class="hdlist1">Description</dt>
 <dd>
-<p>Semantic division (semantic space). Vertical space used to divide the text into sections, in a manner similar to the structure added through a sequence of heading texts with <a href="ms.html" class="xref page">ms</a> or <a href="s.html" class="xref page">s</a>. The purpose of <a href="sd.html" class="xref page">sd</a> is distinct from <a href="../paragraphs/b.html" class="xref page">b</a> which primarily denotes whitespace (in particular at poetic stanza breaks) and does not imply a hierarchy or division.</p>
+<p>Semantic division. Use to identify the location of vertical space intended to divide the text into structural or hierachical sections. The purpose of <a href="sd.html" class="xref page">sd</a> is distinct from <a href="../paragraphs/b.html" class="xref page">b</a> which is <em>primarily</em> used to denote whitespace at poetic stanza breaks.</p>
 <div class="ulist">
 <ul>
 <li>
-<p>The variable <code>#</code> (1-4) represents the level of division be marked.</p>
+<p>The variable <code>#</code> (1-4) represents the level of division being marked.</p>
 </li>
 </ul>
 </div>

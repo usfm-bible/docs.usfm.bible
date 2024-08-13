@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>usfm :: USFM / USX Docs</title>
-    <link rel="canonical" href="https://docs.usfm.bible/usfm-usx-docs/latest/markers/para/usfm.html">
+    <title>id :: USFM / USX Docs</title>
+    <link rel="canonical" href="https://docs.usfm.bible/usfm-usx-docs/latest/markers/doc/id.html">
     <meta name="description" content="Blank line">
     <meta name="generator" content="Antora 3.1.9">
     <link rel="stylesheet" href="../../../../_/css/site.css">
@@ -77,7 +77,22 @@
   <li class="nav-item" data-depth="0">
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="../../doc/index.html">Document Structure</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../doc/id.html">id - Book identification</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../doc/books.html">Book IDs</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../doc/usfm.html">usfm - USFM version</a>
+  </li>
+</ul>
   </li>
 </ul>
   </li>
@@ -119,18 +134,6 @@
     <button class="nav-item-toggle"></button>
     <a class="nav-link" href="../../para/identification/index.html">Identification</a>
 <ul class="nav-list">
-  <li class="nav-item" data-depth="3">
-    <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="../../para/identification/id.html">id - Book identification</a>
-<ul class="nav-list">
-  <li class="nav-item" data-depth="4">
-    <a class="nav-link" href="../../para/identification/books.html">Book IDs</a>
-  </li>
-</ul>
-  </li>
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../../para/identification/usfm.html">usfm - USFM version</a>
-  </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../../para/identification/ide.html">ide - Character encoding</a>
   </li>
@@ -555,6 +558,9 @@
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../../char/tables/tcr.html">tcr# - Table cell - right aligned</a>
   </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../char/tables/tcc.html">tcc# - Table cell - center aligned</a>
+  </li>
 </ul>
   </li>
   <li class="nav-item" data-depth="2">
@@ -796,17 +802,17 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../../index.html">USFM / USX Docs</a></li>
-    <li><a href="usfm.html">usfm</a></li>
+    <li><a href="id.html">id</a></li>
   </ul>
 </nav>
-<div class="edit-this-page"><a href="https://github.com/usfm-bible/tcdocs/edit/main/manual/antora/modules/markers/pages/para/usfm.adoc">Edit this Page</a></div>
+<div class="edit-this-page"><a href="https://github.com/usfm-bible/tcdocs/edit/main/manual/antora/modules/markers/pages/doc/id.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">usfm</h1>
+<h1 class="page">id</h1>
 <div class="sect1">
 <h2 id="_summary"><a class="anchor" href="#_summary"></a>Summary</h2>
 <div class="sectionbody">
@@ -814,41 +820,26 @@
 <dl>
 <dt class="hdlist1">Description</dt>
 <dd>
-<p>USFM/USX version specification. Identifies the USFM/USX version which an editor or processor must support to sucessfully handle markup within the file.</p>
+<p>Scripture book identification.</p>
 </dd>
-</dl>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-<div class="title">USX syntax note</div>
-<div class="paragraph">
-<p>USX represents most USFM <a href="../../para/index.html" class="xref page">paragraph</a> types as a <a href="../../para/index.html" class="xref page">&lt;para&gt;</a> element. In the case of <code>\usfm</code>, the <code>{version}</code> number is related to the <code>{version}</code> attribute value for the USX root element <code>&lt;usx&gt;</code>.</p>
-</div>
-</td>
-</tr>
-</table>
-</div>
-<div class="dlist">
-<dl>
 <dt class="hdlist1"><a href="../../syntax-docs.html#_syntax" class="xref page">Syntax</a></dt>
 <dd>
 <div class="ulist">
 <ul>
 <li>
-<p><strong>USFM:</strong> <code>\usfm </code><mark><em>version</em></mark></p>
+<p><strong>USFM:</strong> <code>\id </code><mark><em>code</em></mark><code> </code><mark><em>content</em></mark></p>
 </li>
 <li>
-<p><strong>USX:</strong> <code>&lt;usx version="</code><mark><em>version</em></mark><code>"&gt;</code></p>
+<p><strong>USX:</strong> <code>&lt;book style="id" </code>@code<code>&gt;</code><mark><em>content</em></mark><code>&lt;/book&gt;</code></p>
 <div class="dlist">
 <dl>
-<dt class="hdlist1"><mark>version</mark></dt>
+<dt class="hdlist1"><mark>code</mark> *</dt>
 <dd>
-<p>USFM/USX version number.</p>
+<p>A standard 3-character scripture <a href="../../doc/books.html" class="xref page">book identifier</a>.</p>
+</dd>
+<dt class="hdlist1"><mark>content</mark></dt>
+<dd>
+<p>Additional description <em>(optional)</em></p>
 </dd>
 </dl>
 </div>
@@ -866,7 +857,7 @@
 </dd>
 <dt class="hdlist1">Added</dt>
 <dd>
-<p>3.0</p>
+<p>1.0</p>
 </dd>
 </dl>
 </div>
@@ -891,26 +882,25 @@
 </ul>
 </div>
 <div id="_tabs_1_usfm--panel" class="tabpanel" aria-labelledby="_tabs_1_usfm">
-<div id="src-usfm-para-usfm_1" class="listingblock">
+<div id="src-usfm-para-id_1" class="listingblock">
 <div class="title">Example 1. Matthew (GNT)</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\id MAT 41MATGNT92.SFM, Good News Translation, June 2003
-\usfm 3.1</code></pre>
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\id MAT 41MATGNT92.SFM, Good News Translation, June 2003</code></pre>
 </div>
 </div>
 </div>
 <div id="_tabs_1_usx--panel" class="tabpanel" aria-labelledby="_tabs_1_usx">
-<div id="src-usx-para-usfm_1" class="listingblock">
+<div id="src-usx-para-id_1" class="listingblock">
 <div class="title">Example 2. Matthew (GNT)</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;usx version="3.1"&gt;
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;usx&gt;
   &lt;book code="MAT" style="id"&gt;41MATGNT92.SFM, Good News Translation, June 2003&lt;/book&gt;
 &lt;/usx&gt;</code></pre>
 </div>
 </div>
 </div>
 <div id="_tabs_1_usj--panel" class="tabpanel" aria-labelledby="_tabs_1_usj">
-<div id="src-usj-para-usfm_1" class="listingblock">
+<div id="src-usj-para-id_1" class="listingblock">
 <div class="title">Example 3. Matthew (GNT)</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
@@ -932,7 +922,7 @@
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="../_images/para/missing.jpg" alt="missing" width="300">
+<img src="../_images/doc/missing.jpg" alt="missing" width="300">
 </div>
 </div>
 </div>
@@ -948,7 +938,7 @@
 </dd>
 <dt class="hdlist1">TextProperties</dt>
 <dd>
-<p>paragraph, nonpublishable, nonvernacular</p>
+<p>paragraph, nonpublishable, nonvernacular, book</p>
 </dd>
 </dl>
 </div>

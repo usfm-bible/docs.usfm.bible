@@ -78,7 +78,22 @@
   <li class="nav-item" data-depth="0">
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="doc/index.html">Document Structure</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="doc/id.html">id - Book identification</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="doc/books.html">Book IDs</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="doc/usfm.html">usfm - USFM version</a>
+  </li>
+</ul>
   </li>
 </ul>
   </li>
@@ -120,18 +135,6 @@
     <button class="nav-item-toggle"></button>
     <a class="nav-link" href="para/identification/index.html">Identification</a>
 <ul class="nav-list">
-  <li class="nav-item" data-depth="3">
-    <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="para/identification/id.html">id - Book identification</a>
-<ul class="nav-list">
-  <li class="nav-item" data-depth="4">
-    <a class="nav-link" href="para/identification/books.html">Book IDs</a>
-  </li>
-</ul>
-  </li>
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="para/identification/usfm.html">usfm - USFM version</a>
-  </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="para/identification/ide.html">ide - Character encoding</a>
   </li>
@@ -556,6 +559,9 @@
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="char/tables/tcr.html">tcr# - Table cell - right aligned</a>
   </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="char/tables/tcc.html">tcc# - Table cell - center aligned</a>
+  </li>
 </ul>
   </li>
   <li class="nav-item" data-depth="2">
@@ -812,7 +818,7 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>There are five general categories of USFM/USX markup:</p>
+<p>There are five general categories of USFM markup:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -836,10 +842,12 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="_usfm"><a class="anchor" href="#_usfm"></a>USFM</h2>
+<h2 id="_markup_expressions"><a class="anchor" href="#_markup_expressions"></a>Markup Expressions</h2>
 <div class="sectionbody">
+<div class="sect2">
+<h3 id="_usfm_usfm_fm"><a class="anchor" href="#_usfm_usfm_fm"></a>USFM (USFM-FM)</h3>
 <div class="paragraph">
-<p>In <strong>USFM</strong>, all markers begin with a backslash character <code>\</code>.</p>
+<p><strong>USFM</strong> is a backslash-based <code>\</code> representation of the USFM data model. In USFM, all markers begin with a backslash character <code>\</code>.</p>
 </div>
 <div class="ulist">
 <ul>
@@ -861,12 +869,10 @@
 </ul>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_usx"><a class="anchor" href="#_usx"></a>USX</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_usx_usfm_xml"><a class="anchor" href="#_usx_usfm_xml"></a>USX (USFM-XML)</h3>
 <div class="paragraph">
-<p><strong>USX</strong> follows the <a href="https://www.w3.org/TR/xml/">standard syntax</a> for XML documents.</p>
+<p><strong>USX</strong> is an <a href="https://www.w3.org/TR/xml/">XML</a> representation of the USFM data model.</p>
 </div>
 <div class="ulist">
 <ul>
@@ -891,10 +897,102 @@
 <p>Different <em>types</em> of paragraph, character, note, or milestones are identified by a <code>style</code> attribute. The <code>style</code> attribute is the value which associates the element with its corresponding USFM marker.</p>
 </div>
 </div>
+<div class="sect2">
+<h3 id="_usj_usfm_json"><a class="anchor" href="#_usj_usfm_json"></a>USJ (USFM-JSON)</h3>
+<div class="paragraph">
+<p><strong>USJ</strong> is a JSON representation of the USFM data model. It is a first-class citizen among the other formats (USFM and USX) and has been added as a target in the test suite maintained by the committee.</p>
+</div>
+<div class="paragraph">
+<p>JSON (JavaScript Object Notation) is a modern data serialization format supported by many software tools and libraries. It is especially convenient to use in JavaScript-based technologies where it is natively supported.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="cv/index.html" class="xref page">Chapters and verses</a> are treated as milestones – denoting only their absolute position and not encapsulating text or other content within them.</p>
+</li>
+<li>
+<p><a href="cv/c.html" class="xref page">Chapter</a> elements are valid at the outermost level – the same level as id and book headers.</p>
+</li>
+<li>
+<p><a href="cv/v.html" class="xref page">Verse</a> elements, like character elements, are valid within paragraph-like parents at the same level as the textual content.</p>
+</li>
+<li>
+<p>The <code>type</code> key has values that refer to the node types in USX. e.g. <a href="para/index.html" class="xref page">para</a>, <a href="char/index.html" class="xref page">char</a>, <a href="doc/id.html" class="xref page">book</a>, <a href="cv/c.html" class="xref page">chapter</a>, <a href="cv/v.html" class="xref page">verse</a>, <a href="ms/index.html" class="xref page">ms</a>.</p>
+</li>
+<li>
+<p>The <code>marker</code> key has values that refer to marker names used in USFM and the style attribute in USX.</p>
+</li>
+<li>
+<p>Every attribute in a USX node becomes a key in the corresponding JSON object.</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "type": "book",
+  "marker": "id",
+  "code": "GEN",
+  "content": []
+},
+{
+  "type": "chapter",
+  "marker": "c",
+  "number": "1",
+  "sid": "GEN 1"
+}</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>All objects may have nested content or textual content in an array for the <code>contents</code> key whose value is an array.</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "type": "para",
+  "marker": "ide",
+  "content": ["UTF-8"]
+},
+{
+  "type": "para",
+  "marker": "usfm",
+  "content": ["3.0"]
+},
+{
+  "type": "para",
+  "marker": "is",
+  "content": [
+    "Introduction"
+    ]
+},
+{
+  "type": "para",
+  "marker": "ip",
+  "content": [
+    {
+      "type": "char",
+      "marker": "bk",
+      "content": [
+        "The Gospel according to Mark"
+          ]
+    },
+    " begins with the statement..."
+  ]
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
 </div>
 <div class="sect1">
-<h2 id="_numbered_markersstyles"><a class="anchor" href="#_numbered_markersstyles"></a>Numbered Markers/Styles</h2>
+<h2 id="_additional_syntax_notes"><a class="anchor" href="#_additional_syntax_notes"></a>Additional Syntax Notes</h2>
 <div class="sectionbody">
+<div class="sect2">
+<h3 id="_numbered_markersstyles"><a class="anchor" href="#_numbered_markersstyles"></a>Numbered Markers/Styles</h3>
 <div class="paragraph">
 <p>Some markers or styles include an optional numeric variable, which is represented in this documentation by a hash character <code>#</code>. The number indicates:</p>
 </div>
@@ -929,10 +1027,8 @@
 </table>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_usfm_endmarkers_in_footnotes_and_cross_references"><a class="anchor" href="#_usfm_endmarkers_in_footnotes_and_cross_references"></a>USFM Endmarkers in Footnotes and Cross References</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="_usfm_endmarkers_in_footnotes_and_cross_references"><a class="anchor" href="#_usfm_endmarkers_in_footnotes_and_cross_references"></a>USFM Endmarkers in Footnotes and Cross References</h3>
 <div class="paragraph">
 <p>Elements which make up <a href="note/footnote/index.html" class="xref page">footnote</a> or <a href="note/crossref/index.html" class="xref page">cross reference</a> content are <a href="char/index.html" class="xref page">character</a> level markers.  <strong>With USFM 3.1</strong>, ending character markers have been made required — except for the markers used to start sections in footnotes and cross references (the note&#8217;s 'structural elements'). The majority of scripture translation projects working with USFM already follow the implicit closure syntax for footnote or cross reference structural markup.</p>
 </div>
@@ -1064,6 +1160,7 @@ Word List.\ft*\f*</code></pre>
   &lt;char style="fk"&gt;The &lt;char style="nd"&gt;Lord&lt;/char&gt;: &lt;/char&gt;
   &lt;char style="ft"&gt;See &lt;char style="nd"&gt;Lord&lt;/char&gt; in Word List.&lt;/char&gt;
 &lt;/note&gt;</code></pre>
+</div>
 </div>
 </div>
 </div>

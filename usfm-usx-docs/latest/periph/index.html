@@ -78,7 +78,22 @@
   <li class="nav-item" data-depth="0">
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="../doc/index.html">Document Structure</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../doc/id.html">id - Book identification</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../doc/books.html">Book IDs</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../doc/usfm.html">usfm - USFM version</a>
+  </li>
+</ul>
   </li>
 </ul>
   </li>
@@ -120,18 +135,6 @@
     <button class="nav-item-toggle"></button>
     <a class="nav-link" href="../para/identification/index.html">Identification</a>
 <ul class="nav-list">
-  <li class="nav-item" data-depth="3">
-    <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="../para/identification/id.html">id - Book identification</a>
-<ul class="nav-list">
-  <li class="nav-item" data-depth="4">
-    <a class="nav-link" href="../para/identification/books.html">Book IDs</a>
-  </li>
-</ul>
-  </li>
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../para/identification/usfm.html">usfm - USFM version</a>
-  </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../para/identification/ide.html">ide - Character encoding</a>
   </li>
@@ -556,6 +559,9 @@
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../char/tables/tcr.html">tcr# - Table cell - right aligned</a>
   </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../char/tables/tcc.html">tcc# - Table cell - center aligned</a>
+  </li>
 </ul>
   </li>
   <li class="nav-item" data-depth="2">
@@ -815,10 +821,10 @@
 <p>Content should be created in separate book files according to the general groupings shown in the list of <a href="books-divs.html" class="xref page">peripheral book and division IDs</a>.</p>
 </div>
 <div class="paragraph">
-<p><strong>In USFM:</strong> An <a href="../para/identification/id.html" class="xref page">id</a> paragraph identifies the overall content of the peripheral file. Within each book, divisions (sub-sections) of content are denoted using a <a href="periph.html" class="xref page">periph</a> marker.</p>
+<p><strong>In USFM:</strong> An <a href="../doc/id.html" class="xref page">id</a> paragraph identifies the overall content of the peripheral file. Within each book, divisions (sub-sections) of content are denoted using a <a href="periph.html" class="xref page">periph</a> marker.</p>
 </div>
 <div class="paragraph">
-<p><strong>In USX:</strong> A <a href="../para/identification/id.html" class="xref page">book</a> element identifies the overall content of the peripheral file. Within each peripheral file, divisions (sub-sections) of content are contained within a <a href="periph.html" class="xref page">periph</a> element.</p>
+<p><strong>In USX:</strong> A <a href="../doc/id.html" class="xref page">book</a> element identifies the overall content of the peripheral file. Within each peripheral file, divisions (sub-sections) of content are contained within a <a href="periph.html" class="xref page">periph</a> element.</p>
 </div>
 <div class="paragraph">
 <p>Content is added to books and divisions using the most appropriate existing USFM/USX <a href="../para/index.html" class="xref page">paragraph</a>, <a href="../char/index.html" class="xref page">character</a>, <a href="../para/tables/index.html" class="xref page">table</a> or <a href="../note/index.html" class="xref page">note</a> markup.</p>
