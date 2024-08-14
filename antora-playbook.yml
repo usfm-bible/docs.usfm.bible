@@ -33,4 +33,4 @@ antora:
   extensions:
     - require: '@antora/lunr-extension'
       snippet_length: 100
-    - '@antora/pdf-extension'
+  #  - '@antora/pdf-extension'

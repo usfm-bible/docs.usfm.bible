@@ -12,10 +12,8 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-      - name: Install ASCIIdoctor-pdf
-        run: npm i asciidoctor-web-pdf
       - name: Install Antora
-        run: npm i antora @antora/lunr-extension @antora/pdf-extension
+        run: npm i antora @antora/lunr-extension
       - name: Generate Site
         run: npx antora antora-playbook.yml
       - name: Publish to GitHub Pages
