@@ -1,14 +1,14 @@
 site:
-  title: USFM-USX-USJ // Docs
+  title: USFM-USX-USJ Documentation
   url: https://docs.usfm.bible
-  start_page: usfm-usx-docs::index.adoc
+  start_page: usfm::index.adoc
   robots: disallow
 git:
   ensure_git_suffix: true
 content:
   sources:
     - url: https://github.com/usfm-bible/tcdocs.git
-      branches: [3.1]
+      branches: [main, 3.1]
       start_path: manual/antora
 output:
   dir: ./build/site
