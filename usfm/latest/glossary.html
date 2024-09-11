@@ -880,7 +880,7 @@
 </dd>
 <dt>TEXTEND</dt>
 <dd>
-<p>Pattern: <code>/(?=</code><mark>${anyws}</mark><code>*\\|$)/</code> Delimits simple text</p>
+<p>Pattern: <code>/(?=</code><mark>${anyws}</mark><code>*\\|//|$)/</code> Delimits simple text</p>
 </dd>
 <dt>ATTRIBTEXTEND</dt>
 <dd>
@@ -900,7 +900,7 @@
 </dd>
 <dt>TEXT</dt>
 <dd>
-<p>Pattern: <code>/([^\\]|\\[/~\\|])+/</code> Matches simple text up to the next marker</p>
+<p>Pattern: <code>/([^\\/]|/(?!/)|\\[/~\\|])+/</code> Matches simple text up to the next marker</p>
 </dd>
 <dt>TEXTNWS</dt>
 <dd>
