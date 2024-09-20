@@ -929,13 +929,18 @@
 <li id="_tabs_1_usx" class="tab">
 <p>USX</p>
 </li>
+<li id="_tabs_1_usj" class="tab">
+<p>USJ</p>
+</li>
 </ul>
 </div>
 <div id="_tabs_1_usfm--panel" class="tabpanel" aria-labelledby="_tabs_1_usfm">
 <div id="src-usfm-char-tcr_1" class="listingblock">
 <div class="title">Example 1. Numbers 2.3-9 (GNT)</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\p
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\id NUM
+\c 2
+\p
 \v 3-9 On the east side, those under the banner of the division of Judah
 shall camp in their groups, under their leaders, as follows:
 \tr \th1 Tribe \th2 Leader \thr3 Number
@@ -950,37 +955,200 @@ shall camp in their groups, under their leaders, as follows:
 <div id="src-usx-char-tcr_1" class="listingblock">
 <div class="title">Example 2. Numbers 2.3-9 (GNT)</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;para style="p"&gt;
-  &lt;verse number="3-9" style="v" sid="NUM 2:3-9"/&gt;On the east side, those under the
-  banner of the division of Judah shall camp in their groups, under their leaders,
-  as follows:&lt;/para&gt;
-&lt;table&gt;
-  &lt;row style="tr"&gt;
-    &lt;cell style="th1" align="start"&gt;Tribe &lt;/cell&gt;
-    &lt;cell style="th2" align="start"&gt;Leader &lt;/cell&gt;
-    &lt;cell style="thr3" align="end"&gt;Number&lt;/cell&gt;
-  &lt;/row&gt;
-  &lt;row style="tr"&gt;
-    &lt;cell style="tc1" align="start"&gt;Judah &lt;/cell&gt;
-    &lt;cell style="tc2" align="start"&gt;Nahshon son of Amminadab &lt;/cell&gt;
-    &lt;cell style="tcr3" align="end"&gt;74,600&lt;/cell&gt;
-  &lt;/row&gt;
-  &lt;row style="tr"&gt;
-    &lt;cell style="tc1" align="start"&gt;Issachar &lt;/cell&gt;
-    &lt;cell style="tc2" align="start"&gt;Nethanel son of Zuar &lt;/cell&gt;
-    &lt;cell style="tcr3" align="end"&gt;54,400&lt;/cell&gt;
-  &lt;/row&gt;
-  &lt;row style="tr"&gt;
-    &lt;cell style="tc1" align="start"&gt;Zebulun &lt;/cell&gt;
-    &lt;cell style="tc2" align="start"&gt;Eliab son of Helon &lt;/cell&gt;
-    &lt;cell style="tcr3" align="end"&gt;57,400&lt;/cell&gt;
-  &lt;/row&gt;
-  &lt;row style="tr"&gt;
-    &lt;cell style="tcr1" align="end" colspan="2"&gt;Total: &lt;/cell&gt;
-    &lt;cell style="tcr3" align="end"&gt;186,400&lt;/cell&gt;
-  &lt;/row&gt;
-  ...
-&lt;/table&gt;</code></pre>
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;usx version="3.1"&gt;
+  &lt;book code="NUM" style="id"/&gt;
+  &lt;chapter number="2" style="c" sid="NUM 2"/&gt;
+  &lt;para style="p"&gt;
+    &lt;verse number="3-9" style="v" sid="NUM 2:3-9"/&gt;On the east side, those under the
+    banner of the division of Judah shall camp in their groups, under their leaders,
+    as follows:&lt;/para&gt;
+  &lt;table&gt;
+    &lt;row style="tr"&gt;
+      &lt;cell style="th1" align="start"&gt;Tribe &lt;/cell&gt;
+      &lt;cell style="th2" align="start"&gt;Leader &lt;/cell&gt;
+      &lt;cell style="thr3" align="end"&gt;Number&lt;/cell&gt;
+    &lt;/row&gt;
+    &lt;row style="tr"&gt;
+      &lt;cell style="tc1" align="start"&gt;Judah &lt;/cell&gt;
+      &lt;cell style="tc2" align="start"&gt;Nahshon son of Amminadab &lt;/cell&gt;
+      &lt;cell style="tcr3" align="end"&gt;74,600&lt;/cell&gt;
+    &lt;/row&gt;
+    &lt;row style="tr"&gt;
+      &lt;cell style="tc1" align="start"&gt;Issachar &lt;/cell&gt;
+      &lt;cell style="tc2" align="start"&gt;Nethanel son of Zuar &lt;/cell&gt;
+      &lt;cell style="tcr3" align="end"&gt;54,400&lt;/cell&gt;
+    &lt;/row&gt;
+    &lt;row style="tr"&gt;
+      &lt;cell style="tc1" align="start"&gt;Zebulun &lt;/cell&gt;
+      &lt;cell style="tc2" align="start"&gt;Eliab son of Helon &lt;/cell&gt;
+      &lt;cell style="tcr3" align="end"&gt;57,400&lt;/cell&gt;
+    &lt;/row&gt;
+    &lt;row style="tr"&gt;
+      &lt;cell style="tcr1" align="end" colspan="2"&gt;Total: &lt;/cell&gt;
+      &lt;cell style="tcr3" align="end"&gt;186,400&lt;/cell&gt;
+    &lt;/row&gt;
+    ...
+  &lt;/table&gt;
+&lt;/usx&gt;</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_1_usj--panel" class="tabpanel" aria-labelledby="_tabs_1_usj">
+<div id="src-usj-char-tcr_1" class="listingblock">
+<div class="title">Example 3. Numbers 2.3-9 (GNT)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "type": "USJ",
+  "version": "3.1",
+  "content": [
+    {
+      "type": "book",
+      "marker": "id",
+      "code": "NUM",
+      "content": []
+    },
+    {
+      "type": "chapter",
+      "marker": "c",
+      "number": "2",
+      "sid": "NUM 2"
+    },
+    {
+      "type": "para",
+      "marker": "p",
+      "content": [
+        {
+          "type": "verse",
+          "marker": "v",
+          "number": "3-9",
+          "sid": "NUM 2:3-9"
+        },
+        "On the east side, those under the banner of the division of Judah shall camp in their groups, under their leaders, as follows:"
+      ]
+    },
+    {
+      "type": "table",
+      "content": [
+        {
+          "type": "table:row",
+          "marker": "tr",
+          "content": [
+            {
+              "type": "table:cell",
+              "marker": "th1",
+              "align": "start",
+              "content": ["Tribe "]
+            },
+            {
+              "type": "table:cell",
+              "marker": "th2",
+              "align": "start",
+              "content": ["Leader "]
+            },
+            {
+              "type": "table:cell",
+              "marker": "thr3",
+              "align": "end",
+              "content": ["Number"]
+            }
+          ]
+        },
+        {
+          "type": "table:row",
+          "marker": "tr",
+          "content": [
+            {
+              "type": "table:cell",
+              "marker": "tc1",
+              "align": "start",
+              "content": ["Judah "]
+            },
+            {
+              "type": "table:cell",
+              "marker": "tc2",
+              "align": "start",
+              "content": ["Nahshon son of Amminadab "]
+            },
+            {
+              "type": "table:cell",
+              "marker": "tcr3",
+              "align": "end",
+              "content": ["74,600"]
+            }
+          ]
+        },
+        {
+          "type": "table:row",
+          "marker": "tr",
+          "content": [
+            {
+              "type": "table:cell",
+              "marker": "tc1",
+              "align": "start",
+              "content": ["Issachar "]
+            },
+            {
+              "type": "table:cell",
+              "marker": "tc2",
+              "align": "start",
+              "content": ["Nethanel son of Zuar "]
+            },
+            {
+              "type": "table:cell",
+              "marker": "tcr3",
+              "align": "end",
+              "content": ["54,400"]
+            }
+          ]
+        },
+        {
+          "type": "table:row",
+          "marker": "tr",
+          "content": [
+            {
+              "type": "table:cell",
+              "marker": "tc1",
+              "align": "start",
+              "content": ["Zebulun "]
+            },
+            {
+              "type": "table:cell",
+              "marker": "tc2",
+              "align": "start",
+              "content": ["Eliab son of Helon "]
+            },
+            {
+              "type": "table:cell",
+              "marker": "tcr3",
+              "align": "end",
+              "content": ["57,400"]
+            }
+          ]
+        },
+        {
+          "type": "table:row",
+          "marker": "tr",
+          "content": [
+            {
+              "type": "table:cell",
+              "marker": "tcr1",
+              "align": "end",
+              "colspan": "2",
+              "content": ["Total: "]
+            },
+            {
+              "type": "table:cell",
+              "marker": "tcr3",
+              "align": "end",
+              "content": ["186,400"]
+            }
+          ]
+        },
+        " ... "
+      ]
+    }
+  ]
+}</code></pre>
 </div>
 </div>
 </div>
