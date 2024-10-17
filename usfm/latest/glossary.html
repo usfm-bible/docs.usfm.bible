@@ -789,6 +789,9 @@
         <li class="version is-current">
           <a href="index.html">latest</a>
         </li>
+        <li class="version">
+          <a href="../3.1.1/index.html">3.1.1</a>
+        </li>
         <li class="version is-latest">
           <a href="../3.1/index.html">3.1</a>
         </li>
@@ -814,6 +817,7 @@
   <button class="version-menu-toggle" title="Show other versions of page">latest</button>
   <div class="version-menu">
     <a class="version is-current" href="glossary.html">latest</a>
+    <a class="version" href="../3.1.1/glossary.html">3.1.1</a>
     <a class="version" href="../3.1/glossary.html">3.1</a>
   </div>
 </div>
@@ -896,11 +900,11 @@
 </dd>
 <dt>ATTRIBNAME</dt>
 <dd>
-<p>Pattern: <code>/[a-zA-Z0-9\-_]+?/</code> Matches an attribute name</p>
+<p>Pattern: <code>/[a-zA-Z_][a-zA-Z0-9\-_]*?/</code> Matches an attribute name</p>
 </dd>
 <dt>TEXT</dt>
 <dd>
-<p>Pattern: <code>/([^\\/]|/(?!/)|\\[/~\\|])+/</code> Matches simple text up to the next marker</p>
+<p>Pattern: <code>/([^\\/]|/(?!/)|\\[/~\\|])+?/</code> Matches simple text up to the next marker</p>
 </dd>
 <dt>TEXTNWS</dt>
 <dd>
