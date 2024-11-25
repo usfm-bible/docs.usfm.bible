@@ -877,13 +877,17 @@
 <li id="_tabs_1_usx" class="tab">
 <p>USX</p>
 </li>
+<li id="_tabs_1_usj" class="tab">
+<p>USJ</p>
+</li>
 </ul>
 </div>
 <div id="_tabs_1_usfm--panel" class="tabpanel" aria-labelledby="_tabs_1_usfm">
 <div id="src-usfm-char-optbreak_1" class="listingblock">
 <div class="title">Example 1. Matthew 9.1 (GNT)</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\c 9
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\id MAT
+\c 9
 \s1 Jesus Heals a Man // Who Could Not Walk
 \r (Mark 2.1-12; Luke 5.17-26)</code></pre>
 </div>
@@ -893,9 +897,68 @@
 <div id="src-usx-char-optbreak_1" class="listingblock">
 <div class="title">Example 2. Matthew 9.1 (GNT)</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;chapter number="9" style="c" sid="MAT 9"/&gt;
-&lt;para style="s1"&gt;Jesus Heals a Man &lt;optbreak/&gt; Who Could Not Walk&lt;/para&gt;
-&lt;para style="r"&gt;(Mark 2.1-12; Luke 5.17-26)&lt;/para&gt;</code></pre>
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;usx version="3.1"&gt;
+  &lt;book code="MAT" style="id"/&gt;
+  &lt;chapter number="9" style="c" sid="MAT 9"/&gt;
+  &lt;para style="s1"&gt;Jesus Heals a Man &lt;optbreak/&gt; Who Could Not Walk&lt;/para&gt;
+  &lt;para style="r"&gt;(&lt;ref loc="MRK 2:1-12"&gt;Mark 2.1-12&lt;/ref&gt;; &lt;ref
+      loc="LUK 5:17-26"&gt;Luke 5.17-26&lt;/ref&gt;)&lt;/para&gt;
+&lt;/usx&gt;</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_1_usj--panel" class="tabpanel" aria-labelledby="_tabs_1_usj">
+<div id="src-usj-char-optbreak_1" class="listingblock">
+<div class="title">Example 3. Matthew 9.1 (GNT)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "type": "USJ",
+  "version": "3.1",
+  "content": [
+    {
+      "type": "book",
+      "marker": "id",
+      "code": "MAT",
+      "content": []
+    },
+    {
+      "type": "chapter",
+      "marker": "c",
+      "number": "9",
+      "sid": "MAT 9"
+    },
+    {
+      "type": "para",
+      "marker": "s1",
+      "content": [
+        "Jesus Heals a Man ",
+        {
+          "type": "optbreak"
+        },
+        " Who Could Not Walk"
+      ]
+    },
+    {
+      "type": "para",
+      "marker": "r",
+      "content": [
+        "(",
+        {
+          "type": "ref",
+          "loc": "MRK 2:1-12",
+          "content": ["Mark 2.1-12"]
+        },
+        "; ",
+        {
+          "type": "ref",
+          "loc": "LUK 5:17-26",
+          "content": ["Luke 5.17-26"]
+        },
+        ")"
+      ]
+    }
+  ]
+}</code></pre>
 </div>
 </div>
 </div>

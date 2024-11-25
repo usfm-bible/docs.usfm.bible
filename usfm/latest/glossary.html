@@ -896,7 +896,7 @@
 </dd>
 <dt>ATTRIBALL</dt>
 <dd>
-<p>Pattern: <code>/(?:[^\\=]|\\=)+(?=\\)/</code> Matches a default attribute value string</p>
+<p>Pattern: <code>/(?:[^\\=|]|\\[\\=|~/])+(?=\\)/</code> Matches a default attribute value string</p>
 </dd>
 <dt>ATTRIBNAME</dt>
 <dd>
@@ -917,6 +917,10 @@
 <dt>TEXTNOTATTRIBOPT</dt>
 <dd>
 <p>Pattern: <code>/(?:[^\\|]|\\[\\~/|])*/</code> Matches simple text up to the start of a sequence of attributes delimited by | if present</p>
+</dd>
+<dt>IGNORELINE</dt>
+<dd>
+<p>Pattern: <code>/[^\r\n]*/</code> Matches anything up to the end of the line. Used for ignoring everything up to the end of a line</p>
 </dd>
 <dt>PIPE</dt>
 <dd>
