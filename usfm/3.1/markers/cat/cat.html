@@ -1,0 +1,1510 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>cat :: USFM-USX-USJ Documentation</title>
+    <link rel="canonical" href="https://docs.usfm.bible/usfm/3.1/markers/cat/cat.html">
+    <meta name="description" content="Note Category">
+    <meta name="generator" content="Antora 3.1.10">
+    <link rel="stylesheet" href="../../../../_/css/site.css">
+<link rel="stylesheet" href="../../../../_/css/site-extra.css">
+<link rel="stylesheet" href="../../../../_/css/vendor/tabs.css">
+<link rel="stylesheet" href="../../../../_/css/vendor/medium-zoom.css">
+<script src="../../../../_/js/vendor/medium-zoom.min.js"></script>  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://docs.usfm.bible">USFM-USX-USJ Documentation</a>
+      <div class="navbar-item search hide-for-print">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search the docs">
+        </div>
+      </div>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="https://github.com/usfm-bible" target="_blank" title="Go to the USFM/USX project on Github">
+          <span class="gitlink"> </span>
+        </a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="usfm" data-version="3.1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../../index.html">USFM-USX-USJ</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../release-notes.html">Release Notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../introduction.html">Introduction</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../syntax.html">General Markup Syntax</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../extensions.html">User Extensions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../whitespace.html">Whitespace</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../syntax-docs.html">Documentation Syntax</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../glossary.html">Glossary of Terms</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../doc/index.html">Document Structure</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../doc/id.html">id - Book identification</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../doc/books.html">Book IDs</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../doc/usfm.html">usfm - USFM version</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../cv/index.html">Chapters and Verses</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cv/c.html">c - Chapter number</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cv/ca.html">ca - Alternate chapter number</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cv/cp.html">cp - Published chapter number</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cv/v.html">v - Verse number</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cv/va.html">va - Alternate verse number</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cv/vp.html">vp - Published verse number</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../para/index.html">Paragraphs</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../para/identification/index.html">Identification</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../para/identification/ide.html">ide - Character encoding</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../para/identification/sts.html">sts - Text status</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../para/identification/rem.html">rem - Remarks</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../para/identification/h.html">h - Running header text</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../para/identification/toc.html">toc# - Book name texts</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../para/identification/toca.html">toca# - Alternate book name texts</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../para/introductions/index.html">Introductions</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../para/introductions/imt.html">imt# - Intro major title</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../para/introductions/is.html">is# - Intro section heading</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../para/introductions/ip.html">ip - Intro paragraph</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../para/introductions/ipi.html">ipi - Intro indented</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../para/introductions/im.html">im - Intro margin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../para/introductions/imi.html">imi - Intro indented margin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../para/introductions/ipq.html">ipq - Intro quote</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../para/introductions/imq.html">imq - Intro quote margin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../para/introductions/ipr.html">ipr - Intro right-aligned</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../para/introductions/iq.html">iq# - Intro poetic line</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../para/introductions/ili.html">ili# - Intro list entry</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../para/introductions/ib.html">ib - Intro blank line</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../para/introductions/iot.html">iot - Intro outline title</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../para/introductions/io.html">io# - Intro outline entry</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../para/introductions/iex.html">iex - Intro bridge text</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../para/introductions/imte.html">imte - Intro major title end</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../para/introductions/ie.html">ie - Intro end</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../para/titles-sections/index.html">Titles and Sections</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../para/titles-sections/mt.html">mt# - Main title</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../para/titles-sections/mte.html">mte# - Main title</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../para/titles-sections/cl.html">cl - Chapter label</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../para/titles-sections/cd.html">cd - Chapter description</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../para/titles-sections/ms.html">ms# - Major section heading</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../para/titles-sections/mr.html">mr - Major section range</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../para/titles-sections/s.html">s# - Section heading</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../para/titles-sections/sr.html">sr - Section range</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../para/titles-sections/r.html">r - Parallel references</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../para/titles-sections/d.html">d - Descriptive title</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../para/titles-sections/sp.html">sp - Speaker identification</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../para/titles-sections/sd.html">sd# - Semantic division</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../para/paragraphs/index.html">Body Paragraphs</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../para/paragraphs/p.html">p - Paragraph</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../para/paragraphs/m.html">m - Continuation (margin)</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../para/paragraphs/po.html">po - Letter opening</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../para/paragraphs/cls.html">cls - Letter closing</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../para/paragraphs/pr.html">pr - Right-aligned</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../para/paragraphs/pc.html">pc - Centered</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../para/paragraphs/pm.html">pm - Embedded paragraph</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../para/paragraphs/pmo.html">pmo -Embedded opening</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../para/paragraphs/pmc.html">pmc - Embedded closing</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../para/paragraphs/pmr.html">pmr - Embedded refrain</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../para/paragraphs/pi.html">pi# - Indented</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../para/paragraphs/mi.html">mi - Indented continuation</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../para/paragraphs/lit.html">lit - Liturgical note</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../para/paragraphs/nb.html">nb - No break</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../para/paragraphs/b.html">b - Blank line</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text"><em>Deprecated</em></span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../para/paragraphs/ph.html">ph - Indented hanging</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../para/poetry/index.html">Poetry</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../para/poetry/q.html">q# - Poetic line</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../para/poetry/qr.html">qr - Right-aligned</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../para/poetry/qc.html">qc - Centered</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../para/poetry/qa.html">qa - Acrostic heading</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../para/poetry/qm.html">qm# - Embedded poetic line</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../para/poetry/qd.html">qd - Hebrew note</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../para/poetry/b.html">b - Blank line</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../para/lists/index.html">Lists</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../para/lists/lh.html">lh - List header</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../para/lists/li.html">li# - List entry</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../para/lists/lf.html">lf - List footer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../para/lists/lim.html">lim# - Embedded list entry</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../para/tables/index.html">Tables</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../para/tables/tr.html">tr - Table row</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../char/index.html">Characters</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../char/attributes.html">Attributes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../char/nesting.html">Nesting</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../char/features/index.html">Text Features</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../char/features/add.html">add - Translator addition</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../char/features/bk.html">bk - Quoted book title</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../char/features/dc.html">dc - DC-only content</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../char/features/em.html">em - Emphasis text</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../char/features/jmp.html">jmp - Link text</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../char/features/k.html">k - Keyword/keyterm</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../char/features/nd.html">nd - Name of God</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../char/features/ord.html">ord - Ordinal ending</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../char/features/pn.html">pn - Proper name</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../char/features/png.html">png - Geographic name</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../char/features/qt.html">qt - Quoted text</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../char/features/rb.html">rb - Ruby gloss</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../char/features/rq.html">rq - Inline quotation refs</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../char/features/ref.html">ref - Scripture reference</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../char/features/sig.html">sig - Author&#8217;s signature</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../char/features/sls.html">sls - Secondary source</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../char/features/tl.html">tl - Transliterated words</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../char/features/w.html">w - Wordlist entry</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../char/features/wa.html">wa - Aramaic wordlist entry</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../char/features/wg.html">wg - Greek wordlist entry</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../char/features/wh.html">wh - Hebrew wordlist entry</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../char/features/wj.html">wj - Words of Jesus</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text"><em>Deprecated</em></span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../char/features/addpn.html">addpn - Addition + name</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../char/features/pro.html">pro - Pronunciation annotation</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../char/format/index.html">Text Formatting</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../char/format/bd.html">bd - Bold text</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../char/format/it.html">it - Italic text</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../char/format/bdit.html">bdit - Bold+italic text</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../char/format/no.html">no - Normal text</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../char/format/sc.html">sc - Smallcap text</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../char/format/sup.html">sup - Superscript text</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../char/breaks/index.html">Breaks</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../char/breaks/optbreak.html">// - Optional line break</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../char/breaks/pb.html">pb - Page break</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../char/introductions/index.html">Introductions</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../char/introductions/ior.html">ior - Intro outline refs</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../char/introductions/iqt.html">iqt - Intro quoted text</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../char/poetry/index.html">Poetry</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../char/poetry/qac.html">qac - Acrostic character</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../char/poetry/qs.html">qs - Selah</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../char/lists/index.html">Lists</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../char/lists/litl.html">litl - Entry total</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../char/lists/lik.html">lik - Entry key</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../char/lists/liv.html">liv - Entry value(s)</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../char/tables/index.html">Tables</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../char/tables/th.html">th# - Table column head</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../char/tables/thr.html">thr# - Table column head - right aligned</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../char/tables/tc.html">tc# - Table cell</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../char/tables/tcr.html">tcr# - Table cell - right aligned</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../char/tables/tcc.html">tcc# - Table cell - center aligned</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../char/notes/index.html">Notes</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../char/notes/footnote/index.html">Footnotes</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../char/notes/footnote/fr.html">fr - Origin reference</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../char/notes/footnote/fq.html">fq - Translation quote</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../char/notes/footnote/fqa.html">fqa - Alternate translation</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../char/notes/footnote/fk.html">fk - Keyword</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../char/notes/footnote/ft.html">ft - Note text</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../char/notes/footnote/fl.html">fl - Label text</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../char/notes/footnote/fw.html">fw - Witness list</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../char/notes/footnote/fp.html">fp - Additional paragraph</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../char/notes/footnote/fv.html">fv - Verse number</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../char/notes/footnote/fdc.html">fdc - DC-only content</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../char/notes/footnote/fm.html">fm - Reference mark</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../char/notes/crossref/index.html">Cross References</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../char/notes/crossref/xo.html">xo - Origin reference</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../char/notes/crossref/xop.html">xop - Published origin text</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../char/notes/crossref/xk.html">xk - Keyword</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../char/notes/crossref/xq.html">xq - Translation quote</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../char/notes/crossref/xt.html">xt - Target references</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../char/notes/crossref/xta.html">xta - Target added text</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../char/notes/crossref/xot.html">xot - OT references</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../char/notes/crossref/xnt.html">xnt - NT references</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../char/notes/crossref/xdc.html">xdc - DC references</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../ms/index.html">Milestones</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../ms/qt.html">qt# - Quotations</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../ms/ts.html">ts - Translator&#8217;s section</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../note/index.html">Notes</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../note/footnote/index.html">Footnotes</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../note/footnote/f.html">f - Footnote</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../note/footnote/fe.html">fe - Endnote</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../note/footnote/ef.html">ef - Extended Note</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../note/crossref/index.html">Cross References</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../note/crossref/x.html">x - Cross Reference</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../note/crossref/ex.html">ex - Extended CrossRef</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../sbar/index.html">Sidebars</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../sbar/esb.html">esb - Sidebar</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../cat/index.html">Content Category</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../cat/cat.html">cat - Content Category</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../fig/index.html">Figures</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../fig/fig.html">fig - Figure</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../periph/index.html">Peripherals</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../periph/periph.html">periph - Peripheral division</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../periph/books-divs.html">Books and Divisions</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../periph/book-frt.html">Front Matter</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../periph/book-int.html">Introductions</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../periph/book-bak.html">Back Matter</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Back Matter (Standalone)</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../periph/book-cnc.html">Concordance</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../periph/book-glo.html">Glossary</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../periph/book-tdx.html">Topical Index</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../periph/book-ndx.html">Names Index</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../periph/book-oth.html">Other</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">USFM-USX-USJ</span>
+    <span class="version">3.1</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <div class="title"><a href="../../index.html">USFM-USX-USJ</a></div>
+      <ul class="versions">
+        <li class="version">
+          <a href="../../../latest/index.html">latest</a>
+        </li>
+        <li class="version">
+          <a href="../../../3.1.1/index.html">3.1.1</a>
+        </li>
+        <li class="version is-current is-latest">
+          <a href="../../index.html">3.1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">USFM-USX-USJ</a></li>
+    <li><a href="cat.html">cat</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">3.1</button>
+  <div class="version-menu">
+    <a class="version" href="../../../latest/markers/cat/cat.html">latest</a>
+    <a class="version" href="../../../3.1.1/markers/cat/cat.html">3.1.1</a>
+    <a class="version is-current" href="cat.html">3.1</a>
+  </div>
+</div>
+<div class="edit-this-page"><a href="https://github.com/usfm-bible/tcdocs/edit/3.1/manual/antora/modules/markers/pages/cat/cat.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">cat</h1>
+<div class="sect1">
+<h2 id="_summary"><a class="anchor" href="#_summary"></a>Summary</h2>
+<div class="sectionbody">
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Description</dt>
+<dd>
+<p>Note Category.</p>
+</dd>
+<dt class="hdlist1"><a href="../../syntax-docs.html#_syntax" class="xref page">Syntax <span class="image"><img src="../../_images/help.svg" alt="help"></span></a></dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>USFM:</strong> <code>\cat </code><mark><em>category</em></mark><code>\cat*</code></p>
+</li>
+<li>
+<p><strong>USX:</strong> <mark><em>category</em></mark> is expressed as an attribute applied to a <code>[<a href="../../note/footnote/index.html" class="xref page">Footnote</a>]</code>, <code>[<a href="../../note/crossref/index.html" class="xref page">CrossReference</a>]</code>, <code>[<a href="../../sbar/index.html" class="xref page">Sidebar</a>]</code> element.<br>
+<code>&lt;note caller="-" style="ef" </code><mark><em>@category</em></mark><code>&gt;</code><mark><em>content</em></mark><code>&lt;/note&gt;</code><br>
+<code>&lt;sidebar style="esb" </code><mark><em>@category</em></mark><code>&gt;</code><mark><em>content</em></mark><code>&lt;/sidebar&gt;</code></p>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><mark>category</mark></dt>
+<dd>
+<p>A single category term, or a space separated list of categories. Each category is a single word (e.g. "people"), and may be single character (e.g. "1").</p>
+</dd>
+</dl>
+</div>
+</li>
+</ul>
+</div>
+</dd>
+<dt class="hdlist1">Valid In</dt>
+<dd>
+<p><code>[<a href="../../note/footnote/index.html" class="xref page">Footnote</a>]</code>, <code>[<a href="../../note/crossref/index.html" class="xref page">CrossReference</a>]</code>, <code>[<a href="../../sbar/index.html" class="xref page">Sidebar</a>]</code></p>
+</dd>
+<dt class="hdlist1">Added</dt>
+<dd>
+<p>2.1</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_diagrams"><a class="anchor" href="#_diagrams"></a>Diagrams</h2>
+<div class="sectionbody">
+<div id="_tabs_1" class="openblock tabs is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_1_usfm" class="tab">
+<p>USFM</p>
+</li>
+<li id="_tabs_1_usx" class="tab">
+<p>USX</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_1_usfm--panel" class="tabpanel" aria-labelledby="_tabs_1_usfm">
+<div class="imageblock">
+<div class="content">
+<img src="../_images/schema/cat_rail.svg" alt="cat rail">
+</div>
+</div>
+</div>
+<div id="_tabs_1_usx--panel" class="tabpanel" aria-labelledby="_tabs_1_usx">
+<div class="imageblock">
+<div class="content">
+<img src="../_images/schema/cat_usx.svg" alt="cat usx">
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_examples"><a class="anchor" href="#_examples"></a>Examples</h2>
+<div class="sectionbody">
+<div id="_tabs_2" class="openblock tabs is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_2_usfm" class="tab">
+<p>USFM</p>
+</li>
+<li id="_tabs_2_usx" class="tab">
+<p>USX</p>
+</li>
+<li id="_tabs_2_usj" class="tab">
+<p>USJ</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_2_usfm--panel" class="tabpanel" aria-labelledby="_tabs_2_usfm">
+<div id="src-usfm-cat_1" class="listingblock">
+<div class="title">Example 1. Category in extended footnotes - Matthew 1.2-11 (GNTUK Study Bible)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\id MAT
+\c 1
+\p
+\v 1 This is the list of the ancestors of Jesus Christ, a descendant of David,
+who was a descendant of Abraham.
+\p
+\v 2-6a From Abraham to King David, the following ancestors are listed: Abraham,
+Isaac, Jacob, Judah and his brothers; then Perez and Zerah (their mother was Tamar
+\ef - \cat People\cat*\fr 1.2-6a: \fq Tamar: \ft Bore her twin sons out of wedlock
+(Gen 38.6-30).\ef*), Hezron, Ram, Amminadab, Nahshon, Salmon, Boaz (his mother was
+Rahab\ef - \cat People\cat*\fr 1.2-6a: \fq Rahab: \ft A prostitute in Jericho
+(Josh 2.1-21; 6.17-25; Jas 2.25).\ef*), Obed (his mother was Ruth\ef -
+\cat People\cat*\fr 1.2-6a: \fq Ruth: \ft A Moabite (Ruth 1.4). Only outstanding
+women were normally included in Jewish genealogical lists.\ef*), Jesse, and
+King David.
+\p
+\v 6b-11 From David to the time when the people of Israel were taken into exile in
+Babylon\ef - \fr 1.6b-11: \fq exile in Babylon: \ft In 597 \sc BC\sc* King
+Nebuchadnezzar of Babylonia conquered Jerusalem and took many of its inhabitants as
+prisoners to his country (2 Kgs 24.10-16; 2 Chr 36.9-10).\ef*, the following
+ancestors are listed: ...</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_2_usx--panel" class="tabpanel" aria-labelledby="_tabs_2_usx">
+<div id="src-usx-cat_1" class="listingblock">
+<div class="title">Example 2. Category in sidebars - Matthew 1.2-11 (GNTUK Study Bible)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;usx version="3.0"&gt;
+  &lt;book code="MAT" style="id"/&gt;
+  &lt;chapter number="1" style="c" sid="MAT 1"/&gt;
+  &lt;para style="p"&gt;
+    &lt;verse number="1" style="v" sid="MAT 1:1"/&gt;This is the list of the
+    ancestors of Jesus Christ, a descendant of David, who was a descendant
+    of Abraham.&lt;verse eid="MAT 2:1"/&gt;&lt;/para&gt;
+  &lt;para style="p"&gt;
+    &lt;verse number="2-6a" style="v" sid="MAT 1:2-6a"/&gt;From Abraham to King David,
+    the following ancestors are listed: Abraham, Isaac, Jacob, Judah and his
+    brothers; then Perez and Zerah (their mother was
+    Tamar&lt;note caller="-" style="ef" category="People"&gt;
+      &lt;char style="fr" closed="false"&gt;1.2-6a: &lt;/char&gt;
+      &lt;char style="fq" closed="false"&gt;Tamar: &lt;/char&gt;
+      &lt;char style="ft" closed="false"&gt;Bore her twin sons out of wedlock
+      (Gen 38.6-30).&lt;/char&gt;&lt;/note&gt;), Hezron, Ram, Amminadab, Nahshon, Salmon,
+    Boaz (his mother was Rahab&lt;note caller="-" style="ef" category="People"&gt;
+      &lt;char style="fr" closed="false"&gt;1.2-6a: &lt;/char&gt;
+      &lt;char style="fq" closed="false"&gt;Rahab: &lt;/char&gt;
+      &lt;char style="ft" closed="false"&gt;A prostitute in Jericho (Josh 2.1-21;
+    6.17-25; Jas 2.25).&lt;/char&gt;&lt;/note&gt;), Obed (his mother was
+    Ruth&lt;note caller="-" style="ef" category="People"&gt;
+      &lt;char style="fr" closed="false"&gt;1.2-6a: &lt;/char&gt;
+      &lt;char style="fq" closed="false"&gt;Ruth: &lt;/char&gt;
+      &lt;char style="ft" closed="false"&gt;A Moabite (Ruth 1.4). Only outstanding
+    women were normally included in Jewish genealogical lists.&lt;/char&gt;&lt;/note&gt;),
+    Jesse, and King David.&lt;verse eid="MAT 1:2-6a"/&gt;&lt;/para&gt;
+  &lt;para style="p"&gt;
+    &lt;verse number="6b-11" style="v" sid="MAT 1:6b-11"/&gt;From David to the
+    time when the people of Israel were taken into exile in
+    Babylon&lt;note caller="-" style="ef"&gt;&lt;char style="fr" closed="false"&gt;1.6b-11:
+    &lt;/char&gt;&lt;char style="fq" closed="false"&gt;exile in Babylon:
+    &lt;/char&gt;&lt;char style="ft" closed="false"&gt;In 597
+    &lt;/char&gt;&lt;char style="sc"&gt;BC&lt;/char&gt; King Nebuchadnezzar of Babylonia conquered
+    Jerusalem and took many of its inhabitants as prisoners to his country (2 Kgs
+    24.10-16; 2 Chr 36.9-10).&lt;/note&gt;, the following ancestors are listed:
+    ...&lt;verse eid="MAT 1:6b-11"/&gt;&lt;/para&gt;
+  &lt;chapter eid="MAT 1"/&gt;
+&lt;/usx&gt;</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_2_usj--panel" class="tabpanel" aria-labelledby="_tabs_2_usj">
+<div id="src-usj-cat_1" class="listingblock">
+<div class="title">Example 3. Category in sidebars - Matthew 1.2-11 (GNTUK Study Bible)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "type": "USJ",
+  "version": "3.1",
+  "content": [
+    {
+      "type": "book",
+      "marker": "id",
+      "code": "MAT",
+      "content": []
+    },
+    {
+      "type": "chapter",
+      "marker": "c",
+      "number": "1",
+      "sid": "MAT 1"
+    },
+    {
+      "type": "para",
+      "marker": "p",
+      "content": [
+        {
+          "type": "verse",
+          "marker": "v",
+          "number": "1",
+          "sid": "MAT 1:1"
+        },
+        "This is the list of the ancestors of Jesus Christ, a descendant of David, who was a descendant of Abraham."
+      ]
+    },
+    {
+      "type": "para",
+      "marker": "p",
+      "content": [
+        {
+          "type": "verse",
+          "marker": "v",
+          "number": "2-6a",
+          "sid": "MAT 1:2-6a"
+        },
+        "From Abraham to King David, the following ancestors are listed: Abraham, Isaac, Jacob, Judah and his brothers; then Perez and Zerah (their mother was Tamar",
+        {
+          "type": "note",
+          "marker": "ef",
+          "caller": "-",
+          "category": "People",
+          "content": [
+            {
+              "type": "char",
+              "marker": "fr",
+              "content": ["1.2-6a: "]
+            },
+            {
+              "type": "char",
+              "marker": "fq",
+              "content": ["Tamar: "]
+            },
+            {
+              "type": "char",
+              "marker": "ft",
+              "content": ["Bore her twin sons out of wedlock (Gen 38.6-30)."]
+            }
+          ]
+        },
+        "), Hezron, Ram, Amminadab, Nahshon, Salmon, Boaz (his mother was Rahab",
+        {
+          "type": "note",
+          "marker": "ef",
+          "caller": "-",
+          "category": "People",
+          "content": [
+            {
+              "type": "char",
+              "marker": "fr",
+              "content": ["1.2-6a: "]
+            },
+            {
+              "type": "char",
+              "marker": "fq",
+              "content": ["Rahab: "]
+            },
+            {
+              "type": "char",
+              "marker": "ft",
+              "content": [
+                "A prostitute in Jericho (Josh 2.1-21; 6.17-25; Jas 2.25)."
+              ]
+            }
+          ]
+        },
+        "), Obed (his mother was Ruth",
+        {
+          "type": "note",
+          "marker": "ef",
+          "caller": "-",
+          "category": "People",
+          "content": [
+            {
+              "type": "char",
+              "marker": "fr",
+              "content": ["1.2-6a: "]
+            },
+            {
+              "type": "char",
+              "marker": "fq",
+              "content": ["Ruth: "]
+            },
+            {
+              "type": "char",
+              "marker": "ft",
+              "content": [
+                "A Moabite (Ruth 1.4). Only outstanding women were normally included in Jewish genealogical lists."
+              ]
+            }
+          ]
+        },
+        "), Jesse, and King David."
+      ]
+    },
+    {
+      "type": "para",
+      "marker": "p",
+      "content": [
+        {
+          "type": "verse",
+          "marker": "v",
+          "number": "6b-11",
+          "sid": "MAT 1:6b-11"
+        },
+        "From David to the time when the people of Israel were taken into exile in Babylon",
+        {
+          "type": "note",
+          "marker": "ef",
+          "caller": "-",
+          "content": [
+            {
+              "type": "char",
+              "marker": "fr",
+              "content": ["1.6b-11: "]
+            },
+            {
+              "type": "char",
+              "marker": "fq",
+              "content": ["exile in Babylon: "]
+            },
+            {
+              "type": "char",
+              "marker": "ft",
+              "content": ["In 597 "]
+            },
+            {
+              "type": "char",
+              "marker": "sc",
+              "content": ["BC"]
+            },
+            " King Nebuchadnezzar of Babylonia conquered Jerusalem and took many of its inhabitants as prisoners to his country (2 Kgs 24.10-16; 2 Chr 36.9-10)."
+          ]
+        },
+        ", the following ancestors are listed: ..."
+      ]
+    }
+  ]
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/cat/cat_1.jpg" alt="Matthew 1.2-11 (GNTUK Study Bible)" width="400">
+</div>
+</div>
+<div id="_tabs_3" class="openblock tabs is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_3_usfm" class="tab">
+<p>USFM</p>
+</li>
+<li id="_tabs_3_usx" class="tab">
+<p>USX</p>
+</li>
+<li id="_tabs_3_usj" class="tab">
+<p>USJ</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_3_usfm--panel" class="tabpanel" aria-labelledby="_tabs_3_usfm">
+<div id="src-usfm-cat_2" class="listingblock">
+<div class="title">Example 4. Current Column - Matthew 2.4 (CEV Learning Bible)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\id MAT
+\c 2
+\p ...
+\v 4 \ef - \fr 2.4: \fk Chief Priests\ef*\ef - \fr 2.4: \fk Teachers of the
+Law\ef*He called together all the chief priests and the teachers of the Law and
+asked them, “Where will the Messiah be born?”
+\esb \cat Ideas\cat*
+\ms Dates in B.C. and A.D.
+\p The initials \sc b.c.\sc* have traditionally been an abbreviation for “Before
+Christ.” If \bk Luke\bk*'s dating is correct, then Jesus was born at least four
+years before the years known as \sc a.d.\sc* began. (\sc a.d.\sc* stands for the
+Latin phrase “in the year of our Lord”). Christian dating was actually not
+introduced until \sc a.d.\sc* 526 by a monk named Dionysius Exiguus. He was given
+the job of creating a calendar for the feasts of the church. He fixed the birth
+of Jesus in the Roman year 754, which was selected as the first year of the
+Christian era beginning on January 1. Dionysius apparently misjudged Herod's
+reign by about five years.
+\p The initials \sc b.c.\sc*e. (Before the Common Era) and c.e. (in the Common
+Era) are sometimes used for the traditional \sc b.c.\sc* and \sc a.d.\sc*
+\esbe
+\p
+\v 5 \ef - \fr 2.5: \fk Prophet\ef*“In the town of Bethlehem in Judea,” they
+answered. “For this is what the prophet wrote:</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_3_usx--panel" class="tabpanel" aria-labelledby="_tabs_3_usx">
+<div id="src-usx-cat_2" class="listingblock">
+<div class="title">Example 5. Current Column - Matthew 2.4 (CEV Learning Bible)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;usx version="3.0"&gt;
+  &lt;book code="MAT" style="id"/&gt;
+  &lt;chapter number="2" style="c" sid="MAT 2"/&gt;
+  &lt;para style="p"&gt;...
+  &lt;verse number="4" style="v" sid="MAT 2:4"/&gt;&lt;note caller="-" style="ef"&gt;
+      &lt;char style="fr" closed="false"&gt;2.4: &lt;/char&gt;
+      &lt;char style="fk" closed="false"&gt;Chief Priests&lt;/char&gt;&lt;/note&gt;&lt;note
+      caller="-" style="ef"&gt;
+      &lt;char style="fr" closed="false"&gt;2.4: &lt;/char&gt;
+      &lt;char style="fk" closed="false"&gt;Teachers of the Law&lt;/char&gt;&lt;/note&gt;He
+    called together all the chief priests and the teachers of the Law and asked
+    them, “Where will the Messiah be born?”&lt;/para&gt;
+  &lt;sidebar style="esb" category="Ideas"&gt;
+    &lt;para style="ms" vid="MAT 2:4"&gt;Dates in B.C. and A.D.&lt;/para&gt;
+    &lt;para style="p" vid="MAT 2:4"&gt;The initials &lt;char style="sc"&gt;b.c.&lt;/char&gt; have
+      traditionally been an abbreviation for “Before Christ.” If
+      &lt;char style="bk"&gt;Luke&lt;/char&gt;'s dating is correct, then Jesus was born at
+      least four years before the years known as &lt;char style="sc"&gt;a.d.&lt;/char&gt;
+      began. (&lt;char style="sc"&gt;a.d.&lt;/char&gt; stands for the Latin phrase “in the
+      year of our Lord”). Christian dating was actually not introduced until
+      &lt;char style="sc"&gt;a.d.&lt;/char&gt; 526 by a monk named Dionysius Exiguus. He was
+      given the job of creating a calendar for the feasts of the church. He
+      fixed the birth of Jesus in the Roman year 754, which was selected as the
+      first year of the Christian era beginning on January 1. Dionysius
+      apparently misjudged Herod's reign by about five years.&lt;/para&gt;
+    &lt;para style="p" vid="MAT 2:4"&gt;The initials &lt;char style="sc"&gt;b.c.&lt;/char&gt;e.
+      (Before the Common Era) and c.e. (in the Common Era) are sometimes used
+      for the traditional &lt;char style="sc"&gt;b.c.&lt;/char&gt; and
+      &lt;char style="sc"&gt;a.d.&lt;/char&gt;&lt;verse eid="MAT 2:4"/&gt;&lt;/para&gt;
+  &lt;/sidebar&gt;
+  &lt;para style="p"&gt;
+    &lt;verse number="5" style="v" sid="MAT 2:5"/&gt;
+    &lt;note caller="-" style="ef"&gt;
+      &lt;char style="fr" closed="false"&gt;2.5: &lt;/char&gt;
+      &lt;char style="fk" closed="false"&gt;Prophet&lt;/char&gt;
+    &lt;/note&gt;“In the town of
+    Bethlehem in Judea,” they answered. “For this is what the prophet
+    wrote:&lt;verse eid="MAT 2:5"/&gt;&lt;/para&gt;
+  &lt;chapter eid="MAT 2"/&gt;
+&lt;/usx&gt;</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_3_usj--panel" class="tabpanel" aria-labelledby="_tabs_3_usj">
+<div id="src-usj-cat_2" class="listingblock">
+<div class="title">Example 6. Current Column - Matthew 2.4 (CEV Learning Bible)</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "type": "USJ",
+  "version": "3.1",
+  "content": [
+    {
+      "type": "book",
+      "marker": "id",
+      "code": "MAT",
+      "content": []
+    },
+    {
+      "type": "chapter",
+      "marker": "c",
+      "number": "2",
+      "sid": "MAT 2"
+    },
+    {
+      "type": "para",
+      "marker": "p",
+      "content": [
+        "... ",
+        {
+          "type": "verse",
+          "marker": "v",
+          "number": "4",
+          "sid": "MAT 2:4"
+        },
+        {
+          "type": "note",
+          "marker": "ef",
+          "caller": "-",
+          "content": [
+            {
+              "type": "char",
+              "marker": "fr",
+              "content": ["2.4: "]
+            },
+            {
+              "type": "char",
+              "marker": "fk",
+              "content": ["Chief Priests"]
+            }
+          ]
+        },
+        {
+          "type": "note",
+          "marker": "ef",
+          "caller": "-",
+          "content": [
+            {
+              "type": "char",
+              "marker": "fr",
+              "content": ["2.4: "]
+            },
+            {
+              "type": "char",
+              "marker": "fk",
+              "content": ["Teachers of the Law"]
+            }
+          ]
+        },
+        "He called together all the chief priests and the teachers of the Law and asked them, “Where will the Messiah be born?”"
+      ]
+    },
+    {
+      "type": "sidebar",
+      "marker": "esb",
+      "category": "Ideas",
+      "content": [
+        {
+          "type": "para",
+          "marker": "ms",
+          "content": ["Dates in B.C. and A.D."]
+        },
+        {
+          "type": "para",
+          "marker": "p",
+          "content": [
+            "The initials ",
+            {
+              "type": "char",
+              "marker": "sc",
+              "content": ["b.c."]
+            },
+            " have traditionally been an abbreviation for “Before Christ.” If ",
+            {
+              "type": "char",
+              "marker": "bk",
+              "content": ["Luke"]
+            },
+            "'s dating is correct, then Jesus was born at least four years before the years known as ",
+            {
+              "type": "char",
+              "marker": "sc",
+              "content": ["a.d."]
+            },
+            " began. (",
+            {
+              "type": "char",
+              "marker": "sc",
+              "content": ["a.d."]
+            },
+            " stands for the Latin phrase “in the year of our Lord”). Christian dating was actually not introduced until ",
+            {
+              "type": "char",
+              "marker": "sc",
+              "content": ["a.d."]
+            },
+            " 526 by a monk named Dionysius Exiguus. He was given the job of creating a calendar for the feasts of the church. He fixed the birth of Jesus in the Roman year 754, which was selected as the first year of the Christian era beginning on January 1. Dionysius apparently misjudged Herod's reign by about five years."
+          ]
+        },
+        {
+          "type": "para",
+          "marker": "p",
+          "content": [
+            "The initials ",
+            {
+              "type": "char",
+              "marker": "sc",
+              "content": ["b.c."]
+            },
+            "e. (Before the Common Era) and c.e. (in the Common Era) are sometimes used for the traditional ",
+            {
+              "type": "char",
+              "marker": "sc",
+              "content": ["b.c."]
+            },
+            " and ",
+            {
+              "type": "char",
+              "marker": "sc",
+              "content": ["a.d."]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "para",
+      "marker": "p",
+      "content": [
+        {
+          "type": "verse",
+          "marker": "v",
+          "number": "5",
+          "sid": "MAT 2:5"
+        },
+        {
+          "type": "note",
+          "marker": "ef",
+          "caller": "-",
+          "content": [
+            {
+              "type": "char",
+              "marker": "fr",
+              "content": ["2.5: "]
+            },
+            {
+              "type": "char",
+              "marker": "fk",
+              "content": ["Prophet"]
+            }
+          ]
+        },
+        "“In the town of Bethlehem in Judea,” they answered. “For this is what the prophet wrote:"
+      ]
+    }
+  ]
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../_images/cat/cat_2.jpg" alt="Matthew 2.4 (CEV Learning Bible)" width="550">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_properties"><a class="anchor" href="#_properties"></a>Properties</h2>
+<div class="sectionbody">
+<div class="dlist">
+<dl>
+<dt class="hdlist1">TextType</dt>
+<dd>
+<p>NoteText</p>
+</dd>
+<dt class="hdlist1">TextProperties</dt>
+<dd>
+<p>publishable, vernacular, note</p>
+</dd>
+</dl>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_publication_issues"><a class="anchor" href="#_publication_issues"></a>Publication Issues</h2>
+<div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="_discussion"><a class="anchor" href="#_discussion"></a>Discussion</h2>
+<div class="sectionbody">
+
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../../../_/js/site.js" data-ui-root-path="../../../../_"></script>
+<script async src="../../../../_/js/vendor/highlight.js"></script>
+<script async src="../../../../_/js/vendor/tabs.js"></script>
+<script defer src="../../../../_/js/medium-zoom.config.js"></script>
+<script src="../../../../_/js/vendor/lunr.js"></script>
+<script src="../../../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../../../.." data-snippet-length="100" data-stylesheet="../../../../_/css/search.css"></script>
+<script async src="../../../../search-index.js"></script>
+  </body>
+</html>

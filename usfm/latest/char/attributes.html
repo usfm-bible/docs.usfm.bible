@@ -7,7 +7,7 @@
     <link rel="canonical" href="https://docs.usfm.bible/usfm/3.1/char/attributes.html">
     <link rel="prev" href="index.html">
     <link rel="next" href="nesting.html">
-    <meta name="generator" content="Antora 3.1.9">
+    <meta name="generator" content="Antora 3.1.10">
     <link rel="stylesheet" href="../../../_/css/site.css">
 <link rel="stylesheet" href="../../../_/css/site-extra.css">
 <link rel="stylesheet" href="../../../_/css/vendor/tabs.css">
@@ -716,6 +716,19 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../cat/index.html">Content Category</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cat/cat.html">cat - Content Category</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="../fig/index.html">Figures</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
@@ -911,10 +924,10 @@
 <h2 id="_default_attribute"><a class="anchor" href="#_default_attribute"></a>Default Attribute</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><strong>In USFM</strong>, when content is supplied in the position of an attribute, but without an explicit attribute name, the specification defines a single default. This allows a commonly used attribute (the default) to be added with as little additional markup in the text as possible.</p>
+<p><strong>In USFM</strong>, when content is supplied in the position of an attribute, but without an explicit attribute name, the specification defines a single default. This allows a commonly used attribute (the default) to be added with as little additional markup as possible.</p>
 </div>
 <div class="paragraph">
-<p>The concept of a "default attribute" is only valid in USFM. <strong>In USX</strong>, attributes always need to be expressed fully as <code>attribute="value"</code> together.</p>
+<p>The concept and syntax of a "default attribute" is only valid in USFM. <strong>In USX</strong>, attributes always need to be expressed fully as <code>attribute="value"</code> together.</p>
 </div>
 <div id="_tabs_2" class="openblock tabs is-loading">
 <div class="content">
@@ -1044,10 +1057,10 @@
 <h2 id="_user_defined_attributes"><a class="anchor" href="#_user_defined_attributes"></a>User Defined Attributes</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Using the general syntax above, attributes may be added to any character markers beyond the formalized set in the current version of the USFM/USX specification. These will not be considered canonical, and software supporting USFM/USX is not required to process user-defined attributes.</p>
+<p>Using the general syntax above, attributes may be added to any character markers beyond the formally defined set in the current version of the USFM/USX specification. These will not be considered canonical, and there are no specific requirements defining how software supporting USFM/USX must process user-defined attributes.</p>
 </div>
 <div class="paragraph">
-<p>User defined attributes must begin with the prefix <code>x-</code>.</p>
+<p>User defined attributes should begin with the prefix <code>x</code> or <code>z</code>.</p>
 </div>
 <div id="_tabs_4" class="openblock tabs is-loading">
 <div class="content">
