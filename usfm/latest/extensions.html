@@ -868,89 +868,113 @@
 <ul>
 <li>
 <p><a href="para/index.html" class="xref page">Paragraph</a></p>
-<div class="ulist">
-<ul>
-<li>
-<p><code>header</code> - Header/identification paragraph</p>
-</li>
-<li>
-<p><code>title</code> - Book title paragraph</p>
-</li>
-<li>
-<p><code>introduction</code> - Introduction text paragraph</p>
-</li>
-<li>
-<p><code>sectionpara</code> - Section heading paragraph</p>
-</li>
-<li>
-<p><code>versepara</code> - Verse text paragraph</p>
-</li>
-<li>
-<p><code>list</code> - List paragraph (verse text)</p>
-</li>
-<li>
-<p><code>otherpara</code> - Other (non verse text) paragraph</p>
 </li>
 </ul>
 </div>
-</li>
+</dd>
+<dt class="hdlist1">** <code>header</code></dt>
+<dd>
+<p>A header/identification paragraph. These are the paragraphs that occur before any titles or introduction</p>
+</dd>
+<dt class="hdlist1">** <code>title</code></dt>
+<dd>
+<p>A book title paragraph occuring before and possibly after introductory material</p>
+</dd>
+<dt class="hdlist1">** <code>introduction</code></dt>
+<dd>
+<p>Introduction text paragraph</p>
+</dd>
+<dt class="hdlist1">** <code>sectionpara</code></dt>
+<dd>
+<p>Section heading paragraph occuring before and associated with a following paragraph. May not include verses</p>
+</dd>
+<dt class="hdlist1">** <code>versepara</code></dt>
+<dd>
+<p>Verse text paragraph may include verses</p>
+</dd>
+<dt class="hdlist1">** <code>list</code></dt>
+<dd>
+<p>List paragraph (verse text)</p>
+</dd>
+<dt class="hdlist1">** <code>otherpara</code></dt>
+<dd>
+<p>Other (non verse text) paragraph</p>
+</dd>
+<dt class="hdlist1">** <code>cell</code></dt>
+<dd>
+<p>A table cell acts much like a paragraph.</p>
+<div class="ulist">
+<ul>
 <li>
 <p><a href="note/index.html" class="xref page">Note</a></p>
-<div class="ulist">
-<ul>
-<li>
-<p><code>crossreference</code> - Cross Reference container</p>
-</li>
-<li>
-<p><code>footnote</code> - Footnote container</p>
 </li>
 </ul>
 </div>
-</li>
+</dd>
+<dt class="hdlist1">** <code>crossreference</code></dt>
+<dd>
+<p>Cross Reference container</p>
+</dd>
+<dt class="hdlist1">** <code>footnote</code></dt>
+<dd>
+<p>Footnote container</p>
+<div class="ulist">
+<ul>
 <li>
 <p><a href="char/index.html" class="xref page">Character</a></p>
-<div class="ulist">
-<ul>
-<li>
-<p><code>char</code> - Character-level container (span)</p>
-</li>
-<li>
-<p><code>introchar</code> - Introduction text character span</p>
-</li>
-<li>
-<p><code>listchar</code> - List text character span</p>
-</li>
-<li>
-<p><code>footnotechar</code> - Footnote text character span</p>
-</li>
-<li>
-<p><code>crossreferencechar</code> - Cross reference text character span</p>
 </li>
 </ul>
 </div>
-</li>
+</dd>
+<dt class="hdlist1">** <code>char</code></dt>
+<dd>
+<p>Character-level container (span). Must be explicitly closed, in USFM.</p>
+</dd>
+<dt class="hdlist1">** <code>introchar</code></dt>
+<dd>
+<p>Introduction text character span only found in introduction paragraphs</p>
+</dd>
+<dt class="hdlist1">** <code>listchar</code></dt>
+<dd>
+<p>List text character span only found in list paragraphs</p>
+</dd>
+<dt class="hdlist1">** <code>footnotechar</code></dt>
+<dd>
+<p>Footnote text character span only found in footnotes. Are implicitly closed by another footnotechar or the end of the footnote, in USFM.</p>
+</dd>
+<dt class="hdlist1">** <code>crossreferencechar</code></dt>
+<dd>
+<p>Cross reference text character span only found in crossreferences. Are implicitly closed by another crossreferencechar or the end of the crossreference, in USFM.</p>
+<div class="ulist">
+<ul>
 <li>
 <p><a href="ms/index.html" class="xref page">Milestone</a></p>
-<div class="ulist">
-<ul>
-<li>
-<p><code>milestone</code> - Milestone</p>
 </li>
 </ul>
 </div>
-</li>
+</dd>
+<dt class="hdlist1">** <code>milestone</code></dt>
+<dd>
+<p>Milestone</p>
+</dd>
+<dt class="hdlist1">** <code>standalone</code></dt>
+<dd>
+<p>A milestone with no parameters. In USFM it has no final <code>\*</code> closer.</p>
+<div class="ulist">
+<ul>
 <li>
 <p>Other</p>
-<div class="ulist">
-<ul>
-<li>
-<p><code>internal</code> - Internal</p>
 </li>
 </ul>
 </div>
-</li>
-</ul>
-</div>
+</dd>
+<dt class="hdlist1">** <code>internal</code></dt>
+<dd>
+<p>Has explicitly programmed behaviour that is not covered by other categories. An extension marker may not be labelled internal.</p>
+</dd>
+<dt class="hdlist1">** <code>attribute</code></dt>
+<dd>
+<p>A special kind of internal marker that is treated as a separate marker in USFM but as an attribute in USX/USJ.</p>
 </dd>
 <dt class="hdlist1"><mark><code>\description</code></mark></dt>
 <dd>
