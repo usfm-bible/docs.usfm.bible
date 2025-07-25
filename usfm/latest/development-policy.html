@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Release Notes :: USFM-USX-USJ Documentation</title>
-    <link rel="canonical" href="https://docs.usfm.bible/usfm/3.1/release-notes.html">
-    <link rel="prev" href="index.html">
-    <link rel="next" href="introduction.html">
+    <title>Development Policy :: USFM-USX-USJ Documentation</title>
+    <link rel="canonical" href="https://docs.usfm.bible/usfm/3.1/development-policy.html">
+    <link rel="prev" href="glossary.html">
+    <link rel="next" href="doc/index.html">
     <meta name="generator" content="Antora 3.1.10">
     <link rel="stylesheet" href="../../_/css/site.css">
 <link rel="stylesheet" href="../../_/css/site-extra.css">
@@ -49,7 +49,7 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
 <ul class="nav-list">
-  <li class="nav-item is-current-page" data-depth="1">
+  <li class="nav-item" data-depth="1">
     <a class="nav-link" href="release-notes.html">Release Notes</a>
   </li>
   <li class="nav-item" data-depth="1">
@@ -71,7 +71,7 @@
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="glossary.html">Glossary of Terms</a>
   </li>
-  <li class="nav-item" data-depth="2">
+  <li class="nav-item is-current-page" data-depth="2">
     <a class="nav-link" href="development-policy.html">Development Policy</a>
   </li>
 </ul>
@@ -828,569 +828,318 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="index.html">USFM-USX-USJ</a></li>
-    <li><a href="release-notes.html">Release Notes</a></li>
+    <li><a href="introduction.html">Introduction</a></li>
+    <li><a href="development-policy.html">Development Policy</a></li>
   </ul>
 </nav>
 <div class="page-versions">
   <button class="version-menu-toggle" title="Show other versions of page">latest</button>
   <div class="version-menu">
-    <a class="version is-current" href="release-notes.html">latest</a>
-    <a class="version" href="../3.1.1/release-notes.html">3.1.1</a>
-    <a class="version" href="../3.1/release-notes.html">3.1</a>
+    <a class="version is-current" href="development-policy.html">latest</a>
+    <a class="version" href="../3.1.1/development-policy.html">3.1.1</a>
+    <a class="version" href="../3.1/development-policy.html">3.1</a>
   </div>
 </div>
-<div class="edit-this-page"><a href="https://github.com/usfm-bible/tcdocs/edit/main/manual/antora/modules/ROOT/pages/release-notes.adoc">Edit this Page</a></div>
+<div class="edit-this-page"><a href="https://github.com/usfm-bible/tcdocs/edit/main/manual/antora/modules/ROOT/pages/development-policy.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">Release Notes</h1>
-<div class="sect1">
-<h2 id="_3_1"><a class="anchor" href="#_3_1"></a>3.1</h2>
+<h1 class="page">Development Policy</h1>
+<div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p><em>July 2024</em></p>
-</div>
-<div class="sect2">
-<h3 id="_background_on_usfm_3_1"><a class="anchor" href="#_background_on_usfm_3_1"></a>Background on USFM 3.1</h3>
-<div class="paragraph">
-<p>USFM (Unified Scripture Format Markup) 3.1 primarily represents an effort to standardize a single <a href="doc/index.html" class="xref page">content model</a> which can be equally expressed in backslash-based <code>\</code> format markers (USFM-FM), XML (USFM-XML), or JSON (USFM-JSON). The common abbreviation for these expressions are <strong>USFM</strong>, <strong>USX</strong>, and <strong>USJ</strong>.</p>
-</div>
-<div class="paragraph">
-<p>This documentation provides a <a href="syntax-docs.html" class="xref page">summary</a> of markup syntax, schema diagrams, and example texts for both USFM and USX. USJ is a newer expression. Equivalent example texts in USJ are also being added.</p>
-</div>
-<div class="paragraph">
-<p>Previous release notes (3.0 and earlier) are expressed only in USFM-FM specific terms.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_summary_of_updates"><a class="anchor" href="#_summary_of_updates"></a>Summary of Updates</h3>
-<div class="paragraph">
-<p>The key differences in the grammar from USFM 3.0 to 3.1.0 are:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="doc/index.html#doc-book-titles" class="xref page">BookTitles</a> are optional.</p>
-</li>
-<li>
-<p><a href="doc/index.html#doc-book-headers" class="xref page">BookHeaders</a> include <a href="para/identification/sts.html" class="xref page">sts</a>.</p>
-</li>
-<li>
-<p><a href="doc/index.html#doc-book-identification" class="xref page">BookIdentification</a> may be any 3 letter code (within reason).</p>
-</li>
-<li>
-<p>Other peripherals may be of any type.</p>
-</li>
-<li>
-<p><a href="doc/index.html#doc-book-chapter-content" class="xref page">Section</a>, <a href="doc/index.html#doc-book-chapter-content" class="xref page">Verse</a>, and other <a href="doc/index.html#doc-book-chapter-content" class="xref page">Para</a> (paragraphs) are seperated as different categories (internal).</p>
-</li>
-<li>
-<p>The <a href="para/index.html" class="xref page">paragraph</a> <mark><em>@vid</em></mark> attribute has an extended reference syntax.</p>
-</li>
-<li>
-<p><a href="char/index.html" class="xref page">Character</a> markers and <a href="char/nesting.html" class="xref page">nesting</a>:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>All <a href="char/index.html" class="xref page">character</a> elements must be closed <em>explicitly</em>, with the exception of note structural elements (below).</p>
-</li>
-<li>
-<p>Note specific <a href="char/notes/index.html" class="xref page">character</a> elements (i.e. <code>f</code>&#8230;&#8203; <a href="char/notes/footnote/fr.html" class="xref page">fr</a>, <a href="char/notes/footnote/fq.html" class="xref page">fq</a>, <a href="char/notes/footnote/ft.html" class="xref page">ft</a>, or <code>x</code>&#8230;&#8203; <a href="char/notes/crossref/xo.html" class="xref page">xo</a>, <a href="char/notes/crossref/xt.html" class="xref page">xt</a> etc.) are considered note <em>submarker elements</em>. They provide structure to the note content. These note submarker elements continue to support (and recommend) the common pratice of implicit closure.</p>
-</li>
-<li>
-<p>Note content must occur within a submarker element; there can be no unmarked note content only within the <a href="note/index.html" class="xref page">note container</a> itself.</p>
-</li>
-<li>
-<p><a href="char/notes/footnote/fv.html" class="xref page">fv</a> is now just a <a href="char/notes/index.html" class="xref page">character</a> style and requires explicit closing.</p>
-</li>
-<li>
-<p>Use of the <code>+</code> prefix for nested USFM <a href="char/index.html" class="xref page">character</a> markup is supported but is <em>deprecated</em>. Note that future versions of USFM may remove support for the <code>\+</code> syntax entirely.</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Markings scripture references&#8201;&#8212;&#8201;<a href="char/features/ref.html" class="xref page">ref</a> and <a href="char/notes/crossref/xt.html" class="xref page">xt</a>:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Added <a href="char/features/ref.html" class="xref page">ref</a> for marking scripture references in all contexts (including <a href="char/notes/crossref/xt.html" class="xref page">xt</a>), with an optional machine-readable target location.</p>
-</li>
-<li>
-<p><em>Deprecated</em> use of the attribute <mark><em>@link-href</em></mark> with <a href="char/notes/crossref/xt.html" class="xref page">xt</a>. Use <a href="char/features/ref.html" class="xref page">ref</a>.</p>
-</li>
-<li>
-<p><em>Deprecated</em> use of <a href="char/notes/crossref/xt.html" class="xref page">xt</a> outside of <a href="note/crossref/x.html" class="xref page">cross-reference</a>. Use: <a href="char/features/ref.html" class="xref page">ref</a>.</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Deprecate the <code>link-</code> prefix in <a href="char/features/jmp.html" class="xref page">jmp</a> attributes.</p>
-</li>
-<li>
-<p>Add <mark><em>@key</em></mark> attribute to the <a href="char/features/k.html" class="xref page">k</a> character element.</p>
-</li>
-<li>
-<p><mark><em>@sid</em></mark> and <mark><em>@eid</em></mark> attributes are not automatically available for all <a href="ms/index.html" class="xref page">milestones</a>, but may be used when specified directly (e.g. <a href="ms/qt.html" class="xref page">qt</a> and <a href="ms/ts.html" class="xref page">ts</a>)</p>
-</li>
-<li>
-<p><code>\</code> escaping is required and supported for a number of key characters: <code>\</code>, <code>'</code>, <code>"</code>, <code>|</code>, <code>~</code>, <code>/</code></p>
-</li>
-<li>
-<p>Whitespace rules are <a href="whitespace.html" class="xref page">clarified and formalised</a>.</p>
-</li>
-</ul>
-</div>
+<p><em>USFM Technical Committee (USFMTC), April 2025</em></p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_3_0"><a class="anchor" href="#_3_0"></a>3.0</h2>
+<h2 id="_introduction"><a class="anchor" href="#_introduction"></a>Introduction</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p><em>April 2018</em></p>
+<p>This document describes the development policy for the USFMTC with regard to versioning and stability. What can be assumed about newer versions of the standard going forward?</p>
 </div>
+<div class="paragraph">
+<p>The USFMTC is concerned to minimise the effect of changes in version on implementers. While it cannot predict the future, it hopes that it can give plenty of warning and opportunity for implementers to be ready for new releases.</p>
+</div>
+<div class="paragraph">
+<p>Notice that the versioning scheme here is a semantic versioning scheme but it is <em>not semver</em>. It is close. But since this is a grammar and not an API. It does not hold entirely.</p>
+</div>
+<hr>
+<div class="paragraph">
+<p>USFM has a 3 level version number: <code>x.y.z</code>. A change in <code>z</code> is considered a <strong>third</strong> level change. A change in <code>y</code> a <strong>second</strong> level change, and change in <code>x</code> a <strong>first</strong> level change.</p>
+</div>
+<div class="paragraph">
+<p>In summary, <strong>second</strong> and <strong>third</strong> level changes are syntactic <em>expansions</em>, with a <strong>third</strong> level only expanding the marker lists for various syntactic categories—meaning very minimal changes are needed to the parser and generator. A second level change involves an arbitrary syntactic expansion, and a <strong>first</strong> level change involves a syntactic <em>contraction</em>.</p>
+</div>
+<hr>
+<div class="paragraph">
+<p>The USFM parser policy considers both a parser and a generator for each version. The standard describes both what is acceptable at a version and what will be generated at that version. What can be parsed is usually much wider than what will be generated.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>This policy will only take effect from <strong>3.1.2</strong> and later.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_versioning"><a class="anchor" href="#_versioning"></a>Versioning</h2>
+<div class="sectionbody">
 <div class="sect2">
-<h3 id="_additions"><a class="anchor" href="#_additions"></a>Additions</h3>
+<h3 id="_increasing_the_third_level"><a class="anchor" href="#_increasing_the_third_level"></a>Increasing the Third Level</h3>
+<div class="paragraph">
+<p>The primary purpose of a third level increment is to fix minor bugs, improve documentation, and not to rock the boat too much.</p>
+</div>
+<div class="paragraph">
+<p>A parser at level <code>x.y.z+1</code> will parse all that <code>x.y.z</code> will parse, which in turn means all that <code>x.y</code> will parse which in turn means all that any version after <code>x</code> will parse.</p>
+</div>
+<div class="paragraph">
+<p>If a document parses at <code>x.y.z</code> then if it is generated with a <code>x.y.z+1</code> generator it will still parse with an <code>x.y.z</code> parser. This is true for all third level values less than <code>z+1</code>.</p>
+</div>
+<div class="paragraph">
+<p>Strictly speaking a third level change can involve syntactic expansion, but the expansion is minimal. USFM contrasts syntactic changes and syntactic content changes. Since the grammar is based around categories, a third level change only increases the contents of some of those categories. It does not change the relationships between them. It could be implemented through additions to the <code>marker.ext</code> and no changes to the parser or generator. Parsers  will typically update to incorporate those changes into their internal category lists.</p>
+</div>
+<div class="paragraph">
+<p>A third level change may also mark existing behaviour (syntax) as <em>deprecated</em>.</p>
+</div>
+<div class="paragraph">
+<p>Third level changes can be used as soon as they are approved, before any particular release. So, for example, if a marker is added at a third level for 3.1.2, it can be used with <a href="https://docs.usfm.bible/usfm/3.1.1/index.html">3.1.1</a> data simply by adding it to the <code>markers.ext</code> file. The release of 3.1.2 removes the need for it to be in a <code>markers.ext</code> file in the future.</p>
+</div>
+<div class="sect3">
+<h4 id="_examples"><a class="anchor" href="#_examples"></a>Examples</h4>
 <div class="ulist">
 <ul>
 <li>
-<p>USFM version identifier: <a href="doc/usfm.html" class="xref page">\usfm</a>.</p>
-</li>
-<li>
-<p>Alternate language table of contents texts: <a href="para/identification/toca.html" class="xref page">\toca#</a></p>
-</li>
-<li>
-<p>Letter opening: <a href="para/paragraphs/po.html" class="xref page">\po</a></p>
-</li>
-<li>
-<p>List header and footer elements: <a href="para/lists/lh.html" class="xref page">\lh</a> and <a href="para/lists/lf.html" class="xref page">\lf</a></p>
-</li>
-<li>
-<p>Embedded list: <a href="para/lists/lim.html" class="xref page">\lim#</a></p>
-</li>
-<li>
-<p>Structured list items: <a href="char/lists/lik.html" class="xref page">\lik &#8230;&#8203;\lik*</a> and <a href="char/lists/liv.html" class="xref page">\liv# &#8230;&#8203;\liv#*</a></p>
-</li>
-<li>
-<p>List item total: <a href="char/lists/litl.html" class="xref page">\litl &#8230;&#8203;\litl*</a></p>
-</li>
-<li>
-<p>Hebrew note: <a href="para/poetry/qd.html" class="xref page">\qd</a></p>
-</li>
-<li>
-<p>Semantic division: <a href="para/titles-sections/sd.html" class="xref page">\sd#</a></p>
-</li>
-<li>
-<p>Aramaic wordlist entry: <a href="char/features/wa.html" class="xref page">\wa &#8230;&#8203;\wa*</a></p>
-</li>
-<li>
-<p>Geographic proper name: <a href="char/features/png.html" class="xref page">\png &#8230;&#8203;\png*</a></p>
-</li>
-<li>
-<p>List of witnesses in footnotes (for critical editions): <a href="char/notes/footnote/fw.html" class="xref page">\fw &#8230;&#8203;\fw*</a></p>
-</li>
-<li>
-<p>Target references “added” text: <a href="char/notes/crossref/xta.html" class="xref page">\xta &#8230;&#8203;\xta*</a></p>
-</li>
-<li>
-<p>Published cross reference origin text: <a href="char/notes/crossref/xop.html" class="xref page">\xop &#8230;&#8203;\xop*</a></p>
-</li>
-<li>
-<p>Link text: <a href="char/features/jmp.html" class="xref page">\jmp &#8230;&#8203;\jmp*</a></p>
-</li>
-<li>
-<p>Ruby glosses (CJK texts): <a href="char/features/rb.html" class="xref page">\rb &#8230;&#8203;\rb*</a></p>
-</li>
-<li>
-<p>Superscript: <a href="char/format/sup.html" class="xref page">\sup &#8230;&#8203;\sup*</a></p>
-</li>
-<li>
-<p>Quotation start/end milestones: <a href="ms/qt.html" class="xref page">\qt#-s*</a> and <a href="ms/qt.html" class="xref page">\qt#-e\*</a></p>
-</li>
-<li>
-<p>Translator’s section (chunk) milestones: <a href="ms/ts.html" class="xref page">\ts-s*</a> and <a href="ms/ts.html" class="xref page">\ts-e\*</a></p>
-</li>
-<li>
-<p>Common <a href="periph/books-divs.html" class="xref page">peripheral identifiers</a>.</p>
+<p>In <a href="https://docs.usfm.bible/usfm/3.1.1/index.html">3.1.1</a>, <a href="para/lists/li.html" class="xref page">li</a> is added to the introductory paragraphs section (as <a href="para/introductions/ili.html" class="xref page">ili</a>), thus allowing lists in introductions. There is no syntax change.&#8288;<sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup> and the addition is merely allowing other <a href="para/index.html" class="xref page">paragraph types</a> in the introduction that weren&#8217;t allowed before. Any document not using this feature is still conformant to <a href="https://docs.usfm.bible/usfm/3.1/index.html">3.1(.0)</a></p>
 </li>
 </ul>
 </div>
-</div>
-<div class="sect2">
-<h3 id="_revisions"><a class="anchor" href="#_revisions"></a>Revisions</h3>
-<div class="ulist">
-<ul>
-<li>
-<p>Restored <a href="para/paragraphs/pr.html" class="xref page">\pr</a> for use as “text refrain”.</p>
-</li>
-<li>
-<p>Support for explicit <a href="char/tables/tc.html" class="xref page">table cell column spanning</a>.</p>
-</li>
-<li>
-<p>Support citation form for wordlist/glossary text (update <a href="char/features/w.html" class="xref page">\w &#8230;&#8203;\w*</a>).</p>
-</li>
-<li>
-<p>Revised syntax for figures/illustrations - applying descriptive attributes: <a href="fig/fig.html" class="xref page">\fig &#8230;&#8203;\fig*</a></p>
-</li>
-<li>
-<p><em>Deprecated</em> cross reference and footnote DC content markers: <a href="char/notes/crossref/xdc.html" class="xref page">\xdc &#8230;&#8203;\xdc*</a> and <a href="char/notes/footnote/fdc.html" class="xref page">\fdc &#8230;&#8203;\fdc*</a></p>
-</li>
-<li>
-<p><em>Deprecated</em> combined marker for proper name within translator’s addition: <a href="char/features/addpn.html" class="xref page">\addpn &#8230;&#8203;\addpn*</a></p>
-</li>
-<li>
-<p><em>Deprecated</em> numbered running header: <a href="para/identification/h.html" class="xref page">\h#</a></p>
-</li>
-<li>
-<p><em>Deprecated</em> pronunciation info marker: <a href="char/features/pro.html" class="xref page">\pro &#8230;&#8203;\pro*</a> in favour of ruby annotations <a href="char/features/rb.html" class="xref page">\rb &#8230;&#8203;\rb*</a></p>
-</li>
-</ul>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_syntax_and_features"><a class="anchor" href="#_syntax_and_features"></a>Syntax and Features</h3>
+<h3 id="_increasing_the_second_level"><a class="anchor" href="#_increasing_the_second_level"></a>Increasing the Second Level</h3>
+<div class="paragraph">
+<p>A second level increase is a more general syntactic <em>expansion</em>. This means that an <code>x.y+1</code> parser will parse anything before it back to <code>x</code>. But an <code>x.y+1</code> generated file is only parsable by parsers of <code>x.y+1</code> or greater. There is no backward compatibility that an <code>x.y+1</code> generated file can be parsed by an <code>x.y</code> parser, even if the content is identical. Thus if a <code>x.y</code> file is parsed and generated at <code>x.y+1</code> it is not necessarily parsable by an <code>x.y</code> parser.</p>
+</div>
+<div class="paragraph">
+<p>Having said this, it is intended that an <code>x.y+1</code> generator be configurable to generate <code>x.y</code> conformant syntax for documents that conform to an <code>x.y</code> (or earlier) content model.</p>
+</div>
+<div class="sect3">
+<h4 id="_examples_2"><a class="anchor" href="#_examples_2"></a>Examples</h4>
 <div class="ulist">
 <ul>
 <li>
-<p>Syntax for assigning <a href="char/attributes.html" class="xref page">character-level attributes</a>.</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Attributes for <a href="char/features/w.html" class="xref page">\w &#8230;&#8203;\w*</a>.</p>
+<p>In 3.2 we intend to add syntax to USFM to allow attributes to be stored at the start of a node immediately after the marker (for all nodes). This will change how documents are stored, but it will still parse <a href="char/index.html" class="xref page">char</a> nodes with <a href="char/attributes.html" class="xref page">attributes</a> at the end just as you can in <a href="https://docs.usfm.bible/usfm/3.1/index.html">3.1</a>. The older syntax would also be deprecated and a 3.2 generator will produce output not parsable by a <a href="https://docs.usfm.bible/usfm/3.1/index.html">3.1</a> parser. Thus if a document has attributes at the start of nodes, it can be read by a <a href="https://docs.usfm.bible/usfm/3.1/index.html">3.1</a> parser by parsing it as 3.2 and outputting it as <a href="https://docs.usfm.bible/usfm/3.1/index.html">3.1</a>. But since 3.2 adds the ability to add attributes to paragraphs (for example), this may mean information is lost going back to <a href="https://docs.usfm.bible/usfm/3.1/index.html">3.1.z</a></p>
 </li>
 <li>
-<p>Attributes for <a href="fig/fig.html" class="xref page">\fig &#8230;&#8203;\fig*</a>.</p>
+<p>In 3.2 we intend to add a new node to the USX model that encapsulates a <a href="para/lists/index.html" class="xref page">list</a>. This <code>&lt;list&gt;</code> node is optional in 3.2. It is serialisable into USFM using <a href="ms/index.html" class="xref page">milestones</a>. It is also <em>optional</em>, thus a 3.1.z file can be read by a 3.2 parser and generate 3.1.z conformant output, if there are no <code>&lt;list&gt;</code> elements. This is added to 3.2 rather than 3.1.2 because it adds a new node to the USX model.</p>
 </li>
 </ul>
 </div>
-</li>
-<li>
-<p>Syntax for assigning word-level <a href="char/features/jmp.html" class="xref page">linking attributes</a>.</p>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-caution" title="Caution"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Second level changes are not to be used until the full second level release.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_increasing_the_first_level"><a class="anchor" href="#_increasing_the_first_level"></a>Increasing the First Level</h3>
+<div class="paragraph">
+<p>A first level increase is considered a syntactic <em>contraction</em>. This means that no new syntactic elements are added, but syntax is removed. This allows for the removal of deprecated items and syntactic structures.</p>
+</div>
+<div class="paragraph">
+<p>There is no backward compatibility between <code>x+1</code> and <code>x</code>. The only time there is backward compatibility is that <code>x+1.0</code> is intended to be a formal restriction of <code>x.last</code>. That is if a file is generated by an <code>x.last</code> generator, it will be parsable as <code>x+1.0</code>. In effect, all that happens in creating <code>x+1.0</code> is that we remove everything we deprecated previously, and we add nothing. This means that <code>x.last</code> (at the 3rd level) must have deprecated whatever is to be removed at the first level change and so only generate output that conforms to the first level change.</p>
+</div>
+<div class="paragraph">
+<p>The point of the first level change is that going forward, <em>there is no requirement for a parser to parse any version before the new first level</em>. Thus a <code>4.</code> parser does not parse any <code>3.</code> files, except those from the last version in version <code>3.</code> which are in effect <code>4.</code> files. The impact on users is that they must use the new syntax and may not use any removed syntax from the previous major version. This is a breaking change for their data.</p>
+</div>
+<div class="paragraph">
+<p>Most often, deprecations will have been announced quite a while before a first level release. These deprecations will often require community discussion due to the breaking with backward compatibility and requiring tool chains to update.</p>
+</div>
+<div class="sect3">
+<h4 id="_examples_3"><a class="anchor" href="#_examples_3"></a>Examples</h4>
 <div class="ulist">
 <ul>
 <li>
-<p>Default link-href linking attribute for <a href="char/notes/crossref/xt.html" class="xref page">\xt &#8230;&#8203;\xt*</a>.</p>
+<p>In 4.0 we intend to remove the capability of storing attributes at the end of <a href="char/index.html" class="xref page">char</a> nodes in USFM and require their storage immediately after the marker, as in 3.2. Thus 3.2 generated files will parse in 4.0.</p>
+</li>
+<li>
+<p>In 4.0 <code>&lt;list&gt;</code> nodes, as defined in 3.2, will become mandatory. This places a requirement on a late 3.2.z generator to insert them if missing.</p>
 </li>
 </ul>
 </div>
-</li>
-<li>
-<p>Syntax for <a href="ms/index.html" class="xref page">milestones</a>.</p>
-</li>
-<li>
-<p>Syntax for peripheral (<a href="periph/periph.html" class="xref page">\periph</a>) <a href="periph/books-divs.html" class="xref page">identifiers</a>.</p>
-</li>
-</ul>
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_2_5"><a class="anchor" href="#_2_5"></a>2.5</h2>
+<h2 id="_in_table_form"><a class="anchor" href="#_in_table_form"></a>In Table Form</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p><em>October 2013</em></p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Stylesheet only configuration update for Paratext 7.5 release.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_2_4"><a class="anchor" href="#_2_4"></a>2.4</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p><em>June 2013</em></p>
-</div>
-<div class="sect2">
-<h3 id="_additions_2"><a class="anchor" href="#_additions_2"></a>Additions</h3>
-<div class="ulist">
-<ul>
-<li>
-<p>Support for <a href="char/nesting.html" class="xref page">nesting</a> character markup.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_2_3"><a class="anchor" href="#_2_3"></a>2.3</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p><em>July 2010</em></p>
-</div>
-<div class="sect2">
-<h3 id="_additions_3"><a class="anchor" href="#_additions_3"></a>Additions</h3>
-<div class="ulist">
-<ul>
-<li>
-<p>Added study Bible cross reference marker <a href="note/crossref/ex.html" class="xref page">\ex</a> for adding additional cross-references to the notes project.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_revisions_2"><a class="anchor" href="#_revisions_2"></a>Revisions</h3>
-<div class="ulist">
-<ul>
-<li>
-<p><em>Deprecated</em> - Study Bible footnote marker <code>\fs</code> for marking a footnote summary text.</p>
-</li>
-<li>
-<p>Revised markup specification for study Bible <a href="sbar/index.html" class="xref page">sidebars</a> (use any title, paragraph, poetry, table, or special text marker elements).</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_2_2"><a class="anchor" href="#_2_2"></a>2.2</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p><em>October 2008</em></p>
-</div>
-<div class="sect2">
-<h3 id="_additions_4"><a class="anchor" href="#_additions_4"></a>Additions</h3>
-<div class="ulist">
-<ul>
-<li>
-<p>Added character markers <a href="char/notes/crossref/xot.html" class="xref page">\xot &#8230;&#8203;\xot*</a> and <a href="char/notes/crossref/xnt.html" class="xref page">\xnt &#8230;&#8203;\xnt*</a> for uniquely marking target references to OT and NT passages (use of these markers is optional)</p>
-</li>
-<li>
-<p>Added <a href="char/introductions/iqt.html" class="xref page">\iqt &#8230;&#8203;\iqt*</a> to mark (scripture) quotations appearing in the introduction.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_revisions_3"><a class="anchor" href="#_revisions_3"></a>Revisions</h3>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="para/introductions/imte.html" class="xref page">\imte#</a> now includes an optional numeric variable (multiple levels).</p>
-</li>
-<li>
-<p>No-break space should now be marked using ~ (tilde), not !$</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_2_1"><a class="anchor" href="#_2_1"></a>2.1</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p><em>April 2007</em></p>
-</div>
-<div class="sect2">
-<h3 id="_additions_5"><a class="anchor" href="#_additions_5"></a>Additions</h3>
-<div class="ulist">
-<ul>
-<li>
-<p>Added <a href="para/introductions/ili.html" class="xref page">\ili</a> for marking introduction list items.</p>
-</li>
-<li>
-<p>Reviewed and finalized <a href="periph/index.html" class="xref page">Peripheral</a> content markup:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Added new back matter books <a href="periph/book-cnc.html" class="xref page">CNC</a>, <a href="periph/book-glo.html" class="xref page">GLO</a>, <a href="periph/book-tdx.html" class="xref page">TDX</a>, <a href="periph/book-ndx.html" class="xref page">NDX</a>.</p>
-</li>
-<li>
-<p>Added <a href="periph/book-int.html" class="xref page">INT</a> book for scripture division Introductions.</p>
-</li>
-<li>
-<p>Updated scheme for marking content divisions in <a href="periph/book-frt.html" class="xref page">FRT</a>, <a href="periph/book-int.html" class="xref page">INT</a>, <a href="periph/book-bak.html" class="xref page">BAK</a>, <a href="periph/book-oth.html" class="xref page">OTH</a></p>
-</li>
-<li>
-<p>Added various new content division markers.</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_revisions_4"><a class="anchor" href="#_revisions_4"></a>Revisions</h3>
-<div class="ulist">
-<ul>
-<li>
-<p>Finalized Study Bible Content markup.</p>
-</li>
-<li>
-<p>Reviewed and finalized <a href="periph/index.html" class="xref page">Peripheral</a> content markup.</p>
-</li>
-<li>
-<p>Changed <a href="char/features/rq.html" class="xref page">\rq &#8230;&#8203;\rq*</a> from paragraph to character level markup.</p>
-</li>
-<li>
-<p>Changed <a href="cv/ca.html" class="xref page">\ca &#8230;&#8203;\ca*</a> from paragraph to character level markup.</p>
-</li>
-</ul>
+<table class="tableblock frame-all grid-all stripes-even stretch">
+<colgroup>
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 42.8572%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Parser</th>
+<th class="tableblock halign-left valign-top">Data</th>
+<th class="tableblock halign-left valign-top">Parser can parse</th>
+<th class="tableblock halign-left valign-top">Generator can generate</th>
+<th class="tableblock halign-left valign-top">Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.1.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">via <code>markers.ext</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.1.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.1.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.1.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">via <code>markers.ext</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.1.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.2.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">via <code>markers.ext</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.3.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Since 4.0 is a formal restriction of 3.3.1</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.3.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4.0.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">via <code>markers.ext</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.3.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.1.*</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.2.*</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4.0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.3.*</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4.0.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.3.*</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Y</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_2_05"><a class="anchor" href="#_2_05"></a>2.05</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p><em>June 2006</em></p>
-</div>
-<div class="sect2">
-<h3 id="_additions_6"><a class="anchor" href="#_additions_6"></a>Additions</h3>
-<div class="ulist">
-<ul>
-<li>
-<p>Added <a href="char/features/rq.html" class="xref page">\rq</a> for marking inline quotation references.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_2_04"><a class="anchor" href="#_2_04"></a>2.04</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p><em>October 2005</em></p>
-</div>
-<div class="sect2">
-<h3 id="_additions_7"><a class="anchor" href="#_additions_7"></a>Additions</h3>
-<div class="ulist">
-<ul>
-<li>
-<p>Added <a href="para/identification/toc.html" class="xref page">\toc3</a> for providing the standard abbreviation for a book.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_2_03"><a class="anchor" href="#_2_03"></a>2.03</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p><em>August 2005</em></p>
-</div>
-<div class="sect2">
-<h3 id="_additions_8"><a class="anchor" href="#_additions_8"></a>Additions</h3>
-<div class="ulist">
-<ul>
-<li>
-<p>Added <a href="para/identification/toc.html" class="xref page">\toc1</a> and <a href="para/identification/toc.html" class="xref page">\toc2</a> for providing and marking long and short table of contents texts.</p>
-</li>
-<li>
-<p>Added <a href="char/notes/footnote/fl.html" class="xref page">\fl</a> for marking footnote “label” text items.</p>
-</li>
-<li>
-<p>Added <a href="char/notes/footnote/fp.html" class="xref page">\fp</a> for marking footnote additional paragraphs.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_2_0"><a class="anchor" href="#_2_0"></a>2.0</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p><em>October 2004</em></p>
-</div>
-<div class="paragraph">
-<p>Changes in USFM from 1.53 to 2.0.</p>
-</div>
-<div class="sect2">
-<h3 id="_additions_9"><a class="anchor" href="#_additions_9"></a>Additions</h3>
-<div class="ulist">
-<ul>
-<li>
-<p>Add character style <a href="char/features/em.html" class="xref page">\em &#8230;&#8203;\em*</a> for “emphasis”.</p>
-</li>
-<li>
-<p>In Peripherals:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Add <code>\intro</code> section to Front Matter (in addition to Preface).</p>
-</li>
-<li>
-<p>Add <code>\maps</code> (Maps Index) section to Back Matter.</p>
-</li>
-<li>
-<p>Define <a href="doc/books.html" class="xref page">books</a> for FRT, BAK, and OTH rather than using the book names XXA, XXB, and XXC for these materials.</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Add <a href="para/titles-sections/sr.html" class="xref page">\sr</a> for marking the text references range listed under a section heading \s.</p>
-</li>
-<li>
-<p>Add the following markers for “embedded text” (see example references – not all versions mark these items the same).</p>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="para/paragraphs/pm.html" class="xref page">\pm</a> - Embedded text paragraph</p>
-</li>
-<li>
-<p><a href="para/paragraphs/pmo.html" class="xref page">\pmo</a> - Embedded text opening</p>
-</li>
-<li>
-<p><a href="para/paragraphs/pmc.html" class="xref page">\pmc</a> - Embedded text closing</p>
-</li>
-<li>
-<p><a href="para/paragraphs/pmr.html" class="xref page">\pmr</a> - Embedded text refrain</p>
-</li>
-<li>
-<p><a href="para/poetry/qm.html" class="xref page">\qm#</a> - Embedded text poetic line</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Add character style \pro &#8230;&#8203;\pro* for indicating pronunciation (in CJK texts). (Deprecated - <em>See</em> <a href="char/features/rb.html" class="xref page">\rb &#8230;&#8203;\rb*</a>)</p>
-</li>
-<li>
-<p>Add character style <a href="char/features/w.html" class="xref page">\wj &#8230;&#8203;\wj*</a> for marking words of Jesus.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_revisions_5"><a class="anchor" href="#_revisions_5"></a>Revisions</h3>
-<div class="ulist">
-<ul>
-<li>
-<p>Removed <code>\pdi</code> and `\pde, and substitute with embedded text markup (see Additions, below)</p>
-</li>
-<li>
-<p>Removed <code>\wr &#8230;&#8203;\wr*</code>. This was really a duplicate of \w …w* used for marking words in the scripture text which are included in the wordlist.</p>
-</li>
-<li>
-<p>Removed <code>\ps</code>. This is used in conjunction with <a href="para/paragraphs/nb.html" class="xref page">\nb</a> to indicate that the paragraph spans the chapter boundary. It should be sufficient to just start the new chapter with <code>\nb</code> and use the appropriate paragraph marker for the previous chapter (<code>\p</code>, <code>\m</code> etc.)</p>
-</li>
-</ul>
-</div>
-</div>
+<div id="footnotes">
+<hr>
+<div class="footnote" id="_footnotedef_1">
+<a href="#_footnoteref_1">1</a>. Strictly speaking this was implemented with a syntax change, but can be modeled without, according to the rules here. <a href="https://docs.usfm.bible/usfm/3.1.1/index.html">3.1.1</a> was released before this document was written.
 </div>
 </div>
 <nav class="pagination">
-  <span class="prev"><a href="index.html">USFM-USX-USJ</a></span>
-  <span class="next"><a href="introduction.html">Introduction</a></span>
+  <span class="prev"><a href="glossary.html">Glossary of Terms</a></span>
+  <span class="next"><a href="doc/index.html">Document Structure</a></span>
 </nav>
 </article>
   </div>
