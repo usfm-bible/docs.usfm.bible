@@ -2,7 +2,7 @@ site:
   title: USFM-USX-USJ Documentation
   url: https://docs.usfm.bible
   start_page: usfm::index.adoc
-  robots: disallow
+  robots: allow
 git:
   ensure_git_suffix: true
 content:
