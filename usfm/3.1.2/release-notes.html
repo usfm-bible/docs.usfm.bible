@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Release Notes :: USFM-USX-USJ Documentation</title>
-    <link rel="canonical" href="https://docs.usfm.bible/usfm/3.1.1/release-notes.html">
+    <link rel="canonical" href="https://docs.usfm.bible/usfm/3.1.2/release-notes.html">
     <link rel="prev" href="index.html">
     <link rel="next" href="introduction.html">
     <meta name="generator" content="Antora 3.1.12">
@@ -188,6 +188,9 @@
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="para/introductions/ipr.html">ipr - Intro right-aligned</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="para/introductions/ipc.html">ipc - Intro centered</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="para/introductions/iq.html">iq# - Intro poetic line</a>
@@ -441,6 +444,9 @@
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="char/features/tl.html">tl - Transliterated words</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="char/features/wl.html">wl - Non-vernacular words</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="char/features/w.html">w - Wordlist entry</a>
@@ -803,15 +809,15 @@
   </div>
   <ul class="components">
     <li class="component is-current">
-      <div class="title"><a href="../3.1.1/index.html">USFM-USX-USJ</a></div>
+      <div class="title"><a href="index.html">USFM-USX-USJ</a></div>
       <ul class="versions">
         <li class="version">
           <a href="../latest/index.html">latest</a>
         </li>
-        <li class="version is-current">
+        <li class="version is-current is-latest">
           <a href="index.html">3.1.2</a>
         </li>
-        <li class="version is-latest">
+        <li class="version">
           <a href="../3.1.1/index.html">3.1.1</a>
         </li>
         <li class="version">
@@ -827,7 +833,7 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="../3.1.1/index.html" class="home-link"></a>
+  <a href="index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="index.html">USFM-USX-USJ</a></li>
@@ -851,6 +857,74 @@
 </aside>
 <article class="doc">
 <h1 class="page">Release Notes</h1>
+<div class="sect1">
+<h2 id="_3_1_2"><a class="anchor" href="#_3_1_2"></a>3.1.2</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_additions"><a class="anchor" href="#_additions"></a>Additions</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Add <mark><em>lang</em></mark> attribute to <a href="char/features/tl.html" class="xref page">tl</a> and <a href="char/features/tl.html" class="xref page">wl</a></p>
+</li>
+<li>
+<p>Add character style ta (U24002)</p>
+</li>
+<li>
+<p>Add new marker categories:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>cell (tc1..12, tcc1..12, tcr1..12, th1..12, thc1..12, thr1..12)</p>
+</li>
+<li>
+<p>attribute (cp, vp, usfm, ca, va, cat) indicates the contents are an attribute in USX</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_3_1_1"><a class="anchor" href="#_3_1_1"></a>3.1.1</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_additions_2"><a class="anchor" href="#_additions_2"></a>Additions</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Add <a href="para/introductions/ipc.html" class="xref page">ipc</a> to correspond to <a href="para/paragraphs/pc.html" class="xref page">pc</a>.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_revisions"><a class="anchor" href="#_revisions"></a>Revisions</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Move p1, p2 from OtherPara to PeriphPara (i.e. they are not used in scripture files).</p>
+</li>
+<li>
+<p>Fix <a href="char/breaks/optbreak.html" class="xref page">optbreak</a>.</p>
+</li>
+<li>
+<p>Allow <a href="para/paragraphs/lit.html" class="xref page">lit</a> in book <a href="doc/index.html#doc-book-intro" class="xref page">introduction</a>.</p>
+</li>
+<li>
+<p><a href="doc/books.html" class="xref page">Book codes</a> must contain at least one letter.</p>
+</li>
+<li>
+<p><a href="extensions.html" class="xref page">Markers.ext</a> <mark><code>\category</code></mark> may contain multiple entries.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
 <div class="sect1">
 <h2 id="_3_1"><a class="anchor" href="#_3_1"></a>3.1</h2>
 <div class="sectionbody">
@@ -959,7 +1033,7 @@
 <p><em>April 2018</em></p>
 </div>
 <div class="sect2">
-<h3 id="_additions"><a class="anchor" href="#_additions"></a>Additions</h3>
+<h3 id="_additions_3"><a class="anchor" href="#_additions_3"></a>Additions</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -1026,7 +1100,7 @@
 </div>
 </div>
 <div class="sect2">
-<h3 id="_revisions"><a class="anchor" href="#_revisions"></a>Revisions</h3>
+<h3 id="_revisions_2"><a class="anchor" href="#_revisions_2"></a>Revisions</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -1116,7 +1190,7 @@
 <p><em>June 2013</em></p>
 </div>
 <div class="sect2">
-<h3 id="_additions_2"><a class="anchor" href="#_additions_2"></a>Additions</h3>
+<h3 id="_additions_4"><a class="anchor" href="#_additions_4"></a>Additions</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -1134,7 +1208,7 @@
 <p><em>July 2010</em></p>
 </div>
 <div class="sect2">
-<h3 id="_additions_3"><a class="anchor" href="#_additions_3"></a>Additions</h3>
+<h3 id="_additions_5"><a class="anchor" href="#_additions_5"></a>Additions</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -1144,7 +1218,7 @@
 </div>
 </div>
 <div class="sect2">
-<h3 id="_revisions_2"><a class="anchor" href="#_revisions_2"></a>Revisions</h3>
+<h3 id="_revisions_3"><a class="anchor" href="#_revisions_3"></a>Revisions</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -1165,7 +1239,7 @@
 <p><em>October 2008</em></p>
 </div>
 <div class="sect2">
-<h3 id="_additions_4"><a class="anchor" href="#_additions_4"></a>Additions</h3>
+<h3 id="_additions_6"><a class="anchor" href="#_additions_6"></a>Additions</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -1178,7 +1252,7 @@
 </div>
 </div>
 <div class="sect2">
-<h3 id="_revisions_3"><a class="anchor" href="#_revisions_3"></a>Revisions</h3>
+<h3 id="_revisions_4"><a class="anchor" href="#_revisions_4"></a>Revisions</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -1199,7 +1273,7 @@
 <p><em>April 2007</em></p>
 </div>
 <div class="sect2">
-<h3 id="_additions_5"><a class="anchor" href="#_additions_5"></a>Additions</h3>
+<h3 id="_additions_7"><a class="anchor" href="#_additions_7"></a>Additions</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -1228,7 +1302,7 @@
 </div>
 </div>
 <div class="sect2">
-<h3 id="_revisions_4"><a class="anchor" href="#_revisions_4"></a>Revisions</h3>
+<h3 id="_revisions_5"><a class="anchor" href="#_revisions_5"></a>Revisions</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -1255,7 +1329,7 @@
 <p><em>June 2006</em></p>
 </div>
 <div class="sect2">
-<h3 id="_additions_6"><a class="anchor" href="#_additions_6"></a>Additions</h3>
+<h3 id="_additions_8"><a class="anchor" href="#_additions_8"></a>Additions</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -1273,7 +1347,7 @@
 <p><em>October 2005</em></p>
 </div>
 <div class="sect2">
-<h3 id="_additions_7"><a class="anchor" href="#_additions_7"></a>Additions</h3>
+<h3 id="_additions_9"><a class="anchor" href="#_additions_9"></a>Additions</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -1291,7 +1365,7 @@
 <p><em>August 2005</em></p>
 </div>
 <div class="sect2">
-<h3 id="_additions_8"><a class="anchor" href="#_additions_8"></a>Additions</h3>
+<h3 id="_additions_10"><a class="anchor" href="#_additions_10"></a>Additions</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -1318,7 +1392,7 @@
 <p>Changes in USFM from 1.53 to 2.0.</p>
 </div>
 <div class="sect2">
-<h3 id="_additions_9"><a class="anchor" href="#_additions_9"></a>Additions</h3>
+<h3 id="_additions_11"><a class="anchor" href="#_additions_11"></a>Additions</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -1375,7 +1449,7 @@
 </div>
 </div>
 <div class="sect2">
-<h3 id="_revisions_5"><a class="anchor" href="#_revisions_5"></a>Revisions</h3>
+<h3 id="_revisions_6"><a class="anchor" href="#_revisions_6"></a>Revisions</h3>
 <div class="ulist">
 <ul>
 <li>
