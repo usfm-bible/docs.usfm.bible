@@ -1,0 +1,1179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Character Level Attributes :: USFM-USX-USJ Documentation</title>
+    <link rel="canonical" href="https://docs.usfm.bible/usfm/3.1/char/attributes.html">
+    <link rel="prev" href="index.html">
+    <link rel="next" href="nesting.html">
+    <meta name="generator" content="Antora 3.1.12">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+<link rel="stylesheet" href="../../../_/css/site-extra.css">
+<link rel="stylesheet" href="../../../_/css/vendor/tabs.css">
+<link rel="stylesheet" href="../../../_/css/vendor/medium-zoom.css">
+<script src="../../../_/js/vendor/medium-zoom.min.js"></script>  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://docs.usfm.bible">USFM-USX-USJ Documentation</a>
+      <div class="navbar-item search hide-for-print">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search the docs">
+        </div>
+      </div>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="https://github.com/usfm-bible" target="_blank" title="Go to the USFM/USX project on Github">
+          <span class="gitlink"> </span>
+        </a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="usfm" data-version="3.1.2">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../index.html">USFM-USX-USJ</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../release-notes.html">Release Notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../introduction.html">Introduction</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../syntax.html">General Markup Syntax</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../extensions.html">User Extensions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../whitespace.html">Whitespace</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../syntax-docs.html">Documentation Syntax</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../glossary.html">Glossary of Terms</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../development-policy.html">Development Policy</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../doc/index.html">Document Structure</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../doc/id.html">id - Book identification</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../doc/books.html">Book IDs</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../doc/usfm.html">usfm - USFM version</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../cv/index.html">Chapters and Verses</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cv/c.html">c - Chapter number</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cv/ca.html">ca - Alternate chapter number</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cv/cp.html">cp - Published chapter number</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cv/v.html">v - Verse number</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cv/va.html">va - Alternate verse number</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cv/vp.html">vp - Published verse number</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../para/index.html">Paragraphs</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../para/identification/index.html">Identification</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/identification/ide.html">ide - Character encoding</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/identification/sts.html">sts - Text status</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/identification/rem.html">rem - Remarks</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/identification/h.html">h - Running header text</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/identification/toc.html">toc# - Book name texts</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/identification/toca.html">toca# - Alternate book name texts</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../para/introductions/index.html">Introductions</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/introductions/imt.html">imt# - Intro major title</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/introductions/is.html">is# - Intro section heading</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/introductions/ip.html">ip - Intro paragraph</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/introductions/ipi.html">ipi - Intro indented</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/introductions/im.html">im - Intro margin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/introductions/imi.html">imi - Intro indented margin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/introductions/ipq.html">ipq - Intro quote</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/introductions/imq.html">imq - Intro quote margin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/introductions/ipr.html">ipr - Intro right-aligned</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/introductions/iq.html">iq# - Intro poetic line</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/introductions/ili.html">ili# - Intro list entry</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/introductions/ib.html">ib - Intro blank line</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/introductions/iot.html">iot - Intro outline title</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/introductions/io.html">io# - Intro outline entry</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/introductions/iex.html">iex - Intro bridge text</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/introductions/imte.html">imte - Intro major title end</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/introductions/ie.html">ie - Intro end</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../para/titles-sections/index.html">Titles and Sections</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/titles-sections/mt.html">mt# - Main title</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/titles-sections/mte.html">mte# - Main title</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/titles-sections/cl.html">cl - Chapter label</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/titles-sections/cd.html">cd - Chapter description</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/titles-sections/ms.html">ms# - Major section heading</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/titles-sections/mr.html">mr - Major section range</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/titles-sections/s.html">s# - Section heading</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/titles-sections/sr.html">sr - Section range</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/titles-sections/r.html">r - Parallel references</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/titles-sections/d.html">d - Descriptive title</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/titles-sections/sp.html">sp - Speaker identification</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/titles-sections/sd.html">sd# - Semantic division</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../para/paragraphs/index.html">Body Paragraphs</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/paragraphs/p.html">p - Paragraph</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/paragraphs/m.html">m - Continuation (margin)</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/paragraphs/po.html">po - Letter opening</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/paragraphs/cls.html">cls - Letter closing</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/paragraphs/pr.html">pr - Right-aligned</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/paragraphs/pc.html">pc - Centered</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/paragraphs/pm.html">pm - Embedded paragraph</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/paragraphs/pmo.html">pmo -Embedded opening</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/paragraphs/pmc.html">pmc - Embedded closing</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/paragraphs/pmr.html">pmr - Embedded refrain</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/paragraphs/pi.html">pi# - Indented</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/paragraphs/mi.html">mi - Indented continuation</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/paragraphs/lit.html">lit - Liturgical note</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/paragraphs/nb.html">nb - No break</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/paragraphs/b.html">b - Blank line</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text"><em>Deprecated</em></span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../para/paragraphs/ph.html">ph - Indented hanging</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../para/poetry/index.html">Poetry</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/poetry/q.html">q# - Poetic line</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/poetry/qr.html">qr - Right-aligned</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/poetry/qc.html">qc - Centered</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/poetry/qa.html">qa - Acrostic heading</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/poetry/qm.html">qm# - Embedded poetic line</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/poetry/qd.html">qd - Hebrew note</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/poetry/b.html">b - Blank line</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../para/lists/index.html">Lists</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/lists/lh.html">lh - List header</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/lists/li.html">li# - List entry</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/lists/lf.html">lf - List footer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/lists/lim.html">lim# - Embedded list entry</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../para/tables/index.html">Tables</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/tables/tr.html">tr - Table row</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="index.html">Characters</a>
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="attributes.html">Attributes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="nesting.html">Nesting</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="features/index.html">Text Features</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="features/add.html">add - Translator addition</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="features/bk.html">bk - Quoted book title</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="features/dc.html">dc - DC-only content</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="features/em.html">em - Emphasis text</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="features/jmp.html">jmp - Link text</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="features/k.html">k - Keyword/keyterm</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="features/nd.html">nd - Name of God</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="features/ord.html">ord - Ordinal ending</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="features/pn.html">pn - Proper name</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="features/png.html">png - Geographic name</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="features/qt.html">qt - Quoted text</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="features/rb.html">rb - Ruby gloss</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="features/rq.html">rq - Inline quotation refs</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="features/ref.html">ref - Scripture reference</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="features/sig.html">sig - Author&#8217;s signature</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="features/sls.html">sls - Secondary source</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="features/tl.html">tl - Transliterated words</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="features/w.html">w - Wordlist entry</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="features/wa.html">wa - Aramaic wordlist entry</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="features/wg.html">wg - Greek wordlist entry</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="features/wh.html">wh - Hebrew wordlist entry</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="features/wj.html">wj - Words of Jesus</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text"><em>Deprecated</em></span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="features/addpn.html">addpn - Addition + name</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="features/pro.html">pro - Pronunciation annotation</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="format/index.html">Text Formatting</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="format/bd.html">bd - Bold text</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="format/it.html">it - Italic text</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="format/bdit.html">bdit - Bold+italic text</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="format/no.html">no - Normal text</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="format/sc.html">sc - Smallcap text</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="format/sup.html">sup - Superscript text</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="breaks/index.html">Breaks</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="breaks/optbreak.html">// - Optional line break</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="breaks/pb.html">pb - Page break</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="introductions/index.html">Introductions</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="introductions/ior.html">ior - Intro outline refs</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="introductions/iqt.html">iqt - Intro quoted text</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="poetry/index.html">Poetry</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="poetry/qac.html">qac - Acrostic character</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="poetry/qs.html">qs - Selah</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="lists/index.html">Lists</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lists/litl.html">litl - Entry total</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lists/lik.html">lik - Entry key</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="lists/liv.html">liv - Entry value(s)</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="tables/index.html">Tables</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="tables/th.html">th# - Table column head</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="tables/thr.html">thr# - Table column head - right aligned</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="tables/thc.html">thc# - Table column head - center aligned</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="tables/tc.html">tc# - Table cell</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="tables/tcr.html">tcr# - Table cell - right aligned</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="tables/tcc.html">tcc# - Table cell - center aligned</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="notes/index.html">Notes</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="notes/footnote/index.html">Footnotes</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="notes/footnote/fr.html">fr - Origin reference</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="notes/footnote/fq.html">fq - Translation quote</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="notes/footnote/fqa.html">fqa - Alternate translation</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="notes/footnote/fk.html">fk - Keyword</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="notes/footnote/ft.html">ft - Note text</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="notes/footnote/fl.html">fl - Label text</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="notes/footnote/fw.html">fw - Witness list</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="notes/footnote/fp.html">fp - Additional paragraph</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="notes/footnote/fv.html">fv - Verse number</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="notes/footnote/fdc.html">fdc - DC-only content</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="notes/footnote/fm.html">fm - Reference mark</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="notes/crossref/index.html">Cross References</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="notes/crossref/xo.html">xo - Origin reference</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="notes/crossref/xop.html">xop - Published origin text</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="notes/crossref/xk.html">xk - Keyword</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="notes/crossref/xq.html">xq - Translation quote</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="notes/crossref/xt.html">xt - Target references</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="notes/crossref/xta.html">xta - Target added text</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="notes/crossref/xot.html">xot - OT references</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="notes/crossref/xnt.html">xnt - NT references</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="notes/crossref/xdc.html">xdc - DC references</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../ms/index.html">Milestones</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ms/qt.html">qt# - Quotations</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ms/ts.html">ts - Translator&#8217;s section</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../note/index.html">Notes</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../note/footnote/index.html">Footnotes</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../note/footnote/f.html">f - Footnote</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../note/footnote/fe.html">fe - Endnote</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../note/footnote/ef.html">ef - Extended Note</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../note/crossref/index.html">Cross References</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../note/crossref/x.html">x - Cross Reference</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../note/crossref/ex.html">ex - Extended CrossRef</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../sbar/index.html">Sidebars</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../sbar/esb.html">esb - Sidebar</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../cat/index.html">Content Category</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cat/cat.html">cat - Content Category</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../fig/index.html">Figures</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../fig/fig.html">fig - Figure</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../periph/index.html">Peripherals</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../periph/periph.html">periph - Peripheral division</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../periph/books-divs.html">Books and Divisions</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../periph/book-frt.html">Front Matter</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../periph/book-int.html">Introductions</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../periph/book-bak.html">Back Matter</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Back Matter (Standalone)</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../periph/book-cnc.html">Concordance</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../periph/book-glo.html">Glossary</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../periph/book-tdx.html">Topical Index</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../periph/book-ndx.html">Names Index</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../periph/book-oth.html">Other</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">USFM-USX-USJ</span>
+    <span class="version">3.1.2</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <div class="title"><a href="../../3.1/index.html">USFM-USX-USJ</a></div>
+      <ul class="versions">
+        <li class="version">
+          <a href="../../latest/index.html">latest</a>
+        </li>
+        <li class="version is-current">
+          <a href="../index.html">3.1.2</a>
+        </li>
+        <li class="version">
+          <a href="../../3.1.1/index.html">3.1.1</a>
+        </li>
+        <li class="version is-latest">
+          <a href="../../3.1/index.html">3.1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../3.1/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">USFM-USX-USJ</a></li>
+    <li><a href="index.html">Characters</a></li>
+    <li><a href="attributes.html">Attributes</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">3.1.2</button>
+  <div class="version-menu">
+    <a class="version" href="../../latest/char/attributes.html">latest</a>
+    <a class="version is-current" href="attributes.html">3.1.2</a>
+    <a class="version" href="../../3.1.1/char/attributes.html">3.1.1</a>
+    <a class="version" href="../../3.1/char/attributes.html">3.1</a>
+  </div>
+</div>
+<div class="edit-this-page"><a href="https://github.com/usfm-bible/tcdocs/edit/3.1.2/manual/antora/modules/char/pages/attributes.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Character Level Attributes</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>USFM and USX 3 provide a syntax for adding named attributes to character markers. Attributes define additional properties for the marked content, and are a means of extending the meta-information contained within in a text. USFM <em>formally</em> defines attributes for a <a href="#chars-with-attrib">selected set</a> of current <a href="index.html" class="xref page">character</a> types.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_general_syntax"><a class="anchor" href="#_general_syntax"></a>General Syntax</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>In USFM</strong>, within a character marker span an attributes list is separated from the text content by a vertical bar <code>|</code>. Attributes are listed as pairs of name + corresponding value using the syntax: <code>attribute="value"</code>. The attribute name is a single ASCII string. The value is wrapped in quotes.</p>
+</div>
+<div class="paragraph">
+<p><strong>In USX</strong>, attributes are applied to elements in the standard XML syntax: <code>attribute="value"</code>.</p>
+</div>
+<div id="_tabs_1" class="openblock tabs is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_1_usfm" class="tab">
+<p>USFM</p>
+</li>
+<li id="_tabs_1_usx" class="tab">
+<p>USX</p>
+</li>
+<li id="_tabs_1_usj" class="tab">
+<p>USJ</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_1_usfm--panel" class="tabpanel" aria-labelledby="_tabs_1_usfm">
+<div id="src-usfm-char-w-attrib" class="listingblock">
+<div class="title">Example 1. Glossary word with <code>lemma</code> attribute</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\w gracious|lemma="grace"\w*</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_1_usx--panel" class="tabpanel" aria-labelledby="_tabs_1_usx">
+<div id="src-usx-char-w-attrib_1" class="listingblock">
+<div class="title">Example 2. Glossary word with <code>lemma</code> attribute</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;char style="w" lemma="grace"&gt;gracious&lt;/char&gt;</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_1_usj--panel" class="tabpanel" aria-labelledby="_tabs_1_usj">
+<div id="src-usj-char-w-attrib_1" class="listingblock">
+<div class="title">Example 3. Glossary word with <code>lemma</code> attribute</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "type": "char",
+  "marker": "w",
+  "lemma": "grace",
+  "content": ["gracious"]
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Nearly all USX elements contain a required <code>style</code> attribute. For <a href="../para/index.html" class="xref page">&lt;para&gt;</a> and <a href="index.html" class="xref page">&lt;char&gt;</a> elements, the <code>style</code> attribute defines the <a href="../para/index.html" class="xref page">paragraph</a> or <a href="index.html" class="xref page">character</a> type.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_default_attribute"><a class="anchor" href="#_default_attribute"></a>Default Attribute</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>In USFM</strong>, when content is supplied in the position of an attribute, but without an explicit attribute name, the specification defines a single default. This allows a commonly used attribute (the default) to be added with as little additional markup as possible.</p>
+</div>
+<div class="paragraph">
+<p>The concept and syntax of a "default attribute" is only valid in USFM. <strong>In USX</strong>, attributes always need to be expressed fully as <code>attribute="value"</code> together.</p>
+</div>
+<div id="_tabs_2" class="openblock tabs is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_2_usfm" class="tab">
+<p>USFM</p>
+</li>
+<li id="_tabs_2_usx" class="tab">
+<p>USX</p>
+</li>
+<li id="_tabs_2_usj" class="tab">
+<p>USJ</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_2_usfm--panel" class="tabpanel" aria-labelledby="_tabs_2_usfm">
+<div id="src-usfm-char-w-attrib-default" class="listingblock">
+<div class="title">Example 4. Glossary word with un-named default <code>lemma</code> attribute</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\w gracious|grace\w*</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_2_usx--panel" class="tabpanel" aria-labelledby="_tabs_2_usx">
+<div id="src-usx-char-w-attrib_2" class="listingblock">
+<div class="title">Example 5. USX: Glossary word with <code>lemma</code> attribute</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;char style="w" lemma="grace"&gt;gracious&lt;/char&gt;</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_2_usj--panel" class="tabpanel" aria-labelledby="_tabs_2_usj">
+<div id="src-usj-char-w-attrib_2" class="listingblock">
+<div class="title">Example 6. USX: Glossary word with <code>lemma</code> attribute</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "type": "char",
+  "marker": "w",
+  "lemma": "grace",
+  "content": ["gracious"]
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_multiple_attribute_values"><a class="anchor" href="#_multiple_attribute_values"></a>Multiple Attribute Values</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In cases where more than one value is needed for an attribute key, use a comma separated list within the value string. Whitespace adjacent to the comma separators is ignored.</p>
+</div>
+<div id="_tabs_3" class="openblock tabs is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_3_usfm" class="tab">
+<p>USFM</p>
+</li>
+<li id="_tabs_3_usx" class="tab">
+<p>USX</p>
+</li>
+<li id="_tabs_3_usj" class="tab">
+<p>USJ</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_3_usfm--panel" class="tabpanel" aria-labelledby="_tabs_3_usfm">
+<div id="src-usfm-char-w-attrib-strong" class="listingblock">
+<div class="title">Example 7. Glossary word with multiple <code>strong</code> values</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\w gracious|strong="H1234,G5485"\w*</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_3_usx--panel" class="tabpanel" aria-labelledby="_tabs_3_usx">
+<div id="src-usx-char-w-attrib-strong" class="listingblock">
+<div class="title">Example 8. Glossary word with multiple <code>strong</code> values</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;char style="w" strong="H1234,G5485"&gt;gracious&lt;/char&gt;</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_3_usj--panel" class="tabpanel" aria-labelledby="_tabs_3_usj">
+<div id="src-usj-char-w-attrib-strong" class="listingblock">
+<div class="title">Example 9. Glossary word with multiple <code>strong</code> values</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "type": "char",
+  "marker": "w",
+  "strong": "H1234,G5485",
+  "content": ["gracious"]
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>See the attributes for <a href="features/w.html" class="xref page">wordlist/glossary entry</a> for other examples.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_multiple_attribute_parts"><a class="anchor" href="#_multiple_attribute_parts"></a>Multiple Attribute Parts</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In cases where an attribute value is composed of multiple parts (e.g. a compound word or phrase), separate the parts using a colon <code>:</code> within the value string.</p>
+</div>
+<div class="paragraph">
+<p>See the <code>gloss</code> attribute for <a href="features/rb.html" class="xref page">ruby glosses</a> for an example of the use of this syntax.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_backward_compatibility"><a class="anchor" href="#_backward_compatibility"></a>Backward Compatibility</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Pre-existing markers which formally provide attributes in USFM/USX 3 (or newer) may continue to be used without attributes. <code>\w gracious\w*</code> (no attributes) and <code>&lt;char style="w"&gt;gracious&lt;/char&gt;</code> remain valid.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_user_defined_attributes"><a class="anchor" href="#_user_defined_attributes"></a>User Defined Attributes</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Using the general syntax above, attributes may be added to any character markers beyond the formally defined set in the current version of the USFM/USX specification. These will not be considered canonical, and there are no specific requirements defining how software supporting USFM/USX must process user-defined attributes.</p>
+</div>
+<div class="paragraph">
+<p>User defined attributes should begin with the prefix <code>x</code> or <code>z</code>.</p>
+</div>
+<div id="_tabs_4" class="openblock tabs is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_4_usfm" class="tab">
+<p>USFM</p>
+</li>
+<li id="_tabs_4_usx" class="tab">
+<p>USX</p>
+</li>
+<li id="_tabs_4_usj" class="tab">
+<p>USJ</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_4_usfm--panel" class="tabpanel" aria-labelledby="_tabs_4_usfm">
+<div id="src-usfm-char-w-attrib-user" class="listingblock">
+<div class="title">Example 10. Glossary word with user defined attribute</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\w gracious|x-myattr="value"\w*
+
+\w gracious|lemma="grace" x-myattr="value"\w*</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_4_usx--panel" class="tabpanel" aria-labelledby="_tabs_4_usx">
+<div id="src-usx-char-w-attrib-user" class="listingblock">
+<div class="title">Example 11. Glossary word with user defined attribute</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;char style="w" x-myattr="value"&gt;gracious&lt;/char&gt;
+
+&lt;char style="w" lemma="grace" x-myattr="value"&gt;gracious&lt;/char&gt;</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_4_usj--panel" class="tabpanel" aria-labelledby="_tabs_4_usj">
+<div id="src-usj-char-w-attrib-user" class="listingblock">
+<div class="title">Example 12. Glossary word with user defined attribute</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "type": "char",
+  "marker": "w",
+  "x-myattr": "value",
+  "content": ["gracious"]
+}
+
+{
+  "type": "char",
+  "marker": "w",
+  "lemma": "grace",
+  "x-myattr": "value",
+  "content": ["gracious"]
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="chars-with-attrib"><a class="anchor" href="#chars-with-attrib"></a>Characters Types with Attributes</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><a href="features/jmp.html" class="xref page">jmp - Link text</a>&#8201;&#8212;&#8201;<code>href</code>, <code>title</code>, <code>id</code></p>
+</li>
+<li>
+<p><a href="features/rb.html" class="xref page">rb - Ruby gloss</a>&#8201;&#8212;&#8201;<code>gloss</code></p>
+</li>
+<li>
+<p><a href="features/w.html" class="xref page">w - Wordlist entry</a>&#8201;&#8212;&#8201;<code>lemma</code>, <code>strong</code>, <code>srcloc</code></p>
+</li>
+<li>
+<p><a href="features/ref.html" class="xref page">ref - Scripture reference(s)</a>&#8201;&#8212;&#8201;<code>loc</code>, <code>gen</code></p>
+</li>
+<li>
+<p><a href="../fig/fig.html" class="xref page">fig - Figure</a>&#8201;&#8212;&#8201;<code>alt</code>, <code>src</code>, <code>size</code>, <code>loc</code>, <code>copy</code>, <code>ref</code></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="index.html">Characters</a></span>
+  <span class="next"><a href="nesting.html">Nesting</a></span>
+</nav>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+<script async src="../../../_/js/vendor/tabs.js"></script>
+<script defer src="../../../_/js/medium-zoom.config.js"></script>
+<script src="../../../_/js/vendor/lunr.js"></script>
+<script src="../../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../../.." data-snippet-length="100" data-stylesheet="../../../_/css/search.css"></script>
+<script async src="../../../search-index.js"></script>
+  </body>
+</html>

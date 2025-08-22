@@ -1,0 +1,1593 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Book Identifiers :: USFM-USX-USJ Documentation</title>
+    <link rel="canonical" href="https://docs.usfm.bible/usfm/3.1/doc/books.html">
+    <link rel="prev" href="id.html">
+    <link rel="next" href="usfm.html">
+    <meta name="generator" content="Antora 3.1.12">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+<link rel="stylesheet" href="../../../_/css/site-extra.css">
+<link rel="stylesheet" href="../../../_/css/vendor/tabs.css">
+<link rel="stylesheet" href="../../../_/css/vendor/medium-zoom.css">
+<script src="../../../_/js/vendor/medium-zoom.min.js"></script>  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://docs.usfm.bible">USFM-USX-USJ Documentation</a>
+      <div class="navbar-item search hide-for-print">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search the docs">
+        </div>
+      </div>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="https://github.com/usfm-bible" target="_blank" title="Go to the USFM/USX project on Github">
+          <span class="gitlink"> </span>
+        </a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="usfm" data-version="3.1.2">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="../index.html">USFM-USX-USJ</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../release-notes.html">Release Notes</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../introduction.html">Introduction</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../syntax.html">General Markup Syntax</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../extensions.html">User Extensions</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../whitespace.html">Whitespace</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../syntax-docs.html">Documentation Syntax</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../glossary.html">Glossary of Terms</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../development-policy.html">Development Policy</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="index.html">Document Structure</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="id.html">id - Book identification</a>
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="3">
+    <a class="nav-link" href="books.html">Book IDs</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="usfm.html">usfm - USFM version</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../cv/index.html">Chapters and Verses</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cv/c.html">c - Chapter number</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cv/ca.html">ca - Alternate chapter number</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cv/cp.html">cp - Published chapter number</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cv/v.html">v - Verse number</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cv/va.html">va - Alternate verse number</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cv/vp.html">vp - Published verse number</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../para/index.html">Paragraphs</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../para/identification/index.html">Identification</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/identification/ide.html">ide - Character encoding</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/identification/sts.html">sts - Text status</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/identification/rem.html">rem - Remarks</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/identification/h.html">h - Running header text</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/identification/toc.html">toc# - Book name texts</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/identification/toca.html">toca# - Alternate book name texts</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../para/introductions/index.html">Introductions</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/introductions/imt.html">imt# - Intro major title</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/introductions/is.html">is# - Intro section heading</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/introductions/ip.html">ip - Intro paragraph</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/introductions/ipi.html">ipi - Intro indented</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/introductions/im.html">im - Intro margin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/introductions/imi.html">imi - Intro indented margin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/introductions/ipq.html">ipq - Intro quote</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/introductions/imq.html">imq - Intro quote margin</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/introductions/ipr.html">ipr - Intro right-aligned</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/introductions/iq.html">iq# - Intro poetic line</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/introductions/ili.html">ili# - Intro list entry</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/introductions/ib.html">ib - Intro blank line</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/introductions/iot.html">iot - Intro outline title</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/introductions/io.html">io# - Intro outline entry</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/introductions/iex.html">iex - Intro bridge text</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/introductions/imte.html">imte - Intro major title end</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/introductions/ie.html">ie - Intro end</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../para/titles-sections/index.html">Titles and Sections</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/titles-sections/mt.html">mt# - Main title</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/titles-sections/mte.html">mte# - Main title</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/titles-sections/cl.html">cl - Chapter label</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/titles-sections/cd.html">cd - Chapter description</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/titles-sections/ms.html">ms# - Major section heading</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/titles-sections/mr.html">mr - Major section range</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/titles-sections/s.html">s# - Section heading</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/titles-sections/sr.html">sr - Section range</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/titles-sections/r.html">r - Parallel references</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/titles-sections/d.html">d - Descriptive title</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/titles-sections/sp.html">sp - Speaker identification</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/titles-sections/sd.html">sd# - Semantic division</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../para/paragraphs/index.html">Body Paragraphs</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/paragraphs/p.html">p - Paragraph</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/paragraphs/m.html">m - Continuation (margin)</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/paragraphs/po.html">po - Letter opening</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/paragraphs/cls.html">cls - Letter closing</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/paragraphs/pr.html">pr - Right-aligned</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/paragraphs/pc.html">pc - Centered</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/paragraphs/pm.html">pm - Embedded paragraph</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/paragraphs/pmo.html">pmo -Embedded opening</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/paragraphs/pmc.html">pmc - Embedded closing</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/paragraphs/pmr.html">pmr - Embedded refrain</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/paragraphs/pi.html">pi# - Indented</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/paragraphs/mi.html">mi - Indented continuation</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/paragraphs/lit.html">lit - Liturgical note</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/paragraphs/nb.html">nb - No break</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/paragraphs/b.html">b - Blank line</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text"><em>Deprecated</em></span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../para/paragraphs/ph.html">ph - Indented hanging</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../para/poetry/index.html">Poetry</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/poetry/q.html">q# - Poetic line</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/poetry/qr.html">qr - Right-aligned</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/poetry/qc.html">qc - Centered</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/poetry/qa.html">qa - Acrostic heading</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/poetry/qm.html">qm# - Embedded poetic line</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/poetry/qd.html">qd - Hebrew note</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/poetry/b.html">b - Blank line</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../para/lists/index.html">Lists</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/lists/lh.html">lh - List header</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/lists/li.html">li# - List entry</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/lists/lf.html">lf - List footer</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/lists/lim.html">lim# - Embedded list entry</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../para/tables/index.html">Tables</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../para/tables/tr.html">tr - Table row</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../char/index.html">Characters</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../char/attributes.html">Attributes</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../char/nesting.html">Nesting</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../char/features/index.html">Text Features</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../char/features/add.html">add - Translator addition</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../char/features/bk.html">bk - Quoted book title</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../char/features/dc.html">dc - DC-only content</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../char/features/em.html">em - Emphasis text</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../char/features/jmp.html">jmp - Link text</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../char/features/k.html">k - Keyword/keyterm</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../char/features/nd.html">nd - Name of God</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../char/features/ord.html">ord - Ordinal ending</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../char/features/pn.html">pn - Proper name</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../char/features/png.html">png - Geographic name</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../char/features/qt.html">qt - Quoted text</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../char/features/rb.html">rb - Ruby gloss</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../char/features/rq.html">rq - Inline quotation refs</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../char/features/ref.html">ref - Scripture reference</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../char/features/sig.html">sig - Author&#8217;s signature</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../char/features/sls.html">sls - Secondary source</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../char/features/tl.html">tl - Transliterated words</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../char/features/w.html">w - Wordlist entry</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../char/features/wa.html">wa - Aramaic wordlist entry</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../char/features/wg.html">wg - Greek wordlist entry</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../char/features/wh.html">wh - Hebrew wordlist entry</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../char/features/wj.html">wj - Words of Jesus</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text"><em>Deprecated</em></span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../char/features/addpn.html">addpn - Addition + name</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../char/features/pro.html">pro - Pronunciation annotation</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../char/format/index.html">Text Formatting</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../char/format/bd.html">bd - Bold text</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../char/format/it.html">it - Italic text</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../char/format/bdit.html">bdit - Bold+italic text</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../char/format/no.html">no - Normal text</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../char/format/sc.html">sc - Smallcap text</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../char/format/sup.html">sup - Superscript text</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../char/breaks/index.html">Breaks</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../char/breaks/optbreak.html">// - Optional line break</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../char/breaks/pb.html">pb - Page break</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../char/introductions/index.html">Introductions</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../char/introductions/ior.html">ior - Intro outline refs</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../char/introductions/iqt.html">iqt - Intro quoted text</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../char/poetry/index.html">Poetry</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../char/poetry/qac.html">qac - Acrostic character</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../char/poetry/qs.html">qs - Selah</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../char/lists/index.html">Lists</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../char/lists/litl.html">litl - Entry total</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../char/lists/lik.html">lik - Entry key</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../char/lists/liv.html">liv - Entry value(s)</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../char/tables/index.html">Tables</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../char/tables/th.html">th# - Table column head</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../char/tables/thr.html">thr# - Table column head - right aligned</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../char/tables/thc.html">thc# - Table column head - center aligned</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../char/tables/tc.html">tc# - Table cell</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../char/tables/tcr.html">tcr# - Table cell - right aligned</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../char/tables/tcc.html">tcc# - Table cell - center aligned</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../char/notes/index.html">Notes</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../char/notes/footnote/index.html">Footnotes</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../char/notes/footnote/fr.html">fr - Origin reference</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../char/notes/footnote/fq.html">fq - Translation quote</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../char/notes/footnote/fqa.html">fqa - Alternate translation</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../char/notes/footnote/fk.html">fk - Keyword</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../char/notes/footnote/ft.html">ft - Note text</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../char/notes/footnote/fl.html">fl - Label text</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../char/notes/footnote/fw.html">fw - Witness list</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../char/notes/footnote/fp.html">fp - Additional paragraph</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../char/notes/footnote/fv.html">fv - Verse number</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../char/notes/footnote/fdc.html">fdc - DC-only content</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../char/notes/footnote/fm.html">fm - Reference mark</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../char/notes/crossref/index.html">Cross References</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../char/notes/crossref/xo.html">xo - Origin reference</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../char/notes/crossref/xop.html">xop - Published origin text</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../char/notes/crossref/xk.html">xk - Keyword</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../char/notes/crossref/xq.html">xq - Translation quote</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../char/notes/crossref/xt.html">xt - Target references</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../char/notes/crossref/xta.html">xta - Target added text</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../char/notes/crossref/xot.html">xot - OT references</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../char/notes/crossref/xnt.html">xnt - NT references</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../char/notes/crossref/xdc.html">xdc - DC references</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../ms/index.html">Milestones</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ms/qt.html">qt# - Quotations</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../ms/ts.html">ts - Translator&#8217;s section</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../note/index.html">Notes</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../note/footnote/index.html">Footnotes</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../note/footnote/f.html">f - Footnote</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../note/footnote/fe.html">fe - Endnote</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../note/footnote/ef.html">ef - Extended Note</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../note/crossref/index.html">Cross References</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../note/crossref/x.html">x - Cross Reference</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../note/crossref/ex.html">ex - Extended CrossRef</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../sbar/index.html">Sidebars</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../sbar/esb.html">esb - Sidebar</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../cat/index.html">Content Category</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../cat/cat.html">cat - Content Category</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../fig/index.html">Figures</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../fig/fig.html">fig - Figure</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../periph/index.html">Peripherals</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../periph/periph.html">periph - Peripheral division</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../periph/books-divs.html">Books and Divisions</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../periph/book-frt.html">Front Matter</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../periph/book-int.html">Introductions</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../periph/book-bak.html">Back Matter</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Back Matter (Standalone)</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../periph/book-cnc.html">Concordance</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../periph/book-glo.html">Glossary</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../periph/book-tdx.html">Topical Index</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../periph/book-ndx.html">Names Index</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../periph/book-oth.html">Other</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">USFM-USX-USJ</span>
+    <span class="version">3.1.2</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <div class="title"><a href="../../3.1/index.html">USFM-USX-USJ</a></div>
+      <ul class="versions">
+        <li class="version">
+          <a href="../../latest/index.html">latest</a>
+        </li>
+        <li class="version is-current">
+          <a href="../index.html">3.1.2</a>
+        </li>
+        <li class="version">
+          <a href="../../3.1.1/index.html">3.1.1</a>
+        </li>
+        <li class="version is-latest">
+          <a href="../../3.1/index.html">3.1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../3.1/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">USFM-USX-USJ</a></li>
+    <li><a href="index.html">Document Structure</a></li>
+    <li><a href="id.html">id - Book identification</a></li>
+    <li><a href="books.html">Book IDs</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">3.1.2</button>
+  <div class="version-menu">
+    <a class="version" href="../../latest/doc/books.html">latest</a>
+    <a class="version is-current" href="books.html">3.1.2</a>
+    <a class="version" href="../../3.1.1/doc/books.html">3.1.1</a>
+    <a class="version" href="../../3.1/doc/books.html">3.1</a>
+  </div>
+</div>
+<div class="edit-this-page"><a href="https://github.com/usfm-bible/tcdocs/edit/3.1.2/manual/antora/modules/doc/pages/books.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Book Identifiers</h1>
+<div class="paragraph">
+<p>This table lists the standard USFM/USX 3-character book identifiers.</p>
+</div>
+<table class="tableblock frame-all grid-all stripes-even stretch">
+<colgroup>
+<col style="width: 14.2857%;">
+<col style="width: 14.2857%;">
+<col style="width: 28.5714%;">
+<col style="width: 42.8572%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Number</th>
+<th class="tableblock halign-left valign-top">Identifier</th>
+<th class="tableblock halign-left valign-top">English Name</th>
+<th class="tableblock halign-left valign-top">Alternate Name/Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">01</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>GEN</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Genesis</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">‘1 Moses’ in some Bibles</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">02</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>EXO</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Exodus</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">‘2 Moses’ in some Bibles</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">03</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>LEV</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Leviticus</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">‘3 Moses’ in some Bibles</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">04</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>NUM</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Numbers</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">‘4 Moses’ in some Bibles</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">05</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>DEU</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Deuteronomy</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">‘5 Moses’ in some Bibles</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">06</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>JOS</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Joshua</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">07</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>JDG</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Judges</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">08</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>RUT</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ruth</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">09</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>1SA</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1 Samuel</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1 Kings or Kingdoms in Orthodox Bibles; do not confuse this abbreviation with ISA for Isaiah</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">10</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>2SA</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2 Samuel</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2 Kings or Kingdoms in Orthodox Bibles</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">11</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>1KI</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1 Kings</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3 Kings or Kingdoms in Orthodox Bibles</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">12</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>2KI</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2 Kings</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4 Kings or Kingdoms in Orthodox Bibles</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">13</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>1CH</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1 Chronicles</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1 Paralipomenon in Orthodox Bibles</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">14</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>2CH</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2 Chronicles</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2 Paralipomenon in Orthodox Bibles</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">15</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>EZR</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ezra</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">This is for Hebrew Ezra, sometimes called 1 Ezra or 1 Esdras; also for Ezra-Nehemiah when one book</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">16</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>NEH</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Nehemiah</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sometimes appended to Ezra; called 2 Esdras in the Vulgate</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">17</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>EST</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Esther (Hebrew)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">This is for Hebrew Esther; for the longer Greek LXX Esther use ESG</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">18</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>JOB</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Job</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">19</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>PSA</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Psalms</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">150 Psalms in Hebrew, 151 Psalms in Orthodox Bibles, 155 Psalms in West Syriac Bibles, if you put Psalm 151 separately in an Apocrypha use PS2, for Psalms 152-155 use PS3</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">20</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>PRO</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Proverbs</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">31 Proverbs, but 24 Proverbs in the Ethiopian Bible</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">21</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ECC</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ecclesiastes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Qoholeth in Catholic Bibles; for Ecclesiasticus use SIR</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">22</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>SNG</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Song of Songs</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Song of Solomon, or Canticles of Canticles in Catholic Bibles</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">23</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ISA</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Isaiah</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Do not confuse this abbreviation with 1SA for 1 Samuel</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">24</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>JER</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Jeremiah</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The Book of Jeremiah; for the Letter of Jeremiah use LJE</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">25</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>LAM</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Lamentations</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The Lamentations of Jeremiah</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">26</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>EZK</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ezekiel</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">27</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>DAN</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Daniel (Hebrew)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">This is for Hebrew Daniel; for the longer Greek LXX Daniel use DAG</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">28</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>HOS</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Hosea</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">29</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>JOL</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Joel</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">30</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>AMO</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Amos</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">31</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>OBA</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Obadiah</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">32</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>JON</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Jonah</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Do not confuse this abbreviation with JHN for John</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">33</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>MIC</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Micah</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">34</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>NAM</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Nahum</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">35</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>HAB</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Habakkuk</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">36</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ZEP</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Zephaniah</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">37</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>HAG</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Haggai</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">38</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ZEC</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Zechariah</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">39</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>MAL</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Malachi</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">41</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>MAT</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Matthew</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The Gospel according to Matthew</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">42</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>MRK</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Mark</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The Gospel according to Mark</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">43</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>LUK</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Luke</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The Gospel according to Luke</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">44</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>JHN</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">John</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The Gospel according to John</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">45</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ACT</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Acts</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The Acts of the Apostles</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">46</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ROM</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Romans</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The Letter of Paul to the Romans</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">47</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>1CO</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1 Corinthians</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The First Letter of Paul to the Corinthians</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">48</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>2CO</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2 Corinthians</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The Second Letter of Paul to the Corinthians</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">49</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>GAL</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Galatians</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The Letter of Paul to the Galatians</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">50</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>EPH</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ephesians</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The Letter of Paul to the Ephesians</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">51</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>PHP</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Philippians</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The Letter of Paul to the Philippians</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">52</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>COL</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Colossians</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The Letter of Paul to the Colossians</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">53</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>1TH</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1 Thessalonians</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The First Letter of Paul to the Thessalonians</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">54</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>2TH</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2 Thessalonians</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The Second Letter of Paul to the Thessalonians</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">55</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>1TI</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1 Timothy</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The First Letter of Paul to Timothy</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">56</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>2TI</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2 Timothy</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The Second Letter of Paul to Timothy</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">57</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>TIT</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Titus</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The Letter of Paul to Titus</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">58</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>PHM</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Philemon</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The Letter of Paul to Philemon</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">59</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>HEB</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Hebrews</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The Letter to the Hebrews</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">60</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>JAS</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">James</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The Letter of James</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">61</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>1PE</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1 Peter</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The First Letter of Peter</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">62</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>2PE</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2 Peter</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The Second Letter of Peter</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">63</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>1JN</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1 John</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The First Letter of John</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">64</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>2JN</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2 John</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The Second Letter of John</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">65</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>3JN</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3 John</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The Third Letter of John</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">66</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>JUD</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Jude</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The Letter of Jude; do not confuse this abbreviation with JDG for Judges, or JDT for Judith</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">67</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>REV</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Revelation</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The Revelation to John; called Apocalypse in Catholic Bibles</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">68</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>TOB</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tobit</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">69</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>JDT</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Judith</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">70</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ESG</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Esther Greek</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">71</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>WIS</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Wisdom of Solomon</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">72</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>SIR</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sirach</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ecclesiasticus or Jesus son of Sirach</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">73</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>BAR</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Baruch</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5 chapters in Orthodox Bibles (LJE is separate); 6 chapters in Catholic Bibles (includes LJE); called 1 Baruch in Syriac Bibles</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">74</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>LJE</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Letter of Jeremiah</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sometimes included in Baruch; called ‘Rest of Jeremiah’ in Ethiopia</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">75</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>S3Y</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Song of the 3 Young Men</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Includes the Prayer of Azariah; sometimes included in Greek Daniel</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">76</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>SUS</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Susanna</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sometimes included in Greek Daniel</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">77</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>BEL</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Bel and the Dragon</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sometimes included in Greek Daniel; called ‘Rest of Daniel’ in Ethiopia</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">78</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>1MA</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1 Maccabees</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Called ‘3 Maccabees’ in some traditions, printed in Catholic and Orthodox Bibles</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">79</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>2MA</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2 Maccabees</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Called ‘1 Maccabees’ in some traditions, printed in Catholic and Orthodox Bibles</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">80</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>3MA</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3 Maccabees</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Called ‘2 Maccabees’ in some traditions, printed in Orthodox Bibles</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">81</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>4MA</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4 Maccabees</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">In an appendix to the Greek Bible and in the Georgian Bible</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">82</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>1ES</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1 Esdras (Greek)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The 9 chapter book of Greek Ezra in the LXX, called ‘2 Esdras’ in Russian Bibles, and called ‘3 Esdras’ in the Vulgate; when Ezra-Nehemiah is one book use EZR</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">83</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>2ES</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2 Esdras (Latin)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The 16 chapter book of Latin Esdras called ‘3 Esdras’ in Russian Bibles and called ‘4 Esdras’ in the Vulgate; for the 12 chapter Apocalypse of Ezra use EZA</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">84</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>MAN</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Prayer of Manasseh</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sometimes appended to 2 Chronicles, included in Orthodox Bibles</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">85</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>PS2</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Psalm 151</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">An additional Psalm in the Septuagint, appended to Psalms in Orthodox Bibles</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">86</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ODA</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Odae/Odes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A book in some editions of the Septuagint; Odes has different contents in Greek, Russian, and Syriac traditions</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">87</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>PSS</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Psalms of Solomon</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A book in some editions of the Septuagint, but not printed in modern Bibles</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>EZA</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ezra Apocalypse</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">12 chapter book of Ezra Apocalypse; called ‘3 Ezra’ in the Armenian Bible, called ‘Ezra Shealtiel’ in the Ethiopian Bible; formerly called 4ES; called ‘2 Esdras’ when it includes 5 Ezra and 6 Ezra</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>5EZ</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">5 Ezra</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2 chapter Latin preface to Ezra Apocalypse; formerly called 5ES</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A6</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>6EZ</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">6 Ezra</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2 chapter Latin conclusion to Ezra Apocalypse; formerly called 6ES</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">B2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>DAG</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Daniel Greek</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The 14 chapter version of Daniel from the Septuagint including Greek additions</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">B3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>PS3</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Psalms 152-155</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Additional Psalms 152-155 found in West Syriac manuscripts</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">B4</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>2BA</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2 Baruch (Apocalypse)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The Apocalypse of Baruch in Syriac Bibles</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">B5</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>LBA</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Letter of Baruch</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sometimes appended to 2 Baruch; sometimes separate in Syriac Bibles</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">B6</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>JUB</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Jubilees</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Ancient Hebrew book used in the Ethiopian Bible</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">B7</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>ENO</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Enoch</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Sometimes called ‘1 Enoch’; ancient Hebrew book in the Ethiopian Bible</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">B8</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>1MQ</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1 Meqabyan/Mekabis</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Book of Mekabis of Benjamin in the Ethiopian Bible</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">B9</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>2MQ</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">2 Meqabyan/Mekabis</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Book of Mekabis of Moab in the Ethiopian Bible</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">C0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>3MQ</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3 Meqabyan/Mekabis</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Book of Meqabyan in the Ethiopian Bible</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">C1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>REP</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Reproof</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Proverbs part 2: Used in the Ethiopian Bible</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">C2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>4BA</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">4 Baruch</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Paralipomenon of Jeremiah, called ‘Rest of the Words of Baruch’ in Ethiopia; may include or exclude the Letter of Jeremiah as chapter 1, used in the Ethiopian Bible</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">C3</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>LAO</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Letter to the Laodiceans</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A Latin Vulgate book, found in the Vulgate and some medieval Catholic translations</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>FRT</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Front Matter</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>BAK</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Back Matter</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A2</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>OTH</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Other Matter</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A7</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>INT</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Introduction Matter</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A8</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>CNC</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Concordance</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A9</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>GLO</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Glossary/Wordlist</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">B0</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>TDX</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Topical Index</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">B1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>NDX</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Names Index</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">94</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>XXA</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Extra material</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">95</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>XXB</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Extra material</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">96</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>XXC</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Extra material</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">97</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>XXD</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Extra material</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">98</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>XXE</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Extra material</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">99</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>XXF</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Extra material</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">100</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><strong>XXG</strong></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Extra material</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+<nav class="pagination">
+  <span class="prev"><a href="id.html">id - Book identification</a></span>
+  <span class="next"><a href="usfm.html">usfm - USFM version</a></span>
+</nav>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+<script async src="../../../_/js/vendor/tabs.js"></script>
+<script defer src="../../../_/js/medium-zoom.config.js"></script>
+<script src="../../../_/js/vendor/lunr.js"></script>
+<script src="../../../_/js/search-ui.js" id="search-ui-script" data-site-root-path="../../.." data-snippet-length="100" data-stylesheet="../../../_/css/search.css"></script>
+<script async src="../../../search-index.js"></script>
+  </body>
+</html>
