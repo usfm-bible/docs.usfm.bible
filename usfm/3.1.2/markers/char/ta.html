@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>cls :: USFM-USX-USJ Documentation</title>
-    <link rel="canonical" href="https://docs.usfm.bible/usfm/3.1.2/markers/para/cls.html">
-    <meta name="description" content="Letter closing">
+    <title>ta :: USFM-USX-USJ Documentation</title>
+    <link rel="canonical" href="https://docs.usfm.bible/usfm/3.1.2/markers/char/ta.html">
+    <meta name="description" content="Text alternatives">
     <meta name="generator" content="Antora 3.1.12">
     <link rel="stylesheet" href="../../../../_/css/site.css">
 <link rel="stylesheet" href="../../../../_/css/site-extra.css">
@@ -839,26 +839,26 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../../index.html">USFM-USX-USJ</a></li>
-    <li><a href="cls.html">cls</a></li>
+    <li><a href="ta.html">ta</a></li>
   </ul>
 </nav>
 <div class="page-versions">
   <button class="version-menu-toggle" title="Show other versions of page">3.1.2</button>
   <div class="version-menu">
-    <a class="version" href="../../../latest/markers/para/cls.html">latest</a>
-    <a class="version is-current" href="cls.html">3.1.2</a>
-    <a class="version" href="../../../3.1.1/markers/para/cls.html">3.1.1</a>
-    <a class="version" href="../../../3.1/markers/para/cls.html">3.1</a>
+    <a class="version is-missing" href="../../../latest/index.html">latest</a>
+    <a class="version is-current" href="ta.html">3.1.2</a>
+    <a class="version is-missing" href="../../../3.1.1/index.html">3.1.1</a>
+    <a class="version is-missing" href="../../../3.1/index.html">3.1</a>
   </div>
 </div>
-<div class="edit-this-page"><a href="https://github.com/usfm-bible/tcdocs/edit/3.1.2/manual/antora/modules/markers/pages/para/cls.adoc">Edit this Page</a></div>
+<div class="edit-this-page"><a href="https://github.com/usfm-bible/tcdocs/edit/3.1.2/manual/antora/modules/markers/pages/char/ta.adoc">Edit this Page</a></div>
 </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">cls</h1>
+<h1 class="page">ta</h1>
 <div class="sect1">
 <h2 id="_summary"><a class="anchor" href="#_summary"></a>Summary</h2>
 <div class="sectionbody">
@@ -866,32 +866,56 @@
 <dl>
 <dt class="hdlist1">Description</dt>
 <dd>
-<p>Letter closing.</p>
+<p>Text alternatives. A character style which allows for specifying alternate texts based on a text identifier. Some examples contexts for use are:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Minor dialectal variations.</p>
+</li>
+<li>
+<p>Key term differences (e.g. the word used for God in Shangdi or Shen editions of the Chinese Bible).</p>
+</li>
+<li>
+<p>Differences in how numbers are presented (e.g. 120, one hundred twenty, one hundred and twenty).</p>
+</li>
+<li>
+<p>In a Back Translation, highlighting alternative senses of a word, or different ways to render a word or phrase.</p>
+</li>
+</ul>
+</div>
 </dd>
 <dt class="hdlist1"><a href="../../syntax-docs.html#_syntax" class="xref page">Syntax <span class="image"><img src="../../_images/help.svg" alt="help"></span></a></dt>
 <dd>
 <div class="ulist">
 <ul>
 <li>
-<p><strong>USFM:</strong> <code>\cls </code><mark><em>content</em></mark></p>
+<p><strong>USFM:</strong> <code>\ta </code><mark><em>content</em></mark><code>|</code><mark><em>@a-&lt;identifier&gt;</em></mark><code>\ta*</code></p>
 </li>
 <li>
-<p><strong>USX:</strong> <code>&lt;para style="cls"&gt;</code><mark><em>content</em></mark><code>&lt;/para&gt;</code></p>
+<p><strong>USX:</strong> <code>&lt;char style="ta" </code><mark><em>@a-&lt;identifier&gt;</em></mark><code>&gt;</code><mark><em>content</em></mark><code>&lt;/char&gt;</code></p>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><mark>a-&lt;identifier&gt;</mark></dt>
+<dd>
+<p>One or more attributes for providing text altervatives. Each attribte should be begin with <code>a-</code></p>
+</dd>
+</dl>
+</div>
 </li>
 </ul>
 </div>
 </dd>
 <dt class="hdlist1">Style Type</dt>
 <dd>
-<p><a href="../../para/index.html" class="xref page">Paragraph</a></p>
+<p><a href="../../char/index.html" class="xref page">Character</a></p>
 </dd>
 <dt class="hdlist1">Valid In</dt>
 <dd>
-<p><code>[<a href="../../doc/index.html#doc-book-chapter-content" class="xref page">ChapterContent</a>]</code></p>
+<p><code>[<a href="../../doc/index.html#doc-book-titles" class="xref page">BookTitles</a>]</code>, <code>[<a href="../../doc/index.html#doc-book-intro" class="xref page">BookIntroduction</a>]</code>, <code>[<a href="../../doc/index.html#doc-book-intro-end-titles" class="xref page">BookIntroductionEndTitles</a>]</code>, <code>[<a href="../../para/titles-sections/index.html" class="xref page">Section</a>]</code>, <code>[Para]</code> (<a href="../../para/paragraphs/index.html" class="xref page">Body Paragraphs</a>, <a href="../../para/poetry/index.html" class="xref page">Poetry</a>), <code>[<a href="../../para/lists/index.html" class="xref page">List</a>]</code>, <code>[<a href="../../para/tables/index.html" class="xref page">Table</a>]</code></p>
 </dd>
 <dt class="hdlist1">Added</dt>
 <dd>
-<p>1.0</p>
+<p>3.1.2</p>
 </dd>
 </dl>
 </div>
@@ -916,80 +940,39 @@
 </ul>
 </div>
 <div id="_tabs_1_usfm--panel" class="tabpanel" aria-labelledby="_tabs_1_usfm">
-<div id="src-usfm-para-cls_1" class="listingblock">
-<div class="title">Example 1. Colossians 4.18 (GNT)</div>
+<div id="src-usfm-char-ta_1" class="listingblock">
+<div class="title">Example 1. Jeremiah 13.23 (GNT)</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\id
-\c 4
-\p
-\v 18 With my own hand I write this: \sig Greetings from Paul\sig*. Do not
-forget my chains!
-\cls May God's grace be with you.</code></pre>
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\id JER
+\c 13
+\p ...
+\v 23 Can people change the \ta color|a-uk="colour" of their skin, or a leopard
+remove its spots? If they could, then you that do nothing but evil could learn
+to do what is right.</code></pre>
 </div>
 </div>
 </div>
 <div id="_tabs_1_usx--panel" class="tabpanel" aria-labelledby="_tabs_1_usx">
-<div id="src-usx-para-cls_1" class="listingblock">
-<div class="title">Example 2. Colossians 4.18 (GNT)</div>
+<div id="src-usx-char-ta_1" class="listingblock">
+<div class="title">Example 2. Jeremiah 13.23 (GNT)</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;usx version="3.1"&gt;
-  &lt;book code="COL" style="id"/&gt;
-  &lt;chapter number="4" style="c" sid="COL 4"/&gt;
+  &lt;book code="JER" style="id"/&gt;
+  &lt;chapter number="13" style="c" sid="JER 13"/&gt;
   &lt;para style="p"&gt;
-    &lt;verse number="18" style="v" sid="COL 4:18"/&gt;With my own hand I write this:
-    &lt;char style="sig"&gt;Greetings from Paul&lt;/char&gt;. Do not forget my chains!&lt;/para&gt;
-  &lt;para style="cls" vid="COL 4:18"&gt;May God's grace be with you.
-    &lt;verse eid="COL 4:18"/&gt;&lt;/para&gt;
+    &lt;verse number="23" style="v" sid="JER 13:23" /&gt;Can people change the
+    &lt;char style="ta" a-uk="colour"&gt;color&lt;/char&gt; of their skin, or a leopard
+    remove its spots? If they could, then you that do nothing but evil could
+    learn to do what is right.&lt;verse eid="XXA 13:23" /&gt;&lt;/para&gt;
 &lt;/usx&gt;</code></pre>
 </div>
 </div>
 </div>
 <div id="_tabs_1_usj--panel" class="tabpanel" aria-labelledby="_tabs_1_usj">
-<div id="src-usj-para-cls_1" class="listingblock">
-<div class="title">Example 3. Colossians 4.18 (GNT)</div>
+<div id="src-usj-char-ta_1" class="listingblock">
+<div class="title">Example 3. Jeremiah 13.23 (GNT)</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
-  "type": "USJ",
-  "version": "3.1",
-  "content": [
-    {
-      "type": "book",
-      "marker": "id",
-      "code": "COL",
-      "content": []
-    },
-    {
-      "type": "chapter",
-      "marker": "c",
-      "number": "4",
-      "sid": "COL 4"
-    },
-    {
-      "type": "para",
-      "marker": "p",
-      "content": [
-        {
-          "type": "verse",
-          "marker": "v",
-          "number": "18",
-          "sid": "COL 4:18"
-        },
-        "With my own hand I write this: ",
-        {
-          "type": "char",
-          "marker": "sig",
-          "content": ["Greetings from Paul"]
-        },
-        ". Do not forget my chains!"
-      ]
-    },
-    {
-      "type": "para",
-      "marker": "cls",
-      "content": ["May God's grace be with you."]
-    }
-  ]
-}</code></pre>
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">Missing</code></pre>
 </div>
 </div>
 </div>
@@ -997,7 +980,7 @@ forget my chains!
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="../_images/para/cls_1.jpg" alt="Colossians 4.18 (GNT)" width="300">
+<img src="../_images/char/missing.jpg" alt="missing" width="300">
 </div>
 </div>
 </div>
@@ -1013,7 +996,7 @@ forget my chains!
 </dd>
 <dt class="hdlist1">TextProperties</dt>
 <dd>
-<p>paragraph, publishable, vernacular</p>
+<p>publishable, vernacular</p>
 </dd>
 </dl>
 </div>
