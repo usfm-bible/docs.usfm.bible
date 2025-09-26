@@ -7,4 +7,4 @@ https://gitlab.com/antora/antora/-/issues/834
 
 ---
 
-Dev publication rev: 141
+Dev publication rev: 142
