@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>tl :: USFM-USX-USJ Documentation</title>
     <link rel="canonical" href="https://docs.usfm.bible/usfm/3.1.1/char/features/tl.html">
-    <link rel="prev" href="sls.html">
-    <link rel="next" href="w.html">
+    <link rel="prev" href="ta.html">
+    <link rel="next" href="wl.html">
     <meta name="generator" content="Antora 3.1.14">
     <link rel="stylesheet" href="../../../../_/css/site.css">
 <link rel="stylesheet" href="../../../../_/css/site-extra.css">
@@ -188,6 +188,9 @@
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../../para/introductions/ipr.html">ipr - Intro right-aligned</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../para/introductions/ipc.html">ipc - Intro centered</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../../para/introductions/iq.html">iq# - Intro poetic line</a>
@@ -439,8 +442,14 @@
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="sls.html">sls - Secondary source</a>
   </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="ta.html">ta - Text alternatives</a>
+  </li>
   <li class="nav-item is-current-page" data-depth="3">
     <a class="nav-link" href="tl.html">tl - Transliterated words</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="wl.html">wl - Non-vernacular words</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="w.html">w - Wordlist entry</a>
@@ -664,6 +673,9 @@
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../../ms/ts.html">ts - Translator&#8217;s section</a>
   </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../ms/vid.html">vid - Current reference identifier</a>
+  </li>
 </ul>
   </li>
 </ul>
@@ -871,10 +883,18 @@
 <div class="ulist">
 <ul>
 <li>
-<p><strong>USFM:</strong> <code>\tl </code><mark><em>content</em></mark><code>\tl*</code></p>
+<p><strong>USFM:</strong> <code>\tl </code><mark><em>content</em></mark><code>|</code><mark><em>@lang</em></mark><code>\tl*</code></p>
 </li>
 <li>
-<p><strong>USX:</strong> <code>&lt;char style="tl"&gt;</code><mark><em>content</em></mark><code>&lt;/char&gt;</code></p>
+<p><strong>USX:</strong> <code>&lt;char style="tl" </code><mark><em>@lang</em></mark><code>&gt;</code><mark><em>content</em></mark><code>&lt;/char&gt;</code></p>
+<div class="dlist">
+<dl>
+<dt class="hdlist1"><mark>lang</mark></dt>
+<dd>
+<p>Source language of the transliterated text according to ISO639-1 (2 letter codes) <em>(default attribute)</em></p>
+</dd>
+</dl>
+</div>
 </li>
 </ul>
 </div>
@@ -890,6 +910,10 @@
 <dt class="hdlist1">Added</dt>
 <dd>
 <p>1.0</p>
+</dd>
+<dt class="hdlist1">Updated</dt>
+<dd>
+<p>3.1.2 (attributes)</p>
 </dd>
 </dl>
 </div>
@@ -1043,8 +1067,8 @@ lema sabachthani?”\tl* which means, “My God, my God, why did you abandon me?
 </div>
 </div>
 <nav class="pagination">
-  <span class="prev"><a href="sls.html">sls - Secondary source</a></span>
-  <span class="next"><a href="w.html">w - Wordlist entry</a></span>
+  <span class="prev"><a href="ta.html">ta - Text alternatives</a></span>
+  <span class="next"><a href="wl.html">wl - Non-vernacular words</a></span>
 </nav>
 </article>
   </div>
