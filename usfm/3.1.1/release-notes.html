@@ -298,7 +298,7 @@
     <a class="nav-link" href="para/paragraphs/pi.html">pi# - Indented</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="para/paragraphs/mi.html">mi - Indented continuation</a>
+    <a class="nav-link" href="para/paragraphs/mi.html">mi# - Indented continuation</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="para/paragraphs/lit.html">lit - Liturgical note</a>
@@ -690,6 +690,9 @@
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="note/footnote/ef.html">ef - Extended Note</a>
   </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="note/footnote/efe.html">efe - Extended Endnote</a>
+  </li>
 </ul>
   </li>
   <li class="nav-item" data-depth="2">
@@ -866,7 +869,7 @@
 <div class="ulist">
 <ul>
 <li>
-<p>Add <a href="para/introductions/ipc.html" class="xref page">ipc</a> to correspond to <a href="para/paragraphs/pc.html" class="xref page">pc</a>.</p>
+<p>Add <a href="para/index.html" class="xref page">paragraph</a> type <a href="para/introductions/ipc.html" class="xref page">ipc</a> to correspond to <a href="para/paragraphs/pc.html" class="xref page">pc</a>.</p>
 </li>
 </ul>
 </div>
@@ -882,7 +885,7 @@
 <p>Fix <a href="char/breaks/optbreak.html" class="xref page">optbreak</a>.</p>
 </li>
 <li>
-<p>Allow <a href="para/paragraphs/lit.html" class="xref page">lit</a> in book <a href="doc/index.html#doc-book-intro" class="xref page">introduction</a>.</p>
+<p>Allow <a href="para/index.html" class="xref page">paragraph</a> type <a href="para/paragraphs/lit.html" class="xref page">lit</a> in book <a href="doc/index.html#doc-book-intro" class="xref page">introductions</a>.</p>
 </li>
 <li>
 <p><a href="doc/books.html" class="xref page">Book codes</a> must contain at least one letter.</p>
@@ -904,13 +907,13 @@
 <div class="sect2">
 <h3 id="_background_on_usfm_3_1"><a class="anchor" href="#_background_on_usfm_3_1"></a>Background on USFM 3.1</h3>
 <div class="paragraph">
-<p>USFM (Unified Scripture Format Markup) 3.1 primarily represents an effort to standardize a single <a href="doc/index.html" class="xref page">content model</a> which can be equally expressed in backslash-based <code>\</code> format markers (USFM-FM), XML (USFM-XML), or JSON (USFM-JSON). The common abbreviation for these expressions are <strong>USFM</strong>, <strong>USX</strong>, and <strong>USJ</strong>.</p>
+<p>USFM (Unified Scripture Format Markup) 3.1 primarily represents an effort to resolve ambiguities, and to standardize a single <a href="doc/index.html" class="xref page">content model</a> which can be equally expressed in backslash-based <code>\</code> format markers (USFM-FM), XML (USFM-XML), or JSON (USFM-JSON). The common abbreviations for these expressions are <strong>USFM</strong>, <strong>USX</strong>, and <strong>USJ</strong>.</p>
 </div>
 <div class="paragraph">
 <p>This documentation provides a <a href="syntax-docs.html" class="xref page">summary</a> of markup syntax, schema diagrams, and example texts for both USFM and USX. USJ is a newer expression. Equivalent example texts in USJ are also being added.</p>
 </div>
 <div class="paragraph">
-<p>Previous release notes (3.0 and earlier) are expressed only in USFM-FM specific terms.</p>
+<p>Previous release notes (3.0 and earlier) are expressed only in USFM specific terms.</p>
 </div>
 </div>
 <div class="sect2">
@@ -924,7 +927,7 @@
 <p><a href="doc/index.html#doc-book-titles" class="xref page">BookTitles</a> are optional.</p>
 </li>
 <li>
-<p><a href="doc/index.html#doc-book-headers" class="xref page">BookHeaders</a> include <a href="para/identification/sts.html" class="xref page">sts</a>.</p>
+<p>Byte Order Mark is allowed at the start of the file.</p>
 </li>
 <li>
 <p><a href="doc/index.html#doc-book-identification" class="xref page">BookIdentification</a> may be any 3 letter code (within reason).</p>
@@ -933,10 +936,16 @@
 <p>Other peripherals may be of any type.</p>
 </li>
 <li>
-<p><a href="doc/index.html#doc-book-chapter-content" class="xref page">Section</a>, <a href="doc/index.html#doc-book-chapter-content" class="xref page">Verse</a>, and other <a href="doc/index.html#doc-book-chapter-content" class="xref page">Para</a> (paragraphs) are seperated as different categories (internal).</p>
+<p><a href="doc/index.html#doc-book-headers" class="xref page">BookHeaders</a> include <a href="para/index.html" class="xref page">paragraph</a> type <a href="para/identification/sts.html" class="xref page">sts</a>.</p>
+</li>
+<li>
+<p>Distinguish <a href="doc/index.html#doc-book-chapter-content" class="xref page">Section</a>, <a href="doc/index.html#doc-book-chapter-content" class="xref page">Verse</a>, and Other <a href="doc/index.html#doc-book-chapter-content" class="xref page">paragraph</a> types in the grammar (internal).</p>
 </li>
 <li>
 <p>The <a href="para/index.html" class="xref page">paragraph</a> <mark><em>@vid</em></mark> attribute has an extended reference syntax.</p>
+</li>
+<li>
+<p>The <a href="para/index.html" class="xref page">paragraph</a> type <a href="para/paragraphs/mi.html" class="xref page">mi#</a> supports 3 indent levels.</p>
 </li>
 <li>
 <p><a href="char/index.html" class="xref page">Character</a> markers and <a href="char/nesting.html" class="xref page">nesting</a>:</p>
@@ -946,19 +955,19 @@
 <p>All <a href="char/index.html" class="xref page">character</a> elements must be closed <em>explicitly</em>, with the exception of note structural elements (below).</p>
 </li>
 <li>
-<p>Note specific <a href="char/notes/index.html" class="xref page">character</a> elements (i.e. <code>f</code>&#8230;&#8203; <a href="char/notes/footnote/fr.html" class="xref page">fr</a>, <a href="char/notes/footnote/fq.html" class="xref page">fq</a>, <a href="char/notes/footnote/ft.html" class="xref page">ft</a>, or <code>x</code>&#8230;&#8203; <a href="char/notes/crossref/xo.html" class="xref page">xo</a>, <a href="char/notes/crossref/xt.html" class="xref page">xt</a> etc.) are considered note <em>submarker elements</em>. They provide structure to the note content. These note submarker elements continue to support (and recommend) the common pratice of implicit closure.</p>
+<p>Note specific <a href="char/notes/index.html" class="xref page">character</a> elements (i.e. <code>f</code>&#8230;&#8203; <a href="char/notes/footnote/fr.html" class="xref page">fr</a>, <a href="char/notes/footnote/fq.html" class="xref page">fq</a>, <a href="char/notes/footnote/ft.html" class="xref page">ft</a>, or <code>x</code>&#8230;&#8203; <a href="char/notes/crossref/xo.html" class="xref page">xo</a>, <a href="char/notes/crossref/xt.html" class="xref page">xt</a> etc.) are considered note <em>structural elements</em>. Only these markers continue to support implicit closure.</p>
 </li>
 <li>
-<p>Note content must occur within a submarker element; there can be no unmarked note content only within the <a href="note/index.html" class="xref page">note container</a> itself.</p>
-</li>
-<li>
-<p><a href="char/notes/footnote/fv.html" class="xref page">fv</a> is now just a <a href="char/notes/index.html" class="xref page">character</a> style and requires explicit closing.</p>
+<p>Note content must occur within a note structural element. There should be no unmarked note content occuring only within the <a href="note/index.html" class="xref page">note container</a> itself.</p>
 </li>
 <li>
 <p>Use of the <code>+</code> prefix for nested USFM <a href="char/index.html" class="xref page">character</a> markup is supported but is <em>deprecated</em>. Note that future versions of USFM may remove support for the <code>\+</code> syntax entirely.</p>
 </li>
 </ul>
 </div>
+</li>
+<li>
+<p><a href="char/notes/footnote/fv.html" class="xref page">fv</a> is now just a <a href="char/notes/index.html" class="xref page">character</a> style and requires explicit closing.</p>
 </li>
 <li>
 <p>Markings scripture references&#8201;&#8212;&#8201;<a href="char/features/ref.html" class="xref page">ref</a> and <a href="char/notes/crossref/xt.html" class="xref page">xt</a>:</p>

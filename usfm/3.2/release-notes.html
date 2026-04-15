@@ -298,7 +298,7 @@
     <a class="nav-link" href="para/paragraphs/pi.html">pi# - Indented</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="para/paragraphs/mi.html">mi - Indented continuation</a>
+    <a class="nav-link" href="para/paragraphs/mi.html">mi# - Indented continuation</a>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="para/paragraphs/lit.html">lit - Liturgical note</a>
@@ -699,6 +699,9 @@
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="note/footnote/ef.html">ef - Extended Note</a>
   </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="note/footnote/efe.html">efe - Extended Endnote</a>
+  </li>
 </ul>
   </li>
   <li class="nav-item" data-depth="2">
@@ -870,8 +873,40 @@
 <div class="sect1">
 <h2 id="_3_2"><a class="anchor" href="#_3_2"></a>3.2</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p><em>Incomplete</em></p>
+<div class="sect2">
+<h3 id="_additions"><a class="anchor" href="#_additions"></a>Additions</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Explicit unicode to USFM (<a href="https://github.com/usfm-bible/tcdocs/blob/main/proposals/2025/U25004%20Explicit%20Unicode.md">U25004</a>).</p>
+</li>
+<li>
+<p>An optional <code>list</code> element in USX, and two pairs of milestones in USFM to represent the start and end of a list or table (<a href="https://github.com/usfm-bible/tcdocs/blob/main/proposals/2025/U25003%20Lists%20and%20Tables.md">U25003</a>).</p>
+</li>
+<li>
+<p>Use a <code>*</code> (wildcard) to attribute in markers.ext (<a href="https://github.com/usfm-bible/tcdocs/blob/main/proposals/2024/U24002%20Textual%20Alternatives.md">U24002</a>). E.g. <code>a-*</code> to allow anything with an <code>a-</code> prefix.</p>
+</li>
+<li>
+<p>Generalised node initial attributes (<a href="https://github.com/usfm-bible/tcdocs/blob/main/proposals/2025/U25001%20Attributes.md">U25001</a>). E.g. <code>\ip |aid="author"| The author is unknown</code>.</p>
+</li>
+<li>
+<p>Anchors and inline referencing (<a href="https://github.com/usfm-bible/tcdocs/blob/main/proposals/2025/U25002%20Anchors.md">U25002</a>)</p>
+</li>
+<li>
+<p>New <a href="extensions.html" class="xref page">markers.ext</a> <a href="extensions.html#ext-category" class="xref page">category</a> <code>standalone</code> - A bare milestone with no attibutes or delimeter.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_revisions"><a class="anchor" href="#_revisions"></a>Revisions</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="cv/v.html" class="xref page">v</a> is not allowed in <a href="para/index.html" class="xref page">paragraphs</a> of <a href="extensions.html#ext-category" class="xref page">category</a> <code>otherpara</code> or <code>sectionpara</code></p>
+</li>
+</ul>
+</div>
 </div>
 </div>
 </div>
@@ -879,24 +914,24 @@
 <h2 id="_3_1_2"><a class="anchor" href="#_3_1_2"></a>3.1.2</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_additions"><a class="anchor" href="#_additions"></a>Additions</h3>
+<h3 id="_additions_2"><a class="anchor" href="#_additions_2"></a>Additions</h3>
 <div class="ulist">
 <ul>
 <li>
-<p>Add <mark><em>lang</em></mark> attribute to <a href="char/features/tl.html" class="xref page">tl</a> and <a href="char/features/tl.html" class="xref page">wl</a></p>
+<p>Add <mark><em>lang</em></mark> attribute to <a href="char/index.html" class="xref page">character</a> types <a href="char/features/tl.html" class="xref page">tl</a> and <a href="char/features/wl.html" class="xref page">wl</a></p>
 </li>
 <li>
-<p>Add character style <a href="char/features/ta.html" class="xref page">ta</a> (<a href="https://github.com/usfm-bible/tcdocs/blob/main/proposals/2024/U24002%20Textual%20Alternatives.md">U24002</a>)</p>
+<p>Add character type <a href="char/features/ta.html" class="xref page">ta</a> (<a href="https://github.com/usfm-bible/tcdocs/blob/main/proposals/2024/U24002%20Textual%20Alternatives.md">U24002</a>)</p>
 </li>
 <li>
 <p>Add new marker <a href="extensions.html#ext-category" class="xref page">categories</a>:</p>
 <div class="ulist">
 <ul>
 <li>
-<p>cell (tc1..12, tcc1..12, tcr1..12, th1..12, thc1..12, thr1..12)</p>
+<p><code>cell</code> (tc1..12, tcc1..12, tcr1..12, th1..12, thc1..12, thr1..12)</p>
 </li>
 <li>
-<p>attribute (<a href="cv/cp.html" class="xref page">cp</a>, <a href="cv/vp.html" class="xref page">vp</a>, <a href="cv/ca.html" class="xref page">ca</a>, <a href="cv/va.html" class="xref page">va</a>, <a href="doc/usfm.html" class="xref page">usfm</a>, <a href="cat/cat.html" class="xref page">cat</a>) indicates the contents are an attribute in USX.</p>
+<p><code>attribute</code> (<a href="cv/cp.html" class="xref page">cp</a>, <a href="cv/vp.html" class="xref page">vp</a>, <a href="cv/ca.html" class="xref page">ca</a>, <a href="cv/va.html" class="xref page">va</a>, <a href="doc/usfm.html" class="xref page">usfm</a>, <a href="cat/cat.html" class="xref page">cat</a>) indicates that the contents are an attribute in USX.</p>
 </li>
 </ul>
 </div>
@@ -913,17 +948,17 @@
 <h2 id="_3_1_1"><a class="anchor" href="#_3_1_1"></a>3.1.1</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_additions_2"><a class="anchor" href="#_additions_2"></a>Additions</h3>
+<h3 id="_additions_3"><a class="anchor" href="#_additions_3"></a>Additions</h3>
 <div class="ulist">
 <ul>
 <li>
-<p>Add <a href="para/introductions/ipc.html" class="xref page">ipc</a> to correspond to <a href="para/paragraphs/pc.html" class="xref page">pc</a>.</p>
+<p>Add <a href="para/index.html" class="xref page">paragraph</a> type <a href="para/introductions/ipc.html" class="xref page">ipc</a> to correspond to <a href="para/paragraphs/pc.html" class="xref page">pc</a>.</p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_revisions"><a class="anchor" href="#_revisions"></a>Revisions</h3>
+<h3 id="_revisions_2"><a class="anchor" href="#_revisions_2"></a>Revisions</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -933,13 +968,13 @@
 <p>Fix <a href="char/breaks/optbreak.html" class="xref page">optbreak</a>.</p>
 </li>
 <li>
-<p>Allow <a href="para/paragraphs/lit.html" class="xref page">lit</a> in book <a href="doc/index.html#doc-book-intro" class="xref page">introduction</a>.</p>
+<p>Allow <a href="para/index.html" class="xref page">paragraph</a> type <a href="para/paragraphs/lit.html" class="xref page">lit</a> in book <a href="doc/index.html#doc-book-intro" class="xref page">introductions</a>.</p>
 </li>
 <li>
 <p><a href="doc/books.html" class="xref page">Book codes</a> must contain at least one letter.</p>
 </li>
 <li>
-<p><a href="extensions.html" class="xref page">Markers.ext</a> <mark><code>\category</code></mark> may contain multiple entries.</p>
+<p><a href="extensions.html" class="xref page">Markers.ext</a> <mark><em>\category</em></mark> may contain multiple entries.</p>
 </li>
 </ul>
 </div>
@@ -955,13 +990,13 @@
 <div class="sect2">
 <h3 id="_background_on_usfm_3_1"><a class="anchor" href="#_background_on_usfm_3_1"></a>Background on USFM 3.1</h3>
 <div class="paragraph">
-<p>USFM (Unified Scripture Format Markup) 3.1 primarily represents an effort to standardize a single <a href="doc/index.html" class="xref page">content model</a> which can be equally expressed in backslash-based <code>\</code> format markers (USFM-FM), XML (USFM-XML), or JSON (USFM-JSON). The common abbreviation for these expressions are <strong>USFM</strong>, <strong>USX</strong>, and <strong>USJ</strong>.</p>
+<p>USFM (Unified Scripture Format Markup) 3.1 primarily represents an effort to resolve ambiguities, and to standardize a single <a href="doc/index.html" class="xref page">content model</a> which can be equally expressed in backslash-based <code>\</code> format markers (USFM-FM), XML (USFM-XML), or JSON (USFM-JSON). The common abbreviations for these expressions are <strong>USFM</strong>, <strong>USX</strong>, and <strong>USJ</strong>.</p>
 </div>
 <div class="paragraph">
 <p>This documentation provides a <a href="syntax-docs.html" class="xref page">summary</a> of markup syntax, schema diagrams, and example texts for both USFM and USX. USJ is a newer expression. Equivalent example texts in USJ are also being added.</p>
 </div>
 <div class="paragraph">
-<p>Previous release notes (3.0 and earlier) are expressed only in USFM-FM specific terms.</p>
+<p>Previous release notes (3.0 and earlier) are expressed only in USFM specific terms.</p>
 </div>
 </div>
 <div class="sect2">
@@ -975,7 +1010,7 @@
 <p><a href="doc/index.html#doc-book-titles" class="xref page">BookTitles</a> are optional.</p>
 </li>
 <li>
-<p><a href="doc/index.html#doc-book-headers" class="xref page">BookHeaders</a> include <a href="para/identification/sts.html" class="xref page">sts</a>.</p>
+<p>Byte Order Mark is allowed at the start of the file.</p>
 </li>
 <li>
 <p><a href="doc/index.html#doc-book-identification" class="xref page">BookIdentification</a> may be any 3 letter code (within reason).</p>
@@ -984,10 +1019,16 @@
 <p>Other peripherals may be of any type.</p>
 </li>
 <li>
-<p><a href="doc/index.html#doc-book-chapter-content" class="xref page">Section</a>, <a href="doc/index.html#doc-book-chapter-content" class="xref page">Verse</a>, and other <a href="doc/index.html#doc-book-chapter-content" class="xref page">Para</a> (paragraphs) are seperated as different categories (internal).</p>
+<p><a href="doc/index.html#doc-book-headers" class="xref page">BookHeaders</a> include <a href="para/index.html" class="xref page">paragraph</a> type <a href="para/identification/sts.html" class="xref page">sts</a>.</p>
+</li>
+<li>
+<p>Distinguish <a href="doc/index.html#doc-book-chapter-content" class="xref page">Section</a>, <a href="doc/index.html#doc-book-chapter-content" class="xref page">Verse</a>, and Other <a href="doc/index.html#doc-book-chapter-content" class="xref page">paragraph</a> types in the grammar (internal).</p>
 </li>
 <li>
 <p>The <a href="para/index.html" class="xref page">paragraph</a> <mark><em>@vid</em></mark> attribute has an extended reference syntax.</p>
+</li>
+<li>
+<p>The <a href="para/index.html" class="xref page">paragraph</a> type <a href="para/paragraphs/mi.html" class="xref page">mi#</a> supports 3 indent levels.</p>
 </li>
 <li>
 <p><a href="char/index.html" class="xref page">Character</a> markers and <a href="char/nesting.html" class="xref page">nesting</a>:</p>
@@ -997,19 +1038,19 @@
 <p>All <a href="char/index.html" class="xref page">character</a> elements must be closed <em>explicitly</em>, with the exception of note structural elements (below).</p>
 </li>
 <li>
-<p>Note specific <a href="char/notes/index.html" class="xref page">character</a> elements (i.e. <code>f</code>&#8230;&#8203; <a href="char/notes/footnote/fr.html" class="xref page">fr</a>, <a href="char/notes/footnote/fq.html" class="xref page">fq</a>, <a href="char/notes/footnote/ft.html" class="xref page">ft</a>, or <code>x</code>&#8230;&#8203; <a href="char/notes/crossref/xo.html" class="xref page">xo</a>, <a href="char/notes/crossref/xt.html" class="xref page">xt</a> etc.) are considered note <em>submarker elements</em>. They provide structure to the note content. These note submarker elements continue to support (and recommend) the common pratice of implicit closure.</p>
+<p>Note specific <a href="char/notes/index.html" class="xref page">character</a> elements (i.e. <code>f</code>&#8230;&#8203; <a href="char/notes/footnote/fr.html" class="xref page">fr</a>, <a href="char/notes/footnote/fq.html" class="xref page">fq</a>, <a href="char/notes/footnote/ft.html" class="xref page">ft</a>, or <code>x</code>&#8230;&#8203; <a href="char/notes/crossref/xo.html" class="xref page">xo</a>, <a href="char/notes/crossref/xt.html" class="xref page">xt</a> etc.) are considered note <em>structural elements</em>. Only these markers continue to support implicit closure.</p>
 </li>
 <li>
-<p>Note content must occur within a submarker element; there can be no unmarked note content only within the <a href="note/index.html" class="xref page">note container</a> itself.</p>
-</li>
-<li>
-<p><a href="char/notes/footnote/fv.html" class="xref page">fv</a> is now just a <a href="char/notes/index.html" class="xref page">character</a> style and requires explicit closing.</p>
+<p>Note content must occur within a note structural element. There should be no unmarked note content occuring only within the <a href="note/index.html" class="xref page">note container</a> itself.</p>
 </li>
 <li>
 <p>Use of the <code>+</code> prefix for nested USFM <a href="char/index.html" class="xref page">character</a> markup is supported but is <em>deprecated</em>. Note that future versions of USFM may remove support for the <code>\+</code> syntax entirely.</p>
 </li>
 </ul>
 </div>
+</li>
+<li>
+<p><a href="char/notes/footnote/fv.html" class="xref page">fv</a> is now just a <a href="char/notes/index.html" class="xref page">character</a> style and requires explicit closing.</p>
 </li>
 <li>
 <p>Markings scripture references&#8201;&#8212;&#8201;<a href="char/features/ref.html" class="xref page">ref</a> and <a href="char/notes/crossref/xt.html" class="xref page">xt</a>:</p>
@@ -1054,7 +1095,7 @@
 <p><em>April 2018</em></p>
 </div>
 <div class="sect2">
-<h3 id="_additions_3"><a class="anchor" href="#_additions_3"></a>Additions</h3>
+<h3 id="_additions_4"><a class="anchor" href="#_additions_4"></a>Additions</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -1121,7 +1162,7 @@
 </div>
 </div>
 <div class="sect2">
-<h3 id="_revisions_2"><a class="anchor" href="#_revisions_2"></a>Revisions</h3>
+<h3 id="_revisions_3"><a class="anchor" href="#_revisions_3"></a>Revisions</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -1211,7 +1252,7 @@
 <p><em>June 2013</em></p>
 </div>
 <div class="sect2">
-<h3 id="_additions_4"><a class="anchor" href="#_additions_4"></a>Additions</h3>
+<h3 id="_additions_5"><a class="anchor" href="#_additions_5"></a>Additions</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -1229,7 +1270,7 @@
 <p><em>July 2010</em></p>
 </div>
 <div class="sect2">
-<h3 id="_additions_5"><a class="anchor" href="#_additions_5"></a>Additions</h3>
+<h3 id="_additions_6"><a class="anchor" href="#_additions_6"></a>Additions</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -1239,7 +1280,7 @@
 </div>
 </div>
 <div class="sect2">
-<h3 id="_revisions_3"><a class="anchor" href="#_revisions_3"></a>Revisions</h3>
+<h3 id="_revisions_4"><a class="anchor" href="#_revisions_4"></a>Revisions</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -1260,7 +1301,7 @@
 <p><em>October 2008</em></p>
 </div>
 <div class="sect2">
-<h3 id="_additions_6"><a class="anchor" href="#_additions_6"></a>Additions</h3>
+<h3 id="_additions_7"><a class="anchor" href="#_additions_7"></a>Additions</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -1273,7 +1314,7 @@
 </div>
 </div>
 <div class="sect2">
-<h3 id="_revisions_4"><a class="anchor" href="#_revisions_4"></a>Revisions</h3>
+<h3 id="_revisions_5"><a class="anchor" href="#_revisions_5"></a>Revisions</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -1294,7 +1335,7 @@
 <p><em>April 2007</em></p>
 </div>
 <div class="sect2">
-<h3 id="_additions_7"><a class="anchor" href="#_additions_7"></a>Additions</h3>
+<h3 id="_additions_8"><a class="anchor" href="#_additions_8"></a>Additions</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -1323,7 +1364,7 @@
 </div>
 </div>
 <div class="sect2">
-<h3 id="_revisions_5"><a class="anchor" href="#_revisions_5"></a>Revisions</h3>
+<h3 id="_revisions_6"><a class="anchor" href="#_revisions_6"></a>Revisions</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -1350,7 +1391,7 @@
 <p><em>June 2006</em></p>
 </div>
 <div class="sect2">
-<h3 id="_additions_8"><a class="anchor" href="#_additions_8"></a>Additions</h3>
+<h3 id="_additions_9"><a class="anchor" href="#_additions_9"></a>Additions</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -1368,7 +1409,7 @@
 <p><em>October 2005</em></p>
 </div>
 <div class="sect2">
-<h3 id="_additions_9"><a class="anchor" href="#_additions_9"></a>Additions</h3>
+<h3 id="_additions_10"><a class="anchor" href="#_additions_10"></a>Additions</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -1386,7 +1427,7 @@
 <p><em>August 2005</em></p>
 </div>
 <div class="sect2">
-<h3 id="_additions_10"><a class="anchor" href="#_additions_10"></a>Additions</h3>
+<h3 id="_additions_11"><a class="anchor" href="#_additions_11"></a>Additions</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -1413,7 +1454,7 @@
 <p>Changes in USFM from 1.53 to 2.0.</p>
 </div>
 <div class="sect2">
-<h3 id="_additions_11"><a class="anchor" href="#_additions_11"></a>Additions</h3>
+<h3 id="_additions_12"><a class="anchor" href="#_additions_12"></a>Additions</h3>
 <div class="ulist">
 <ul>
 <li>
@@ -1470,7 +1511,7 @@
 </div>
 </div>
 <div class="sect2">
-<h3 id="_revisions_6"><a class="anchor" href="#_revisions_6"></a>Revisions</h3>
+<h3 id="_revisions_7"><a class="anchor" href="#_revisions_7"></a>Revisions</h3>
 <div class="ulist">
 <ul>
 <li>
