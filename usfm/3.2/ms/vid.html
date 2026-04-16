@@ -879,15 +879,34 @@
 <dd>
 <p>Current reference identifier. For indicating what the current reference is within a fragment of scripture (e.g. a scripture module), and to provide the current header text (<a href="../para/identification/h.html" class="xref page">h</a>). This can be used instead of inserting a <a href="../cv/c.html" class="xref page">c</a> and <a href="../cv/v.html" class="xref page">v</a> marker in the text fragment.</p>
 </dd>
+</dl>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="title">Syntax notes</div>
+<div class="paragraph">
+<p>In <strong>USFM</strong> <code>\vid\*</code> is presented as a <a href="index.html" class="xref page">milestone</a>. In <strong>USX</strong> the attribute values from this milestone are expressed within the following <a href="../para/index.html" class="xref page">paragraph</a> element as <mark><em>@h</em></mark> and <mark><em>@vid</em></mark>, rather than by the addition of an <code>&lt;ms/&gt;</code> element.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="dlist">
+<dl>
 <dt class="hdlist1"><a href="../syntax-docs.html#_syntax" class="xref page">Syntax <span class="image"><img src="../_images/help.svg" alt="help"></span></a></dt>
 <dd>
 <div class="ulist">
 <ul>
 <li>
-<p><strong>USFM:</strong> <code>\vid |</code><mark><em>@ref @h</em></mark><code>\*</code></p>
+<p><strong>USFM:</strong> <code>\vid|</code><mark><em>@h @ref</em></mark><code>\*</code></p>
 </li>
 <li>
-<p><strong>USX:</strong> <code>&lt;ms style="vid" </code><mark><em>@ref @h</em></mark><code>/&gt;</code></p>
+<p><strong>USX:</strong> <code>&lt;para style="</code><mark><em>style</em></mark><code>" h="</code><mark><em>@h</em></mark><code>" vid="</code><mark><em>@ref</em></mark><code>"&gt;</code><mark><em>content</em></mark><code>&lt;/para&gt;</code></p>
 <div class="dlist">
 <dl>
 <dt class="hdlist1"><mark>ref*</mark></dt>
@@ -937,7 +956,7 @@
 </dd>
 <dt class="hdlist1">Added</dt>
 <dd>
-<p>3.1.2</p>
+<p>3.1.2 (TC proposal: <a href="https://github.com/usfm-bible/tcdocs/blob/main/proposals/2025/U25008%20vid.md" target="_blank" rel="noopener">U25008</a>)</p>
 </dd>
 </dl>
 </div>
@@ -979,8 +998,7 @@ then grain that ripens within.</code></pre>
 <div class="title">Example 2. Mark 4.26-28 (BSB)</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;usx version="3.1.2"&gt;
-  &lt;ms style="vid" ref="MRK 4:26" h="Mark"/&gt;
-  &lt;para style="s1"&gt;The Seed Growing Secretly&lt;/para&gt;
+  &lt;para style="s1" h="Mark" vid="MRK 4:26"&gt;The Seed Growing Secretly&lt;/para&gt;
   &lt;para style="p"&gt;&lt;verse style="v" number="26" /&gt;Jesus also said, “The kingdom
   of God is like a man who scatters seed on the ground.
   &lt;verse style="v" number="27" /&gt;Night and day he sleeps and wakes, and the seed
