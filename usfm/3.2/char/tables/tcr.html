@@ -66,6 +66,9 @@
     <a class="nav-link" href="../../whitespace.html">Whitespace</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../syntax-usv.html">Representing Unicode Scalar Values</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../../syntax-docs.html">Documentation Syntax</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -668,6 +671,12 @@
     <a class="nav-link" href="../../ms/index.html">Milestones</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../ms/list.html">list - List start/end</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../ms/table.html">table - Table start/end</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../../ms/qt.html">qt# - Quotations</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -989,11 +998,13 @@
 \p
 \v 3-9 On the east side, those under the banner of the division of Judah
 shall camp in their groups, under their leaders, as follows:
+\table-s\*
 \tr \th1 Tribe \th2 Leader \thr3 Number
 \tr \tc1 Judah \tc2 Nahshon son of Amminadab \tcr3 74,600
 \tr \tc1 Issachar \tc2 Nethanel son of Zuar \tcr3 54,400
 \tr \tc1 Zebulun \tc2 Eliab son of Helon \tcr3 57,400
-\tr \tcr1-2 Total: \tcr3 186,400</code></pre>
+\tr \tcr1-2 Total: \tcr3 186,400
+\table-e\*</code></pre>
 </div>
 </div>
 </div>
@@ -1001,7 +1012,7 @@ shall camp in their groups, under their leaders, as follows:
 <div id="src-usx-char-tcr_1" class="listingblock">
 <div class="title">Example 2. Numbers 2.3-9 (GNT)</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;usx version="3.1"&gt;
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;usx version="3.2"&gt;
   &lt;book code="NUM" style="id"/&gt;
   &lt;chapter number="2" style="c" sid="NUM 2"/&gt;
   &lt;para style="p"&gt;

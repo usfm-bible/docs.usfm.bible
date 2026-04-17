@@ -65,6 +65,9 @@
     <a class="nav-link" href="../../whitespace.html">Whitespace</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../syntax-usv.html">Representing Unicode Scalar Values</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../../syntax-docs.html">Documentation Syntax</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -667,6 +670,12 @@
     <a class="nav-link" href="../../ms/index.html">Milestones</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../ms/list.html">list - List start/end</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../ms/table.html">table - Table start/end</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../../ms/qt.html">qt# - Quotations</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -932,6 +941,7 @@
 <pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\id 1CH
 \c 27
 \s1 Administration of the Tribes of Israel
+\list-s\*
 \lh
 \v 16-22 This is the list of the administrators of the tribes of Israel:
 \li1 \lik Reuben\lik* \liv1 Eliezer son of Zichri\liv1*
@@ -947,7 +957,8 @@
 \li1 \lik East Manasseh\lik* \liv1 Iddo son of Zechariah\liv1*
 \li1 \lik Benjamin\lik* \liv1 Jaasiel son of Abner\liv1*
 \li1 \lik Dan\lik* \liv1 Azarel son of Jeroham\liv1*
-\lf This was the list of the administrators of the tribes of Israel.</code></pre>
+\lf This was the list of the administrators of the tribes of Israel.
+\list-e\*</code></pre>
 </div>
 </div>
 </div>
@@ -955,67 +966,69 @@
 <div id="src-usx-char-lik_1" class="listingblock">
 <div class="title">Example 2. 1 Chronicles 27:16-22 (GNT - markup adapted)</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;usx version="3.1"&gt;
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;usx version="3.2"&gt;
   &lt;book code="1CH" style="id"/&gt;
   &lt;chapter number="27" style="c" sid="NEH 27"/&gt;
   &lt;para style="s1"&gt;Administration of the Tribes of Israel&lt;/para&gt;
-  &lt;para style="lh"&gt;
-    &lt;verse number="16-22" style="v" sid="1CH 27:16-22"/&gt;This is the list of
-    the administrators of the tribes of Israel:&lt;/para&gt;
-  &lt;para style="li1" vid="1CH 27:16-22"&gt;
-    &lt;char style="lik"&gt;Reuben&lt;/char&gt;
-    &lt;char style="liv1"&gt;Eliezer son of Zichri&lt;/char&gt;
-  &lt;/para&gt;
-  &lt;para style="li1" vid="1CH 27:16-22"&gt;
-    &lt;char style="lik"&gt;Simeon&lt;/char&gt;
-    &lt;char style="liv1"&gt;Shephatiah son of Maacah&lt;/char&gt;
-  &lt;/para&gt;
-  &lt;para style="li1" vid="1CH 27:16-22"&gt;
-    &lt;char style="lik"&gt;Levi&lt;/char&gt;
-    &lt;char style="liv1"&gt;Hashabiah son of Kemuel&lt;/char&gt;
-  &lt;/para&gt;
-  &lt;para style="li1" vid="1CH 27:16-22"&gt;
-    &lt;char style="lik"&gt;Aaron&lt;/char&gt;
-    &lt;char style="liv1"&gt;Zadok&lt;/char&gt;
-  &lt;/para&gt;
-  &lt;para style="li1" vid="1CH 27:16-22"&gt;
-    &lt;char style="lik"&gt;Judah&lt;/char&gt;
-    &lt;char style="liv1"&gt;Elihu, one of King David's brothers&lt;/char&gt;
-  &lt;/para&gt;
-  &lt;para style="li1" vid="1CH 27:16-22"&gt;
-    &lt;char style="lik"&gt;Issachar&lt;/char&gt;
-    &lt;char style="liv1"&gt;Omri son of Michael&lt;/char&gt;
-  &lt;/para&gt;
-  &lt;para style="li1" vid="1CH 27:16-22"&gt;
-    &lt;char style="lik"&gt;Zebulun&lt;/char&gt;
-    &lt;char style="liv1"&gt;Ishmaiah son of Obadiah&lt;/char&gt;
-  &lt;/para&gt;
-  &lt;para style="li1" vid="1CH 27:16-22"&gt;
-    &lt;char style="lik"&gt;Naphtali&lt;/char&gt;
-    &lt;char style="liv1"&gt;Jeremoth son of Azriel&lt;/char&gt;
-  &lt;/para&gt;
-  &lt;para style="li1" vid="1CH 27:16-22"&gt;
-    &lt;char style="lik"&gt;Ephraim&lt;/char&gt;
-    &lt;char style="liv1"&gt;Hoshea son of Azaziah&lt;/char&gt;
-  &lt;/para&gt;
-  &lt;para style="li1" vid="1CH 27:16-22"&gt;
-    &lt;char style="lik"&gt;West Manasseh&lt;/char&gt;
-    &lt;char style="liv1"&gt;Joel son of Pedaiah&lt;/char&gt;
-  &lt;/para&gt;
-  &lt;para style="li1" vid="1CH 27:16-22"&gt;
-    &lt;char style="lik"&gt;East Manasseh&lt;/char&gt;
-    &lt;char style="liv1"&gt;Iddo son of Zechariah&lt;/char&gt;
-  &lt;/para&gt;
-  &lt;para style="li1" vid="1CH 27:16-22"&gt;
-    &lt;char style="lik"&gt;Benjamin&lt;/char&gt;
-    &lt;char style="liv1"&gt;Jaasiel son of Abner&lt;/char&gt;
-  &lt;/para&gt;
-  &lt;para style="li1" vid="1CH 27:16-22"&gt;
-    &lt;char style="lik"&gt;Dan&lt;/char&gt;
-    &lt;char style="liv1"&gt;Azarel son of Jeroham&lt;/char&gt;
-  &lt;/para&gt;
-  &lt;para style="lf" vid="1CH 27:16-22"&gt;This was the list of the administrators of
-    the tribes of Israel.&lt;verse eid="1CH 27:16-22"/&gt;&lt;/para&gt;
+  &lt;list&gt;
+    &lt;para style="lh"&gt;
+      &lt;verse number="16-22" style="v" sid="1CH 27:16-22"/&gt;This is the list of
+      the administrators of the tribes of Israel:&lt;/para&gt;
+    &lt;para style="li1" vid="1CH 27:16-22"&gt;
+      &lt;char style="lik"&gt;Reuben&lt;/char&gt;
+      &lt;char style="liv1"&gt;Eliezer son of Zichri&lt;/char&gt;
+    &lt;/para&gt;
+    &lt;para style="li1" vid="1CH 27:16-22"&gt;
+      &lt;char style="lik"&gt;Simeon&lt;/char&gt;
+      &lt;char style="liv1"&gt;Shephatiah son of Maacah&lt;/char&gt;
+    &lt;/para&gt;
+    &lt;para style="li1" vid="1CH 27:16-22"&gt;
+      &lt;char style="lik"&gt;Levi&lt;/char&gt;
+      &lt;char style="liv1"&gt;Hashabiah son of Kemuel&lt;/char&gt;
+    &lt;/para&gt;
+    &lt;para style="li1" vid="1CH 27:16-22"&gt;
+      &lt;char style="lik"&gt;Aaron&lt;/char&gt;
+      &lt;char style="liv1"&gt;Zadok&lt;/char&gt;
+    &lt;/para&gt;
+    &lt;para style="li1" vid="1CH 27:16-22"&gt;
+      &lt;char style="lik"&gt;Judah&lt;/char&gt;
+      &lt;char style="liv1"&gt;Elihu, one of King David's brothers&lt;/char&gt;
+    &lt;/para&gt;
+    &lt;para style="li1" vid="1CH 27:16-22"&gt;
+      &lt;char style="lik"&gt;Issachar&lt;/char&gt;
+      &lt;char style="liv1"&gt;Omri son of Michael&lt;/char&gt;
+    &lt;/para&gt;
+    &lt;para style="li1" vid="1CH 27:16-22"&gt;
+      &lt;char style="lik"&gt;Zebulun&lt;/char&gt;
+      &lt;char style="liv1"&gt;Ishmaiah son of Obadiah&lt;/char&gt;
+    &lt;/para&gt;
+    &lt;para style="li1" vid="1CH 27:16-22"&gt;
+      &lt;char style="lik"&gt;Naphtali&lt;/char&gt;
+      &lt;char style="liv1"&gt;Jeremoth son of Azriel&lt;/char&gt;
+    &lt;/para&gt;
+    &lt;para style="li1" vid="1CH 27:16-22"&gt;
+      &lt;char style="lik"&gt;Ephraim&lt;/char&gt;
+      &lt;char style="liv1"&gt;Hoshea son of Azaziah&lt;/char&gt;
+    &lt;/para&gt;
+    &lt;para style="li1" vid="1CH 27:16-22"&gt;
+      &lt;char style="lik"&gt;West Manasseh&lt;/char&gt;
+      &lt;char style="liv1"&gt;Joel son of Pedaiah&lt;/char&gt;
+    &lt;/para&gt;
+    &lt;para style="li1" vid="1CH 27:16-22"&gt;
+      &lt;char style="lik"&gt;East Manasseh&lt;/char&gt;
+      &lt;char style="liv1"&gt;Iddo son of Zechariah&lt;/char&gt;
+    &lt;/para&gt;
+    &lt;para style="li1" vid="1CH 27:16-22"&gt;
+      &lt;char style="lik"&gt;Benjamin&lt;/char&gt;
+      &lt;char style="liv1"&gt;Jaasiel son of Abner&lt;/char&gt;
+    &lt;/para&gt;
+    &lt;para style="li1" vid="1CH 27:16-22"&gt;
+      &lt;char style="lik"&gt;Dan&lt;/char&gt;
+      &lt;char style="liv1"&gt;Azarel son of Jeroham&lt;/char&gt;
+    &lt;/para&gt;
+    &lt;para style="lf" vid="1CH 27:16-22"&gt;This was the list of the administrators
+      of the tribes of Israel.&lt;verse eid="1CH 27:16-22"/&gt;&lt;/para&gt;
+  &lt;/list&gt;
 &lt;/usx&gt;</code></pre>
 </div>
 </div>
@@ -1026,7 +1039,7 @@
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
   "type": "USJ",
-  "version": "3.1",
+  "version": "3.2",
   "content": [
     {
       "type": "book",

@@ -66,6 +66,9 @@
     <a class="nav-link" href="../../whitespace.html">Whitespace</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../syntax-usv.html">Representing Unicode Scalar Values</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../../syntax-docs.html">Documentation Syntax</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -668,6 +671,12 @@
     <a class="nav-link" href="../../ms/index.html">Milestones</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../ms/list.html">list - List start/end</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../ms/table.html">table - Table start/end</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../../ms/qt.html">qt# - Quotations</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -873,6 +882,12 @@
 <h1 class="page">Lists</h1>
 <div id="preamble">
 <div class="sectionbody">
+<div class="sidebarblock">
+<div class="content">
+<div class="title">Lists in USFM and USX</div>
+<div class="paragraph">
+<p>In <strong>USFM</strong>, a list is composed of a series of paragraphs marked with a sub-set of paragraph types for lists.</p>
+</div>
 <div class="ulist">
 <ul>
 <li>
@@ -889,11 +904,25 @@
 </li>
 </ul>
 </div>
+<div class="paragraph">
+<p>Selected character spans within a list item are marked with <a href="../../char/lists/index.html" class="xref page">character types for lists</a>.</p>
 </div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="../../char/lists/litl.html" class="xref page">litl - List entry total</a></p>
+</li>
+<li>
+<p><a href="../../char/lists/lik.html" class="xref page">lik - List entry key</a></p>
+</li>
+<li>
+<p><a href="../../char/lists/liv.html" class="xref page">liv - List entry value</a></p>
+</li>
+</ul>
 </div>
-<div class="sect1">
-<h2 id="_diagrams"><a class="anchor" href="#_diagrams"></a>Diagrams</h2>
-<div class="sectionbody">
+<div class="paragraph">
+<p><strong>USX</strong> predictably represents USFM list <a href="../index.html" class="xref page">paragraph</a> and <a href="../../char/index.html" class="xref page">character</a> types with corresponding <code>&lt;para&gt;</code> and <code>&lt;char&gt;</code> tags. <strong>USX</strong> &gt;= 3.2 adds a new <code>&lt;list&gt;</code>&#8230;&#8203;<code>&lt;/list&gt;</code> container which is expressed in USFM syntax using a <a href="../../ms/list.html" class="xref page">list start and end</a> milestone pair.</p>
+</div>
 <div id="_tabs_1" class="openblock tabs is-loading">
 <div class="content">
 <div class="ulist tablist">
@@ -904,9 +933,107 @@
 <li id="_tabs_1_usx" class="tab">
 <p>USX</p>
 </li>
+<li id="_tabs_1_usj" class="tab">
+<p>USJ</p>
+</li>
 </ul>
 </div>
 <div id="_tabs_1_usfm--panel" class="tabpanel" aria-labelledby="_tabs_1_usfm">
+<div id="src-usfm-list_1" class="listingblock">
+<div class="title">Example 1. USFM list structure</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\list-s\*
+\lh optional list header
+\li1 list entry 1
+\li1 list entry 2
+\li3 list entry 3
+\lf optional list footer
+\list-e\*</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_1_usx--panel" class="tabpanel" aria-labelledby="_tabs_1_usx">
+<div id="src-usx-list_1" class="listingblock">
+<div class="title">Example 2. USX list structure</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;list&gt;
+&lt;para style="lh"&gt;optional list header&lt;/para&gt;
+&lt;para style="li1"&gt;list entry 1&lt;/para&gt;
+&lt;para style="li1"&gt;list entry 2&lt;/para&gt;
+&lt;para style="li1"&gt;list entry 3&lt;/para&gt;
+&lt;para style="lf"&gt;optional list footer&lt;/para&gt;
+&lt;/list&gt;</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_1_usj--panel" class="tabpanel" aria-labelledby="_tabs_1_usj">
+<div id="src-usj-list_1" class="listingblock">
+<div class="title">Example 3. USX list structure</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "content": [
+    {
+      "type": "para",
+      "marker": "lh",
+      "content": [
+        "optional list header"
+      ]
+    },
+    {
+      "type": "para",
+      "marker": "li1",
+      "content": [
+        "list entry 1"
+      ]
+    },
+    {
+      "type": "para",
+      "marker": "li1",
+      "content": [
+        "list entry 2"
+      ]
+    },
+    {
+      "type": "para",
+      "marker": "li1",
+      "content": [
+        "list entry 3"
+      ]
+    },
+    {
+      "type": "para",
+      "marker": "lf",
+      "content": [
+        "optional list footer"
+      ]
+    },
+  ]
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_diagrams"><a class="anchor" href="#_diagrams"></a>Diagrams</h2>
+<div class="sectionbody">
+<div id="_tabs_2" class="openblock tabs is-loading">
+<div class="content">
+<div class="ulist tablist">
+<ul>
+<li id="_tabs_2_usfm" class="tab">
+<p>USFM</p>
+</li>
+<li id="_tabs_2_usx" class="tab">
+<p>USX</p>
+</li>
+</ul>
+</div>
+<div id="_tabs_2_usfm--panel" class="tabpanel" aria-labelledby="_tabs_2_usfm">
 <div class="imageblock">
 <div class="content">
 <img src="../_images/schema/list_rail.svg" alt="list rail">
@@ -918,7 +1045,7 @@
 </div>
 </div>
 </div>
-<div id="_tabs_1_usx--panel" class="tabpanel" aria-labelledby="_tabs_1_usx">
+<div id="_tabs_2_usx--panel" class="tabpanel" aria-labelledby="_tabs_2_usx">
 <div class="imageblock">
 <div class="content">
 <img src="../_images/schema/list_usx.svg" alt="list usx">

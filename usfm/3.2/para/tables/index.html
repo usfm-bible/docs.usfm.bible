@@ -66,6 +66,9 @@
     <a class="nav-link" href="../../whitespace.html">Whitespace</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../syntax-usv.html">Representing Unicode Scalar Values</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../../syntax-docs.html">Documentation Syntax</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -668,6 +671,12 @@
     <a class="nav-link" href="../../ms/index.html">Milestones</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../ms/list.html">list - List start/end</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../ms/table.html">table - Table start/end</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../../ms/qt.html">qt# - Quotations</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -873,18 +882,11 @@
 <h1 class="page">Tables</h1>
 <div id="preamble">
 <div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p><a href="tr.html" class="xref page">tr - Table row</a></p>
-</li>
-</ul>
-</div>
 <div class="sidebarblock">
 <div class="content">
 <div class="title">Alternate structures for tables in USFM and USX</div>
 <div class="paragraph">
-<p>In <strong>USFM</strong>, a table is composed by a series of paragraphs marked with <code>\tr</code>.</p>
+<p>In <strong>USFM</strong>, a table is composed of a series of paragraphs marked with <code>\tr</code>.</p>
 </div>
 <div class="ulist">
 <ul>
@@ -919,7 +921,7 @@
 </ul>
 </div>
 <div class="paragraph">
-<p>USX represents most USFM <a href="../index.html" class="xref page">paragraph</a> and <a href="../../char/index.html" class="xref page">character</a> types with corresponding <code>&lt;para&gt;</code> and <code>&lt;char&gt;</code> tags. For tables, the structures are different. In <strong>USX</strong> the sequence of <code>\tr</code> rows is composed within a <code>&lt;table&gt;...&lt;/table&gt;</code> container.</p>
+<p><strong>USX</strong> represents most USFM <a href="../index.html" class="xref page">paragraph</a> and <a href="../../char/index.html" class="xref page">character</a> types with corresponding <code>&lt;para&gt;</code> and <code>&lt;char&gt;</code> tags. For tables, the structures are different. In <strong>USX</strong> the sequence of <code>\tr</code> rows is composed within a <code>&lt;table&gt;...&lt;/table&gt;</code> container. In USFM &gt;= 3.2 this table container can also be expressed in USFM syntax using a <a href="../../ms/table.html" class="xref page">table start and end</a> milestone pair.</p>
 </div>
 <div id="_tabs_1" class="openblock tabs is-loading">
 <div class="content">
@@ -931,14 +933,19 @@
 <li id="_tabs_1_usx" class="tab">
 <p>USX</p>
 </li>
+<li id="_tabs_1_usj" class="tab">
+<p>USJ</p>
+</li>
 </ul>
 </div>
 <div id="_tabs_1_usfm--panel" class="tabpanel" aria-labelledby="_tabs_1_usfm">
 <div id="src-usfm-para-tr_1" class="listingblock">
 <div class="title">Example 1. USFM table structure</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\tr \tc1 {cell 1 content} \tc2 {cell 2 content}
-\tr \tc1 {cell 3 content} \tc2 {cell 4 content}</code></pre>
+<pre class="highlightjs highlight"><code class="language-usfm hljs" data-lang="usfm">\table-s\*
+\tr \tc1 row 1, col 1 content \tc2 row 1, col 2 content
+\tr \tc1 row 2, col 1 content \tc2 row 2, col 2 content
+\table-e\*</code></pre>
 </div>
 </div>
 </div>
@@ -948,14 +955,22 @@
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;table&gt;
    &lt;row&gt;
-      &lt;cell style="[char@style]" align="start"&gt;{cell 1 content}&lt;/cell&gt;
-      &lt;cell style="[char@style]" align="start"&gt;{cell 2 content}&lt;/cell&gt;
+      &lt;cell style="[char@style]" align="start"&gt;row 1, col 1 content&lt;/cell&gt;
+      &lt;cell style="[char@style]" align="start"&gt;row 1, col 2 content&lt;/cell&gt;
    &lt;/row&gt;
    &lt;row&gt;
-      &lt;cell style="[char@style]" align="start"&gt;{cell 3 content}&lt;/cell&gt;
-      &lt;cell style="[char@style]" align="start"&gt;{cell 4 content}&lt;/cell&gt;
+      &lt;cell style="[char@style]" align="start"&gt;row 2, col 1 content&lt;/cell&gt;
+      &lt;cell style="[char@style]" align="start"&gt;row 2, col 2 content&lt;/cell&gt;
    &lt;/row&gt;
 &lt;/table&gt;</code></pre>
+</div>
+</div>
+</div>
+<div id="_tabs_1_usj--panel" class="tabpanel" aria-labelledby="_tabs_1_usj">
+<div id="src-usj-table_1" class="listingblock">
+<div class="title">Example 3. USX table structure</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json"></code></pre>
 </div>
 </div>
 </div>

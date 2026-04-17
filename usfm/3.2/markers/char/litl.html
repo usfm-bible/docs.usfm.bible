@@ -65,6 +65,9 @@
     <a class="nav-link" href="../../whitespace.html">Whitespace</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../syntax-usv.html">Representing Unicode Scalar Values</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../../syntax-docs.html">Documentation Syntax</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -667,6 +670,12 @@
     <a class="nav-link" href="../../ms/index.html">Milestones</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../ms/list.html">list - List start/end</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../ms/table.html">table - Table start/end</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../../ms/qt.html">qt# - Quotations</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -937,7 +946,7 @@ to Jerusalem and Judah, each to his own town,
 Mordecai, Bilshan, Mispereth, Bigvai, Nehum and Baanah):
 \b
 \pm The list of the men of Israel:
-\b
+\list-s\*
 \lim1
 \v 8 the descendants of Parosh - \litl 2,172\litl*
 \lim1
@@ -952,7 +961,8 @@ Mordecai, Bilshan, Mispereth, Bigvai, Nehum and Baanah):
 \v 13 of Zattu - \litl 845\litl*
 \lim1
 \v 14 of Zaccai - \litl 760\litl*
-...</code></pre>
+...
+\list-e\*</code></pre>
 </div>
 </div>
 </div>
@@ -960,7 +970,7 @@ Mordecai, Bilshan, Mispereth, Bigvai, Nehum and Baanah):
 <div id="src-usx-char-litl_1" class="listingblock">
 <div class="title">Example 2. Nehemiah 7.6-14 (GNT - markup adapted)</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;usx version="3.1"&gt;
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;usx version="3.2"&gt;
   &lt;book code="NEH" style="id"/&gt;
   &lt;chapter number="7" style="c" sid="NEH 7"/&gt;
   &lt;para style="pm"&gt;
@@ -974,29 +984,30 @@ Mordecai, Bilshan, Mispereth, Bigvai, Nehum and Baanah):
   &lt;para style="b" vid="NEH 7:7"/&gt;
   &lt;para style="pm" vid="NEH 7:7"&gt;The list of the men of
     Israel:&lt;verse eid="NEH 7:7"/&gt;&lt;/para&gt;
-  &lt;para style="b"/&gt;
-  &lt;para style="lim1"&gt;
-    &lt;verse number="8" style="v" sid="NEH 7:8"/&gt;the descendants of Parosh -
-    &lt;char style="litl"&gt;2,172&lt;/char&gt;&lt;verse eid="NEH 7:8"/&gt;&lt;/para&gt;
-  &lt;para style="lim1"&gt;
-    &lt;verse number="9" style="v" sid="NEH 7:9"/&gt;of Shephatiah -
-    &lt;char style="litl"&gt;372&lt;/char&gt;&lt;verse eid="NEH 7:9"/&gt;&lt;/para&gt;
-  &lt;para style="lim1"&gt;
-    &lt;verse number="10" style="v" sid="NEH 7:10"/&gt;of Arah -
-    &lt;char style="litl"&gt;652&lt;/char&gt;&lt;verse eid="NEH 7:10"/&gt;&lt;/para&gt;
-  &lt;para style="lim1"&gt;
-    &lt;verse number="11" style="v" sid="NEH 7:11"/&gt;of Pahath-Moab (through the
-    line of Jeshua and Joab) -
-    &lt;char style="litl"&gt;2,818&lt;/char&gt;&lt;verse eid="NEH 7:11"/&gt;&lt;/para&gt;
-  &lt;para style="lim1"&gt;
-    &lt;verse number="12" style="v" sid="NEH 7:12"/&gt;of Elam -
-    &lt;char style="litl"&gt;1,254&lt;/char&gt;&lt;verse eid="NEH 7:12"/&gt;&lt;/para&gt;
-  &lt;para style="lim1"&gt;
-    &lt;verse number="13" style="v" sid="NEH 7:13"/&gt;of Zattu -
-    &lt;char style="litl"&gt;845&lt;/char&gt;&lt;verse eid="NEH 7:13"/&gt;&lt;/para&gt;
-  &lt;para style="lim1"&gt;
-    &lt;verse number="14" style="v" sid="NEH 7:14"/&gt;of Zaccai -
-    &lt;char style="litl"&gt;760&lt;/char&gt;&lt;verse eid="NEH 7:14"/&gt;&lt;/para&gt;
+  &lt;list&gt;
+    &lt;para style="lim1"&gt;
+      &lt;verse number="8" style="v" sid="NEH 7:8"/&gt;the descendants of Parosh -
+      &lt;char style="litl"&gt;2,172&lt;/char&gt;&lt;verse eid="NEH 7:8"/&gt;&lt;/para&gt;
+    &lt;para style="lim1"&gt;
+      &lt;verse number="9" style="v" sid="NEH 7:9"/&gt;of Shephatiah -
+      &lt;char style="litl"&gt;372&lt;/char&gt;&lt;verse eid="NEH 7:9"/&gt;&lt;/para&gt;
+    &lt;para style="lim1"&gt;
+      &lt;verse number="10" style="v" sid="NEH 7:10"/&gt;of Arah -
+      &lt;char style="litl"&gt;652&lt;/char&gt;&lt;verse eid="NEH 7:10"/&gt;&lt;/para&gt;
+    &lt;para style="lim1"&gt;
+      &lt;verse number="11" style="v" sid="NEH 7:11"/&gt;of Pahath-Moab (through the
+      line of Jeshua and Joab) -
+      &lt;char style="litl"&gt;2,818&lt;/char&gt;&lt;verse eid="NEH 7:11"/&gt;&lt;/para&gt;
+    &lt;para style="lim1"&gt;
+      &lt;verse number="12" style="v" sid="NEH 7:12"/&gt;of Elam -
+      &lt;char style="litl"&gt;1,254&lt;/char&gt;&lt;verse eid="NEH 7:12"/&gt;&lt;/para&gt;
+    &lt;para style="lim1"&gt;
+      &lt;verse number="13" style="v" sid="NEH 7:13"/&gt;of Zattu -
+      &lt;char style="litl"&gt;845&lt;/char&gt;&lt;verse eid="NEH 7:13"/&gt;&lt;/para&gt;
+    &lt;para style="lim1"&gt;
+      &lt;verse number="14" style="v" sid="NEH 7:14"/&gt;of Zaccai -
+      &lt;char style="litl"&gt;760&lt;/char&gt;&lt;verse eid="NEH 7:14"/&gt;&lt;/para&gt;
+  &lt;/list&gt;
 &lt;/usx&gt;</code></pre>
 </div>
 </div>

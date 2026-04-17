@@ -66,6 +66,9 @@
     <a class="nav-link" href="../../whitespace.html">Whitespace</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../syntax-usv.html">Representing Unicode Scalar Values</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../../syntax-docs.html">Documentation Syntax</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -668,6 +671,12 @@
     <a class="nav-link" href="../../ms/index.html">Milestones</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../ms/list.html">list - List start/end</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../ms/table.html">table - Table start/end</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../../ms/qt.html">qt# - Quotations</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -944,13 +953,15 @@
 \p
 \v 84-88 The totals of the offerings brought by the twelve leaders for the
 dedication of the altar were as follows:
+\list-s\*
 \li1 –twelve silver bowls and twelve silver basins weighing a total of 60 pounds
 \li1 –twelve gold dishes weighing a total of 48 ounces, filled with incense
 \li1 –twelve bulls, twelve rams, and twelve one-year-old lambs, plus the grain
 offerings that go with them, for the burnt offerings
 \li1 –twelve goats for the sin offerings
 \li1 –twenty-four bulls, sixty rams, sixty goats, sixty one-year-old lambs, for
-the fellowship offerings</code></pre>
+the fellowship offerings
+\list-e\*</code></pre>
 </div>
 </div>
 </div>
@@ -958,24 +969,27 @@ the fellowship offerings</code></pre>
 <div id="src-usx-para-li_1" class="listingblock">
 <div class="title">Example 2. Numbers 7.84-88 (GNT)</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;usx version="3.1"&gt;
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;usx version="3.2"&gt;
   &lt;book code="NUM" style="id"/&gt;
   &lt;chapter number="7" style="c" sid="NUM 7"/&gt;
   &lt;para style="p"&gt;
     &lt;verse number="84-88" style="v" sid="NUM 7:84-88"/&gt;The totals of the offerings
     brought by the twelve leaders for the dedication of the altar were as follows:
     &lt;/para&gt;
-  &lt;para style="li1" vid="NUM 7:84-88"&gt;–twelve silver bowls and twelve silver basins
-    weighing a total of 60 pounds&lt;/para&gt;
-  &lt;para style="li1" vid="NUM 7:84-88"&gt;–twelve gold dishes weighing a total of 48
-    ounces, filled with incense&lt;/para&gt;
-  &lt;para style="li1" vid="NUM 7:84-88"&gt;–twelve bulls, twelve rams, and twelve
-    one-year-old lambs, plus the grain offerings that go with them, for the burnt
-    offerings&lt;/para&gt;
-  &lt;para style="li1" vid="NUM 7:84-88"&gt;–twelve goats for the sin offerings&lt;/para&gt;
-  &lt;para style="li1" vid="NUM 7:84-88"&gt;–twenty-four bulls, sixty rams, sixty goats,
-    sixty one-year-old lambs, for the fellowship offerings&lt;verse eid="NUM 7:84-88"/&gt;
-    &lt;/para&gt;
+  &lt;list&gt;
+    &lt;para style="li1" vid="NUM 7:84-88"&gt;–twelve silver bowls and twelve silver
+      basins weighing a total of 60 pounds&lt;/para&gt;
+    &lt;para style="li1" vid="NUM 7:84-88"&gt;–twelve gold dishes weighing a total of
+      48 ounces, filled with incense&lt;/para&gt;
+    &lt;para style="li1" vid="NUM 7:84-88"&gt;–twelve bulls, twelve rams, and twelve
+      one-year-old lambs, plus the grain offerings that go with them, for the
+      burnt offerings&lt;/para&gt;
+    &lt;para style="li1" vid="NUM 7:84-88"&gt;–twelve goats for the sin offerings&lt;/para&gt;
+    &lt;para style="li1" vid="NUM 7:84-88"&gt;–twenty-four bulls, sixty rams, sixty
+      goats, sixty one-year-old lambs, for the fellowship
+      offerings&lt;verse eid="NUM 7:84-88"/&gt;
+      &lt;/para&gt;
+  &lt;/list&gt;
 &lt;/usx&gt;</code></pre>
 </div>
 </div>
@@ -986,7 +1000,7 @@ the fellowship offerings</code></pre>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
   "type": "USJ",
-  "version": "3.1",
+  "version": "3.2",
   "content": [
     {
       "type": "book",
